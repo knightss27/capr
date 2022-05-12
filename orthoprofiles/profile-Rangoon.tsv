@@ -1,0 +1,133 @@
+Grapheme	Segments	CLPA	Structure	Unicode	Frequency	Reflexes	Examples
+⁵⁵	⁵⁵	⁵⁵	t	U+2075 U+2075	967	Rangoon	jɑ⁵⁵
+²²	²²	²²	t	U+00b2 U+00b2	839	Rangoon	ɑ²²
+⁴	⁴	⁴	t	U+2074	637	Rangoon	joʔ⁴
+⁵³	⁵³	⁵³	t	U+2075 U+00b3	618	Rangoon	si⁵³
+²	²	²	t	U+00b2	3	Rangoon	wɑ²
+³	³	³	t	U+00b3	2	Rangoon	khɑ³
+³⁵	³⁵	³⁵	t	U+00b3 U+2075	1	Rangoon	tɕhi³⁵
+³³	³³	³³	t	U+00b3 U+00b3	1	Rangoon	kɑ³³
+¹	¹	¹	t	U+00b9	1	Rangoon	jɑ¹
+ɑ̃	ɑ̃	ɑ̃ ∼	n c	U+0251 U+0303 U+0020 U+223c	151	Rangoon	kɑ̃∼²²
+ĩ	ĩ	ĩ ∼	n c	U+0129 U+0020 U+223c	132	Rangoon	nĩ∼⁵⁵
+ɑ̃u	ɑ̃ u	ɑ̃ u ∼	n N c	U+0251 U+0303 U+0075 U+0020 U+223c	118	Rangoon	kɑ̃u∼⁵⁵
+ɛʔ	ɛ ʔ	ɛ ʔ	n c	U+025b U+0020 U+0294	111	Rangoon	bɛʔ⁴
+õ	õ	õ ∼	n c	U+00f5 U+0020 U+223c	78	Rangoon	shõ∼²²
+ɑuʔ	ɑ u ʔ	ɑ u ʔ	n N c	U+0251 U+0075 U+0020 U+0294	75	Rangoon	tɕɑuʔ⁴
+ɑʔ	ɑ ʔ	ɑ ʔ	n c	U+0251 U+0020 U+0294	74	Rangoon	pɑʔ⁴
+iʔ	i ʔ	i ʔ	n c	U+0069 U+0020 U+0294	66	Rangoon	n̥iʔ⁴
+oʔ	o ʔ	o ʔ	n c	U+006f U+0020 U+0294	63	Rangoon	shoʔ⁴
+ẽ	ẽ	ẽ ∼	n c	U+1ebd U+0020 U+223c	46	Rangoon	tɕhẽ∼⁵⁵
+eʔ	e ʔ	e ʔ	n c	U+0065 U+0020 U+0294	45	Rangoon	reʔ⁴
+ɑiʔ	ɑi ʔ	ɑi ʔ	n c	U+0251 U+0069 U+0020 U+0294	35	Rangoon	kɑiʔ⁴
+ɑ̃i	ɑ̃ i	ɑ̃ i ∼	n N c	U+0251 U+0303 U+0069 U+0020 U+223c	33	Rangoon	tɕhɑ̃i∼⁵⁵
+ũ	ũ	ũ ∼	n c	U+0169 U+0020 U+223c	31	Rangoon	tɕũ∼²²
+uʔ	u ʔ	u ʔ	n c	U+0075 U+0020 U+0294	12	Rangoon	buʔ⁴
+ã	ã	ã ∼	n c	U+00e3 U+0020 U+223c	3	Rangoon	kã∼⁵⁵
+ɑĩ	ɑ ĩ	ɑ̃ i ∼	n N c	U+0251 U+0129 U+0020 U+223c	2	Rangoon	tɑĩ∼⁵⁵
+ɪ̃	ɪ̃	ɪ̃ ∼	n c	U+026a U+0303 U+0020 U+223c	1	Rangoon	n̥ɪ̃∼⁵⁵
+ɑũ	ɑ ũ	ɑ̃ u ∼	n N c	U+0251 U+0169 U+0020 U+223c	1	Rangoon	mɑũ∼⁵⁵
+un	u n	u n	n c	U+0075 U+0020 U+006e	1	Rangoon	kun³
+ɪʔ	ɪ ʔ	ɪ ʔ	n c	U+026a U+0020 U+0294	1	Rangoon	tθɪʔ⁴
+eĩ	e ĩ	ẽ i ∼	n N c	U+0065 U+0129 U+0020 U+223c	1	Rangoon	tɕheĩ∼²²
+ɑṇ	ɑ ṇ	ɑ ṇ/ŋ	n c	U+0251 U+0020 U+1e47	1	Rangoon	dɑṇ²²
+ɑ	ɑ	ɑ	n	U+0251	516	Rangoon	ɑ²²
+i	i	i	n	U+0069	204	Rangoon	si⁵³
+o	o	o	n	U+006f	168	Rangoon	tɕo⁵⁵
+ɛ	ɛ	ɛ	n	U+025b	120	Rangoon	thɛ⁵⁵
+e	e	e	n	U+0065	115	Rangoon	se²²
+u	u	u	n	U+0075	114	Rangoon	bu⁵³
+ɔ	ɔ	ɔ	n	U+0254	77	Rangoon	dɔ⁵⁵
+a	a	a	n	U+0061	10	Rangoon	pa⁵⁵
+û	û	û/u	n	U+00fb	1	Rangoon	û⁵³
+ou	ou	o u	n N	U+006f U+0075	1	Rangoon	mou⁵³
+jĩ	j ĩ	j ĩ ∼	m n c	U+006a U+0020 U+0129 U+0020 U+223c	33	Rangoon	pjĩ∼⁵⁵
+wɛʔ	w ɛ ʔ	w ɛ ʔ	m n c	U+0077 U+0020 U+025b U+0020 U+0294	30	Rangoon	wɛʔ⁴
+jɛʔ	j ɛ ʔ	j ɛ ʔ	m n c	U+006a U+0020 U+025b U+0020 U+0294	29	Rangoon	jɛʔ⁴
+wĩ	w ĩ	w ĩ ∼	m n c	U+0077 U+0020 U+0129 U+0020 U+223c	29	Rangoon	twĩ∼²²
+jɑ̃	j ɑ̃	j ɑ̃ ∼	m n c	U+006a U+0020 U+0251 U+0303 U+0020 U+223c	26	Rangoon	jɑ̃∼²²
+jɑuʔ	j ɑ u ʔ	j ɑ u ʔ	m n N c	U+006a U+0020 U+0251 U+0075 U+0020 U+0294	24	Rangoon	mjɑuʔ⁴
+jɑ̃u	j ɑ̃ u	j ɑ̃ u ∼	m n N c	U+006a U+0020 U+0251 U+0303 U+0075 U+0020 U+223c	16	Rangoon	pjɑ̃u∼⁵⁵
+jɑʔ	j ɑ ʔ	j ɑ ʔ	m n c	U+006a U+0020 U+0251 U+0020 U+0294	15	Rangoon	pjɑʔ⁴
+jiʔ	j i ʔ	j i ʔ	m n c	U+006a U+0020 U+0069 U+0020 U+0294	14	Rangoon	mjiʔ⁴
+wũ	w ũ	w ũ ∼	m n c	U+0077 U+0020 U+0169 U+0020 U+223c	12	Rangoon	wũ∼²²
+niʔ	n i ʔ	n i ʔ	m n c	U+006e U+0020 U+0069 U+0020 U+0294	9	Rangoon	hniʔ⁴
+jõ	j õ	j õ ∼	m n c	U+006a U+0020 U+00f5 U+0020 U+223c	7	Rangoon	jõ∼²²
+jwɛʔ	jw ɛ ʔ	ɥ ɛ ʔ	m n c	U+006a U+0077 U+0020 U+025b U+0020 U+0294	6	Rangoon	jwɛʔ⁴
+juʔ	j u ʔ	j u ʔ	m n c	U+006a U+0020 U+0075 U+0020 U+0294	5	Rangoon	pjuʔ⁴
+wuʔ	w u ʔ	w u ʔ	m n c	U+0077 U+0020 U+0075 U+0020 U+0294	5	Rangoon	wuʔ⁴
+jeʔ	j e ʔ	j e ʔ	m n c	U+006a U+0020 U+0065 U+0020 U+0294	4	Rangoon	jeʔ⁴
+joʔ	j o ʔ	j o ʔ	m n c	U+006a U+0020 U+006f U+0020 U+0294	3	Rangoon	joʔ⁴
+hnĩ⁵⁵	hn ĩ ⁵⁵	n̥ ĩ ∼ ⁵⁵	i n c t	U+006e U+0020 U+0129 U+0020 U+223c	3	Rangoon	hnĩ∼⁵⁵
+hn	hn	n̥	i			
+jɑiʔ	j ɑi ʔ	j ɑi ʔ	m n c	U+006a U+0020 U+0251 U+0069 U+0020 U+0294	3	Rangoon	jɑiʔ⁴
+wɑ̃	w ɑ̃	w ɑ̃ ∼	m n c	U+0077 U+0020 U+0251 U+0303 U+0020 U+223c	2	Rangoon	tɕwɑ̃∼⁵⁵
+jẽ	j ẽ	j ẽ ∼	m n c	U+006a U+0020 U+1ebd U+0020 U+223c	2	Rangoon	jẽ∼⁵⁵
+jwĩ	jw ĩ	ɥ ĩ ∼	m n c	U+006a U+0077 U+0020 U+0129 U+0020 U+223c	1	Rangoon	jwĩ∼⁵⁵
+wɑ̃i	w ɑ̃ i ∼	w ɑ̃ i ∼	m n N c	U+0077 U+0020 U+0251 U+0303 U+0069 U+0020 U+223c	1	Rangoon	wɑ̃i∼⁵⁵
+jouʔ	j o u ʔ	j o u ʔ	m n N c	U+006a U+0020 U+006f U+0075 U+0020 U+0294	1	Rangoon	pjouʔ⁴
+moʔ	m o ʔ	m o ʔ	m n c	U+006d U+0020 U+006f U+0020 U+0294	1	Rangoon	hmoʔ⁴
+mɑʔ	m ɑ ʔ	m ɑ ʔ	m n c	U+006d U+0020 U+0251 U+0020 U+0294	1	Rangoon	hmɑʔ⁴
+mõ	m õ	m õ ∼	m n c	U+006d U+0020 U+00f5 U+0020 U+223c	1	Rangoon	hmõ∼²²
+nɑʔ	n ɑ ʔ	n ɑ ʔ	m n c	U+006e U+0020 U+0251 U+0020 U+0294	1	Rangoon	hnɑʔ⁴
+noʔ	n o ʔ	n o ʔ	m n c	U+006e U+0020 U+006f U+0020 U+0294	1	Rangoon	hnoʔ⁴
+hȵ	hȵ	ɲ̊	i			
+hȵɑ̃u⁵³	hȵ ɑ̃ u ⁵³	ɲ̊ ɑ̃ u ∼	i n N c t	U+0235 U+0020 U+0251 U+0303 U+0075 U+0020 U+223c	1	Rangoon	hȵɑ̃u∼⁵³
+hȵɑʔ	hȵ ɑ ʔ	ɲ̊ ɑ ʔ	i n c	U+0235 U+0020 U+0251 U+0020 U+0294	1	Rangoon	hȵɑʔ⁴
+hlĩ	hl ĩ	l̥ ĩ ∼	i n c	U+006c U+0020 U+0129 U+0020 U+223c	1	Rangoon	hlĩ∼⁵⁵
+hl	hl	l̥	i			
+we	w e	w e	m n	U+0077 U+0020 U+0065	76	Rangoon	ŋwe⁵³
+jɑ	j ɑ	j ɑ	m n	U+006a U+0020 U+0251	65	Rangoon	jɑ⁵⁵
+wɑ	w ɑ	w ɑ	m n	U+0077 U+0020 U+0251	47	Rangoon	bwɑ⁵⁵
+wɛ	w ɛ	w ɛ	m n	U+0077 U+0020 U+025b	40	Rangoon	khwɛ⁵⁵
+je	j e	j e	m n	U+006a U+0020 U+0065	36	Rangoon	phje²²
+ji	j i	j i	m n	U+006a U+0020 U+0069	23	Rangoon	pji⁵⁵
+jo	j o	j o	m n	U+006a U+0020 U+006f	21	Rangoon	mjo⁵⁵
+jɔ	j ɔ	j ɔ	m n	U+006a U+0020 U+0254	19	Rangoon	jɔ⁵⁵
+ju	j u	j u	m n	U+006a U+0020 U+0075	19	Rangoon	ju⁵⁵
+jɛ	j ɛ	j ɛ	m n	U+006a U+0020 U+025b	8	Rangoon	jɛ⁵⁵
+jwe	jw e	ɥ e	m n	U+006a U+0077 U+0020 U+0065	3	Rangoon	jwe⁵⁵
+jwɑ	jw ɑ	ɥ ɑ	m n	U+006a U+0077 U+0020 U+0251	3	Rangoon	jwɑ²²
+nɑ	n ɑ	n ɑ	m n	U+006e U+0020 U+0251	3	Rangoon	hnɑ⁵³
+le	l e	l e	m n	U+006c U+0020 U+0065	2	Rangoon	hle²²
+hmjɑ	hm j ɑ	m̥ j ɑ	i m n	U+006d U+006a U+0020 U+0251	1	Rangoon	hmjɑ⁵⁵
+hm	hm	m̥	i			
+mɛ	m ɛ	m ɛ	m n	U+006d U+0020 U+025b	1	Rangoon	hmɛ⁵³
+mo	m o	m o	m n	U+006d U+0020 U+006f	1	Rangoon	hmo²²
+hlwɑ	hl w ɑ	l̥ w ɑ	i m n	U+006c U+0077 U+0020 U+0251	1	Rangoon	hlwɑ⁵³
+ja	j a	j a	m n	U+006a U+0020 U+0061	1	Rangoon	ja²²
+wa	w a	w a	m n	U+0077 U+0020 U+0061	1	Rangoon	wa²²
+wũ	w ũ	w ũ ∼	m n c	U+0077 U+0020 U+0169 U+223c	1	Rangoon	wũ∼
+p	p	p	i	U+0070	254	Rangoon	pji⁵⁵
+m	m	m	i	U+006d	216	Rangoon	mjo⁵⁵
+tθ	tθ	tθ	i	U+0074 U+03b8	194	Rangoon	tθiʔ⁴
+t	t	t	i	U+0074	186	Rangoon	tɑ⁵³
+l	l	l	i	U+006c	185	Rangoon	lu²²
+tɕ	tɕ	tɕ	i	U+0074 U+0255	165	Rangoon	tɕɑ̃∼²²
+s	s	s	i	U+0073	147	Rangoon	si⁵³
+k	k	k	i	U+006b	146	Rangoon	kɑ̃∼²²
+sh	sh	sʰ	i	U+0073 U+0068	132	Rangoon	shõ∼²²
+n	n	n	i	U+006e	119	Rangoon	nĩ∼⁵⁵
+kh	kh	kʰ	i	U+006b U+0068	114	Rangoon	khu⁵⁵
+th	th	tʰ	i	U+0074 U+0068	114	Rangoon	thɛ⁵⁵
+tɕh	tɕh	tɕʰ	i	U+0074 U+0255 U+0068	108	Rangoon	tɕhĩ∼²²
+ph	ph	pʰ	i	U+0070 U+0068	101	Rangoon	pho⁵⁵
+ɕ	ɕ	ɕ	i	U+0255	55	Rangoon	ɕĩ∼²²
+b	b	b	i	U+0062	50	Rangoon	bu⁵³
+h	h	h	i	U+0068	49	Rangoon	hmjɑ⁵⁵
+m̥	m̥	m̥	i	U+006d U+0325	36	Rangoon	m̥ɑ̃∼²²
+ɬ	ɬ	ɬ	i	U+026c	34	Rangoon	ɬɑ⁵³
+ŋ	ŋ	ŋ	i	U+014b	30	Rangoon	ŋɑ²²
+ȵ	ȵ	ɲ	i	U+0235	28	Rangoon	ȵɑ̃∼⁵³
+n̥	n̥	n̥	i	U+006e U+0325	27	Rangoon	n̥iʔ⁴
+d	d	d	i	U+0064	24	Rangoon	dɑ²²
+g	g	g	i	U+0067	16	Rangoon	gɑ²²
+z	z	z	i	U+007a	15	Rangoon	zɑ⁵⁵
+ȵ̥	ȵ̥	ɲ̊	i	U+0235 U+0325	8	Rangoon	ȵ̥i²²
+ŋ̊	ŋ̊	ŋ̊	i	U+014b U+030a	7	Rangoon	ŋ̊ɛʔ⁴
+dʑ	dʑ	dʑ	i	U+0064 U+0291	7	Rangoon	dʑõ∼²²
+r	r	r	i	U+0072	4	Rangoon	reʔ⁴
+hn̥	hn̥	n̩̊ ∼	n c	U+0068 U+006e U+0325	1	Rangoon	hn̥²²
+ʔh	ʔh	ʔh	i	U+0294 U+0068	1	Rangoon	ʔhnĩ∼²²
+thɛʔ	th ɛ ʔ	tʰ ɛ ʔ	i n c	U+025b U+0294	1	Rangoon	thɛʔ
+tɕhĩ	tɕn ĩ	tɕʰ ĩ ∼	i n c	U+0129 U+223c	1	Rangoon	tɕhĩ∼

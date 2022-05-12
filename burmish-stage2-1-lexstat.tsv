@@ -59,11 +59,11 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 #
 1811	Rangoon	New Year's Day (in Burmese system, around April)	1794	tθĩ⁵⁵tɕɑ̃²²	tθ ĩ ∼ ⁵⁵ + tɕ ɑ̃ ∼ ²²	i n c t + i n c t	114 115
 #
-164	Rangoon	Tibetan	164	ti⁵³bɛʔ⁴lu²²mjo⁵⁵	t i ⁵³ + b ɛ ʔ ⁴ + l u ²² + m j o ⁵⁵	i n t + i n c t + i n t + i m n t	122 123 119 124
+164	Rangoon	Tibetan	164	ti⁵³bɛʔ⁴lu²²mjo⁵⁵	t i ⁵³ + b ɛ ʔ ⁴ + l u ²² + m j o ⁵⁵	i n t + i n c t + i n t + i m n t	123 124 120 125
 5098	Atsi	Tibetan	164	muŋ²¹phaŋ⁵⁵	m u ŋ ²¹ + pʰ a ŋ ⁵⁵	i n c t + i n c t	117 118
-6870	Maru	Tibetan	164	tsaŋ³⁵tshuʔ ³¹	ts a ŋ ³⁵ + tsh u ʔ ³¹	i n c t + i n c t	117 121
-8504	Bola	Tibetan	164	tsaŋ ³⁵	ts a ŋ ³⁵	i n c t	117
-10228	Lashi	Tibetan	164	lə̆³¹sɿ³³	l ə̆ ³¹ + s ɿ ³³	i n t + i n t	119 120
+6870	Maru	Tibetan	164	tsaŋ³⁵tshuʔ ³¹	ts a ŋ ³⁵ + tsh u ʔ ³¹	i n c t + i n c t	119 122
+8504	Bola	Tibetan	164	tsaŋ ³⁵	ts a ŋ ³⁵	i n c t	119
+10228	Lashi	Tibetan	164	lə̆³¹sɿ³³	l ə̆ ³¹ + s ɿ ³³	i n t + i n t	120 121
 #
 744	Rangoon	Tuesday	741	ĩ²²gɑ²²	/ʔ ĩ ∼ ²² + g ɑ ²²	i n c t + i n t	135 136
 5673	Atsi	Tuesday	741	jĭ⁵¹pan²¹thaŋ⁵¹i⁵⁵ŋji⁵⁵	/ʔ j ĭ ⁵¹ + p a n ²¹ + tʰ a ŋ ⁵¹ + /ʔ i ⁵⁵ + ŋ j i ⁵⁵	i m n t + i n c t + i n c t + i n t + i m n t	129 130 131 132 133
@@ -644,7 +644,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 11219	Lashi	bear (fruit)	1330	tʃɿ³³	tʃ ɿ ³³	i n t	974
 12072	Old_Burmese	bear (fruit)	1330	siḥ	s i ⁵⁵	i n t	974
 #
-86	Rangoon	beard	86	pa⁵⁵tθɑ̃i⁵⁵m̥we⁵⁵	p a ⁵⁵ + tθ ɑ̃ i ∼ ⁵⁵ + m̥ w e ⁵⁵	i n t + i n N c t + i m n t	983 987 988
+86	Rangoon	beard	86	pa⁵⁵tθɑ̃i⁵⁵m̥we⁵⁵	p a ⁵⁵ + tθ ɑ̃ i ∼ ⁵⁵ + m̥ w e ⁵⁵	i n t + i n N c t + i m n t	983 987 985
 5022	Atsi	beard	86	po²¹tʃo̱ʔ⁵¹mau⁵⁵	p o ²¹ + ˀtʃ o ʔ ⁵¹ + m a u ⁵⁵	i n t + i n c t + i n N t	983 984 985
 8433	Bola	beard	86	nɔ̱t⁵⁵mø³¹	ˀn ɔ t ⁵⁵ + m ø ³¹	i n c t + i n t	986 985
 #
@@ -738,7 +738,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9917	Bola	believe / trust	1606	lam³¹tʃaŋ³⁵	l a m ³¹ + tʃ a ŋ ³⁵	i n c t + i n c t	1109 1108
 11468	Lashi	believe / trust	1606	tʃəːŋ⁵⁵	tʃ əː ŋ ⁵⁵	i n c t	1108
 #
-625	Rangoon	bell	623	tɕi⁵⁵si²²	tɕ i ⁵⁵ + s i ²²	i n t + i n t	1116 1118
+625	Rangoon	bell	623	tɕi⁵⁵si²²	tɕ i ⁵⁵ + s i ²²	i n t + i n t	1118 1116
 2405	Achang_Longchuan	bell	623	tɕhu⁵⁵	tɕʰ u ⁵⁵	i n t	1116
 3991	Xiandao	bell	623	thi³¹liŋ³¹	th i ³¹ + l i ŋ ³¹	i n t + i n c t	1116 1119
 5553	Atsi	bell	623	tʃu̱⁵¹	ˀtʃ u ⁵¹	i n t	1116
@@ -902,7 +902,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9101	Bola	blade (of grass)	788	khɛʔ⁵⁵	kh ɛ ʔ ⁵⁵	i n c t	1332
 10752	Lashi	blade (of grass)	788	khat⁵⁵	kh a t ⁵⁵	i n c t	1332
 #
-459	Rangoon	blanket (felt)	457	ɑ⁵³mwe⁵⁵tɕɑ̃⁵⁵sɑ̃u²²thɛ²²	/ʔ ɑ ⁵³ + m w e ⁵⁵ + tɕ ɑ̃ ∼ ⁵⁵ + s ɑ̃ u ∼ ²² + tʰ ɛ ²²	i n t + i m n t + i n c t + i n N c t + i n t	1342 1339 1344 1345 1346
+459	Rangoon	blanket (felt)	457	ɑ⁵³mwe⁵⁵tɕɑ̃⁵⁵sɑ̃u²²thɛ²²	/ʔ ɑ ⁵³ + m w e ⁵⁵ + tɕ ɑ̃ ∼ ⁵⁵ + s ɑ̃ u ∼ ²² + tʰ ɛ ²²	i n t + i m n t + i n c t + i n N c t + i n t	1344 1339 1345 1346 1347
 2247	Achang_Longchuan	blanket (felt)	457	mi⁵⁵phaʔ³¹tʂuaŋ³⁵	m i ⁵⁵ + pʰ a ʔ ³¹ + tʂ ua ŋ ³⁵	i n t + i n c t + i n c t	1339 1340 1341
 8778	Bola	blanket (felt)	457	sau³¹kau⁵⁵	s au ³¹ + k au ⁵⁵	i n t + i n t	1342 1343
 10479	Lashi	blanket (felt)	457	sou⁵⁵kou⁵⁵	s ou ⁵⁵ + k ou ⁵⁵	i n t + i n t	1342 1343
@@ -1101,7 +1101,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 10199	Lashi	bone	131	ʃŏ⁵⁵jou³³	ʃ ŏ ⁵⁵ + /ʔ j ou ³³	i n t + i m n t	1579 1581
 11620	Old_Burmese	bone	131	ruiwḥ	r ə w ⁵⁵	i n c t	1583
 #
-607	Rangoon	book	605	sɑ²²oʔ⁴	s ɑ ²² + /ʔ o ʔ ⁴	i n t + i n c t	1593 1597
+607	Rangoon	book	605	sɑ²²oʔ⁴	s ɑ ²² + /ʔ o ʔ ⁴	i n t + i n c t	1597 1598
 2388	Achang_Longchuan	book	605	a³¹pʐo⁵⁵	/ʔ a ³¹ + p ʐ o ⁵⁵	i n t + i m n t	1592 1593
 3980	Xiandao	book	605	a³¹pʐuʔ⁵⁵	/ʔ a ³¹ + pʐ u ʔ ⁵⁵	i n t + i n c t	1592 1593
 5535	Atsi	book	605	lai²¹ka̱⁵⁵puk²¹	l a i ²¹ + ˀk a ⁵⁵ + p u k ²¹	i n N t + i n t + i n c t	1594 1595 1593
@@ -1125,15 +1125,15 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9315	Bola	bored	999	saʔ⁵⁵tshau³⁵	s a ʔ ⁵⁵ + tsh au ³⁵	i n c t + i n t	1626 1625
 10949	Lashi	bored	999	xuːp⁵⁵	x uː p ⁵⁵	i n c t	1627
 #
-1342	Rangoon	borrow (money)	1333	tɕhi⁵⁵	tɕʰ i ⁵⁵	i n t	1634
+1342	Rangoon	borrow (money)	1333	tɕhi⁵⁵	tɕʰ i ⁵⁵	i n t	1633
 3063	Achang_Longchuan	borrow (money)	1333	m̥ɔ³¹	m̥ ɔ ³¹	i n t	1631
-4555	Xiandao	borrow (money)	1333	ŋ̊ɔ³¹	ŋ̊ ɔ ³¹	i n t	1635
+4555	Xiandao	borrow (money)	1333	ŋ̊ɔ³¹	ŋ̊ ɔ ³¹	i n t	1634
 6275	Atsi	borrow (money)	1333	tʃi̱²¹	ˀtʃ i ²¹	i n t	1632
 7920	Maru	borrow (money)	1333	tʃi̱k⁵⁵	ˀtʃ i k ⁵⁵	i n c t	1632
 9640	Bola	borrow (money)	1333	tʃɿ̄³⁵	tʃ ɿ̄ ³⁵	i n t	1632
 11221	Lashi	borrow (money)	1333	tʃe̱ːi⁵⁵	ˀtʃ eːi ⁵⁵	i n t	1632
 12077	Old_Burmese	borrow (money)	1333	khyiyḥ	kh j ə j ⁵⁵	i m n c t	1633
-12078	Old_Burmese	borrow (money)	1333	ṅhaḥ	ŋ̊ a ⁵⁵	i n t	1635
+12078	Old_Burmese	borrow (money)	1333	ṅhaḥ	ŋ̊ a ⁵⁵	i n t	1634
 #
 1343	Rangoon	borrow (tools)	1334	ŋ̊ɑ⁵⁵	ŋ̊ ɑ ⁵⁵	i n t	1642
 3064	Achang_Longchuan	borrow (tools)	1334	m̥ɔ³¹	m̥ ɔ ³¹	i n t	1641
@@ -1210,7 +1210,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 #
 458	Rangoon	bracelet	456	lɛʔ⁴kɑuʔ⁴	l ɛ ʔ ⁴ + k ɑ u ʔ ⁴	i n c t + i n N c t	1729 1732
 2246	Achang_Longchuan	bracelet	456	lɔʔ⁵⁵lum³¹	l ɔ ʔ ⁵⁵ + l u m ³¹	i n c t + i n c t	1729 1730
-3875	Xiandao	bracelet	456	lɔʔ⁵⁵fum³¹	l ɔ ʔ ⁵⁵ + f u m ³¹	i n c t + i n c t	1729 1730
+3875	Xiandao	bracelet	456	lɔʔ⁵⁵fum³¹	l ɔ ʔ ⁵⁵ + f u m ³¹	i n c t + i n c t	1729 1733
 5389	Atsi	bracelet	456	loʔ²¹thiŋ²¹	l o ʔ ²¹ + tʰ i ŋ ²¹	i n c t + i n c t	1729 1731
 7131	Maru	bracelet	456	lɔʔ³¹thaŋ³⁵	l ɔ ʔ ³¹ + th a ŋ ³⁵	i n c t + i n c t	1729 1731
 8777	Bola	bracelet	456	laʔ³¹thaŋ³⁵	l a ʔ ³¹ + th a ŋ ³⁵	i n c t + i n c t	1729 1731
@@ -1358,7 +1358,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 11324	Lashi	broken, be (bowls)	1447	kjuːp³¹	k j uː p ³¹	i m n c t	1926
 11876	Old_Burmese	broken, be (bowls)	1447	kuyḥ	k u j ⁵⁵	i n c t	1927
 #
-499	Rangoon	broom	497	tɑ̃²²mjɛʔ⁴si⁵⁵	t ɑ̃ ∼ ²² + m j ɛ ʔ ⁴ + s i ⁵⁵	i n c t + i m n c t + i n t	1939 1940 1941
+499	Rangoon	broom	497	tɑ̃²²mjɛʔ⁴si⁵⁵	t ɑ̃ ∼ ²² + m j ɛ ʔ ⁴ + s i ⁵⁵	i n c t + i m n c t + i n t	1939 1940 1935
 2287	Achang_Longchuan	broom	497	ʑa⁵⁵pun⁵¹	ʑ a ⁵⁵ + p u n ⁵¹	i n t + i n c t	1935 1936
 3908	Xiandao	broom	497	çɔʔ³¹pun³¹	ç ɔ ʔ ³¹ + p u n ³¹	i n c t + i n c t	1938 1936
 5429	Atsi	broom	497	pui²¹ʃum²¹	p u i ²¹ + ʃ u m ²¹	i m n t + i n c t	1937 1938
@@ -1366,21 +1366,21 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 8818	Bola	broom	497	pɔn³¹ʃam³⁵	p ɔ n ³¹ + ʃ a m ³⁵	i n c t + i n c t	1936 1938
 10513	Lashi	broom	497	pɔn³³ʃɔm⁵⁵	p ɔ n ³³ + ʃ ɔ m ⁵⁵	i n c t + i n c t	1936 1938
 #
-231	Rangoon	brothers	231	ȵi²²iʔ⁴ko²²	ɲ i ²² + /ʔ i ʔ ⁴ + k o ²²	i n t + i n c t + i n t	1952 1958 1953
+231	Rangoon	brothers	231	ȵi²²iʔ⁴ko²²	ɲ i ²² + /ʔ i ʔ ⁴ + k o ²²	i n t + i n c t + i n t	1952 1957 1953
 2047	Achang_Longchuan	brothers	231	a³¹ȵi⁵⁵	/ʔ a ³¹ + ȵ i ⁵⁵	i n t + i n t	1951 1952
-3699	Xiandao	brothers	231	a³¹tʂai⁵⁵a³¹ni⁵⁵	/ʔ a ³¹ + tʂ ai ⁵⁵ + /ʔ a ³¹ + n i ⁵⁵	i n t + i n t + i n t + i n t	1951 1957 1959 1952
+3699	Xiandao	brothers	231	a³¹tʂai⁵⁵a³¹ni⁵⁵	/ʔ a ³¹ + tʂ ai ⁵⁵ + /ʔ a ³¹ + n i ⁵⁵	i n t + i n t + i n t + i n t	1951 1955 1958 1952
 5166	Atsi	brothers	231	a⁵⁵ku²¹a⁵⁵maŋ²¹	/ʔ a ⁵⁵ + k u ²¹ + /ʔ a ⁵⁵ + m a ŋ ²¹	i n t + i n t + i n t + i n c t	1951 1953 1954 1955
 6933	Maru	brothers	231	mɔ³⁵na̱uŋ³⁵	m ɔ ³⁵ + ˀn au ŋ ³⁵	i n t + i n c t	1955 1956
 8569	Bola	brothers	231	mɔ³¹na̱uŋ³⁵	m ɔ ³¹ + ˀn au ŋ ³⁵	i n t + i n c t	1955 1956
-10288	Lashi	brothers	231	nə̱k⁵⁵ta̱ŋ³³	ˀn ə k ⁵⁵ + ˀt a ŋ ³³	i n c t + i n c t	1952 1957
+10288	Lashi	brothers	231	nə̱k⁵⁵ta̱ŋ³³	ˀn ə k ⁵⁵ + ˀt a ŋ ³³	i n c t + i n c t	1952 1955
 #
-528	Rangoon	bucket	526	je²²põ⁵⁵	/ʔ j e ²² + p õ ∼ ⁵⁵	i m n t + i n c t	1976 1972
+528	Rangoon	bucket	526	je²²põ⁵⁵	/ʔ j e ²² + p õ ∼ ⁵⁵	i m n t + i n c t	1977 1974
 2313	Achang_Longchuan	bucket	526	ti⁵⁵thuŋ⁵⁵	t i ⁵⁵ + tʰ u ŋ ⁵⁵	i n t + i n c t	1971 1972
-3927	Xiandao	bucket	526	ti⁵⁵ʂaŋ³¹	t i ⁵⁵ + ʂ a ŋ ³¹	i n t + i n c t	1971 1977
-5458	Atsi	bucket	526	vui²¹pu̱ŋ⁵¹	v u i ²¹ + ˀp u ŋ ⁵¹	i m n t + i n c t	1973 1972
+3927	Xiandao	bucket	526	ti⁵⁵ʂaŋ³¹	t i ⁵⁵ + ʂ a ŋ ³¹	i n t + i n c t	1971 1978
+5458	Atsi	bucket	526	vui²¹pu̱ŋ⁵¹	v u i ²¹ + ˀp u ŋ ⁵¹	i m n t + i n c t	1973 1974
 7194	Maru	bucket	526	thuŋ³¹	th u ŋ ³¹	i n c t	1972
-8846	Bola	bucket	526	ɣəi⁵⁵thuŋ³¹	ɣ əi ⁵⁵ + th u ŋ ³¹	i n t + i n c t	1974 1972
-10537	Lashi	bucket	526	kjei³¹	k j ei ³¹	i m n t	1975
+8846	Bola	bucket	526	ɣəi⁵⁵thuŋ³¹	ɣ əi ⁵⁵ + th u ŋ ³¹	i n t + i n c t	1975 1972
+10537	Lashi	bucket	526	kjei³¹	k j ei ³¹	i m n t	1976
 #
 796	Rangoon	bucket (of water)	793	põ⁵⁵	p õ ∼ ⁵⁵	i n c t	1984
 2551	Achang_Longchuan	bucket (of water)	793	thuŋ⁵⁵	tʰ u ŋ ⁵⁵	i n c t	1984
@@ -1461,14 +1461,14 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9756	Bola	bully / treat s.b. rough	1451	ʒɔi⁵⁵	ʒ ɔi ⁵⁵	i n t	2080
 11328	Lashi	bully / treat s.b. rough	1451	ʒɔ̱ːi⁵³	ˀʒ ɔːi ⁵³	i n t	2080
 #
-793	Rangoon	bunch / bundle (of vegetable)	790	si⁵⁵	s i ⁵⁵	i n t	2087
+793	Rangoon	bunch / bundle (of vegetable)	790	si⁵⁵	s i ⁵⁵	i n t	2088
 2548	Achang_Longchuan	bunch / bundle (of vegetable)	790	pan⁵⁵	p a n ⁵⁵	i n c t	2087
 4116	Xiandao	bunch / bundle (of vegetable)	790	pan⁵⁵	p a n ⁵⁵	i n c t	2087
-5721	Atsi	bunch / bundle (of vegetable)	790	khan²¹	kʰ a n ²¹	i n c t	2087
-7424	Maru	bunch / bundle (of vegetable)	790	khəŋ³⁵	kh ə ŋ ³⁵	i n c t	2087
-9103	Bola	bunch / bundle (of vegetable)	790	khɛ̃³⁵	kh ɛ̃ ∼ ³⁵	i n c t	2087
-10754	Lashi	bunch / bundle (of vegetable)	790	təŋ³¹	t ə ŋ ³¹	i n c t	2087
-11991	Old_Burmese	bunch / bundle (of vegetable)	790	cañḥ	tɕ a ɲ ⁵⁵	i n c t	2087
+5721	Atsi	bunch / bundle (of vegetable)	790	khan²¹	kʰ a n ²¹	i n c t	2088
+7424	Maru	bunch / bundle (of vegetable)	790	khəŋ³⁵	kh ə ŋ ³⁵	i n c t	2088
+9103	Bola	bunch / bundle (of vegetable)	790	khɛ̃³⁵	kh ɛ̃ ∼ ³⁵	i n c t	2088
+10754	Lashi	bunch / bundle (of vegetable)	790	təŋ³¹	t ə ŋ ³¹	i n c t	2088
+11991	Old_Burmese	bunch / bundle (of vegetable)	790	cañḥ	tɕ a ɲ ⁵⁵	i n c t	2088
 #
 1757	Rangoon	bundle / sheaf	1740	si⁵⁵	s i ⁵⁵	i n t	2098
 3456	Achang_Longchuan	bundle / sheaf	1740	pan⁵⁵	p a n ⁵⁵	i n c t	2096
@@ -1554,7 +1554,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 6347	Atsi	buy	1404	vui⁵¹	v u i ⁵¹	i m n t	2207
 7987	Maru	buy	1404	vai³¹	v ai ³¹	i n t	2207
 9710	Bola	buy	1404	vɛ⁵⁵	v ɛ ⁵⁵	i n t	2207
-11284	Lashi	buy	1404	ɣəː³¹	ɣ əː ³¹	i n t	2208
+11284	Lashi	buy	1404	ɣəː³¹	ɣ əː ³¹	i n t	2207
 11627	Old_Burmese	buy	1404	way	w a j ²²	i n c t	2207
 #
 1549	Rangoon	calculate	1536	twɛʔ⁴	t w ɛ ʔ ⁴	i m n c t	2218
@@ -1809,18 +1809,18 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 #
 955	Rangoon	chaotic / disorderly / messy	951	ɕoʔ⁴	ɕ o ʔ ⁴	i n c t	2563
 2712	Achang_Longchuan	chaotic / disorderly / messy	951	kʐut⁵⁵	k ʐ u t ⁵⁵	i m n c t	2561
-4266	Xiandao	chaotic / disorderly / messy	951	l̥ɔŋ⁵⁵	l̥ ɔ ŋ ⁵⁵	i n c t	2564
+4266	Xiandao	chaotic / disorderly / messy	951	l̥ɔŋ⁵⁵	l̥ ɔ ŋ ⁵⁵	i n c t	2562
 5887	Atsi	chaotic / disorderly / messy	951	sut⁵⁵	s u t ⁵⁵	i n c t	2561
 7582	Maru	chaotic / disorderly / messy	951	sa̱t⁵⁵	ˀs a t ⁵⁵	i n c t	2561
 9266	Bola	chaotic / disorderly / messy	951	lu̱⁵⁵	ˀl u ⁵⁵	i n t	2562
 #
-604	Rangoon	character / word	602	sɑ²²	s ɑ ²²	i n t	2569
+604	Rangoon	character / word	602	sɑ²²	s ɑ ²²	i n t	2575
 2385	Achang_Longchuan	character / word	602	a³¹pʐo⁵⁵	/ʔ a ³¹ + p ʐ o ⁵⁵	i n t + i m n t	2568 2569
 3979	Xiandao	character / word	602	a³¹pʐuʔ⁵⁵	/ʔ a ³¹ + pʐ u ʔ ⁵⁵	i n t + i n c t	2568 2569
 5532	Atsi	character / word	602	lai²¹ka̱⁵⁵	l a i ²¹ + ˀk a ⁵⁵	i n N t + i n t	2570 2571
 7260	Maru	character / word	602	muk³¹suk⁵⁵tʃhɛʔ⁵⁵	m u k ³¹ + s u k ⁵⁵ + tʃh ɛ ʔ ⁵⁵	i n c t + i n c t + i n c t	2572 2569 2573
 8921	Bola	character / word	602	mau³¹sau³¹tʃhɛʔ⁵⁵	m au ³¹ + s au ³¹ + tʃh ɛ ʔ ⁵⁵	i n t + i n t + i n c t	2572 2569 2573
-10598	Lashi	character / word	602	mou³¹sou⁵⁵tʃham⁵⁵	m ou ³¹ + s ou ⁵⁵ + tʃh a m ⁵⁵	i n t + i n t + i n c t	2572 2569 2573
+10598	Lashi	character / word	602	mou³¹sou⁵⁵tʃham⁵⁵	m ou ³¹ + s ou ⁵⁵ + tʃh a m ⁵⁵	i n t + i n t + i n c t	2572 2569 2574
 #
 58	Rangoon	charcoal	58	mi⁵⁵tθwe⁵⁵	m i ⁵⁵ + tθ w e ⁵⁵	i n t + i m n t	2587 2589
 1885	Achang_Longchuan	charcoal	58	laŋ³¹ka³¹	l a ŋ ³¹ + k a ³¹	i n c t + i n t	2585 2586
@@ -1831,7 +1831,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 #
 502	Rangoon	charcoal (live)	500	mi⁵⁵khɛ⁵⁵	m i ⁵⁵ + kʰ ɛ ⁵⁵	i n t + i n t	2600 2599
 2290	Achang_Longchuan	charcoal (live)	500	laŋ³¹ka³¹	l a ŋ ³¹ + k a ³¹	i n c t + i n t	2598 2599
-3911	Xiandao	charcoal (live)	500	ɲ̊i³¹ka³¹	ɲ̊ i ³¹ + k a ³¹	i n t + i n t	2602 2599
+3911	Xiandao	charcoal (live)	500	ɲ̊i³¹ka³¹	ɲ̊ i ³¹ + k a ³¹	i n t + i n t	2600 2599
 5432	Atsi	charcoal (live)	500	mji²¹xi²¹	m j i ²¹ + x i ²¹	i m n t + i n t	2600 2601
 7173	Maru	charcoal (live)	500	mjĭ³⁵kjø³⁵	m j ĭ ³⁵ + k j ø ³⁵	i m n t + i m n t	2600 2599
 8821	Bola	charcoal (live)	500	mi³¹kjø³¹	m i ³¹ + k j ø ³¹	i n t + i m n t	2600 2599
@@ -1882,11 +1882,11 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 1916	Achang_Longchuan	chest	92	ɔm³¹ko⁵⁵	/ʔ ɔ m ³¹ + k o ⁵⁵	i n c t + i n t	2673 2674
 3575	Xiandao	chest	92	am³¹pɔŋ⁵⁵	/ʔ a m ³¹ + p ɔ ŋ ⁵⁵	i n c t + i n c t	2680 2673
 5028	Atsi	chest	92	vaŋ⁵¹kaŋ⁵¹	v a ŋ ⁵¹ + k a ŋ ⁵¹	i n c t + i n c t	2675 2673
-6809	Maru	chest	92	ɣɔ̃³¹kɔ̃³¹	ɣ ɔ̃ ∼ ³¹ + k ɔ̃ ∼ ³¹	i n c t + i n c t	2678 2673
+6809	Maru	chest	92	ɣɔ̃³¹kɔ̃³¹	ɣ ɔ̃ ∼ ³¹ + k ɔ̃ ∼ ³¹	i n c t + i n c t	2673 2678
 8439	Bola	chest	92	ɣɔ⁵⁵kɔ̃⁵⁵	ɣ ɔ ⁵⁵ + k ɔ̃ ∼ ⁵⁵	i n t + i n c t	2676 2673
 10166	Lashi	chest	92	jaŋ³¹kaŋ³¹	/ʔ j a ŋ ³¹ + k a ŋ ³¹	i m n c t + i n c t	2677 2673
 #
-494	Rangoon	chest / box / trunk	492	tθiʔ⁴tɑ²²	tθ i ʔ ⁴ + t ɑ ²²	i n c t + i n t	2693 2694
+494	Rangoon	chest / box / trunk	492	tθiʔ⁴tɑ²²	tθ i ʔ ⁴ + t ɑ ²²	i n c t + i n t	2691 2693
 2282	Achang_Longchuan	chest / box / trunk	492	siaŋ⁵⁵tsɿ⁵⁵	s i a ŋ ⁵⁵ + ts ɿ ⁵⁵	i m n c t + i n t	2688 2689
 3905	Xiandao	chest / box / trunk	492	siaŋ⁵⁵tsɿ⁵⁵	s i a ŋ ⁵⁵ + ts ɿ ⁵⁵	i m n c t + i n t	2688 2689
 5425	Atsi	chest / box / trunk	492	să²¹tek²¹	s ă ²¹ + t e k ²¹	i n t + i n c t	2690 2691
@@ -1928,7 +1928,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 11852	Old_Burmese	chicken	278	krak	k r a k ⁴	i m n c t	2743
 11853	Old_Burmese	chicken	278	khyak	kh j a k ⁴	i m n c t	2743
 #
-167	Rangoon	child	167	kɑ⁵³le⁵⁵	k ɑ ⁵³ + /ʔ l e ⁵⁵	i n t + i m n t	2758 2759
+167	Rangoon	child	167	kɑ⁵³le⁵⁵	k ɑ ⁵³ + /ʔ l e ⁵⁵	i n t + i m n t	2755 2758
 1986	Achang_Longchuan	child	167	tsă³¹oi³¹	ts ă ³¹ + /ʔ oi ³¹	i n t + i n t	2755 2756
 3639	Xiandao	child	167	tsɔ³¹ui³¹	ts ɔ ³¹ + /ʔ ui ³¹	i n t + i n t	2755 2756
 5101	Atsi	child	167	tsŏ²¹ʃaŋ⁵¹	ts ŏ ²¹ + ʃ a ŋ ⁵¹	i n t + i n c t	2755 2757
@@ -2122,8 +2122,8 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 3441	Achang_Longchuan	classifier for eggs	1725	lum³¹	l u m ³¹	i n c t	2986
 4899	Xiandao	classifier for eggs	1725	lum³¹	l u m ³¹	i n c t	2986
 6678	Atsi	classifier for eggs	1725	tʃham²¹	tʃʰ a m ²¹	i n c t	2987
-8309	Maru	classifier for eggs	1725	tʃhɛʔ⁵⁵	tʃh ɛ ʔ ⁵⁵	i n c t	2987
-10035	Bola	classifier for eggs	1725	tʃhɛʔ⁵⁵	tʃh ɛ ʔ ⁵⁵	i n c t	2987
+8309	Maru	classifier for eggs	1725	tʃhɛʔ⁵⁵	tʃh ɛ ʔ ⁵⁵	i n c t	2988
+10035	Bola	classifier for eggs	1725	tʃhɛʔ⁵⁵	tʃh ɛ ʔ ⁵⁵	i n c t	2988
 11568	Lashi	classifier for eggs	1725	tʃham⁵⁵	tʃh a m ⁵⁵	i n c t	2987
 12055	Old_Burmese	classifier for eggs	1725	lumḥ	l u m ⁵⁵	i n c t	2986
 #
@@ -2176,7 +2176,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 #
 804	Rangoon	classifier for one of a pair	801	bɛʔ⁴	b ɛ ʔ ⁴	i n c t	3044
 2559	Achang_Longchuan	classifier for one of a pair	801	xuan³¹	x ua n ³¹	i n c t	3042
-4127	Xiandao	classifier for one of a pair	801	kuŋ⁵⁵	k u ŋ ⁵⁵	i n c t	3042
+4127	Xiandao	classifier for one of a pair	801	kuŋ⁵⁵	k u ŋ ⁵⁵	i n c t	3045
 5732	Atsi	classifier for one of a pair	801	te̱²¹	ˀt e ²¹	i n t	3043
 7435	Maru	classifier for one of a pair	801	tɛ̱³⁵	ˀt ɛ ³⁵	i n t	3043
 9114	Bola	classifier for one of a pair	801	tɛ̱³⁵	ˀt ɛ ³⁵	i n t	3043
@@ -2338,7 +2338,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9575	Bola	close (a book)	1267	pɔ̱ŋ³¹kɛ̱ʔ⁵⁵	ˀp ɔ ŋ ³¹ + ˀk ɛ ʔ ⁵⁵	i n c t + i n c t	3228 3229
 11169	Lashi	close (a book)	1267	tsuːm³¹	ts uː m ³¹	i n c t	3227
 #
-1528	Rangoon	close (an umbrella)	1516	peʔ⁴	p e ʔ ⁴	i n c t	3235
+1528	Rangoon	close (an umbrella)	1516	peʔ⁴	p e ʔ ⁴	i n c t	3237
 3239	Achang_Longchuan	close (an umbrella)	1516	xop³⁵	x o p ³⁵	i n c t	3234
 6462	Atsi	close (an umbrella)	1516	phek⁵⁵	pʰ e k ⁵⁵	i n c t	3235
 8098	Maru	close (an umbrella)	1516	mji̱k⁵⁵	ˀm j i k ⁵⁵	i m n c t	3236
@@ -2420,9 +2420,9 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 6778	Maru	coal	57	mɛʔ³¹	m ɛ ʔ ³¹	i n c t	3341
 8405	Bola	coal	57	mɛʔ³¹	m ɛ ʔ ³¹	i n c t	3341
 #
-1278	Rangoon	coax / fool	1270	tɕhɔ⁵³	tɕʰ ɔ ⁵³	i n t	3355
+1278	Rangoon	coax / fool	1270	tɕhɔ⁵³	tɕʰ ɔ ⁵³	i n t	3354
 3011	Achang_Longchuan	coax / fool	1270	xup⁵⁵	x u p ⁵⁵	i n c t	3352
-4517	Xiandao	coax / fool	1270	l̥au³⁵	l̥ au ³⁵	i n t	3356
+4517	Xiandao	coax / fool	1270	l̥au³⁵	l̥ au ³⁵	i n t	3355
 6212	Atsi	coax / fool	1270	xu²¹	x u ²¹	i n t	3353
 7867	Maru	coax / fool	1270	tʃu⁵⁵	tʃ u ⁵⁵	i n t	3354
 9578	Bola	coax / fool	1270	tʃu̱³⁵	ˀtʃ u ³⁵	i n t	3354
@@ -2534,10 +2534,10 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9422	Bola	come out (the sun)	1108	thɔʔ⁵⁵	th ɔ ʔ ⁵⁵	i n c t	3495
 11032	Lashi	come out (the sun)	1108	pei³¹thuʔ⁵⁵lɔ³¹	p ei ³¹ + th u ʔ ⁵⁵ + l ɔ ³¹	i n t + i n c t + i n t	3497 3495 3498
 #
-1094	Rangoon	commend / praise	1090	tɕhi⁵⁵tɕu⁵⁵	tɕʰ i ⁵⁵ + tɕ u ⁵⁵	i n t + i n t	3510 3511
+1094	Rangoon	commend / praise	1090	tɕhi⁵⁵tɕu⁵⁵	tɕʰ i ⁵⁵ + tɕ u ⁵⁵	i n t + i n t	3511 3512
 2843	Achang_Longchuan	commend / praise	1090	u⁵⁵	/ʔ u ⁵⁵	i n t	3507
-6029	Atsi	commend / praise	1090	khje⁵¹on²¹	kʰ j e ⁵¹ + /ʔ o n ²¹	i m n t + i n c t	3508 3507
-9404	Bola	commend / praise	1090	ʃə̆³¹ɔn³¹	ʃ ə̆ ³¹ + /ʔ ɔ n ³¹	i n t + i n c t	3509 3507
+6029	Atsi	commend / praise	1090	khje⁵¹on²¹	kʰ j e ⁵¹ + /ʔ o n ²¹	i m n t + i n c t	3508 3509
+9404	Bola	commend / praise	1090	ʃə̆³¹ɔn³¹	ʃ ə̆ ³¹ + /ʔ ɔ n ³¹	i n t + i n c t	3510 3509
 #
 175	Rangoon	common people	175	ɑ⁵³jɑʔ⁴tθɑ⁵⁵	/ʔ ɑ ⁵³ + /ʔ j ɑ ʔ ⁴ + tθ ɑ ⁵⁵	i n t + i m n c t + i n t	3519 3520 3521
 1994	Achang_Longchuan	common people	175	pəʔ³¹sin³⁵	p ə ʔ ³¹ + s i n ³⁵	i n c t + i n c t	3515 3516
@@ -2576,12 +2576,12 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9776	Bola	complete, be	1471	tʃap³¹	tʃ a p ³¹	i n c t	3557
 11345	Lashi	complete, be	1471	paːn³¹	p aː n ³¹	i n c t	3558
 #
-587	Rangoon	conduit (open, for water)	585	je²²tɑ̃²²jɑuʔ⁴	/ʔ j e ²² + t ɑ̃ ∼ ²² + /ʔ j ɑ u ʔ ⁴	i m n t + i n c t + i m n N c t	3569 3566 3570
-3964	Xiandao	conduit (open, for water)	585	ti⁵⁵cam⁵⁵	t i ⁵⁵ + c a m ⁵⁵	i n t + i n c t	3571 3566
+587	Rangoon	conduit (open, for water)	585	je²²tɑ̃²²jɑuʔ⁴	/ʔ j e ²² + t ɑ̃ ∼ ²² + /ʔ j ɑ u ʔ ⁴	i m n t + i n c t + i m n N c t	3568 3563 3569
+3964	Xiandao	conduit (open, for water)	585	ti⁵⁵cam⁵⁵	t i ⁵⁵ + c a m ⁵⁵	i n t + i n c t	3570 3563
 5516	Atsi	conduit (open, for water)	585	laŋ⁵¹khuŋ²¹	l a ŋ ⁵¹ + kʰ u ŋ ²¹	i n c t + i n c t	3563 3564
-7245	Maru	conduit (open, for water)	585	ɣək³¹xɔŋ³¹	ɣ ə k ³¹ + x ɔ ŋ ³¹	i n c t + i n c t	3565 3568
-8905	Bola	conduit (open, for water)	585	ɣəi⁵⁵tsɛ̃⁵⁵	ɣ əi ⁵⁵ + ts ɛ̃ ∼ ⁵⁵	i n t + i n c t	3565 3566
-10583	Lashi	conduit (open, for water)	585	kjei³¹la̱ŋ⁵⁵	k j ei ³¹ + ˀl a ŋ ⁵⁵	i m n t + i n c t	3567 3563
+7245	Maru	conduit (open, for water)	585	ɣək³¹xɔŋ³¹	ɣ ə k ³¹ + x ɔ ŋ ³¹	i n c t + i n c t	3565 3567
+8905	Bola	conduit (open, for water)	585	ɣəi⁵⁵tsɛ̃⁵⁵	ɣ əi ⁵⁵ + ts ɛ̃ ∼ ⁵⁵	i n t + i n c t	3565 3563
+10583	Lashi	conduit (open, for water)	585	kjei³¹la̱ŋ⁵⁵	k j ei ³¹ + ˀl a ŋ ⁵⁵	i m n t + i n c t	3566 3563
 #
 1234	Rangoon	conform (cause to) / satisfy	1227	kɑiʔ⁴ȵi²²ɑ̃u²²loʔ⁴	k ɑi ʔ ⁴ + ɲ i ²² + /ʔ ɑ̃ u ∼ ²² + l o ʔ ⁴	i n c t + i n t + i n N c t + i n c t	3580 3581 3582 3577
 6166	Atsi	conform (cause to) / satisfy	1227	lo̱ʔ⁵⁵tʃo²¹	ˀl o ʔ ⁵⁵ + tʃ o ²¹	i n c t + i n t	3577 3578
@@ -2732,12 +2732,12 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 7298	Maru	crack / rift / fissure	649	kɔʔ³¹khu³¹	k ɔ ʔ ³¹ + kh u ³¹	i n c t + i n t	3761 3764
 8964	Bola	crack / rift / fissure	649	kaʔ³¹puŋ³⁵	k a ʔ ³¹ + p u ŋ ³⁵	i n c t + i n c t	3761 3763
 #
-895	Rangoon	cramped / narrow	892	tɕĩ⁵⁵tɕɑʔ⁴	tɕ ĩ ∼ ⁵⁵ + tɕ ɑ ʔ ⁴	i n c t + i n c t	3773 3772
+895	Rangoon	cramped / narrow	892	tɕĩ⁵⁵tɕɑʔ⁴	tɕ ĩ ∼ ⁵⁵ + tɕ ɑ ʔ ⁴	i n c t + i n c t	3772 3771
 2650	Achang_Longchuan	cramped / narrow	892	n̥ap⁵⁵	n̥ a p ⁵⁵	i n c t	3771
-5825	Atsi	cramped / narrow	892	tʃa̱p⁵⁵	ˀtʃ a p ⁵⁵	i n c t	3772
-7526	Maru	cramped / narrow	892	tʃɛ̱ʔ⁵⁵	ˀtʃ ɛ ʔ ⁵⁵	i n c t	3772
-9206	Bola	cramped / narrow	892	tʃɛ̱ʔ⁵⁵	ˀtʃ ɛ ʔ ⁵⁵	i n c t	3772
-10853	Lashi	cramped / narrow	892	tʃiːn⁵⁵tʃa̱p⁵⁵	tʃ iː n ⁵⁵ + ˀtʃ a p ⁵⁵	i n c t + i n c t	3773 3772
+5825	Atsi	cramped / narrow	892	tʃa̱p⁵⁵	ˀtʃ a p ⁵⁵	i n c t	3771
+7526	Maru	cramped / narrow	892	tʃɛ̱ʔ⁵⁵	ˀtʃ ɛ ʔ ⁵⁵	i n c t	3771
+9206	Bola	cramped / narrow	892	tʃɛ̱ʔ⁵⁵	ˀtʃ ɛ ʔ ⁵⁵	i n c t	3771
+10853	Lashi	cramped / narrow	892	tʃiːn⁵⁵tʃa̱p⁵⁵	tʃ iː n ⁵⁵ + ˀtʃ a p ⁵⁵	i n c t + i n c t	3772 3771
 #
 319	Rangoon	crane	317	tɕo⁵⁵tɕɑ²²	tɕ o ⁵⁵ + tɕ ɑ ²²	i n t + i n t	3782 3783
 5253	Atsi	crane	317	kon⁵⁵phju⁵¹	k o n ⁵⁵ + pʰ j u ⁵¹	i n c t + i m n t	3780 3781
@@ -2777,7 +2777,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 #
 378	Rangoon	crops	376	kɑuʔ⁴pɛ⁵⁵tθi⁵⁵n̥²²	k ɑ u ʔ ⁴ + p ɛ ⁵⁵ + tθ i ⁵⁵ + n̥ ²²	i n N c t + i n t + i n t + i t	3824 3825 3826 3827
 5310	Atsi	crops	376	xŭ²¹va²¹	x ŭ ²¹ + v a ²¹	i n t + i n t	3819 3820
-7062	Maru	crops	376	xə̆⁵⁵vɔ³¹	x ə̆ ⁵⁵ + v ɔ ³¹	i n t + i n t	3820 3823
+7062	Maru	crops	376	xə̆⁵⁵vɔ³¹	x ə̆ ⁵⁵ + v ɔ ³¹	i n t + i n t	3823 3820
 8701	Bola	crops	376	xə̆³¹vɔ⁵¹	x ə̆ ³¹ + v ɔ ⁵¹	i n t + i n t	3820 3821
 10411	Lashi	crops	376	jo³¹	/ʔ j o ³¹	i m n t	3822
 #
@@ -2791,7 +2791,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 #
 1194	Rangoon	cross (a river)	1188	ku⁵⁵	k u ⁵⁵	i n t	3840
 2935	Achang_Longchuan	cross (a river)	1188	kʐo³¹	k ʐ o ³¹	i m n t	3840
-4450	Xiandao	cross (a river)	1188	vai³¹	v ai ³¹	i n t	3840
+4450	Xiandao	cross (a river)	1188	vai³¹	v ai ³¹	i n t	3841
 6128	Atsi	cross (a river)	1188	ku²¹	k u ²¹	i n t	3840
 7792	Maru	cross (a river)	1188	kau³⁵	k au ³⁵	i n t	3840
 9499	Bola	cross (a river)	1188	ku³¹	k u ³¹	i n t	3840
@@ -2897,10 +2897,10 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 916	Rangoon	curved / crooked / bent	913	kɑuʔ⁴	k ɑ u ʔ ⁴	i n N c t	3980
 2673	Achang_Longchuan	curved / crooked / bent	913	kok⁵⁵	k o k ⁵⁵	i n c t	3980
 4229	Xiandao	curved / crooked / bent	913	koʔ³⁵	k o ʔ ³⁵	i n c t	3980
-5848	Atsi	curved / crooked / bent	913	koi⁵⁵	k o i ⁵⁵	i n N t	3980
-7547	Maru	curved / crooked / bent	913	ŋa̱uk³¹	ˀŋ au k ³¹	i n c t	3982
-9228	Bola	curved / crooked / bent	913	kuŋ³⁵	k u ŋ ³⁵	i n c t	3981
-10874	Lashi	curved / crooked / bent	913	kɔːi⁵⁵	k ɔːi ⁵⁵	i n t	3980
+5848	Atsi	curved / crooked / bent	913	koi⁵⁵	k o i ⁵⁵	i n N t	3981
+7547	Maru	curved / crooked / bent	913	ŋa̱uk³¹	ˀŋ au k ³¹	i n c t	3983
+9228	Bola	curved / crooked / bent	913	kuŋ³⁵	k u ŋ ³⁵	i n c t	3982
+10874	Lashi	curved / crooked / bent	913	kɔːi⁵⁵	k ɔːi ⁵⁵	i n t	3981
 #
 1596	Rangoon	curved, become / bent	1581	kwe⁵⁵	k w e ⁵⁵	i m n t	3988
 3306	Achang_Longchuan	curved, become / bent	1581	kok⁵⁵	k o k ⁵⁵	i n c t	3988
@@ -3039,7 +3039,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 #
 220	Rangoon	daughter	220	tθɑ⁵³mi⁵⁵	tθ ɑ ⁵³ + m i ⁵⁵	i n t + i n t	4178 4179
 2034	Achang_Longchuan	daughter	220	tsaŋ³¹ʑi³¹	ts a ŋ ³¹ + ʑ i ³¹	i n c t + i n t	4177 4178
-3686	Xiandao	daughter	220	ji³¹ɲɔ³¹tsɔ³¹	/ʔ j i ³¹ + ɲ ɔ ³¹ + ts ɔ ³¹	i m n t + i n t + i n t	4179 4181 4178
+3686	Xiandao	daughter	220	ji³¹ɲɔ³¹tsɔ³¹	/ʔ j i ³¹ + ɲ ɔ ³¹ + ts ɔ ³¹	i m n t + i n t + i n t	4181 4182 4178
 5153	Atsi	daughter	220	mji²¹ve²¹tso²¹	m j i ²¹ + v e ²¹ + ts o ²¹	i m n t + i n t + i n t	4179 4180 4178
 6920	Maru	daughter	220	tso	ts o	i n	4178
 8557	Bola	daughter	220	ta³¹	t a ³¹	i n t	4178
@@ -3054,25 +3054,25 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 8556	Bola	daughter-in-law	219	tu⁵⁵ma³¹	t u ⁵⁵ + m a ³¹	i n t + i n t	4196 4195
 10274	Lashi	daughter-in-law	219	tu³¹mo⁵⁵	t u ³¹ + m o ⁵⁵	i n t + i n t	4196 4195
 #
-1567	Rangoon	dawn (the day)	1554	mo⁵⁵lĩ⁵⁵	/ʔ m o ⁵⁵ + l ĩ ∼ ⁵⁵	i m n t + i n c t	4214 4215
+1567	Rangoon	dawn (the day)	1554	mo⁵⁵lĩ⁵⁵	/ʔ m o ⁵⁵ + l ĩ ∼ ⁵⁵	i m n t + i n c t	4209 4215
 3279	Achang_Longchuan	dawn (the day)	1554	mau³¹ʂaŋ³¹	m au ³¹ + ʂ a ŋ ³¹	i n t + i n c t	4209 4210
-4749	Xiandao	dawn (the day)	1554	ɲɔʔ⁵⁵ʂaŋ³¹	ɲ ɔ ʔ ⁵⁵ + ʂ a ŋ ³¹	i n c t + i n c t	4209 4210
+4749	Xiandao	dawn (the day)	1554	ɲɔʔ⁵⁵ʂaŋ³¹	ɲ ɔ ʔ ⁵⁵ + ʂ a ŋ ³¹	i n c t + i n c t	4213 4210
 6502	Atsi	dawn (the day)	1554	mau²¹ po⁵⁵	m a u ²¹ + p o ⁵⁵	i n N t + i n t	4209 4211
-8138	Maru	dawn (the day)	1554	mjɔʔ³¹mjɔ̃³¹	m j ɔ ʔ ³¹ + m j ɔ̃ ∼ ³¹	i m n c t + i m n c t	4213 4209
+8138	Maru	dawn (the day)	1554	mjɔʔ³¹mjɔ̃³¹	m j ɔ ʔ ³¹ + m j ɔ̃ ∼ ³¹	i m n c t + i m n c t	4214 4213
 9864	Bola	dawn (the day)	1554	mau³¹pa³⁵	m au ³¹ + p a ³⁵	i n t + i n t	4209 4211
-11424	Lashi	dawn (the day)	1554	mjɔʔ³¹mjaːŋ³¹	m j ɔ ʔ ³¹ + m j aː ŋ ³¹	i m n c t + i m n c t	4212 4209
+11424	Lashi	dawn (the day)	1554	mjɔʔ³¹mjaːŋ³¹	m j ɔ ʔ ³¹ + m j aː ŋ ³¹	i m n c t + i m n c t	4212 4213
 #
-724	Rangoon	day (first of lunar month)	721	lɑ⁵³shɑ̃⁵⁵tiʔ⁴jɛʔ⁴ne⁵³	l ɑ ⁵³ + sʰ ɑ̃ ∼ ⁵⁵ + t i ʔ ⁴ + /ʔ j ɛ ʔ ⁴ + n e ⁵³	i n t + i n c t + i n c t + i m n c t + i n t	4224 4229 4232 4233 4230
+724	Rangoon	day (first of lunar month)	721	lɑ⁵³shɑ̃⁵⁵tiʔ⁴jɛʔ⁴ne⁵³	l ɑ ⁵³ + sʰ ɑ̃ ∼ ⁵⁵ + t i ʔ ⁴ + /ʔ j ɛ ʔ ⁴ + n e ⁵³	i n t + i n c t + i n c t + i m n c t + i n t	4224 4229 4231 4232 4228
 4058	Xiandao	day (first of lunar month)	721	van⁵⁵lɤŋ³¹	v a n ⁵⁵ + l ɤ ŋ ³¹	i n c t + i n c t	4229 4224
 5653	Atsi	day (first of lunar month)	721	lă²¹sik⁵⁵lă²¹	l ă ²¹ + s i k ⁵⁵ + l ă ²¹	i n t + i n c t + i n t	4224 4225 4226
-7362	Maru	day (first of lunar month)	721	nɔ³¹mɔ⁵⁵	n ɔ ³¹ + m ɔ ⁵⁵	i n t + i n t	4230 4231
+7362	Maru	day (first of lunar month)	721	nɔ³¹mɔ⁵⁵	n ɔ ³¹ + m ɔ ⁵⁵	i n t + i n t	4228 4230
 9034	Bola	day (first of lunar month)	721	tă³¹nɛʔ³¹	t ă ³¹ + n ɛ ʔ ³¹	i n t + i n c t	4227 4228
-10689	Lashi	day (first of lunar month)	721	lə̆⁵⁵tshan⁵⁵ta³¹ŋjei⁵⁵	l ə̆ ⁵⁵ + tsh a n ⁵⁵ + t a ³¹ + ŋ j ei ⁵⁵	i n t + i n c t + i n t + i m n t	4224 4229 4227 4230
+10689	Lashi	day (first of lunar month)	721	lə̆⁵⁵tshan⁵⁵ta³¹ŋjei⁵⁵	l ə̆ ⁵⁵ + tsh a n ⁵⁵ + t a ³¹ + ŋ j ei ⁵⁵	i n t + i n c t + i n t + i m n t	4224 4229 4227 4228
 #
-725	Rangoon	day (second of lunar month)	722	lɑ⁵³shɑ̃⁵⁵n̥iʔ⁴jɛʔ⁴ne⁵³	l ɑ ⁵³ + sʰ ɑ̃ ∼ ⁵⁵ + n̥ i ʔ ⁴ + /ʔ j ɛ ʔ ⁴ + n e ⁵³	i n t + i n c t + i n c t + i m n c t + i n t	4243 4250 4246 4251 4248
-4059	Xiandao	day (second of lunar month)	722	van⁵⁵sɔŋ³⁵	v a n ⁵⁵ + s ɔ ŋ ³⁵	i n c t + i n c t	4252 4250
+725	Rangoon	day (second of lunar month)	722	lɑ⁵³shɑ̃⁵⁵n̥iʔ⁴jɛʔ⁴ne⁵³	l ɑ ⁵³ + sʰ ɑ̃ ∼ ⁵⁵ + n̥ i ʔ ⁴ + /ʔ j ɛ ʔ ⁴ + n e ⁵³	i n t + i n c t + i n c t + i m n c t + i n t	4243 4249 4250 4251 4246
+4059	Xiandao	day (second of lunar month)	722	van⁵⁵sɔŋ³⁵	v a n ⁵⁵ + s ɔ ŋ ³⁵	i n c t + i n c t	4252 4249
 5654	Atsi	day (second of lunar month)	722	lă²¹sik⁵⁵i⁵⁵	l ă ²¹ + s i k ⁵⁵ + /ʔ i ⁵⁵	i n t + i n c t + i n t	4243 4244 4245
-7363	Maru	day (second of lunar month)	722	nɔ³¹tsɔ³⁵	n ɔ ³¹ + ts ɔ ³⁵	i n t + i n t	4248 4249
+7363	Maru	day (second of lunar month)	722	nɔ³¹tsɔ³⁵	n ɔ ³¹ + ts ɔ ³⁵	i n t + i n t	4246 4248
 9035	Bola	day (second of lunar month)	722	i̱³⁵nɛʔ³¹	ˀ/ʔ i ³⁵ + n ɛ ʔ ³¹	i n t + i n c t	4245 4246
 10690	Lashi	day (second of lunar month)	722	lə̆⁵⁵ləŋ⁵⁵	l ə̆ ⁵⁵ + l ə ŋ ⁵⁵	i n t + i n c t	4243 4247
 #
@@ -3085,37 +3085,37 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 10671	Lashi	day (time)	701	ŋjei⁵⁵kuŋ³¹	ŋ j ei ⁵⁵ + k u ŋ ³¹	i m n t + i n c t	4260 4262
 12031	Old_Burmese	day (time)	701	niyʔ	n ə j ⁵³	i n c t	4260
 #
-700	Rangoon	day after tomorrow	697	tθɑ̃²bɛʔ⁴khɑ²²	tθ ɑ̃ ∼ ² + b ɛ ʔ ⁴ + kʰ ɑ ²²	i n c t + i n c t + i n t	4278 4279 4280
+700	Rangoon	day after tomorrow	697	tθɑ̃²bɛʔ⁴khɑ²²	tθ ɑ̃ ∼ ² + b ɛ ʔ ⁴ + kʰ ɑ ²²	i n c t + i n c t + i n t	4276 4278 4279
 2465	Achang_Longchuan	day after tomorrow	697	phă⁵⁵ȵen³¹	pʰ ă ⁵⁵ + ȵ e n ³¹	i n t + i n c t	4274 4275
-4033	Xiandao	day after tomorrow	697	n̥a³¹ʐɔ⁵⁵a³¹pun³¹	n̥ a ³¹ + ʐ ɔ ⁵⁵ + /ʔ a ³¹ + p u n ³¹	i n t + i n t + i n t + i n c t	4275 4276 4281 4282
+4033	Xiandao	day after tomorrow	697	n̥a³¹ʐɔ⁵⁵a³¹pun³¹	n̥ a ³¹ + ʐ ɔ ⁵⁵ + /ʔ a ³¹ + p u n ³¹	i n t + i n t + i n t + i n c t	4275 4276 4280 4281
 5627	Atsi	day after tomorrow	697	saŋ⁵¹phe²¹nap²¹	s a ŋ ⁵¹ + pʰ e ²¹ + n a p ²¹	i n c t + i n t + i n c t	4276 4274 4275
 7337	Maru	day after tomorrow	697	sɔ̃³¹phɔ⁵⁵nɛʔ³¹	s ɔ̃ ∼ ³¹ + ph ɔ ⁵⁵ + n ɛ ʔ ³¹	i n c t + i n t + i n c t	4276 4274 4275
 9009	Bola	day after tomorrow	697	sɔ⁵⁵pha⁵⁵nɛʔ³¹	s ɔ ⁵⁵ + ph a ⁵⁵ + n ɛ ʔ ³¹	i n t + i n t + i n c t	4276 4274 4275
 10666	Lashi	day after tomorrow	697	sa̱ŋ³³phə̆⁵⁵nəp³¹ŋjei⁵⁵	ˀs a ŋ ³³ + ph ə̆ ⁵⁵ + n ə p ³¹ + ŋ j ei ⁵⁵	i n c t + i n t + i n c t + i m n t	4276 4274 4275 4277
 #
-697	Rangoon	day before yesterday	694	tɑ⁵³ne⁵³kɑ	t ɑ ⁵³ + n e ⁵³ + k ɑ	i n t + i n t + i n	4302 4298 4303
+697	Rangoon	day before yesterday	694	tɑ⁵³ne⁵³kɑ	t ɑ ⁵³ + n e ⁵³ + k ɑ	i n t + i n t + i n	4301 4298 4302
 2462	Achang_Longchuan	day before yesterday	694	si³¹ȵen³¹	s i ³¹ + ȵ e n ³¹	i n t + i n c t	4297 4298
-4031	Xiandao	day before yesterday	694	n̥ai³¹nɛn³⁵	n̥ ai ³¹ + n ɛ n ³⁵	i n t + i n c t	4298 4304
-5624	Atsi	day before yesterday	694	xu⁵⁵va⁵¹ŋji⁵⁵	x u ⁵⁵ + v a ⁵¹ + ŋ j i ⁵⁵	i n t + i n t + i m n t	4299 4300 4298
-7334	Maru	day before yesterday	694	xək⁵⁵nɛʔ³¹	x ə k ⁵⁵ + n ɛ ʔ ³¹	i n c t + i n c t	4299 4298
-9006	Bola	day before yesterday	694	xəi⁵⁵nɛʔ³¹	x əi ⁵⁵ + n ɛ ʔ ³¹	i n t + i n c t	4299 4298
-10663	Lashi	day before yesterday	694	ʃə̱k⁵⁵jɔ³¹ŋjei⁵⁵	ˀʃ ə k ⁵⁵ + /ʔ j ɔ ³¹ + ŋ j ei ⁵⁵	i n c t + i m n t + i m n t	4299 4301 4298
+4031	Xiandao	day before yesterday	694	n̥ai³¹nɛn³⁵	n̥ ai ³¹ + n ɛ n ³⁵	i n t + i n c t	4298 4303
+5624	Atsi	day before yesterday	694	xu⁵⁵va⁵¹ŋji⁵⁵	x u ⁵⁵ + v a ⁵¹ + ŋ j i ⁵⁵	i n t + i n t + i m n t	4297 4299 4298
+7334	Maru	day before yesterday	694	xək⁵⁵nɛʔ³¹	x ə k ⁵⁵ + n ɛ ʔ ³¹	i n c t + i n c t	4297 4298
+9006	Bola	day before yesterday	694	xəi⁵⁵nɛʔ³¹	x əi ⁵⁵ + n ɛ ʔ ³¹	i n t + i n c t	4297 4298
+10663	Lashi	day before yesterday	694	ʃə̱k⁵⁵jɔ³¹ŋjei⁵⁵	ˀʃ ə k ⁵⁵ + /ʔ j ɔ ³¹ + ŋ j ei ⁵⁵	i n c t + i m n t + i m n t	4297 4300 4298
 #
-803	Rangoon	day's (journey)	800	jɛʔ⁴	/ʔ j ɛ ʔ ⁴	i m n c t	4317
+803	Rangoon	day's (journey)	800	jɛʔ⁴	/ʔ j ɛ ʔ ⁴	i m n c t	4316
 2558	Achang_Longchuan	day's (journey)	800	ȵen³¹	ȵ e n ³¹	i n c t	4315
 4126	Xiandao	day's (journey)	800	nɛn³⁵	n ɛ n ³⁵	i n c t	4315
-5731	Atsi	day's (journey)	800	ŋji⁵⁵	ŋ j i ⁵⁵	i m n t	4316
+5731	Atsi	day's (journey)	800	ŋji⁵⁵	ŋ j i ⁵⁵	i m n t	4315
 7434	Maru	day's (journey)	800	nɛʔ³¹	n ɛ ʔ ³¹	i n c t	4315
 9113	Bola	day's (journey)	800	nɛʔ³¹	n ɛ ʔ ³¹	i n c t	4315
-10764	Lashi	day's (journey)	800	ŋjei⁵⁵	ŋ j ei ⁵⁵	i m n t	4316
+10764	Lashi	day's (journey)	800	ŋjei⁵⁵	ŋ j ei ⁵⁵	i m n t	4315
 #
-830	Rangoon	day's (work)	827	jɛʔ⁴	/ʔ j ɛ ʔ ⁴	i m n c t	4325
+830	Rangoon	day's (work)	827	jɛʔ⁴	/ʔ j ɛ ʔ ⁴	i m n c t	4324
 2586	Achang_Longchuan	day's (work)	827	ȵen³¹	ȵ e n ³¹	i n c t	4323
 4153	Xiandao	day's (work)	827	nɛn³⁵	n ɛ n ³⁵	i n c t	4323
-5759	Atsi	day's (work)	827	ŋji̱⁵⁵	ˀŋ j i ⁵⁵	i m n t	4324
+5759	Atsi	day's (work)	827	ŋji̱⁵⁵	ˀŋ j i ⁵⁵	i m n t	4323
 7462	Maru	day's (work)	827	nɛʔ³¹	n ɛ ʔ ³¹	i n c t	4323
 9142	Bola	day's (work)	827	nɛʔ³¹	n ɛ ʔ ³¹	i n c t	4323
-10789	Lashi	day's (work)	827	ŋjei⁵⁵	ŋ j ei ⁵⁵	i m n t	4324
+10789	Lashi	day's (work)	827	ŋjei⁵⁵	ŋ j ei ⁵⁵	i m n t	4323
 #
 996	Rangoon	dead	992	a⁵³tθe²²	/ʔ a ⁵³ + tθ e ²²	i n t + i n t	4332 4335
 2752	Achang_Longchuan	dead	992	ʂɿ⁵⁵	ʂ ɿ ⁵⁵	i n t	4331
@@ -3267,9 +3267,9 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 11446	Lashi	dig / scoop out	1579	tuː³³	t uː ³³	i n t	4515
 11633	Old_Burmese	dig / scoop out	1579	tuḥ	t u ⁵⁵	i n t	4515
 #
-1382	Rangoon	dig out with finger	1371	kɔ²²	k ɔ ²²	i n t	4528
+1382	Rangoon	dig out with finger	1371	kɔ²²	k ɔ ²²	i n t	4524
 3098	Achang_Longchuan	dig out with finger	1371	khou³¹	kʰ ou ³¹	i n t	4524
-4583	Xiandao	dig out with finger	1371	kʐak³⁵	kʐ a k ³⁵	i n c t	4529
+4583	Xiandao	dig out with finger	1371	kʐak³⁵	kʐ a k ³⁵	i n c t	4528
 6315	Atsi	dig out with finger	1371	tʃhoʔ⁵⁵	tʃʰ o ʔ ⁵⁵	i n c t	4525
 7956	Maru	dig out with finger	1371	tʃhɔʔ⁵⁵	tʃh ɔ ʔ ⁵⁵	i n c t	4525
 9677	Bola	dig out with finger	1371	pa̱u⁵⁵	ˀp au ⁵⁵	i n t	4526
@@ -3318,7 +3318,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 #
 1592	Rangoon	dislocate (a joint)	1577	lwɛ⁵⁵	l w ɛ ⁵⁵	i m n t	4590
 3303	Achang_Longchuan	dislocate (a joint)	1577	ɕet³⁵	ɕ e t ³⁵	i n c t	4587
-4771	Xiandao	dislocate (a joint)	1577	khɯk⁵⁵	kh ɯ k ⁵⁵	i n c t	4591
+4771	Xiandao	dislocate (a joint)	1577	khɯk⁵⁵	kh ɯ k ⁵⁵	i n c t	4589
 6527	Atsi	dislocate (a joint)	1577	kjut²¹	k j u t ²¹	i m n c t	4588
 8162	Maru	dislocate (a joint)	1577	kjɛt³¹	k j ɛ t ³¹	i m n c t	4588
 9889	Bola	dislocate (a joint)	1577	la̱k⁵⁵	ˀl a k ⁵⁵	i n c t	4589
@@ -3333,7 +3333,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 #
 1492	Rangoon	dissolve (cause to)	1481	phjɔ²²	pʰ j ɔ ²²	i m n t	4603
 3203	Achang_Longchuan	dissolve (cause to)	1481	n̥oŋ⁵⁵	n̥ o ŋ ⁵⁵	i n c t	4602
-4680	Xiandao	dissolve (cause to)	1481	nut⁵⁵	n u t ⁵⁵	i n c t	4602
+4680	Xiandao	dissolve (cause to)	1481	nut⁵⁵	n u t ⁵⁵	i n c t	4605
 6424	Atsi	dissolve (cause to)	1481	ŋjun⁵¹pji⁵¹	ŋ j u n ⁵¹ + p j i ⁵¹	i m n c t + i m n t	4602 4603
 9786	Bola	dissolve (cause to)	1481	la̱ʔ⁵⁵phi⁵⁵	ˀl a ʔ ⁵⁵ + ph i ⁵⁵	i n c t + i n t	4604 4603
 #
@@ -3494,7 +3494,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 8673	Bola	dragonfly	347	təŋ³¹ʃu³¹	t ə ŋ ³¹ + ʃ u ³¹	i n c t + i n t	4853 4854
 10387	Lashi	dragonfly	347	təŋ³¹kam³³	t ə ŋ ³¹ + k a m ³³	i n c t + i n c t	4853 4855
 #
-1450	Rangoon	drape (a garment) over one's shoulders	1439	tɕhõ²²	tɕʰ õ ∼ ²²	i n c t	4870
+1450	Rangoon	drape (a garment) over one's shoulders	1439	tɕhõ²²	tɕʰ õ ∼ ²²	i n c t	4871
 3162	Achang_Longchuan	drape (a garment) over one's shoulders	1439	ɕum³⁵	ɕ u m ³⁵	i n c t	4868
 4643	Xiandao	drape (a garment) over one's shoulders	1439	çam³⁵	ç a m ³⁵	i n c t	4868
 6382	Atsi	drape (a garment) over one's shoulders	1439	ke̱²¹	ˀk e ²¹	i n t	4869
@@ -3603,7 +3603,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 10007	Bola	drunk, be	1698	jɔt³¹	/ʔ j ɔ t ³¹	i m n c t	5001
 11540	Lashi	drunk, be	1698	jiːt³¹	/ʔ j iː t ³¹	i m n c t	5001
 11857	Old_Burmese	drunk, be	1698	muḥ	m u ⁵⁵	i n t	5002
-11858	Old_Burmese	drunk, be	1698	yac	j a c ⁴	i n c t	5003
+11858	Old_Burmese	drunk, be	1698	yac	j a c ⁴	i n c t	5001
 #
 940	Rangoon	dry	936	tɕhɑuʔ⁴	tɕʰ ɑ u ʔ ⁴	i n N c t	5013
 2697	Achang_Longchuan	dry	936	səʔ⁵⁵	s ə ʔ ⁵⁵	i n c t	5011
@@ -3776,11 +3776,11 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 #
 661	Rangoon	east	659	ɑ⁵³ɕe⁵³	/ʔ ɑ ⁵³ + ɕ e ⁵³	i n t + i n t	5272 5274
 2430	Achang_Longchuan	east	659	pui⁵⁵thoʔ⁵⁵pa³¹	p ui ⁵⁵ + tʰ o ʔ ⁵⁵ + p a ³¹	i n t + i n c t + i n t	5268 5269 5270
-4007	Xiandao	east	659	n⁵⁵mɔ⁵¹thoʔ⁵⁵pa³¹	n ⁵⁵ + m ɔ ⁵¹ + th o ʔ ⁵⁵ + p a ³¹	i t + i n t + i n c t + i n t	5275 5276 5269 5268
-5590	Atsi	east	659	pui⁵¹thoʔ⁵⁵ʃut⁵⁵	p u i ⁵¹ + tʰ o ʔ ⁵⁵ + ʃ u t ⁵⁵	i m n t + i n c t + i n c t	5268 5269 5271
-7303	Maru	east	659	pa³¹thuk⁵⁵ʃat⁵⁵	p a ³¹ + th u k ⁵⁵ + ʃ a t ⁵⁵	i n t + i n c t + i n c t	5268 5269 5271
-8972	Bola	east	659	pui⁵⁵thɔʔ⁵⁵	p ui ⁵⁵ + th ɔ ʔ ⁵⁵	i n t + i n c t	5268 5269
-10640	Lashi	east	659	pei³¹thuk⁵⁵	p ei ³¹ + th u k ⁵⁵	i n t + i n c t	5268 5269
+4007	Xiandao	east	659	n⁵⁵mɔ⁵¹thoʔ⁵⁵pa³¹	n ⁵⁵ + m ɔ ⁵¹ + th o ʔ ⁵⁵ + p a ³¹	i t + i n t + i n c t + i n t	5275 5276 5269 5270
+5590	Atsi	east	659	pui⁵¹thoʔ⁵⁵ʃut⁵⁵	p u i ⁵¹ + tʰ o ʔ ⁵⁵ + ʃ u t ⁵⁵	i m n t + i n c t + i n c t	5270 5269 5271
+7303	Maru	east	659	pa³¹thuk⁵⁵ʃat⁵⁵	p a ³¹ + th u k ⁵⁵ + ʃ a t ⁵⁵	i n t + i n c t + i n c t	5270 5269 5271
+8972	Bola	east	659	pui⁵⁵thɔʔ⁵⁵	p ui ⁵⁵ + th ɔ ʔ ⁵⁵	i n t + i n c t	5270 5269
+10640	Lashi	east	659	pei³¹thuk⁵⁵	p ei ³¹ + th u k ⁵⁵	i n t + i n c t	5270 5269
 11874	Old_Burmese	east	659	aʔ◦rhiyʔ	ʔ a ⁵³ + r̥ ə j ⁵³	i n t + i n c t	5272 5273
 #
 976	Rangoon	easy	972	lwɛ²²	l w ɛ ²²	i m n t	5291
@@ -3815,13 +3815,13 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 8784	Bola	eaves	463	kə̆³¹tʃɔ̃³⁵thɔ̃⁵⁵	k ə̆ ³¹ + tʃ ɔ̃ ∼ ³⁵ + th ɔ̃ ∼ ⁵⁵	i n t + i n c t + i n c t	5319 5320 5317
 10485	Lashi	eaves	463	khjaŋ⁵⁵thaŋ³³	kh j a ŋ ⁵⁵ + th a ŋ ³³	i m n c t + i n c t	5321 5317
 #
-675	Rangoon	edge / rim / margin	672	ɑ⁵³nɑ⁵⁵	/ʔ ɑ ⁵³ + /ʔ n ɑ ⁵⁵	i n t + i m n t	5331 5338
+675	Rangoon	edge / rim / margin	672	ɑ⁵³nɑ⁵⁵	/ʔ ɑ ⁵³ + /ʔ n ɑ ⁵⁵	i n t + i m n t	5331 5334
 2444	Achang_Longchuan	edge / rim / margin	672	a³¹ʑam⁵⁵	/ʔ a ³¹ + ʑ a m ⁵⁵	i n t + i n c t	5331 5332
-4019	Xiandao	edge / rim / margin	672	a³¹jam⁵⁵	/ʔ a ³¹ + /ʔ j a m ⁵⁵	i n t + i m n c t	5331 5339
-5604	Atsi	edge / rim / margin	672	a²¹jam⁵¹ma⁵⁵	/ʔ a ²¹ + /ʔ j a m ⁵¹ + m a ⁵⁵	i n t + i m n c t + i n t	5331 5333 5334
-7315	Maru	edge / rim / margin	672	a³¹jɛ̃³	/ʔ a ³¹ + /ʔ j ɛ̃ ∼ ³	i n t + i m n c t	5331 5337
-8984	Bola	edge / rim / margin	672	a³¹jɛ̃⁵⁵	/ʔ a ³¹ + /ʔ j ɛ̃ ∼ ⁵⁵	i n t + i m n c t	5331 5335
-10651	Lashi	edge / rim / margin	672	a³³jam³¹	/ʔ a ³³ + /ʔ j a m ³¹	i n t + i m n c t	5331 5336
+4019	Xiandao	edge / rim / margin	672	a³¹jam⁵⁵	/ʔ a ³¹ + /ʔ j a m ⁵⁵	i n t + i m n c t	5331 5332
+5604	Atsi	edge / rim / margin	672	a²¹jam⁵¹ma⁵⁵	/ʔ a ²¹ + /ʔ j a m ⁵¹ + m a ⁵⁵	i n t + i m n c t + i n t	5331 5332 5333
+7315	Maru	edge / rim / margin	672	a³¹jɛ̃³	/ʔ a ³¹ + /ʔ j ɛ̃ ∼ ³	i n t + i m n c t	5331 5332
+8984	Bola	edge / rim / margin	672	a³¹jɛ̃⁵⁵	/ʔ a ³¹ + /ʔ j ɛ̃ ∼ ⁵⁵	i n t + i m n c t	5331 5332
+10651	Lashi	edge / rim / margin	672	a³³jam³¹	/ʔ a ³³ + /ʔ j a m ³¹	i n t + i m n c t	5331 5332
 #
 423	Rangoon	egg	421	û⁵³	/ʔ û/u ⁵³	i n t	5347
 2215	Achang_Longchuan	egg	421	uʔ³¹	/ʔ u ʔ ³¹	i n c t	5347
@@ -3857,13 +3857,13 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9086	Bola	eighty	773	ʃɛʔ⁵⁵thai⁵⁵	ʃ ɛ ʔ ⁵⁵ + th ai ⁵⁵	i n c t + i n t	5384 5385
 10738	Lashi	eighty	773	sə̱t⁵⁵tshe³³	ˀs ə t ⁵⁵ + tsh e ³³	i n c t + i n t	5384 5385
 #
-104	Rangoon	elbow	104	tɑ̃²²tɑ̃u²²	t ɑ̃ ∼ ²² + t ɑ̃ u ∼ ²²	i n c t + i n N c t	5402 5407
+104	Rangoon	elbow	104	tɑ̃²²tɑ̃u²²	t ɑ̃ ∼ ²² + t ɑ̃ u ∼ ²²	i n c t + i n N c t	5402 5410
 1928	Achang_Longchuan	elbow	104	loʔ⁵⁵suak³⁵	l o ʔ ⁵⁵ + s ua k ³⁵	i n c t + i n c t	5399 5400
 3587	Xiandao	elbow	104	lɔʔ⁵⁵thom³¹	l ɔ ʔ ⁵⁵ + th o m ³¹	i n c t + i n c t	5399 5402
 5040	Atsi	elbow	104	loʔ²¹mun⁵⁵thuŋ⁵⁵tshum⁵¹	l o ʔ ²¹ + m u n ⁵⁵ + tʰ u ŋ ⁵⁵ + tsʰ u m ⁵¹	i n c t + i n c t + i n c t + i n c t	5399 5401 5402 5403
-6821	Maru	elbow	104	lɔʔ³¹mat⁵⁵thauŋ³⁵thɔ̃³¹	l ɔ ʔ ³¹ + m a t ⁵⁵ + th au ŋ ³⁵ + th ɔ̃ ∼ ³¹	i n c t + i n c t + i n c t + i n c t	5399 5401 5406 5402
-8451	Bola	elbow	104	laʔ³¹mɔ̱n³⁵tʃhɔ̃³⁵thauŋ³¹	l a ʔ ³¹ + ˀm ɔ n ³⁵ + tʃh ɔ̃ ∼ ³⁵ + th au ŋ ³¹	i n c t + i n c t + i n c t + i n c t	5399 5401 5404 5402
-10177	Lashi	elbow	104	lɔ ³¹mɔn⁵⁵thuŋ⁵⁵tshɔm³³	l ɔ ³¹ + m ɔ n ⁵⁵ + th u ŋ ⁵⁵ + tsh ɔ m ³³	i n t + i n c t + i n c t + i n c t	5399 5401 5402 5405
+6821	Maru	elbow	104	lɔʔ³¹mat⁵⁵thauŋ³⁵thɔ̃³¹	l ɔ ʔ ³¹ + m a t ⁵⁵ + th au ŋ ³⁵ + th ɔ̃ ∼ ³¹	i n c t + i n c t + i n c t + i n c t	5399 5408 5409 5402
+8451	Bola	elbow	104	laʔ³¹mɔ̱n³⁵tʃhɔ̃³⁵thauŋ³¹	l a ʔ ³¹ + ˀm ɔ n ³⁵ + tʃh ɔ̃ ∼ ³⁵ + th au ŋ ³¹	i n c t + i n c t + i n c t + i n c t	5399 5404 5405 5402
+10177	Lashi	elbow	104	lɔ ³¹mɔn⁵⁵thuŋ⁵⁵tshɔm³³	l ɔ ³¹ + m ɔ n ⁵⁵ + th u ŋ ⁵⁵ + tsh ɔ m ³³	i n t + i n c t + i n c t + i n c t	5399 5406 5402 5407
 11984	Old_Burmese	elbow	104	to₂ṅ	t ʊ ŋ ²²	i n c t	5402
 #
 224	Rangoon	elder brother	224	ɑ⁵³ko²²	/ʔ ɑ ⁵³ + k o ²²	i n t + i n t	5424 5426
@@ -3911,12 +3911,12 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 8044	Maru	embrace a child cheek to cheek	1463	pɔ̱³¹	ˀp ɔ ³¹	i n t	5487
 9768	Bola	embrace a child cheek to cheek	1463	tʃɔ̱t⁵⁵	ˀtʃ ɔ t ⁵⁵	i n c t	5486
 #
-1637	Rangoon	embroider	1622	tho⁵⁵	tʰ o ⁵⁵	i n t	5491
+1637	Rangoon	embroider	1622	tho⁵⁵	tʰ o ⁵⁵	i n t	5492
 3343	Achang_Longchuan	embroider	1622	sa³¹	s a ³¹	i n t	5490
-4807	Xiandao	embroider	1622	phɔ⁵⁵	ph ɔ ⁵⁵	i n t	5492
+4807	Xiandao	embroider	1622	phɔ⁵⁵	ph ɔ ⁵⁵	i n t	5493
 6572	Atsi	embroider	1622	thau²¹	tʰ a u ²¹	i n N t	5491
-8204	Maru	embroider	1622	thuk⁵⁵	th u k ⁵⁵	i n c t	5491
-9932	Bola	embroider	1622	thau³⁵	th au ³⁵	i n t	5491
+8204	Maru	embroider	1622	thuk⁵⁵	th u k ⁵⁵	i n c t	5492
+9932	Bola	embroider	1622	thau³⁵	th au ³⁵	i n t	5492
 #
 196	Rangoon	emperor	196	bu⁵³jĩ²²	b u ⁵³ + /ʔ j ĩ ∼ ²²	i n t + i m n c t	5501 5502
 2011	Achang_Longchuan	emperor	196	xuan³¹ti³⁵	x ua n ³¹ + t i ³⁵	i n c t + i n t	5497 5498
@@ -3939,7 +3939,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 4587	Xiandao	empty the bowels	1377	khɯ³¹ʂɔ⁵⁵	kh ɯ ³¹ + ʂ ɔ ⁵⁵	i n t + i n t	5525 5526
 6321	Atsi	empty the bowels	1377	khji²¹ʃo⁵¹	kʰ j i ²¹ + ʃ o ⁵¹	i m n t + i n t	5525 5526
 7961	Maru	empty the bowels	1377	khjik⁵⁵ʃɔ³¹	kh j i k ⁵⁵ + ʃ ɔ ³¹	i m n c t + i n t	5525 5526
-9683	Bola	empty the bowels	1377	vɛ̃³¹ʃɔn⁵⁵	v ɛ̃ ∼ ³¹ + ʃ ɔ n ⁵⁵	i n c t + i n c t	5524 5526
+9683	Bola	empty the bowels	1377	vɛ̃³¹ʃɔn⁵⁵	v ɛ̃ ∼ ³¹ + ʃ ɔ n ⁵⁵	i n c t + i n c t	5523 5526
 11261	Lashi	empty the bowels	1377	ʃɔ̱ː³³	ˀʃ ɔː ³³	i n t	5526
 #
 731	Rangoon	end of a month	728	la⁵³shoʔ⁴	l a ⁵³ + sʰ o ʔ ⁴	i n t + i n c t	5538 5541
@@ -4047,12 +4047,12 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 8243	Maru	extract (oil)	1662	pja̱k⁵⁵	ˀp j a k ⁵⁵	i m n c t	5672
 9971	Bola	extract (oil)	1662	ʃu³⁵	ʃ u ³⁵	i n t	5671
 #
-78	Rangoon	eye	78	mjɛʔ⁴si⁵³	m j ɛ ʔ ⁴ + s i ⁵³	i m n c t + i n t	5677 5679
+78	Rangoon	eye	78	mjɛʔ⁴si⁵³	m j ɛ ʔ ⁴ + s i ⁵³	i m n c t + i n t	5677 5680
 1903	Achang_Longchuan	eye	78	ȵɔʔ⁵⁵tsiʔ³¹	ȵ ɔ ʔ ⁵⁵ + ts i ʔ ³¹	i n c t + i n c t	5677 5678
 3562	Xiandao	eye	78	ɲɔʔ⁵⁵	ɲ ɔ ʔ ⁵⁵	i n c t	5677
-5014	Atsi	eye	78	mjoʔ²¹tʃi⁵⁵	m j o ʔ ²¹ + tʃ i ⁵⁵	i m n c t + i n t	5677 5678
-6797	Maru	eye	78	mjɔʔ³¹tʃik⁵⁵	m j ɔ ʔ ³¹ + tʃ i k ⁵⁵	i m n c t + i n c t	5677 5678
-8425	Bola	eye	78	mjaʔ³¹tʃɿ³⁵	m j a ʔ ³¹ + tʃ ɿ ³⁵	i m n c t + i n t	5677 5678
+5014	Atsi	eye	78	mjoʔ²¹tʃi⁵⁵	m j o ʔ ²¹ + tʃ i ⁵⁵	i m n c t + i n t	5677 5679
+6797	Maru	eye	78	mjɔʔ³¹tʃik⁵⁵	m j ɔ ʔ ³¹ + tʃ i k ⁵⁵	i m n c t + i n c t	5677 5679
+8425	Bola	eye	78	mjaʔ³¹tʃɿ³⁵	m j a ʔ ³¹ + tʃ ɿ ³⁵	i m n c t + i n t	5677 5679
 10153	Lashi	eye	78	mjɔʔ³¹	m j ɔ ʔ ³¹	i m n c t	5677
 11644	Old_Burmese	eye	78	myak	m j a k ⁴	i m n c t	5677
 #
@@ -4067,8 +4067,8 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 #
 438	Rangoon	fabric (satin)	436	phɛ⁵⁵	pʰ ɛ ⁵⁵	i n t	5709
 2229	Achang_Longchuan	fabric (satin)	436	phe⁵⁵	pʰ e ⁵⁵	i n t	5709
-5370	Atsi	fabric (satin)	436	pai²¹khje⁵¹	p a i ²¹ + kʰ j e ⁵¹	i n N t + i m n t	5710 5711
-8760	Bola	fabric (satin)	436	tʃɔŋ³¹kjaŋ³¹	tʃ ɔ ŋ ³¹ + k j a ŋ ³¹	i n c t + i m n c t	5712 5711
+5370	Atsi	fabric (satin)	436	pai²¹khje⁵¹	p a i ²¹ + kʰ j e ⁵¹	i n N t + i m n t	5709 5710
+8760	Bola	fabric (satin)	436	tʃɔŋ³¹kjaŋ³¹	tʃ ɔ ŋ ³¹ + k j a ŋ ³¹	i n c t + i m n c t	5711 5710
 #
 437	Rangoon	fabric (silk)	435	po⁵⁵	p o ⁵⁵	i n t	5716
 2228	Achang_Longchuan	fabric (silk)	435	phe⁵⁵	pʰ e ⁵⁵	i n t	5716
@@ -4197,13 +4197,13 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 10271	Lashi	father	216	a⁵⁵pho⁵³	/ʔ a ⁵⁵ + ph o ⁵³	i n t + i n t	5870 5872
 11646	Old_Burmese	father	216	aʔ◦phaʔ	ʔ a ⁵³ + ph a ⁵³	i n t + i n t	5870 5872
 #
-238	Rangoon	father-in-law	238	jɑuʔ⁴khɑ⁵³mɑ⁵³	/ʔ j ɑ u ʔ ⁴ + kʰ ɑ ⁵³ + m ɑ ⁵³	i m n N c t + i n t + i n t	5887 5888 5889
+238	Rangoon	father-in-law	238	jɑuʔ⁴khɑ⁵³mɑ⁵³	/ʔ j ɑ u ʔ ⁴ + kʰ ɑ ⁵³ + m ɑ ⁵³	i m n N c t + i n t + i n t	5888 5889 5890
 2051	Achang_Longchuan	father-in-law	238	phɔ³¹tʂau³¹	pʰ ɔ ³¹ + tʂ au ³¹	i n t + i n t	5884 5885
 3706	Xiandao	father-in-law	238	po³¹	p o ³¹	i n t	5884
-5173	Atsi	father-in-law	238	a⁵⁵tsa̱²¹	/ʔ a ⁵⁵ + ˀts a ²¹	i n t + i n t	5886 5885
-6940	Maru	father-in-law	238	jauk³¹phɔ⁵⁵	/ʔ j au k ³¹ + ph ɔ ⁵⁵	i m n c t + i n t	5887 5884
-8574	Bola	father-in-law	238	jauʔ³¹pha³⁵	/ʔ j au ʔ ³¹ + ph a ³⁵	i m n c t + i n t	5887 5884
-10295	Lashi	father-in-law	238	juʔ³¹pho⁵³	/ʔ j u ʔ ³¹ + ph o ⁵³	i m n c t + i n t	5887 5884
+5173	Atsi	father-in-law	238	a⁵⁵tsa̱²¹	/ʔ a ⁵⁵ + ˀts a ²¹	i n t + i n t	5886 5887
+6940	Maru	father-in-law	238	jauk³¹phɔ⁵⁵	/ʔ j au k ³¹ + ph ɔ ⁵⁵	i m n c t + i n t	5888 5884
+8574	Bola	father-in-law	238	jauʔ³¹pha³⁵	/ʔ j au ʔ ³¹ + ph a ³⁵	i m n c t + i n t	5888 5884
+10295	Lashi	father-in-law	238	juʔ³¹pho⁵³	/ʔ j u ʔ ³¹ + ph o ⁵³	i m n c t + i n t	5888 5884
 #
 821	Rangoon	fathom	818	lɑ̃²²	l ɑ̃ ∼ ²²	i n c t	5899
 2578	Achang_Longchuan	fathom	818	lam⁵⁵	l a m ⁵⁵	i n c t	5899
@@ -4230,7 +4230,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 8754	Bola	feed (pig) / pigwash	430	vaʔ³¹ta⁵⁵	v a ʔ ³¹ + t a ⁵⁵	i n c t + i n t	5923 5924
 10457	Lashi	feed (pig) / pigwash	430	vuʔ³¹tso³¹	v u ʔ ³¹ + ts o ³¹	i n c t + i n t	5923 5924
 #
-488	Rangoon	fence (bamboo / twig)	486	tɕhɑ̃²²si⁵⁵jo⁵⁵	tɕʰ ɑ̃ ∼ ²² + s i ⁵⁵ + /ʔ j o ⁵⁵	i n c t + i n t + i m n t	5942 5943 5944
+488	Rangoon	fence (bamboo / twig)	486	tɕhɑ̃²²si⁵⁵jo⁵⁵	tɕʰ ɑ̃ ∼ ²² + s i ⁵⁵ + /ʔ j o ⁵⁵	i n c t + i n t + i m n t	5942 5939 5943
 2276	Achang_Longchuan	fence (bamboo / twig)	486	tʂham³⁵	tʂʰ a m ³⁵	i n c t	5938
 3899	Xiandao	fence (bamboo / twig)	486	tshɛn³¹xʐam³⁵	tsh ɛ n ³¹ + xʐ a m ³⁵	i n c t + i n c t	5939 5938
 5419	Atsi	fence (bamboo / twig)	486	tshe²¹vam⁵¹	tsʰ e ²¹ + v a m ⁵¹	i n t + i n c t	5939 5940
@@ -4258,14 +4258,14 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9060	Bola	festival	747	pɔi⁵⁵	p ɔi ⁵⁵	i n t	5971
 10712	Lashi	festival	747	pɔi⁵⁵	p ɔi ⁵⁵	i n t	5971
 #
-1143	Rangoon	fetch / draw (water)	1139	je²²khɑʔ⁴	/ʔ j e ²² + kʰ ɑ ʔ ⁴	i m n t + i n c t	5987 5986
+1143	Rangoon	fetch / draw (water)	1139	je²²khɑʔ⁴	/ʔ j e ²² + kʰ ɑ ʔ ⁴	i m n t + i n c t	5986 5980
 2886	Achang_Longchuan	fetch / draw (water)	1139	xam⁵⁵	x a m ⁵⁵	i n c t	5980
-4407	Xiandao	fetch / draw (water)	1139	ti⁵⁵kɤ⁵⁵	t i ⁵⁵ + k ɤ ⁵⁵	i n t + i n t	5988 5980
+4407	Xiandao	fetch / draw (water)	1139	ti⁵⁵kɤ⁵⁵	t i ⁵⁵ + k ɤ ⁵⁵	i n t + i n t	5987 5980
 6078	Atsi	fetch / draw (water)	1139	ĭ⁵⁵tʃam²¹kham⁵¹	/ʔ ĭ ⁵⁵ + tʃ a m ²¹ + kʰ a m ⁵¹	i n t + i n c t + i n c t	5981 5982 5980
 7747	Maru	fetch / draw (water)	1139	ɣək³¹khɛ̃³¹	ɣ ə k ³¹ + kh ɛ̃ ∼ ³¹	i n c t + i n c t	5985 5980
 9453	Bola	fetch / draw (water)	1139	ɣəi⁵⁵khɛ̃⁵⁵	ɣ əi ⁵⁵ + kh ɛ̃ ∼ ⁵⁵	i n t + i n c t	5983 5980
-11061	Lashi	fetch / draw (water)	1139	kjik³¹khuː⁵⁵	k j i k ³¹ + kh uː ⁵⁵	i m n c t + i n t	5984 5980
-11950	Old_Burmese	fetch / draw (water)	1139	khap	kh a p ⁴	i n c t	5986
+11061	Lashi	fetch / draw (water)	1139	kjik³¹khuː⁵⁵	k j i k ³¹ + kh uː ⁵⁵	i m n c t + i n t	5980 5984
+11950	Old_Burmese	fetch / draw (water)	1139	khap	kh a p ⁴	i n c t	5980
 #
 1210	Rangoon	fever, have	1204	ko²²pu²²	k o ²² + p u ²²	i n t + i n t	6001 6002
 2949	Achang_Longchuan	fever, have	1204	a³¹tu³¹pan³¹	/ʔ a ³¹ + t u ³¹ + p a n ³¹	i n t + i n t + i n c t	5996 5997 5998
@@ -4389,7 +4389,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 8457	Bola	finger (little)	110	laʔ³¹thɔ̃³⁵ŋju̱ŋ³⁵	l a ʔ ³¹ + th ɔ̃ ∼ ³⁵ + ˀŋ j u ŋ ³⁵	i n c t + i n c t + i m n c t	6162 6163 6165
 10183	Lashi	finger (little)	110	lɔʔ³¹mo⁵⁵tʃham⁵⁵	l ɔ ʔ ³¹ + m o ⁵⁵ + tʃh a m ⁵⁵	i n c t + i n t + i n c t	6162 6166 6163
 #
-109	Rangoon	finger (middle)	109	lɛʔ⁴khɑ⁵³lɛ²²	l ɛ ʔ ⁴ + kʰ ɑ ⁵³ + l ɛ ²²	i n c t + i n t + i n t	6179 6181 6186
+109	Rangoon	finger (middle)	109	lɛʔ⁴khɑ⁵³lɛ²²	l ɛ ʔ ⁴ + kʰ ɑ ⁵³ + l ɛ ²²	i n c t + i n t + i n t	6179 6186 6187
 1933	Achang_Longchuan	finger (middle)	109	lɔʔ³⁵ȵ̥au³¹	l ɔ ʔ ³⁵ + ȵ̥ au ³¹	i n c t + i n t	6179 6180
 5045	Atsi	finger (middle)	109	kuŋ²¹ kuŋ⁵¹ŋju̱i²¹	k u ŋ ²¹ + k u ŋ ⁵¹ + ˀŋ j u i ²¹	i n c t + i n c t + i m n N t	6181 6182 6180
 6825	Maru	finger (middle)	109	kauŋ³⁵kauŋ³⁵ŋju̱k⁵⁵	k au ŋ ³⁵ + k au ŋ ³⁵ + ˀŋ j u k ⁵⁵	i n c t + i n c t + i m n c t	6181 6185 6180
@@ -4528,7 +4528,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 #
 1540	Rangoon	fling / toss	1527	piʔ⁴	p i ʔ ⁴	i n c t	6392
 3251	Achang_Longchuan	fling / toss	1527	xuat³⁵	x ua t ³⁵	i n c t	6387
-4722	Xiandao	fling / toss	1527	fu⁵⁵	f u ⁵⁵	i n t	6390
+4722	Xiandao	fling / toss	1527	fu⁵⁵	f u ⁵⁵	i n t	6393
 6474	Atsi	fling / toss	1527	tu⁵⁵	t u ⁵⁵	i n t	6388
 8110	Maru	fling / toss	1527	tɔ̱̃³⁵	ˀt ɔ̃ ∼ ³⁵	i n c t	6391
 9836	Bola	fling / toss	1527	ŋju̱ŋ³⁵	ˀŋ j u ŋ ³⁵	i m n c t	6389
@@ -4579,19 +4579,19 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 10395	Lashi	flower	355	pan³³	p a n ³³	i n c t	6441
 11651	Old_Burmese	flower	355	panḥ	p a n ⁵⁵	i n c t	6441
 #
-624	Rangoon	flute (bamboo)	622	pu⁵³lwe²²	p u ⁵³ + l w e ²²	i n t + i m n t	6459 6460
+624	Rangoon	flute (bamboo)	622	pu⁵³lwe²²	p u ⁵³ + l w e ²²	i n t + i m n t	6460 6461
 2402	Achang_Longchuan	flute (bamboo)	622	tiʔ³¹tsɿ⁵¹	t i ʔ ³¹ + ts ɿ ⁵¹	i n c t + i n t	6454 6455
-3990	Xiandao	flute (bamboo)	622	phu³¹l̥ɤ³⁵	ph u ³¹ + l̥ ɤ ³⁵	i n t + i n t	6459 6458
+3990	Xiandao	flute (bamboo)	622	phu³¹l̥ɤ³⁵	ph u ³¹ + l̥ ɤ ³⁵	i n t + i n t	6460 6458
 5550	Atsi	flute (bamboo)	622	pji̱⁵⁵thot²¹	ˀp j i ⁵⁵ + tʰ o t ²¹	i m n t + i n c t	6456 6457
 7276	Maru	flute (bamboo)	622	khə̆³¹lɔ̱̃³⁵	kh ə̆ ³¹ + ˀl ɔ̃ ∼ ³⁵	i n t + i n c t	6455 6458
 8939	Bola	flute (bamboo)	622	khə³¹lɔ̱³⁵	kh ə ³¹ + ˀl ɔ ³⁵	i n t + i n t	6455 6458
-10612	Lashi	flute (bamboo)	622	kho⁵⁵lua̱ŋ⁵³	kh o ⁵⁵ + ˀl u a ŋ ⁵³	i n t + i m n c t	6455 6458
+10612	Lashi	flute (bamboo)	622	kho⁵⁵lua̱ŋ⁵³	kh o ⁵⁵ + ˀl u a ŋ ⁵³	i n t + i m n c t	6455 6459
 #
 2403	Achang_Longchuan	flute (bamboo, vertical)	1823	phă³¹lə³⁵tɕam⁵⁵	pʰ ă ³¹ + l ə ³⁵ + tɕ a m ⁵⁵	i n t + i n t + i n c t	6469 6470 6471
-5551	Atsi	flute (bamboo, vertical)	1823	sam⁵⁵pji̱⁵⁵	s a m ⁵⁵ + ˀp j i ⁵⁵	i n c t + i m n t	6471 6472
-7277	Maru	flute (bamboo, vertical)	1823	pjĭ³¹sun⁵⁵	p j ĭ ³¹ + s u n ⁵⁵	i m n t + i n c t	6472 6471
-8940	Bola	flute (bamboo, vertical)	1823	khə³¹lɔ̱³⁵	kh ə ³¹ + ˀl ɔ ³⁵	i n t + i n t	6473 6470
-10613	Lashi	flute (bamboo, vertical)	1823	pji⁵⁵sɔn⁵³	p j i ⁵⁵ + s ɔ n ⁵³	i m n t + i n c t	6472 6471
+5551	Atsi	flute (bamboo, vertical)	1823	sam⁵⁵pji̱⁵⁵	s a m ⁵⁵ + ˀp j i ⁵⁵	i n c t + i m n t	6471 6469
+7277	Maru	flute (bamboo, vertical)	1823	pjĭ³¹sun⁵⁵	p j ĭ ³¹ + s u n ⁵⁵	i m n t + i n c t	6469 6471
+8940	Bola	flute (bamboo, vertical)	1823	khə³¹lɔ̱³⁵	kh ə ³¹ + ˀl ɔ ³⁵	i n t + i n t	6472 6470
+10613	Lashi	flute (bamboo, vertical)	1823	pji⁵⁵sɔn⁵³	p j i ⁵⁵ + s ɔ n ⁵³	i m n t + i n c t	6469 6471
 #
 339	Rangoon	fly	337	jĩ²²	/ʔ j ĩ ∼ ²²	i m n c t	6482
 1223	Rangoon	fly	337	pjɑ̃²²	p j ɑ̃ ∼ ²²	i m n c t	6482
@@ -4627,12 +4627,12 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 11653	Old_Burmese	fog	16	nhaṅḥ	n̥ a ŋ ⁵⁵	i n c t	6522
 11654	Old_Burmese	fog	16	myu	m j u ²²	i m n t	6523
 #
-1183	Rangoon	fold up (a quilt)	1177	khɑuʔ⁴	kʰ ɑ u ʔ ⁴	i n N c t	6535
+1183	Rangoon	fold up (a quilt)	1177	khɑuʔ⁴	kʰ ɑ u ʔ ⁴	i n N c t	6534
 2924	Achang_Longchuan	fold up (a quilt)	1177	tɔp³⁵	t ɔ p ³⁵	i n c t	6531
 4439	Xiandao	fold up (a quilt)	1177	top⁵⁵	t o p ⁵⁵	i n c t	6531
 6117	Atsi	fold up (a quilt)	1177	tsa̱ŋ⁵⁵	ˀts a ŋ ⁵⁵	i n c t	6532
 9488	Bola	fold up (a quilt)	1177	nɛ̱̃ʔ⁵⁵	ˀn ɛ̃ ∼ʔ ⁵⁵	i n c t	6533
-11095	Lashi	fold up (a quilt)	1177	na̱ːp⁵⁵	ˀn aː p ⁵⁵	i n c t	6534
+11095	Lashi	fold up (a quilt)	1177	na̱ːp⁵⁵	ˀn aː p ⁵⁵	i n c t	6533
 #
 1250	Rangoon	follow	1243	lɑiʔ⁴	l ɑi ʔ ⁴	i n c t	6539
 2984	Achang_Longchuan	follow	1243	tʂhaŋ³⁵	tʂʰ a ŋ ³⁵	i n c t	6538
@@ -4713,11 +4713,11 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 8946	Bola	fortune / luck	631	kam³¹	k a m ³¹	i n c t	6645
 10619	Lashi	fortune / luck	631	kam³¹	k a m ³¹	i n c t	6645
 #
-772	Rangoon	forty	769	le⁵⁵shɛ²²	/ʔ l e ⁵⁵ + sʰ ɛ ²²	i m n t + i n t	6651 6650
+772	Rangoon	forty	769	le⁵⁵shɛ²²	/ʔ l e ⁵⁵ + sʰ ɛ ²²	i m n t + i n t	6652 6650
 2528	Achang_Longchuan	forty	769	mi³¹tɕhe⁵⁵	m i ³¹ + tɕʰ e ⁵⁵	i n t + i n t	6649 6650
-4099	Xiandao	forty	769	si³⁵sip⁵⁵	s i ³⁵ + s i p ⁵⁵	i n t + i n c t	6650 6652
+4099	Xiandao	forty	769	si³⁵sip⁵⁵	s i ³⁵ + s i p ⁵⁵	i n t + i n c t	6650 6653
 5700	Atsi	forty	769	mji²¹tshe⁵¹	m j i ²¹ + tsʰ e ⁵¹	i m n t + i n t	6649 6650
-7403	Maru	forty	769	pjik³¹tshɛ³¹	p j i k ³¹ + tsh ɛ ³¹	i m n c t + i n t	6649 6650
+7403	Maru	forty	769	pjik³¹tshɛ³¹	p j i k ³¹ + tsh ɛ ³¹	i m n c t + i n t	6651 6650
 9082	Bola	forty	769	məi³¹thai⁵⁵	m əi ³¹ + th ai ⁵⁵	i n t + i n t	6649 6650
 10734	Lashi	forty	769	mei³³tshe³³	m ei ³³ + tsh e ³³	i n t + i n t	6649 6650
 #
@@ -4736,20 +4736,20 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 8785	Bola	foundation	464	ja̱m⁵⁵ɣa⁵⁵	ˀ/ʔ j a m ⁵⁵ + ɣ a ⁵⁵	i m n c t + i n t	6679 6680
 10486	Lashi	foundation	464	jɔ̱m³³ko³¹	ˀ/ʔ j ɔ m ³³ + k o ³¹	i m n c t + i n t	6679 6680
 #
-754	Rangoon	four	751	le⁵⁵	/ʔ l e ⁵⁵	i m n t	6693
+754	Rangoon	four	751	le⁵⁵	/ʔ l e ⁵⁵	i m n t	6694
 2510	Achang_Longchuan	four	751	mi³¹	m i ³¹	i n t	6692
 4081	Xiandao	four	751	mi⁵⁵	m i ⁵⁵	i n t	6692
 5683	Atsi	four	751	mji²¹	m j i ²¹	i m n t	6692
-7385	Maru	four	751	pjik³¹	p j i k ³¹	i m n c t	6692
+7385	Maru	four	751	pjik³¹	p j i k ³¹	i m n c t	6693
 9064	Bola	four	751	məi³¹	m əi ³¹	i n t	6692
 10716	Lashi	four	751	mei³³	m ei ³³	i n t	6692
-11655	Old_Burmese	four	751	liyḥ	l ə j ⁵⁵	i n c t	6693
+11655	Old_Burmese	four	751	liyḥ	l ə j ⁵⁵	i n c t	6694
 #
-764	Rangoon	fourteen	761	shɛ⁵³le⁵⁵	sʰ ɛ ⁵³ + /ʔ l e ⁵⁵	i n t + i m n t	6701 6707
+764	Rangoon	fourteen	761	shɛ⁵³le⁵⁵	sʰ ɛ ⁵³ + /ʔ l e ⁵⁵	i n t + i m n t	6701 6708
 2520	Achang_Longchuan	fourteen	761	tɕhe⁵⁵mi³¹	tɕʰ e ⁵⁵ + m i ³¹	i n t + i n t	6701 6702
-4091	Xiandao	fourteen	761	sip⁵⁵si³⁵	s i p ⁵⁵ + s i ³⁵	i n c t + i n t	6708 6701
+4091	Xiandao	fourteen	761	sip⁵⁵si³⁵	s i p ⁵⁵ + s i ³⁵	i n c t + i n t	6709 6701
 5693	Atsi	fourteen	761	lă²¹tshe⁵¹ mji²¹	l ă ²¹ + tsʰ e ⁵¹ + m j i ²¹	i n t + i n t + i m n t	6703 6701 6702
-7395	Maru	fourteen	761	tă³¹tshɛ³¹pjik³¹	t ă ³¹ + tsh ɛ ³¹ + p j i k ³¹	i n t + i n t + i m n c t	6701 6706 6702
+7395	Maru	fourteen	761	tă³¹tshɛ³¹pjik³¹	t ă ³¹ + tsh ɛ ³¹ + p j i k ³¹	i n t + i n t + i m n c t	6701 6706 6707
 9074	Bola	fourteen	761	tă³¹thai⁵⁵məi³¹	t ă ³¹ + th ai ⁵⁵ + m əi ³¹	i n t + i n t + i n t	6701 6704 6702
 10726	Lashi	fourteen	761	tshĕ³³khjuk⁵⁵	tsh ĕ ³³ + kh j u k ⁵⁵	i n t + i m n c t	6701 6705
 #
@@ -4766,7 +4766,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 10927	Lashi	fragrant (smell)	973	xuːm³³	x uː m ³³	i n c t	6727
 12063	Old_Burmese	fragrant (smell)	973	mhuyḥ	m̥ u j ⁵⁵	i n c t	6730
 #
-1188	Rangoon	freeze (meat)	1182	khɛ⁵⁵	kʰ ɛ ⁵⁵	i n t	6738
+1188	Rangoon	freeze (meat)	1182	khɛ⁵⁵	kʰ ɛ ⁵⁵	i n t	6739
 2929	Achang_Longchuan	freeze (meat)	1182	kət³⁵	k ə t ³⁵	i n c t	6736
 4444	Xiandao	freeze (meat)	1182	kɤt³⁵	k ɤ t ³⁵	i n c t	6736
 6122	Atsi	freeze (meat)	1182	kjam⁵⁵	k j a m ⁵⁵	i m n c t	6737
@@ -4966,13 +4966,13 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9444	Bola	gesticulate	1130	laʔ³¹tɔ̱³⁵tɔ̱³¹	l a ʔ ³¹ + ˀt ɔ ³⁵ + ˀt ɔ ³¹	i n c t + i n t + i n t	7025 7028 7029
 11052	Lashi	gesticulate	1130	lɔʔ³¹tu⁵³tu⁵³	l ɔ ʔ ³¹ + t u ⁵³ + t u ⁵³	i n c t + i n t + i n t	7025 7029 7030
 #
-1168	Rangoon	get / acquire	1163	jɑ⁵³	/ʔ j ɑ ⁵³	i m n t	7041
+1168	Rangoon	get / acquire	1163	jɑ⁵³	/ʔ j ɑ ⁵³	i m n t	7042
 2909	Achang_Longchuan	get / acquire	1163	ʐua³⁵	ʐ ua ³⁵	i n t	7040
 4427	Xiandao	get / acquire	1163	ʐɔ³⁵	ʐ ɔ ³⁵	i n t	7040
-6102	Atsi	get / acquire	1163	vo⁵⁵ ju⁵¹	v o ⁵⁵ + /ʔ j u ⁵¹	i n t + i m n t	7040 7041
-7768	Maru	get / acquire	1163	xuk⁵⁵ ŋɔ̱³¹	x u k ⁵⁵ + ˀŋ ɔ ³¹	i n c t + i n t	7043 7044
-9474	Bola	get / acquire	1163	mjɔ̃³¹ju⁵⁵	m j ɔ̃ ∼ ³¹ + /ʔ j u ⁵⁵	i m n c t + i m n t	7042 7041
-12093	Old_Burmese	get / acquire	1163	raʔ	r a ⁵³	i n t	7041
+6102	Atsi	get / acquire	1163	vo⁵⁵ ju⁵¹	v o ⁵⁵ + /ʔ j u ⁵¹	i n t + i m n t	7041 7042
+7768	Maru	get / acquire	1163	xuk⁵⁵ ŋɔ̱³¹	x u k ⁵⁵ + ˀŋ ɔ ³¹	i n c t + i n t	7041 7044
+9474	Bola	get / acquire	1163	mjɔ̃³¹ju⁵⁵	m j ɔ̃ ∼ ³¹ + /ʔ j u ⁵⁵	i m n c t + i m n t	7043 7042
+12093	Old_Burmese	get / acquire	1163	raʔ	r a ⁵³	i n t	7042
 #
 1476	Rangoon	get / fetch	1465	ju²²	/ʔ j u ²²	i m n t	7052
 3187	Achang_Longchuan	get / fetch	1465	ȵu⁵⁵	ȵ u ⁵⁵	i n t	7051
@@ -4982,12 +4982,12 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9770	Bola	get / fetch	1465	ju⁵⁵	/ʔ j u ⁵⁵	i m n t	7052
 11339	Lashi	get / fetch	1465	juː³¹	/ʔ j uː ³¹	i m n t	7052
 #
-1301	Rangoon	get / gain	1292	jɑ⁵³ɕi⁵³	/ʔ j ɑ ⁵³ + ɕ i ⁵³	i m n t + i n t	7060 7059
+1301	Rangoon	get / gain	1292	jɑ⁵³ɕi⁵³	/ʔ j ɑ ⁵³ + ɕ i ⁵³	i m n t + i n t	7061 7059
 3027	Achang_Longchuan	get / gain	1292	ʐua³⁵	ʐ ua ³⁵	i n t	7059
 4528	Xiandao	get / gain	1292	ʐɔ³⁵	ʐ ɔ ³⁵	i n t	7059
-6235	Atsi	get / gain	1292	vo⁵⁵ju⁵¹	v o ⁵⁵ + /ʔ j u ⁵¹	i n t + i m n t	7059 7060
-7888	Maru	get / gain	1292	xuk⁵⁵ju³¹	x u k ⁵⁵ + /ʔ j u ³¹	i n c t + i m n t	7062 7060
-9601	Bola	get / gain	1292	ɣə³¹ju⁵⁵	ɣ ə ³¹ + /ʔ j u ⁵⁵	i n t + i m n t	7061 7060
+6235	Atsi	get / gain	1292	vo⁵⁵ju⁵¹	v o ⁵⁵ + /ʔ j u ⁵¹	i n t + i m n t	7060 7061
+7888	Maru	get / gain	1292	xuk⁵⁵ju³¹	x u k ⁵⁵ + /ʔ j u ³¹	i n c t + i m n t	7060 7061
+9601	Bola	get / gain	1292	ɣə³¹ju⁵⁵	ɣ ə ³¹ + /ʔ j u ⁵⁵	i n t + i m n t	7062 7061
 #
 1355	Rangoon	get together, all / assemble	1345	sõ²²	s õ ∼ ²²	i n c t	7070
 3075	Achang_Longchuan	get together, all / assemble	1345	ʐum⁵⁵	ʐ u m ⁵⁵	i n c t	7070
@@ -5021,13 +5021,13 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 10431	Lashi	ginger	398	tshaŋ⁵⁵kɔ̱ʔ⁵⁵	tsh a ŋ ⁵⁵ + ˀk ɔ ʔ ⁵⁵	i n c t + i n c t	7103 7104
 12035	Old_Burmese	ginger	398	khyaṅḥ	kh j a ŋ ⁵⁵	i m n c t	7103
 #
-174	Rangoon	girl	174	lõ²²mɑ⁵³	l õ ∼ ²² + m ɑ ⁵³	i n c t + i n t	7119 7116
+174	Rangoon	girl	174	lõ²²mɑ⁵³	l õ ∼ ²² + m ɑ ⁵³	i n c t + i n t	7119 7114
 1993	Achang_Longchuan	girl	174	tsaŋ³¹ʑi³¹	ts a ŋ ³¹ + ʑ i ³¹	i n c t + i n t	7113 7114
 3646	Xiandao	girl	174	tsɔ³¹ni³¹	ts ɔ ³¹ + n i ³¹	i n t + i n t	7115 7114
-5108	Atsi	girl	174	tsŏ²¹mji²¹	ts ŏ ²¹ + m j i ²¹	i n t + i m n t	7115 7116
-6880	Maru	girl	174	tsɔ̆³⁵mji³⁵	ts ɔ̆ ³⁵ + m j i ³⁵	i n t + i m n t	7115 7116
-8514	Bola	girl	174	mi³¹ɣɛ³¹nɔ³⁵	m i ³¹ + ɣ ɛ ³¹ + n ɔ ³⁵	i n t + i n t + i n t	7116 7117 7114
-10237	Lashi	girl	174	mji³³ji³³tso³³	m j i ³³ + /ʔ j i ³³ + ts o ³³	i m n t + i m n t + i n t	7116 7118 7115
+5108	Atsi	girl	174	tsŏ²¹mji²¹	ts ŏ ²¹ + m j i ²¹	i n t + i m n t	7115 7114
+6880	Maru	girl	174	tsɔ̆³⁵mji³⁵	ts ɔ̆ ³⁵ + m j i ³⁵	i n t + i m n t	7115 7114
+8514	Bola	girl	174	mi³¹ɣɛ³¹nɔ³⁵	m i ³¹ + ɣ ɛ ³¹ + n ɔ ³⁵	i n t + i n t + i n t	7114 7116 7117
+10237	Lashi	girl	174	mji³³ji³³tso³³	m j i ³³ + /ʔ j i ³³ + ts o ³³	i m n t + i m n t + i n t	7114 7118 7115
 #
 1249	Rangoon	give	1242	pe⁵⁵	p e ⁵⁵	i n t	7131
 2983	Achang_Longchuan	give	1242	tsi³¹	ts i ³¹	i n t	7130
@@ -5059,9 +5059,9 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 11254	Lashi	gnaw / nibble	1370	khɛː⁵⁵	kh ɛː ⁵⁵	i n t	7153
 11928	Old_Burmese	gnaw / nibble	1370	khayḥ	kh a j ⁵⁵	i n c t	7153
 #
-1239	Rangoon	go (to market / a fair)	1232	ze⁵⁵tθwɑ⁵⁵	z e ⁵⁵ + tθ w ɑ ⁵⁵	i n t + i m n t	7165 7166
+1239	Rangoon	go (to market / a fair)	1232	ze⁵⁵tθwɑ⁵⁵	z e ⁵⁵ + tθ w ɑ ⁵⁵	i n t + i m n t	7163 7165
 2973	Achang_Longchuan	go (to market / a fair)	1232	sɔʔ³⁵ɔŋ⁵⁵	s ɔ ʔ ³⁵ + /ʔ ɔ ŋ ⁵⁵	i n c t + i n c t	7161 7162
-4483	Xiandao	go (to market / a fair)	1232	tsai³¹thɔʔ³⁵lɔ³⁵	ts ai ³¹ + th ɔ ʔ ³⁵ + l ɔ ³⁵	i n t + i n c t + i n t	7163 7161 7167
+4483	Xiandao	go (to market / a fair)	1232	tsai³¹thɔʔ³⁵lɔ³⁵	ts ai ³¹ + th ɔ ʔ ³⁵ + l ɔ ³⁵	i n t + i n c t + i n t	7163 7161 7166
 6171	Atsi	go (to market / a fair)	1232	kai⁵¹vaŋ⁵¹	k a i ⁵¹ + v a ŋ ⁵¹	i n N t + i n c t	7163 7162
 7830	Maru	go (to market / a fair)	1232	kai³¹jɛ³⁵	k ai ³¹ + /ʔ j ɛ ³⁵	i n t + i m n t	7163 7164
 9538	Bola	go (to market / a fair)	1232	kai³¹ai⁵⁵	k ai ³¹ + /ʔ ai ⁵⁵	i n t + i n t	7163 7162
@@ -5115,7 +5115,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9802	Bola	go upstairs	1496	taʔ³¹	t a ʔ ³¹	i n c t	7223
 11369	Lashi	go upstairs	1496	tɔːʔ⁵⁵	t ɔː ʔ ⁵⁵	i n c t	7223
 #
-263	Rangoon	goat	261	sheʔ⁴	sʰ e ʔ ⁴	i n c t	7236
+263	Rangoon	goat	261	sheʔ⁴	sʰ e ʔ ⁴	i n c t	7235
 2076	Achang_Longchuan	goat	261	paʔ⁵⁵	p a ʔ ⁵⁵	i n c t	7231
 3729	Xiandao	goat	261	paʔ³¹	p a ʔ ³¹	i n c t	7231
 5198	Atsi	goat	261	pai²¹nam⁵⁵	p a i ²¹ + n a m ⁵⁵	i n N t + i n c t	7232 7233
@@ -5204,9 +5204,9 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 8551	Bola	grandfather	214	a⁵⁵phau³⁵	/ʔ a ⁵⁵ + ph au ³⁵	i n t + i n t	7339 7341
 10269	Lashi	grandfather	214	a³¹phou⁵⁵	/ʔ a ³¹ + ph ou ⁵⁵	i n t + i n t	7339 7341
 #
-215	Rangoon	grandmother	215	phwɑ⁵⁵phwɑ⁵⁵	pʰ w ɑ ⁵⁵ + pʰ w ɑ ⁵⁵	i m n t + i m n t	7353 7354
+215	Rangoon	grandmother	215	phwɑ⁵⁵phwɑ⁵⁵	pʰ w ɑ ⁵⁵ + pʰ w ɑ ⁵⁵	i m n t + i m n t	7352 7353
 2029	Achang_Longchuan	grandmother	215	tɕhiŋ⁵⁵	tɕʰ i ŋ ⁵⁵	i n c t	7349
-3681	Xiandao	grandmother	215	ŋoʔ³⁵	ŋ o ʔ ³⁵	i n c t	7355
+3681	Xiandao	grandmother	215	ŋoʔ³⁵	ŋ o ʔ ³⁵	i n c t	7354
 5148	Atsi	grandmother	215	a⁵⁵vo̱i⁵⁵	/ʔ a ⁵⁵ + ˀv o i ⁵⁵	i n t + i n N t	7350 7351
 6915	Maru	grandmother	215	a³¹phjik⁵⁵	/ʔ a ³¹ + ph j i k ⁵⁵	i n t + i m n c t	7350 7352
 8552	Bola	grandmother	215	a⁵⁵phi³¹	/ʔ a ⁵⁵ + ph i ³¹	i n t + i n t	7350 7352
@@ -5392,14 +5392,14 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 8918	Bola	gunpowder	599	mi³¹tʃhɿ³⁵	m i ³¹ + tʃh ɿ ³⁵	i n t + i n t	7580 7581
 10595	Lashi	gunpowder	599	mji³³tʃhei⁵⁵	m j i ³³ + tʃh ei ⁵⁵	i m n t + i n t	7580 7581
 #
-13	Rangoon	hail	13	mo⁵⁵tθi⁵⁵	/ʔ m o ⁵⁵ + tθ i ⁵⁵	i m n t + i n t	7595 7596
+13	Rangoon	hail	13	mo⁵⁵tθi⁵⁵	/ʔ m o ⁵⁵ + tθ i ⁵⁵	i m n t + i n t	7596 7597
 1844	Achang_Longchuan	hail	13	l̥i³¹ʐo⁵⁵	l̥ i ³¹ + ʐ o ⁵⁵	i n t + i n t	7592 7593
-3510	Xiandao	hail	13	niʔ³¹	n i ʔ ³¹	i n c t	7597
+3510	Xiandao	hail	13	niʔ³¹	n i ʔ ³¹	i n c t	7598
 4950	Atsi	hail	13	lik²¹vo⁵¹	l i k ²¹ + v o ⁵¹	i n c t + i n t	7592 7593
 6739	Maru	hail	13	lak³¹ɣu³¹	l a k ³¹ + ɣ u ³¹	i n c t + i n t	7592 7593
 8364	Bola	hail	13	lak³¹ɣɔ⁵⁵	l a k ³¹ + ɣ ɔ ⁵⁵	i n c t + i n t	7592 7593
 10103	Lashi	hail	13	lək³¹	l ə k ³¹	i n c t	7592
-11792	Old_Burmese	hail	13	muiw◦si	m ə w ²² + s i ²²	i n c t + i n t	7594 7593
+11792	Old_Burmese	hail	13	muiw◦si	m ə w ²² + s i ²²	i n c t + i n t	7594 7595
 #
 74	Rangoon	hair	74	shɑ̃²²pĩ²²	sʰ ɑ̃ ∼ ²² + p ĩ ∼ ²²	i n c t + i n c t	7609 7610
 1899	Achang_Longchuan	hair	74	u³¹mui³¹	/ʔ u ³¹ + m ui ³¹	i n t + i n t	7607 7608
@@ -5748,9 +5748,9 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 10113	Lashi	hill / mountain	23	pɔm³¹	p ɔ m ³¹	i n c t	8081
 11697	Old_Burmese	hill / mountain	23	to₂ṅ	t ʊ ŋ ²²	i n c t	8082
 #
-24	Rangoon	hillside / mountain slope	24	tɑ̃u²²sɑ̃u⁵⁵	t ɑ̃ u ∼ ²² + s ɑ̃ u ∼ ⁵⁵	i n N c t + i n N c t	8094 8095
+24	Rangoon	hillside / mountain slope	24	tɑ̃u²²sɑ̃u⁵⁵	t ɑ̃ u ∼ ²² + s ɑ̃ u ∼ ⁵⁵	i n N c t + i n N c t	8094 8091
 1855	Achang_Longchuan	hillside / mountain slope	24	pum⁵⁵ʐəŋ³¹	p u m ⁵⁵ + ʐ ə ŋ ³¹	i n c t + i n c t	8090 8091
-3520	Xiandao	hillside / mountain slope	24	a³¹phʐa³⁵	/ʔ a ³¹ + phʐ a ³⁵	i n t + i n t	8096 8097
+3520	Xiandao	hillside / mountain slope	24	a³¹phʐa³⁵	/ʔ a ³¹ + phʐ a ³⁵	i n t + i n t	8095 8096
 4961	Atsi	hillside / mountain slope	24	khe⁵⁵	kʰ e ⁵⁵	i n t	8092
 6749	Maru	hillside / mountain slope	24	pam³¹kha⁵⁵	p a m ³¹ + kh a ⁵⁵	i n c t + i n t	8090 8092
 8375	Bola	hillside / mountain slope	24	pjaʔ³¹	p j a ʔ ³¹	i m n c t	8093
@@ -5779,11 +5779,11 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 #
 1137	Rangoon	hit, have (the target)	1133	m̥ɑ̃²²	m̥ ɑ̃ ∼ ²²	i n c t	8125
 2880	Achang_Longchuan	hit, have (the target)	1133	pək⁵⁵men⁵⁵	p ə k ⁵⁵ + m e n ⁵⁵	i n c t + i n c t	8124 8125
-4403	Xiandao	hit, have (the target)	1133	pɤk⁵⁵ʂu³¹tsɔŋ³⁵	p ɤ k ⁵⁵ + ʂ u ³¹ + ts ɔ ŋ ³⁵	i n c t + i n t + i n c t	8124 8127 8125
-6072	Atsi	hit, have (the target)	1133	tsaŋ⁵⁵pik²¹	ts a ŋ ⁵⁵ + p i k ²¹	i n c t + i n c t	8125 8124
-7741	Maru	hit, have (the target)	1133	tsɔ̃⁵⁵pak³¹	ts ɔ̃ ∼ ⁵⁵ + p a k ³¹	i n c t + i n c t	8125 8124
-9447	Bola	hit, have (the target)	1133	tsɔ̃³⁵vɛ̃⁵⁵	ts ɔ̃ ∼ ³⁵ + v ɛ̃ ∼ ⁵⁵	i n c t + i n c t	8125 8126
-11055	Lashi	hit, have (the target)	1133	tsaŋ³³pəːk³¹	ts a ŋ ³³ + p əː k ³¹	i n c t + i n c t	8125 8124
+4403	Xiandao	hit, have (the target)	1133	pɤk⁵⁵ʂu³¹tsɔŋ³⁵	p ɤ k ⁵⁵ + ʂ u ³¹ + ts ɔ ŋ ³⁵	i n c t + i n t + i n c t	8124 8128 8126
+6072	Atsi	hit, have (the target)	1133	tsaŋ⁵⁵pik²¹	ts a ŋ ⁵⁵ + p i k ²¹	i n c t + i n c t	8126 8124
+7741	Maru	hit, have (the target)	1133	tsɔ̃⁵⁵pak³¹	ts ɔ̃ ∼ ⁵⁵ + p a k ³¹	i n c t + i n c t	8126 8124
+9447	Bola	hit, have (the target)	1133	tsɔ̃³⁵vɛ̃⁵⁵	ts ɔ̃ ∼ ³⁵ + v ɛ̃ ∼ ⁵⁵	i n c t + i n c t	8126 8127
+11055	Lashi	hit, have (the target)	1133	tsaŋ³³pəːk³¹	ts a ŋ ³³ + p əː k ³¹	i n c t + i n c t	8126 8124
 #
 581	Rangoon	hoe	579	pɑuʔ⁴pjɑ⁵⁵	p ɑ u ʔ ⁴ + p j ɑ ⁵⁵	i n N c t + i m n t	8142 8143
 2364	Achang_Longchuan	hoe	579	ȵ̥ɔŋ³¹	ȵ̥ ɔ ŋ ³¹	i n c t	8139
@@ -5879,11 +5879,11 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 11674	Old_Burmese	horn	250	khyuiw	kh j ə w ²²	i m n c t	8255
 #
 2406	Achang_Longchuan	horn (woodwind)	624	pe³¹xe³¹	p e ³¹ + x e ³¹	i n t + i n t	8265 8266
-3992	Xiandao	horn (woodwind)	624	iʔ⁵⁵ɛ³¹	/ʔ i ʔ ⁵⁵ + /ʔ ɛ ³¹	i n c t + i n t	8270 8271
-5554	Atsi	horn (woodwind)	624	pji̱²¹khje⁵⁵	ˀp j i ²¹ + kʰ j e ⁵⁵	i m n t + i m n t	8265 8266
-7279	Maru	horn (woodwind)	624	pjĭ⁵⁵khjɛ³¹	p j ĭ ⁵⁵ + kh j ɛ ³¹	i m n t + i m n t	8265 8266
-8942	Bola	horn (woodwind)	624	nə̆³¹tɔ̱t⁵⁵	n ə̆ ³¹ + ˀt ɔ t ⁵⁵	i n t + i n c t	8267 8268
-12045	Old_Burmese	horn (woodwind)	624	khaʔ◦ra	kh a ⁵³ + r a ²²	i n t + i n t	8266 8269
+3992	Xiandao	horn (woodwind)	624	iʔ⁵⁵ɛ³¹	/ʔ i ʔ ⁵⁵ + /ʔ ɛ ³¹	i n c t + i n t	8271 8266
+5554	Atsi	horn (woodwind)	624	pji̱²¹khje⁵⁵	ˀp j i ²¹ + kʰ j e ⁵⁵	i m n t + i m n t	8265 8267
+7279	Maru	horn (woodwind)	624	pjĭ⁵⁵khjɛ³¹	p j ĭ ⁵⁵ + kh j ɛ ³¹	i m n t + i m n t	8265 8267
+8942	Bola	horn (woodwind)	624	nə̆³¹tɔ̱t⁵⁵	n ə̆ ³¹ + ˀt ɔ t ⁵⁵	i n t + i n c t	8268 8269
+12045	Old_Burmese	horn (woodwind)	624	khaʔ◦ra	kh a ⁵³ + r a ²²	i n t + i n t	8266 8270
 #
 255	Rangoon	horse	253	mjĩ⁵⁵	m j ĩ ∼ ⁵⁵	i m n c t	8278
 2068	Achang_Longchuan	horse	253	m̥ʐaŋ³¹	m̥ ʐ a ŋ ³¹	i m n c t	8278
@@ -6135,7 +6135,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 8238	Maru	increase / gain	1657	la̱uk⁵⁵	ˀl au k ⁵⁵	i n c t	8639
 9966	Bola	increase / gain	1657	la̱ʔ⁵⁵mja³¹	ˀl a ʔ ⁵⁵ + m j a ³¹	i n c t + i m n t	8639 8640
 #
-1017	Rangoon	industrious / hardworking	1013	lõ⁵³lɑ⁵³ɕi⁵³	l õ ∼ ⁵³ + l ɑ ⁵³ + ɕ i ⁵³	i n c t + i n t + i n t	8647 8648 8649
+1017	Rangoon	industrious / hardworking	1013	lõ⁵³lɑ⁵³ɕi⁵³	l õ ∼ ⁵³ + l ɑ ⁵³ + ɕ i ⁵³	i n c t + i n t + i n t	8647 8648 8645
 2772	Achang_Longchuan	industrious / hardworking	1013	ʑe⁵⁵	ʑ e ⁵⁵	i n t	8645
 4318	Xiandao	industrious / hardworking	1013	kat⁵⁵	k a t ⁵⁵	i n c t	8646
 5951	Atsi	industrious / hardworking	1013	kje̱t²¹	ˀk j e t ²¹	i m n c t	8646
@@ -6267,11 +6267,11 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 8476	Bola	joint	134	u³¹tshaʔ⁵⁵	/ʔ u ³¹ + tsh a ʔ ⁵⁵	i n t + i n c t	8811 8809
 10201	Lashi	joint	134	jou³³mjɔʔ³¹	/ʔ j ou ³³ + m j ɔ ʔ ³¹	i m n t + i m n c t	8811 8809
 #
-615	Rangoon	joke / jest	613	ji²²sɑ⁵³jɑ²²	/ʔ j i ²² + s ɑ ⁵³ + /ʔ j ɑ ²²	i m n t + i n t + i m n t	8827 8828 8829
+615	Rangoon	joke / jest	613	ji²²sɑ⁵³jɑ²²	/ʔ j i ²² + s ɑ ⁵³ + /ʔ j ɑ ²²	i m n t + i n t + i m n t	8826 8827 8828
 2394	Achang_Longchuan	joke / jest	613	ŋ̊eŋ³⁵ʐə⁵⁵	ŋ̊ e ŋ ³⁵ + ʐ ə ⁵⁵	i n c t + i n t	8821 8822
-5542	Atsi	joke / jest	613	vui⁵¹vo⁵¹	v u i ⁵¹ + v o ⁵¹	i m n t + i n t	8823 8824
-7269	Maru	joke / jest	613	ɣɯ³¹nuk³¹tɔ̃³⁵	ɣ ɯ ³¹ + n u k ³¹ + t ɔ̃ ∼ ³⁵	i n t + i n c t + i n c t	8822 8825 8826
-8931	Bola	joke / jest	613	ɣəi⁵⁵nau⁵⁵tɔ̃³¹	ɣ əi ⁵⁵ + n au ⁵⁵ + t ɔ̃ ∼ ³¹	i n t + i n t + i n c t	8822 8825 8826
+5542	Atsi	joke / jest	613	vui⁵¹vo⁵¹	v u i ⁵¹ + v o ⁵¹	i m n t + i n t	8822 8823
+7269	Maru	joke / jest	613	ɣɯ³¹nuk³¹tɔ̃³⁵	ɣ ɯ ³¹ + n u k ³¹ + t ɔ̃ ∼ ³⁵	i n t + i n c t + i n c t	8822 8824 8825
+8931	Bola	joke / jest	613	ɣəi⁵⁵nau⁵⁵tɔ̃³¹	ɣ əi ⁵⁵ + n au ⁵⁵ + t ɔ̃ ∼ ³¹	i n t + i n t + i n c t	8822 8824 8825
 #
 508	Rangoon	joss stick / incense	506	ɑ⁵³m̥we⁵⁵tɑ̃i²²	/ʔ ɑ ⁵³ + m̥ w e ⁵⁵ + t ɑ̃ i ∼ ²²	i n t + i m n t + i n N c t	8839 8837 8840
 2294	Achang_Longchuan	joss stick / incense	506	ja⁵⁵ phau³⁵	/ʔ j a ⁵⁵ + pʰ au ³⁵	i m n t + i n t	8835 8836
@@ -6287,11 +6287,11 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9871	Bola	jump	1560	pjɛ̃⁵⁵	p j ɛ̃ ∼ ⁵⁵	i m n c t	8845
 11430	Lashi	jump	1560	pjaːp³¹	p j aː p ³¹	i m n c t	8845
 #
-526	Rangoon	kettle / pot	524	khɑ⁵³jɑ⁵⁵	kʰ ɑ ⁵³ + /ʔ j ɑ ⁵⁵	i n t + i m n t	8857 8852
+526	Rangoon	kettle / pot	524	khɑ⁵³jɑ⁵⁵	kʰ ɑ ⁵³ + /ʔ j ɑ ⁵⁵	i n t + i m n t	8858 8852
 2311	Achang_Longchuan	kettle / pot	524	jaŋ³¹tɕim⁵⁵	/ʔ j a ŋ ³¹ + tɕ i m ⁵⁵	i m n c t + i n c t	8852 8853
 5456	Atsi	kettle / pot	524	pu̱ŋ⁵¹	ˀp u ŋ ⁵¹	i n c t	8854
-7192	Maru	kettle / pot	524	xu³¹	x u ³¹	i n t	8856
-8844	Bola	kettle / pot	524	thuŋ³¹kɔn³⁵	th u ŋ ³¹ + k ɔ n ³⁵	i n c t + i n c t	8854 8855
+7192	Maru	kettle / pot	524	xu³¹	x u ³¹	i n t	8857
+8844	Bola	kettle / pot	524	thuŋ³¹kɔn³⁵	th u ŋ ³¹ + k ɔ n ³⁵	i n c t + i n c t	8855 8856
 #
 550	Rangoon	key	548	tθɔ⁵³	tθ ɔ ⁵³	i n t	8866
 2337	Achang_Longchuan	key	548	so⁵⁵kak⁵⁵	s o ⁵⁵ + k a k ⁵⁵	i n t + i n c t	8861 8862
@@ -6430,7 +6430,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 2334	Achang_Longchuan	ladder	545	tɕam³¹thək³⁵	tɕ a m ³¹ + tʰ ə k ³⁵	i n c t + i n c t	9053 9054
 3944	Xiandao	ladder	545	cam³¹thɤk³⁵	c a m ³¹ + th ɤ k ³⁵	i n c t + i n c t	9053 9054
 5477	Atsi	ladder	545	tʃat²¹	tʃ a t ²¹	i n c t	9055
-7214	Maru	ladder	545	tsam³¹thɔ̃³¹	ts a m ³¹ + th ɔ̃ ∼ ³¹	i n c t + i n c t	9053 9057
+7214	Maru	ladder	545	tsam³¹thɔ̃³¹	ts a m ³¹ + th ɔ̃ ∼ ³¹	i n c t + i n c t	9057 9053
 8866	Bola	ladder	545	tsam⁵⁵thɔ̃⁵⁵	ts a m ⁵⁵ + th ɔ̃ ∼ ⁵⁵	i n c t + i n c t	9056 9053
 #
 518	Rangoon	ladle	516	jɑuʔ⁴mɑ⁵³	/ʔ j ɑ u ʔ ⁴ + m ɑ ⁵³	i m n N c t + i n t	9070 9066
@@ -6875,11 +6875,11 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 7439	Maru	load (of firewood) on the back	806	vuŋ³¹	v u ŋ ³¹	i n c t	9650
 9119	Bola	load (of firewood) on the back	806	tʃam³⁵	tʃ a m ³⁵	i n c t	9651
 #
-1758	Rangoon	load of cupped-hands	1741	lɛʔ⁴khoʔ⁴	l ɛ ʔ ⁴ + kʰ o ʔ ⁴	i n c t + i n c t	9661 9662
+1758	Rangoon	load of cupped-hands	1741	lɛʔ⁴khoʔ⁴	l ɛ ʔ ⁴ + kʰ o ʔ ⁴	i n c t + i n c t	9661 9663
 3457	Achang_Longchuan	load of cupped-hands	1741	op⁵⁵	/ʔ o p ⁵⁵	i n c t	9657
 4913	Xiandao	load of cupped-hands	1741	op⁵⁵	/ʔ o p ⁵⁵	i n c t	9657
 6694	Atsi	load of cupped-hands	1741	kjon⁵⁵	k j o n ⁵⁵	i m n c t	9658
-8325	Maru	load of cupped-hands	1741	ʃik⁵⁵lɔʔ³¹tsa̱p⁵⁵	ʃ i k ⁵⁵ + l ɔ ʔ ³¹ + ˀts a p ⁵⁵	i n c t + i n c t + i n c t	9660 9661 9657
+8325	Maru	load of cupped-hands	1741	ʃik⁵⁵lɔʔ³¹tsa̱p⁵⁵	ʃ i k ⁵⁵ + l ɔ ʔ ³¹ + ˀts a p ⁵⁵	i n c t + i n c t + i n c t	9660 9661 9662
 10051	Bola	load of cupped-hands	1741	ŋø̱ʔ⁵⁵	ˀŋ ø ʔ ⁵⁵	i n c t	9659
 #
 811	Rangoon	load on an animal's back	808	tĩ²²shɑ̃u²²	t ĩ ∼ ²² + sʰ ɑ̃ u ∼ ²²	i n c t + i n N c t	9670 9671
@@ -6921,7 +6921,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 10847	Lashi	long	885	ʃə̱ːŋ³³	ˀʃ əː ŋ ³³	i n c t	9710
 11690	Old_Burmese	long	885	rhañ	r̥ a ɲ ²²	i n c t	9710
 #
-1488	Rangoon	look at and distinguish (characters)	1477	sɑ²²tθĩ²²	s ɑ ²² + tθ ĩ ∼ ²²	i n t + i n c t	9724 9725
+1488	Rangoon	look at and distinguish (characters)	1477	sɑ²²tθĩ²²	s ɑ ²² + tθ ĩ ∼ ²²	i n t + i n c t	9719 9724
 3199	Achang_Longchuan	look at and distinguish (characters)	1477	sa³⁵	s a ³⁵	i n t	9719
 6420	Atsi	look at and distinguish (characters)	1477	moʔ⁵⁵	m o ʔ ⁵⁵	i n c t	9720
 8058	Maru	look at and distinguish (characters)	1477	vu⁵⁵	v u ⁵⁵	i n t	9723
@@ -6937,10 +6937,10 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 11471	Lashi	look like / resemble	1610	tuː³¹	t uː ³¹	i n t	9728
 11856	Old_Burmese	look like / resemble	1610	tu	t u ²²	i n t	9728
 #
-593	Rangoon	loom	591	jɛʔ⁴kɑ̃⁵⁵sɛʔ⁴	/ʔ j ɛ ʔ ⁴ + k ɑ̃ ∼ ⁵⁵ + s ɛ ʔ ⁴	i m n c t + i n c t + i n c t	9737 9738 9740
+593	Rangoon	loom	591	jɛʔ⁴kɑ̃⁵⁵sɛʔ⁴	/ʔ j ɛ ʔ ⁴ + k ɑ̃ ∼ ⁵⁵ + s ɛ ʔ ⁴	i m n c t + i n c t + i n c t	9737 9738 9741
 2375	Achang_Longchuan	loom	591	jɔ³¹kan⁵¹	/ʔ j ɔ ³¹ + k a n ⁵¹	i m n t + i n c t	9737 9738
 3970	Xiandao	loom	591	ʐɔʔ⁵⁵kan⁵¹	ʐ ɔ ʔ ⁵⁵ + k a n ⁵¹	i n c t + i n c t	9737 9738
-5522	Atsi	loom	591	pa̱n⁵⁵voʔ²¹tʃak²¹	ˀp a n ⁵⁵ + v o ʔ ²¹ + tʃ a k ²¹	i n c t + i n c t + i n c t	9738 9737 9739
+5522	Atsi	loom	591	pa̱n⁵⁵voʔ²¹tʃak²¹	ˀp a n ⁵⁵ + v o ʔ ²¹ + tʃ a k ²¹	i n c t + i n c t + i n c t	9739 9737 9740
 7251	Maru	loom	591	ɣɔʔ³¹kaŋ³⁵	ɣ ɔ ʔ ³¹ + k a ŋ ³⁵	i n c t + i n c t	9737 9738
 8911	Bola	loom	591	ɣaʔ³¹kɛ̃³¹	ɣ a ʔ ³¹ + k ɛ̃ ∼ ³¹	i n c t + i n c t	9737 9738
 10589	Lashi	loom	591	jɔʔ³¹kan³³	/ʔ j ɔ ʔ ³¹ + k a n ³³	i m n c t + i n c t	9737 9738
@@ -7033,7 +7033,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 8989	Bola	lower part of / lower reaches	677	a³¹a⁵⁵khja⁵⁵	/ʔ a ³¹ + /ʔ a ⁵⁵ + khj a ⁵⁵	i n t + i n t + i n t	9846 9849 9850
 10656	Lashi	lower part of / lower reaches	677	kjei³¹thaŋ³³	k j ei ³¹ + th a ŋ ³³	i m n t + i n c t	9850 9851
 #
-972	Rangoon	lukewarm (water)	968	nwe⁵⁵	n w e ⁵⁵	i m n t	9864
+972	Rangoon	lukewarm (water)	968	nwe⁵⁵	n w e ⁵⁵	i m n t	9863
 2730	Achang_Longchuan	lukewarm (water)	968	lum⁵⁵	l u m ⁵⁵	i n c t	9862
 4284	Xiandao	lukewarm (water)	968	lum⁵⁵	l u m ⁵⁵	i n c t	9862
 5905	Atsi	lukewarm (water)	968	ŋje²¹	ŋ j e ²¹	i m n t	9863
@@ -7083,7 +7083,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 #
 1444	Rangoon	make (tea)	1433	phjɔ²²	pʰ j ɔ ²²	i m n t	9936
 3157	Achang_Longchuan	make (tea)	1433	ʂun⁵⁵	ʂ u n ⁵⁵	i n c t	9934
-4637	Xiandao	make (tea)	1433	phau³⁵	ph au ³⁵	i n t	9937
+4637	Xiandao	make (tea)	1433	phau³⁵	ph au ³⁵	i n t	9936
 6376	Atsi	make (tea)	1433	ŋju̱n²¹	ˀŋ j u n ²¹	i m n c t	9935
 9739	Bola	make (tea)	1433	ŋjɔ̱n³⁵	ˀŋ j ɔ n ³⁵	i m n c t	9935
 11311	Lashi	make (tea)	1433	ŋju̱ːm⁵⁵	ˀŋ j uː m ⁵⁵	i m n c t	9935
@@ -7118,9 +7118,9 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9779	Bola	make way for / give way	1474	jaŋ³⁵	/ʔ j a ŋ ³⁵	i m n c t	9971
 11348	Lashi	make way for / give way	1474	xəː⁵⁵	x əː ⁵⁵	i n t	9972
 #
-171	Rangoon	man	171	jɑuʔ⁴tɕɑ⁵⁵	/ʔ j ɑ u ʔ ⁴ + tɕ ɑ ⁵⁵	i m n N c t + i n t	9981 9980
+171	Rangoon	man	171	jɑuʔ⁴tɕɑ⁵⁵	/ʔ j ɑ u ʔ ⁴ + tɕ ɑ ⁵⁵	i m n N c t + i n t	9981 9983
 1990	Achang_Longchuan	man	171	i³¹tɕi⁵⁵	/ʔ i ³¹ + tɕ i ⁵⁵	i n t + i n t	9979 9980
-3643	Xiandao	man	171	juʔ ³¹ɕɛ⁵⁵	/ʔ j u ʔ ³¹ + ɕ ɛ ⁵⁵	i m n c t + i n t	9981 9983
+3643	Xiandao	man	171	juʔ ³¹ɕɛ⁵⁵	/ʔ j u ʔ ³¹ + ɕ ɛ ⁵⁵	i m n c t + i n t	9981 9984
 5105	Atsi	man	171	juʔ²¹ke⁵¹	/ʔ j u ʔ ²¹ + k e ⁵¹	i m n c t + i n t	9981 9980
 6877	Maru	man	171	jauk³¹kai³¹	/ʔ j au k ³¹ + k ai ³¹	i m n c t + i n t	9981 9980
 8511	Bola	man	171	jauʔ³¹kai⁵⁵	/ʔ j au ʔ ³¹ + k ai ⁵⁵	i m n c t + i n t	9981 9980
@@ -7141,12 +7141,12 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 8594	Bola	mane (horse)	257	ma³¹tsuŋ³¹	m a ³¹ + ts u ŋ ³¹	i n t + i n c t	10004 10005
 10315	Lashi	mane (horse)	257	mjaŋ³³tsham³³	m j a ŋ ³³ + tsh a m ³³	i m n c t + i n c t	10004 10005
 #
-559	Rangoon	manger	557	mjĩ⁵⁵zɑ̃u⁵⁵	m j ĩ ∼ ⁵⁵ + z ɑ̃ u ∼ ⁵⁵	i m n c t + i n N c t	10018 10023
+559	Rangoon	manger	557	mjĩ⁵⁵zɑ̃u⁵⁵	m j ĩ ∼ ⁵⁵ + z ɑ̃ u ∼ ⁵⁵	i m n c t + i n N c t	10018 10024
 2344	Achang_Longchuan	manger	557	m̥ʐaŋ³¹xʐoŋ³¹	m̥ ʐ a ŋ ³¹ + x ʐ o ŋ ³¹	i m n c t + i m n c t	10018 10019
-5488	Atsi	manger	557	mjaŋ²¹ma̱n²¹laŋ⁵¹khaŋ²¹	m j a ŋ ²¹ + ˀm a n ²¹ + l a ŋ ⁵¹ + kʰ a ŋ ²¹	i m n c t + i n c t + i n c t + i n c t	10018 10020 10019 10021
-7223	Maru	manger	557	mjɔ̃³⁵thauŋ³⁵lɔ̱̃³¹	m j ɔ̃ ∼ ³⁵ + th au ŋ ³⁵ + ˀl ɔ̃ ∼ ³¹	i m n c t + i n c t + i n c t	10018 10022 10019
-8877	Bola	manger	557	mjɔ̃³¹thauŋ³⁵lɔ̱̃ ³⁵	m j ɔ̃ ∼ ³¹ + th au ŋ ³⁵ + ˀl ɔ̃ ∼ ³⁵	i m n c t + i n c t + i n c t	10018 10022 10019
-10563	Lashi	manger	557	mjaŋ³³la̱ŋ³³	m j a ŋ ³³ + ˀl a ŋ ³³	i m n c t + i n c t	10018 10019
+5488	Atsi	manger	557	mjaŋ²¹ma̱n²¹laŋ⁵¹khaŋ²¹	m j a ŋ ²¹ + ˀm a n ²¹ + l a ŋ ⁵¹ + kʰ a ŋ ²¹	i m n c t + i n c t + i n c t + i n c t	10018 10020 10021 10022
+7223	Maru	manger	557	mjɔ̃³⁵thauŋ³⁵lɔ̱̃³¹	m j ɔ̃ ∼ ³⁵ + th au ŋ ³⁵ + ˀl ɔ̃ ∼ ³¹	i m n c t + i n c t + i n c t	10018 10023 10021
+8877	Bola	manger	557	mjɔ̃³¹thauŋ³⁵lɔ̱̃ ³⁵	m j ɔ̃ ∼ ³¹ + th au ŋ ³⁵ + ˀl ɔ̃ ∼ ³⁵	i m n c t + i n c t + i n c t	10018 10023 10021
+10563	Lashi	manger	557	mjaŋ³³la̱ŋ³³	m j a ŋ ³³ + ˀl a ŋ ³³	i m n c t + i n c t	10018 10021
 #
 902	Rangoon	many / much	899	mjɑ⁵⁵	m j ɑ ⁵⁵	i m n t	10036
 2657	Achang_Longchuan	many / much	899	ȵɔ³¹	ȵ ɔ ³¹	i n t	10035
@@ -7184,14 +7184,14 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 5505	Atsi	marker (ink, carpenter's)	574	me²¹kok⁵⁵	m e ²¹ + k o k ⁵⁵	i n t + i n c t	10086 10088
 8894	Bola	marker (ink, carpenter's)	574	mɛʔ³¹tu⁵¹	m ɛ ʔ ³¹ + t u ⁵¹	i n c t + i n t	10086 10087
 #
-1341	Rangoon	marry	1332	lɛʔ⁴thɑʔ⁴	l ɛ ʔ ⁴ + tʰ ɑ ʔ ⁴	i n c t + i n c t	10101 10102
+1341	Rangoon	marry	1332	lɛʔ⁴thɑʔ⁴	l ɛ ʔ ⁴ + tʰ ɑ ʔ ⁴	i n c t + i n c t	10100 10101
 3062	Achang_Longchuan	marry	1332	tsaŋ³¹i³¹ʂa⁵⁵	ts a ŋ ³¹ + /ʔ i ³¹ + ʂ a ⁵⁵	i n c t + i n t + i n t	10095 10096 10097
-4554	Xiandao	marry	1332	i³¹nɔ³¹ɲu⁵⁵	/ʔ i ³¹ + n ɔ ³¹ + ɲ u ⁵⁵	i n t + i n t + i n t	10096 10103 10104
+4554	Xiandao	marry	1332	i³¹nɔ³¹ɲu⁵⁵	/ʔ i ³¹ + n ɔ ³¹ + ɲ u ⁵⁵	i n t + i n t + i n t	10096 10102 10103
 6274	Atsi	marry	1332	mji²¹xaŋ⁵⁵	m j i ²¹ + x a ŋ ⁵⁵	i m n t + i n c t	10098 10099
 7919	Maru	marry	1332	mji³⁵fɔ̃⁵⁵	m j i ³⁵ + f ɔ̃ ∼ ⁵⁵	i m n t + i n c t	10098 10099
 9639	Bola	marry	1332	mi³¹fɔ̃³⁵	m i ³¹ + f ɔ̃ ∼ ³⁵	i n t + i n c t	10098 10099
 11220	Lashi	marry	1332	mji³³faːŋ⁵³	m j i ³³ + f aː ŋ ⁵³	i m n t + i n c t	10098 10099
-12076	Old_Burmese	marry	1332	im◦tho₂ṅ	ʔ i m ²² + th ʊ ŋ ²²	i n c t + i n c t	10100 10095
+12076	Old_Burmese	marry	1332	im◦tho₂ṅ	ʔ i m ²² + th ʊ ŋ ²²	i n c t + i n c t	10096 10095
 #
 1477	Rangoon	marry (a woman)	1466	ju²²	/ʔ j u ²²	i m n t	10115
 3188	Achang_Longchuan	marry (a woman)	1466	ʂa⁵⁵	ʂ a ⁵⁵	i n t	10114
@@ -7235,9 +7235,9 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 #
 637	Rangoon	means / solution	635	ni⁵⁵	n i ⁵⁵	i n t	10174
 2416	Achang_Longchuan	means / solution	635	pan³¹ȵa³⁵	p a n ³¹ + ȵ a ³⁵	i n c t + i n t	10173 10174
-5565	Atsi	means / solution	635	lă²¹tat²¹phaʔ²¹tʃi⁵¹	l ă ²¹ + t a t ²¹ + pʰ a ʔ ²¹ + tʃ i ⁵¹	i n t + i n c t + i n c t + i n t	10175 10176 10173 10177
-7286	Maru	means / solution	635	pan³⁵fa³¹	p a n ³⁵ + f a ³¹	i n c t + i n t	10173 10178
-8950	Bola	means / solution	635	pan³⁵faʔ⁵⁵	p a n ³⁵ + f a ʔ ⁵⁵	i n c t + i n c t	10173 10178
+5565	Atsi	means / solution	635	lă²¹tat²¹phaʔ²¹tʃi⁵¹	l ă ²¹ + t a t ²¹ + pʰ a ʔ ²¹ + tʃ i ⁵¹	i n t + i n c t + i n c t + i n t	10175 10176 10177 10178
+7286	Maru	means / solution	635	pan³⁵fa³¹	p a n ³⁵ + f a ³¹	i n c t + i n t	10173 10179
+8950	Bola	means / solution	635	pan³⁵faʔ⁵⁵	p a n ³⁵ + f a ʔ ⁵⁵	i n c t + i n c t	10173 10179
 #
 124	Rangoon	measles	124	wɛʔ⁴tθɛʔ⁴	/ʔ w ɛ ʔ ⁴ + tθ ɛ ʔ ⁴	i m n c t + i n c t	10188 10189
 1946	Achang_Longchuan	measles	124	kăn⁵⁵tam³¹	k ă n ⁵⁵ + t a m ³¹	i n c t + i n c t	10185 10186
@@ -7353,7 +7353,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 4043	Xiandao	midnight	707	chot⁵⁵tsin³¹	ch o t ⁵⁵ + ts i n ³¹	i n c t + i n c t	10359 10350
 5638	Atsi	midnight	707	kuŋ⁵¹kam⁵¹	k u ŋ ⁵¹ + k a m ⁵¹	i n c t + i n c t	10350 10352
 7348	Maru	midnight	707	kɛ̃³¹kauŋ³⁵	k ɛ̃ ∼ ³¹ + k au ŋ ³⁵	i n c t + i n c t	10350 10356
-9019	Bola	midnight	707	kɛ̃⁵⁵kauŋ³¹jaʔ³¹	k ɛ̃ ∼ ⁵⁵ + k au ŋ ³¹ + /ʔ j a ʔ ³¹	i n c t + i n c t + i m n c t	10353 10350 10354
+9019	Bola	midnight	707	kɛ̃⁵⁵kauŋ³¹jaʔ³¹	k ɛ̃ ∼ ⁵⁵ + k au ŋ ³¹ + /ʔ j a ʔ ³¹	i n c t + i n c t + i m n c t	10350 10353 10354
 10675	Lashi	midnight	707	kam³¹knŋ³¹	k a m ³¹ + k nŋ ³¹	i n c t + i m t	10350 10355
 #
 2577	Achang_Longchuan	mile (=0.5 kilometer)	1829	lak⁵⁵	l a k ⁵⁵	i n c t	10367
@@ -7506,7 +7506,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 3966	Xiandao	mortar	587	kai⁵⁵ thum⁵¹	k ai ⁵⁵ + th u m ⁵¹	i n t + i n c t	10568 10565
 5518	Atsi	mortar	587	tshum⁵¹	tsʰ u m ⁵¹	i n c t	10565
 7247	Maru	mortar	587	tshum³⁵thauŋ³¹	tsh u m ³⁵ + th au ŋ ³¹	i n c t + i n c t	10565 10567
-8907	Bola	mortar	587	tʃhɔ̃³¹tsham⁵⁵	tʃh ɔ̃ ∼ ³¹ + tsh a m ⁵⁵	i n c t + i n c t	10566 10565
+8907	Bola	mortar	587	tʃhɔ̃³¹tsham⁵⁵	tʃh ɔ̃ ∼ ³¹ + tsh a m ⁵⁵	i n c t + i n c t	10565 10566
 10585	Lashi	mortar	587	tshɔm³³	tsh ɔ m ³³	i n c t	10565
 11882	Old_Burmese	mortar	587	chum	tɕh u m ²²	i n c t	10565
 #
@@ -7620,7 +7620,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9247	Bola	muddy / turbid	932	mø⁵⁵	m ø ⁵⁵	i n t	10707
 10891	Lashi	muddy / turbid	932	mə̱ː³³	ˀm əː ³³	i n t	10707
 #
-268	Rangoon	mule	266	lɑ⁵⁵	l ɑ ⁵⁵	i n t	10716
+268	Rangoon	mule	266	lɑ⁵⁵	l ɑ ⁵⁵	i n t	10717
 2080	Achang_Longchuan	mule	266	m̥ʑaŋ³¹ma³¹lɔʔ³¹	m̥ ʑ a ŋ ³¹ + m a ³¹ + l ɔ ʔ ³¹	i m n c t + i n t + i n c t	10714 10715 10716
 #
 1005	Rangoon	multicolored / patterned (cloth)	1001	pwĩ⁵³jɑiʔ⁴	p w ĩ ∼ ⁵³ + /ʔ j ɑi ʔ ⁴	i m n c t + i m n c t	10722 10723
@@ -7713,7 +7713,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 10850	Lashi	near	888	tʃaːŋ⁵³	tʃ aː ŋ ⁵³	i n c t	10837
 11702	Old_Burmese	near	888	niḥ	n i ⁵⁵	i n t	10836
 #
-1031	Rangoon	near / close to	1027	ɑ⁵³nɑ⁵⁵kɑʔ⁴	/ʔ ɑ ⁵³ + /ʔ n ɑ ⁵⁵ + k ɑ ʔ ⁴	i n t + i m n t + i n c t	10849 10850 10851
+1031	Rangoon	near / close to	1027	ɑ⁵³nɑ⁵⁵kɑʔ⁴	/ʔ ɑ ⁵³ + /ʔ n ɑ ⁵⁵ + k ɑ ʔ ⁴	i n t + i m n t + i n c t	10849 10845 10850
 2783	Achang_Longchuan	near / close to	1027	ne³¹ʐaʔ⁵⁵	n e ³¹ + ʐ a ʔ ⁵⁵	i n t + i n c t	10845 10846
 5965	Atsi	near / close to	1027	te̱p⁵⁵	ˀt e p ⁵⁵	i n c t	10847
 7648	Maru	near / close to	1027	nɛ̱³¹tɛ̱ʔ⁵⁵	ˀn ɛ ³¹ + ˀt ɛ ʔ ⁵⁵	i n t + i n c t	10845 10847
@@ -7792,7 +7792,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 #
 736	Rangoon	next year	733	ɕe⁵³n̥iʔ⁴	ɕ e ⁵³ + n̥ i ʔ ⁴	i n t + i n c t	10948 10949
 2496	Achang_Longchuan	next year	733	si³¹nək⁵⁵	s i ³¹ + n ə k ⁵⁵	i n t + i n c t	10948 10949
-4068	Xiandao	next year	733	choŋ³¹thoʔ³⁵	ch o ŋ ³¹ + th o ʔ ³⁵	i n c t + i n c t	10950 10951
+4068	Xiandao	next year	733	choŋ³¹thoʔ³⁵	ch o ŋ ³¹ + th o ʔ ³⁵	i n c t + i n c t	10951 10952
 5664	Atsi	next year	733	saŋ⁵¹ni̱k⁵⁵	s a ŋ ⁵¹ + ˀn i k ⁵⁵	i n c t + i n c t	10950 10949
 7371	Maru	next year	733	sɔ̃³¹na̱k⁵⁵	s ɔ̃ ∼ ³¹ + ˀn a k ⁵⁵	i n c t + i n c t	10950 10949
 9045	Bola	next year	733	sɔ̃⁵⁵na̱k⁵⁵	s ɔ̃ ∼ ⁵⁵ + ˀn a k ⁵⁵	i n c t + i n c t	10950 10949
@@ -7806,9 +7806,9 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9143	Bola	night's (work)	828	mjɔn⁵⁵	m j ɔ n ⁵⁵	i m n c t	10964
 10790	Lashi	night's (work)	828	mjɛn³¹	m j ɛ n ³¹	i m n c t	10964
 #
-709	Rangoon	night, at	706	ȵĩ⁵³nɛʔ⁴	ɲ ĩ ∼ ⁵³ + n ɛ ʔ ⁴	i n c t + i n c t	10976 10977
+709	Rangoon	night, at	706	ȵĩ⁵³nɛʔ⁴	ɲ ĩ ∼ ⁵³ + n ɛ ʔ ⁴	i n c t + i n c t	10971 10976
 2475	Achang_Longchuan	night, at	706	ni³¹tɕhot³⁵	n i ³¹ + tɕʰ o t ³⁵	i n t + i n c t	10971 10972
-4042	Xiandao	night, at	706	chot⁵⁵tsin³¹	ch o t ⁵⁵ + ts i n ³¹	i n c t + i n c t	10972 10978
+4042	Xiandao	night, at	706	chot⁵⁵tsin³¹	ch o t ⁵⁵ + ts i n ³¹	i n c t + i n c t	10972 10977
 5637	Atsi	night, at	706	mjin⁵⁵le²¹	m j i n ⁵⁵ + l e ²¹	i m n c t + i n t	10973 10974
 7347	Maru	night, at	706	mji⁵⁵ʒɛ³¹	m j i ⁵⁵ + ʒ ɛ ³¹	i m n t + i n t	10973 10975
 #
@@ -8159,20 +8159,20 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9762	Bola	owe (money)	1457	tɛʔ³¹	t ɛ ʔ ³¹	i n c t	11516
 11333	Lashi	owe (money)	1457	tʃhɛ̱ːn⁵³	ˀtʃh ɛː n ⁵³	i n c t	11515
 #
-316	Rangoon	owl	314	zi⁵⁵kwɛʔ⁴	z i ⁵⁵ + k w ɛ ʔ ⁴	i n t + i m n c t	11531 11532
+316	Rangoon	owl	314	zi⁵⁵kwɛʔ⁴	z i ⁵⁵ + k w ɛ ʔ ⁴	i n t + i m n c t	11532 11533
 2120	Achang_Longchuan	owl	314	tɕuk⁵⁵ku⁵⁵lu⁵¹	tɕ u k ⁵⁵ + k u ⁵⁵ + l u ⁵¹	i n c t + i n t + i n t	11524 11525 11526
-3770	Xiandao	owl	314	cun³¹mɔ⁵¹a³¹pɔŋ³¹	c u n ³¹ + m ɔ ⁵¹ + /ʔ a ³¹ + p ɔ ŋ ³¹	i n c t + i n t + i n t + i n c t	11525 11533 11534 11535
+3770	Xiandao	owl	314	cun³¹mɔ⁵¹a³¹pɔŋ³¹	c u n ³¹ + m ɔ ⁵¹ + /ʔ a ³¹ + p ɔ ŋ ³¹	i n c t + i n t + i n t + i n c t	11529 11534 11535 11536
 5250	Atsi	owl	314	puk²¹pĕ²¹lui⁵¹	p u k ²¹ + p ĕ ²¹ + l u i ⁵¹	i n c t + i n t + i m n t	11524 11527 11526
-7008	Maru	owl	314	puk³¹pə̆³¹lui³¹	p u k ³¹ + p ə̆ ³¹ + l u i ³¹	i n c t + i n t + i m n t	11524 11530 11526
+7008	Maru	owl	314	puk³¹pə̆³¹lui³¹	p u k ³¹ + p ə̆ ³¹ + l u i ³¹	i n c t + i n t + i m n t	11524 11531 11526
 8644	Bola	owl	314	puk³¹pu⁵⁵lui⁵¹	p u k ³¹ + p u ⁵⁵ + l ui ⁵¹	i n c t + i n t + i n t	11524 11528 11526
-10358	Lashi	owl	314	khuŋ⁵⁵pɔp³¹	kh u ŋ ⁵⁵ + p ɔ p ³¹	i n c t + i n c t	11525 11529
+10358	Lashi	owl	314	khuŋ⁵⁵pɔp³¹	kh u ŋ ⁵⁵ + p ɔ p ³¹	i n c t + i n c t	11529 11530
 #
-1176	Rangoon	pad	1171	khu⁵³	kʰ u ⁵³	i n t	11549
+1176	Rangoon	pad	1171	khu⁵³	kʰ u ⁵³	i n t	11548
 2917	Achang_Longchuan	pad	1171	m̥uan³⁵	m̥ ua n ³⁵	i n c t	11545
 6110	Atsi	pad	1171	tʃa̱²¹	ˀtʃ a ²¹	i n t	11546
-7776	Maru	pad	1171	tʃɛ̱̃³⁵	ˀtʃ ɛ̃ ∼ ³⁵	i n c t	11547
-9481	Bola	pad	1171	tʃɛ̱̃³⁵	ˀtʃ ɛ̃ ∼ ³⁵	i n c t	11547
-11088	Lashi	pad	1171	mju̱ː⁵⁵	ˀm j uː ⁵⁵	i m n t	11548
+7776	Maru	pad	1171	tʃɛ̱̃³⁵	ˀtʃ ɛ̃ ∼ ³⁵	i n c t	11546
+9481	Bola	pad	1171	tʃɛ̱̃³⁵	ˀtʃ ɛ̃ ∼ ³⁵	i n c t	11546
+11088	Lashi	pad	1171	mju̱ː⁵⁵	ˀm j uː ⁵⁵	i m n t	11547
 #
 462	Rangoon	pad / cushion	460	thɑ̃i²²phõ²²	tʰ ɑ̃ i ∼ ²² + pʰ õ ∼ ²²	i n N c t + i n c t	11560 11561
 2250	Achang_Longchuan	pad / cushion	460	ă³¹m̥ɔn³¹	/ʔ ă ³¹ + m̥ ɔ n ³¹	i n t + i n c t	11552 11553
@@ -8196,7 +8196,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 8391	Bola	paddy fields	42	ji³¹thauŋ³⁵	/ʔ j i ³¹ + th au ŋ ³⁵	i m n t + i n c t	11572 11573
 10126	Lashi	paddy fields	42	jo³¹thuŋ⁵⁵	/ʔ j o ³¹ + th u ŋ ⁵⁵	i m n t + i n c t	11572 11573
 #
-790	Rangoon	page	787	mjɛʔ⁴hnɑ²²	m j ɛ ʔ ⁴ + n̥ ɑ ²²	i m n c t + i n t	11586 11587
+790	Rangoon	page	787	mjɛʔ⁴hnɑ²²	m j ɛ ʔ ⁴ + n̥ ɑ ²²	i m n c t + i n t	11585 11586
 2545	Achang_Longchuan	page	787	tʂap⁵⁵	tʂ a p ⁵⁵	i n c t	11584
 5718	Atsi	page	787	khjap⁵⁵	kʰ j a p ⁵⁵	i m n c t	11585
 7421	Maru	page	787	khjɛʔ⁵⁵	kh j ɛ ʔ ⁵⁵	i m n c t	11585
@@ -8370,7 +8370,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 #
 328	Rangoon	peacock	326	dɑ̃u⁵⁵	d ɑ̃ u ∼ ⁵⁵	i n N c t	11824
 2131	Achang_Longchuan	peacock	326	luk³¹ʑuŋ⁵⁵	l u k ³¹ + ʑ u ŋ ⁵⁵	i n c t + i n c t	11821 11822
-3779	Xiandao	peacock	326	noʔ³¹joŋ⁵⁵	n o ʔ ³¹ + /ʔ j o ŋ ⁵⁵	i n c t + i m n c t	11828 11829
+3779	Xiandao	peacock	326	noʔ³¹joŋ⁵⁵	n o ʔ ³¹ + /ʔ j o ŋ ⁵⁵	i n c t + i m n c t	11828 11822
 5262	Atsi	peacock	326	ŭ⁵⁵to̱ŋ⁵⁵	/ʔ ŭ ⁵⁵ + ˀt o ŋ ⁵⁵	i n t + i n c t	11823 11824
 8654	Bola	peacock	326	tə̆³¹kjauʔ⁵⁵	t ə̆ ³¹ + k j au ʔ ⁵⁵	i n t + i m n c t	11825 11826
 10366	Lashi	peacock	326	wo³³tɔ̱ŋ³³	/ʔ w o ³³ + ˀt ɔ ŋ ³³	i m n t + i n c t	11827 11824
@@ -8463,11 +8463,11 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9963	Bola	permit / allow	1654	kɔ̱t⁵⁵nɔ̱̃⁵⁵	ˀk ɔ t ⁵⁵ + ˀn ɔ̃ ∼ ⁵⁵	i n c t + i n c t	11963 11964
 11505	Lashi	permit / allow	1654	kɛː³¹	k ɛː ³¹	i n t	11965
 #
-373	Rangoon	persimmon	371	tɛ²²tθi⁵⁵	t ɛ ²² + tθ i ⁵⁵	i n t + i n t	11977 11978
+373	Rangoon	persimmon	371	tɛ²²tθi⁵⁵	t ɛ ²² + tθ i ⁵⁵	i n t + i n t	11978 11979
 2172	Achang_Longchuan	persimmon	371	maʔ³¹xo³⁵liŋ⁵⁵	m a ʔ ³¹ + x o ³⁵ + l i ŋ ⁵⁵	i n c t + i n t + i n c t	11971 11972 11973
 5305	Atsi	persimmon	371	ʃi²¹pjiŋ²¹	ʃ i ²¹ + p j i ŋ ²¹	i n t + i m n c t	11974 11975
-7057	Maru	persimmon	371	pa³¹kɔ³¹ʃi³⁵	p a ³¹ + k ɔ ³¹ + ʃ i ³⁵	i n t + i n t + i n t	11976 11972 11974
-8696	Bola	persimmon	371	pui⁵⁵ka⁵⁵ʃɿ³⁵	p ui ⁵⁵ + k a ⁵⁵ + ʃ ɿ ³⁵	i n t + i n t + i n t	11976 11972 11974
+7057	Maru	persimmon	371	pa³¹kɔ³¹ʃi³⁵	p a ³¹ + k ɔ ³¹ + ʃ i ³⁵	i n t + i n t + i n t	11976 11977 11974
+8696	Bola	persimmon	371	pui⁵⁵ka⁵⁵ʃɿ³⁵	p ui ⁵⁵ + k a ⁵⁵ + ʃ ɿ ³⁵	i n t + i n t + i n t	11976 11977 11974
 #
 204	Rangoon	person w / pockmarked face	204	tɕɑuʔ⁴pɑuʔ⁴mɑ²²	tɕ ɑ u ʔ ⁴ + p ɑ u ʔ ⁴ + m ɑ ²²	i n N c t + i n N c t + i n t	11988 11989 11990
 2018	Achang_Longchuan	person w / pockmarked face	204	ȵɔʔ⁵⁵pʐaŋ⁵⁵	ȵ ɔ ʔ ⁵⁵ + p ʐ a ŋ ⁵⁵	i n c t + i m n c t	11985 11986
@@ -8494,9 +8494,9 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9416	Bola	pestle / pound	1102	thauŋ³⁵	th au ŋ ³⁵	i n c t	12019
 11027	Lashi	pestle / pound	1102	thuːŋ⁵⁵	th uː ŋ ⁵⁵	i n c t	12019
 #
-324	Rangoon	pheasant	322	jiʔ⁴	/ʔ j i ʔ ⁴	i m n c t	12035
+324	Rangoon	pheasant	322	jiʔ⁴	/ʔ j i ʔ ⁴	i m n c t	12032
 2127	Achang_Longchuan	pheasant	322	kai³¹thən³⁵	k ai ³¹ + tʰ ə n ³⁵	i n t + i n c t	12027 12028
-3776	Xiandao	pheasant	322	pum⁵⁵kʐɔʔ⁵⁵	p u m ⁵⁵ + kʐ ɔ ʔ ⁵⁵	i n c t + i n c t	12036 12032
+3776	Xiandao	pheasant	322	pum⁵⁵kʐɔʔ⁵⁵	p u m ⁵⁵ + kʐ ɔ ʔ ⁵⁵	i n c t + i n c t	12035 12032
 5258	Atsi	pheasant	322	ŋŏ̱ʔ⁵⁵khjik⁵⁵	ˀŋ ă ʔ ⁵⁵ + kʰ j i k ⁵⁵	i n c t + i m n c t	12029 12030
 7013	Maru	pheasant	322	sə̆³¹jɔ³¹ɣɔʔ³¹	s ə̆ ³¹ + /ʔ j ɔ ³¹ + ɣ ɔ ʔ ³¹	i n t + i m n t + i n c t	12033 12034 12032
 8650	Bola	pheasant	322	phauŋ³⁵ɣaʔ³¹	ph au ŋ ³⁵ + ɣ a ʔ ³¹	i n c t + i n c t	12031 12032
@@ -8584,7 +8584,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 #
 460	Rangoon	pillow	458	gɑ̃u⁵⁵õ⁵⁵	g ɑ̃ u ∼ ⁵⁵ + /ʔ õ ∼ ⁵⁵	i n N c t + i n c t	12158 12155
 2248	Achang_Longchuan	pillow	458	u³¹thuʔ³¹	/ʔ u ³¹ + tʰ u ʔ ³¹	i n t + i n c t	12155 12156
-3876	Xiandao	pillow	458	u³¹fu³¹	/ʔ u ³¹ + f u ³¹	i n t + i n t	12155 12157
+3876	Xiandao	pillow	458	u³¹fu³¹	/ʔ u ³¹ + f u ³¹	i n t + i n t	12155 12159
 5390	Atsi	pillow	458	u²¹khuʔ⁵⁵	/ʔ u ²¹ + kʰ u ʔ ⁵⁵	i n t + i n c t	12155 12157
 7132	Maru	pillow	458	a̱u³⁵khau³⁵	ˀ/ʔ au ³⁵ + kh au ³⁵	i n t + i n t	12155 12157
 8779	Bola	pillow	458	ŭ̱³⁵khu³⁵	ˀ/ʔ ŭ ³⁵ + kh u ³⁵	i n t + i n t	12155 12157
@@ -8595,18 +8595,18 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9607	Bola	pinch (of a shoe)	1300	tʃɛ̱ʔ⁵⁵	ˀtʃ ɛ ʔ ⁵⁵	i n c t	12171
 11194	Lashi	pinch (of a shoe)	1300	tʃa̱ːp⁵⁵	ˀtʃ aː p ⁵⁵	i n c t	12171
 #
-364	Rangoon	pine	362	thĩ⁵⁵ju⁵⁵	tʰ ĩ ∼ ⁵⁵ + /ʔ j u ⁵⁵	i n c t + i m n t	12176 12184
+364	Rangoon	pine	362	thĩ⁵⁵ju⁵⁵	tʰ ĩ ∼ ⁵⁵ + /ʔ j u ⁵⁵	i n c t + i m n t	12176 12179
 2164	Achang_Longchuan	pine	362	piak³¹tseŋ⁵⁵	p i a k ³¹ + ts e ŋ ⁵⁵	i m n c t + i n c t	12175 12176
-3811	Xiandao	pine	362	tsɛ̆³¹pɛk³⁵a³¹tʂɯŋ⁵⁵	ts ɛ̆ ³¹ + p ɛ k ³⁵ + /ʔ a ³¹ + tʂ ɯ ŋ ⁵⁵	i n t + i n c t + i n t + i n c t	12185 12175 12179 12176
+3811	Xiandao	pine	362	tsɛ̆³¹pɛk³⁵a³¹tʂɯŋ⁵⁵	ts ɛ̆ ³¹ + p ɛ k ³⁵ + /ʔ a ³¹ + tʂ ɯ ŋ ⁵⁵	i n t + i n c t + i n t + i n c t	12184 12175 12179 12176
 5297	Atsi	pine	362	thaŋ²¹mo⁵⁵kam⁵¹	tʰ a ŋ ²¹ + m o ⁵⁵ + k a m ⁵¹	i n c t + i n t + i n c t	12176 12177 12178
 7050	Maru	pine	362	thaŋ⁵⁵xu³¹	th a ŋ ⁵⁵ + x u ³¹	i n c t + i n t	12176 12182
 8687	Bola	pine	362	fə̆³¹tʃɛʔ⁵⁵kɛ̃⁵⁵	f ə̆ ³¹ + tʃ ɛ ʔ ⁵⁵ + k ɛ̃ ∼ ⁵⁵	i n t + i n c t + i n c t	12179 12180 12176
 10401	Lashi	pine	362	thaŋ⁵⁵fu̱³³kam³¹	th a ŋ ⁵⁵ + ˀf u ³³ + k a m ³¹	i n c t + i n t + i n c t	12176 12179 12181
 11860	Old_Burmese	pine	362	taṅḥ◦rumḥ	t a ŋ ⁵⁵ + r u m ⁵⁵	i n c t + i n c t	12176 12183
 #
-1495	Rangoon	piss / pee	1484	pɑuʔ⁴	p ɑ u ʔ ⁴	i n N c t	12199
+1495	Rangoon	piss / pee	1484	pɑuʔ⁴	p ɑ u ʔ ⁴	i n N c t	12198
 3206	Achang_Longchuan	piss / pee	1484	tʂhə³¹	tʂʰ ə ³¹	i n t	12197
-6427	Atsi	piss / pee	1484	tʃit²¹	tʃ i t ²¹	i n c t	12198
+6427	Atsi	piss / pee	1484	tʃit²¹	tʃ i t ²¹	i n c t	12197
 8064	Maru	piss / pee	1484	ta̱k⁵⁵	ˀt a k ⁵⁵	i n c t	12197
 9789	Bola	piss / pee	1484	ta̱k⁵⁵	ˀt a k ⁵⁵	i n c t	12197
 11357	Lashi	piss / pee	1484	tə̱ːk⁵⁵	ˀt əː k ⁵⁵	i n c t	12197
@@ -8687,14 +8687,14 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9991	Bola	plant / raise (wheat)	1681	tu̱i⁵⁵	ˀt ui ⁵⁵	i n t	12307
 11526	Lashi	plant / raise (wheat)	1681	ʃɔːʔ⁵⁵	ʃ ɔː ʔ ⁵⁵	i n c t	12306
 #
-62	Rangoon	plant ash	62	pjɑ²²	p j ɑ ²²	i m n t	12316
+62	Rangoon	plant ash	62	pjɑ²²	p j ɑ ²²	i m n t	12317
 1887	Achang_Longchuan	plant ash	62	nă³¹ʐap³⁵	n ă ³¹ + ʐ a p ³⁵	i n t + i n c t	12314 12315
-3547	Xiandao	plant ash	62	ʐɔʔ⁵⁵phɔʔ⁵⁵	ʐ ɔ ʔ ⁵⁵ + ph ɔ ʔ ⁵⁵	i n c t + i n c t	12317 12318
-4998	Atsi	plant ash	62	mji²¹mop⁵⁵	m j i ²¹ + m o p ⁵⁵	i m n t + i n c t	12314 12315
-6782	Maru	plant ash	62	njĭ³⁵map⁵⁵	n j ĭ ³⁵ + m a p ⁵⁵	i m n t + i n c t	12314 12315
-8409	Bola	plant ash	62	mi³¹map³¹	m i ³¹ + m a p ³¹	i n t + i n c t	12314 12315
+3547	Xiandao	plant ash	62	ʐɔʔ⁵⁵phɔʔ⁵⁵	ʐ ɔ ʔ ⁵⁵ + ph ɔ ʔ ⁵⁵	i n c t + i n c t	12318 12319
+4998	Atsi	plant ash	62	mji²¹mop⁵⁵	m j i ²¹ + m o p ⁵⁵	i m n t + i n c t	12314 12316
+6782	Maru	plant ash	62	njĭ³⁵map⁵⁵	n j ĭ ³⁵ + m a p ⁵⁵	i m n t + i n c t	12314 12316
+8409	Bola	plant ash	62	mi³¹map³¹	m i ³¹ + m a p ³¹	i n t + i n c t	12314 12316
 10140	Lashi	plant ash	62	mji³³jap³¹	m j i ³³ + /ʔ j a p ³¹	i m n t + i m n c t	12314 12315
-11844	Old_Burmese	plant ash	62	pra	p r a ²²	i m n t	12316
+11844	Old_Burmese	plant ash	62	pra	p r a ²²	i m n t	12317
 #
 521	Rangoon	plate / dish	519	pɑ̃⁵⁵kɑ̃²²pjɑ⁵⁵	p ɑ̃ ∼ ⁵⁵ + k ɑ̃ ∼ ²² + p j ɑ ⁵⁵	i n c t + i n c t + i m n t	12329 12330 12331
 2307	Achang_Longchuan	plate / dish	519	phan³¹	pʰ a n ³¹	i n c t	12329
@@ -8704,7 +8704,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 8839	Bola	plate / dish	519	phan³¹	ph a n ³¹	i n c t	12329
 10531	Lashi	plate / dish	519	phan⁵³	ph a n ⁵³	i n c t	12329
 #
-1599	Rangoon	play / amuse oneself	1584	kɑ⁵³sɑ⁵³	k ɑ ⁵³ + s ɑ ⁵³	i n t + i n t	12341 12344
+1599	Rangoon	play / amuse oneself	1584	kɑ⁵³sɑ⁵³	k ɑ ⁵³ + s ɑ ⁵³	i n t + i n t	12341 12345
 3309	Achang_Longchuan	play / amuse oneself	1584	tseʔ⁵⁵	ts e ʔ ⁵⁵	i n c t	12339
 4778	Xiandao	play / amuse oneself	1584	tsɛʔ⁵⁵	ts ɛ ʔ ⁵⁵	i n c t	12339
 6534	Atsi	play / amuse oneself	1584	ŋji⁵¹ku̱n⁵⁵	ŋ j i ⁵¹ + ˀk u n ⁵⁵	i m n t + i n c t	12340 12341
@@ -8794,15 +8794,15 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9386	Bola	poke (a sign into earth) / insert	1072	tsa̱uʔ⁵⁵	ˀts au ʔ ⁵⁵	i n c t	12451
 11005	Lashi	poke (a sign into earth) / insert	1072	tsu̱ːk⁵⁵	ˀts uː k ⁵⁵	i n c t	12451
 #
-1736	Rangoon	pole (carrying / shoulder)	1719	thɑ̃⁵⁵po⁵⁵	tʰ ɑ̃ ∼ ⁵⁵ + p o ⁵⁵	i n c t + i n t	12459 12463
+1736	Rangoon	pole (carrying / shoulder)	1719	thɑ̃⁵⁵po⁵⁵	tʰ ɑ̃ ∼ ⁵⁵ + p o ⁵⁵	i n c t + i n t	12460 12463
 3435	Achang_Longchuan	pole (carrying / shoulder)	1719	kan³¹tam⁵⁵	k a n ³¹ + t a m ⁵⁵	i n c t + i n c t	12459 12460
-4892	Xiandao	pole (carrying / shoulder)	1719	cɛn³¹tam⁵⁵	c ɛ n ³¹ + t a m ⁵⁵	i n c t + i n c t	12464 12459
+4892	Xiandao	pole (carrying / shoulder)	1719	cɛn³¹tam⁵⁵	c ɛ n ³¹ + t a m ⁵⁵	i n c t + i n c t	12464 12460
 6671	Atsi	pole (carrying / shoulder)	1719	xap²¹loʔ²¹	x a p ²¹ + l o ʔ ²¹	i n c t + i n c t	12461 12462
 8302	Maru	pole (carrying / shoulder)	1719	xap³¹lɔʔ³¹	x a p ³¹ + l ɔ ʔ ³¹	i n c t + i n c t	12461 12462
 10029	Bola	pole (carrying / shoulder)	1719	xap⁵⁵laʔ³¹	x a p ⁵⁵ + l a ʔ ³¹	i n c t + i n c t	12461 12462
 11561	Lashi	pole (carrying / shoulder)	1719	xap⁵⁵	x a p ⁵⁵	i n c t	12461
 #
-1015	Rangoon	polite / courteous	1011	phɔ²²jwe²²	pʰ ɔ ²² + /ʔ ɥ e ²²	i n t + i m n t	12479 12480
+1015	Rangoon	polite / courteous	1011	phɔ²²jwe²²	pʰ ɔ ²² + /ʔ ɥ e ²²	i n t + i m n t	12475 12479
 2770	Achang_Longchuan	polite / courteous	1011	khəʔ³¹tɕhi³⁵	kʰ ə ʔ ³¹ + tɕʰ i ³⁵	i n c t + i n t	12473 12474
 5949	Atsi	polite / courteous	1011	phau²¹ta̱p⁵⁵	pʰ a u ²¹ + ˀt a p ⁵⁵	i n N t + i n c t	12475 12476
 9327	Bola	polite / courteous	1011	phau³⁵	ph au ³⁵	i n t	12475
@@ -8900,7 +8900,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9049	Bola	present, the (time)	736	a³¹khui⁵⁵	/ʔ a ³¹ + kh ui ⁵⁵	i n t + i n t	12609 12610
 10704	Lashi	present, the (time)	736	a³¹khui⁵⁵	/ʔ a ³¹ + kh u i ⁵⁵	i n t + i m n t	12609 12610
 #
-1307	Rangoon	press (a tube of toothpaste)	1298	ȵ̥iʔ⁵⁵	ɲ̊ i ʔ ⁵⁵	i n c t	12626
+1307	Rangoon	press (a tube of toothpaste)	1298	ȵ̥iʔ⁵⁵	ɲ̊ i ʔ ⁵⁵	i n c t	12622
 3031	Achang_Longchuan	press (a tube of toothpaste)	1298	ŋ̊uat⁵⁵	ŋ̊ ua t ⁵⁵	i n c t	12622
 4532	Xiandao	press (a tube of toothpaste)	1298	ɲ̊ap⁵⁵	ɲ̊ a p ⁵⁵	i n c t	12623
 6241	Atsi	press (a tube of toothpaste)	1298	tʃa̱p⁵⁵	ˀtʃ a p ⁵⁵	i n c t	12623
@@ -8924,9 +8924,9 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9936	Bola	press / push down	1626	na̱i³⁵	ˀn ai ³⁵	i n t	12639
 11484	Lashi	press / push down	1626	nɛ̱ː⁵⁵	ˀn ɛː ⁵⁵	i n t	12639
 #
-1675	Rangoon	pricked, be (on a thorn)	1660	su⁵⁵	s u ⁵⁵	i n t	12646
+1675	Rangoon	pricked, be (on a thorn)	1660	su⁵⁵	s u ⁵⁵	i n t	12647
 3379	Achang_Longchuan	pricked, be (on a thorn)	1660	toi³¹	t oi ³¹	i n t	12646
-6610	Atsi	pricked, be (on a thorn)	1660	tsu²¹	ts u ²¹	i n t	12646
+6610	Atsi	pricked, be (on a thorn)	1660	tsu²¹	ts u ²¹	i n t	12647
 8241	Maru	pricked, be (on a thorn)	1660	thuk⁵⁵	th u k ⁵⁵	i n c t	12646
 9969	Bola	pricked, be (on a thorn)	1660	thau³⁵	th au ³⁵	i n t	12646
 #
@@ -9037,11 +9037,11 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9348	Bola	pull up (weeds)	1033	nɔt³¹	n ɔ t ³¹	i n c t	12762
 10973	Lashi	pull up (weeds)	1033	nuːt³¹	n uː t ³¹	i n c t	12762
 #
-129	Rangoon	pulse (wrist)	129	tθwe⁵⁵to⁵⁵	tθ w e ⁵⁵ + t o ⁵⁵	i m n t + i n t	12775 12773
+129	Rangoon	pulse (wrist)	129	tθwe⁵⁵to⁵⁵	tθ w e ⁵⁵ + t o ⁵⁵	i m n t + i n t	12774 12773
 1951	Achang_Longchuan	pulse (wrist)	129	lɔʔ⁵⁵məʔ³¹	l ɔ ʔ ⁵⁵ + m ə ʔ ³¹	i n c t + i n c t	12770 12771
-3607	Xiandao	pulse (wrist)	129	lɔʔ⁵⁵kɯ³¹	l ɔ ʔ ⁵⁵ + k ɯ ³¹	i n c t + i n t	12770 12776
+3607	Xiandao	pulse (wrist)	129	lɔʔ⁵⁵kɯ³¹	l ɔ ʔ ⁵⁵ + k ɯ ³¹	i n c t + i n t	12770 12775
 5063	Atsi	pulse (wrist)	129	sui²¹tʃho⁵¹	s u i ²¹ + tʃʰ o ⁵¹	i m n t + i n t	12772 12773
-6839	Maru	pulse (wrist)	129	sa³⁵tʃhɔʔ⁵⁵	s a ³⁵ + tʃh ɔ ʔ ⁵⁵	i n t + i n c t	12772 12774
+6839	Maru	pulse (wrist)	129	sa³⁵tʃhɔʔ⁵⁵	s a ³⁵ + tʃh ɔ ʔ ⁵⁵	i n t + i n c t	12772 12770
 8472	Bola	pulse (wrist)	129	sui³⁵	s ui ³⁵	i n t	12772
 #
 1575	Rangoon	pulse / beat	1561	khõ²²	kʰ õ ∼ ²²	i n c t	12784
@@ -9220,9 +9220,9 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 8720	Bola	radish	394	ɔ̃³⁵khji⁵⁵pɔ̱n⁵⁵	/ʔ ɔ̃ ∼ ³⁵ + khj i ⁵⁵ + ˀp ɔ n ⁵⁵	i n c t + i n t + i n c t	13001 13002 13004
 10427	Lashi	radish	394	ŋa̱ŋ⁵⁵khjei³³	ˀŋ a ŋ ⁵⁵ + kh j ei ³³	i n c t + i m n t	13001 13002
 #
-567	Rangoon	raft	565	bɑ̃u²²	b ɑ̃ u ∼ ²²	i n N c t	13021
+567	Rangoon	raft	565	bɑ̃u²²	b ɑ̃ u ∼ ²²	i n N c t	13020
 2350	Achang_Longchuan	raft	565	xə⁵⁵	x ə ⁵⁵	i n t	13019
-3953	Xiandao	raft	565	phaʔ⁵¹tsi⁵⁵	ph a ʔ ⁵¹ + ts i ⁵⁵	i n c t + i n t	13020 13022
+3953	Xiandao	raft	565	phaʔ⁵¹tsi⁵⁵	ph a ʔ ⁵¹ + ts i ⁵⁵	i n c t + i n t	13020 13021
 5496	Atsi	raft	565	pa̱u⁵¹	ˀp a u ⁵¹	i n N t	13020
 7231	Maru	raft	565	pu̱k³¹	ˀp u k ³¹	i n c t	13020
 8885	Bola	raft	565	pa̱u⁵⁵	ˀp au ⁵⁵	i n t	13020
@@ -9246,14 +9246,14 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 #
 11607	Lashi	rain (note:+v)	1872	mou³³wɔ³¹	m ou ³³ + /ʔ w ɔ ³¹	i n t + i m n t	13047 13048
 #
-11	Rangoon	rainbow	11	tθɛʔ⁴tɑ̃⁵³	tθ ɛ ʔ ⁴ + t ɑ̃ ∼ ⁵³	i n c t + i n c t	13056 13054
+11	Rangoon	rainbow	11	tθɛʔ⁴tɑ̃⁵³	tθ ɛ ʔ ⁴ + t ɑ̃ ∼ ⁵³	i n c t + i n c t	13053 13050
 1842	Achang_Longchuan	rainbow	11	xɔŋ⁵¹ȵin³¹nam³¹	x ɔ ŋ ⁵¹ + ȵ i n ³¹ + n a m ³¹	i n c t + i n c t + i n c t	13050 13051 13052
-3509	Xiandao	rainbow	11	l̥ɿ⁵⁵ɲ̊ɔʔ⁵⁵l̥aŋ³¹kam⁵⁵	l̥ ɿ ⁵⁵ + ɲ̊ ɔ ʔ ⁵⁵ + l̥ a ŋ ³¹ + k a m ⁵⁵	i n t + i n c t + i n c t + i n c t	13057 13053 13050 13058
+3509	Xiandao	rainbow	11	l̥ɿ⁵⁵ɲ̊ɔʔ⁵⁵l̥aŋ³¹kam⁵⁵	l̥ ɿ ⁵⁵ + ɲ̊ ɔ ʔ ⁵⁵ + l̥ a ŋ ³¹ + k a m ⁵⁵	i n t + i n c t + i n c t + i n c t	13059 13053 13050 13060
 4948	Atsi	rainbow	11	voʔ²¹kan²¹ʃiŋ⁵⁵jaŋ²¹	v o ʔ ²¹ + k a n ²¹ + ʃ i ŋ ⁵⁵ + /ʔ j a ŋ ²¹	i n c t + i n c t + i n c t + i m n c t	13053 13050 13054 13051
-6738	Maru	rainbow	11	ɣɔʔ³¹kaŋ³⁵saŋ³¹ŋjɔ̃³¹	ɣ ɔ ʔ ³¹ + k a ŋ ³⁵ + s a ŋ ³¹ + ŋ j ɔ̃ ∼ ³¹	i n c t + i n c t + i n c t + i m n c t	13053 13050 13054 13051
-8362	Bola	rainbow	11	ɣaʔ³¹kɛ̃³¹saŋ⁵⁵njuŋ⁵⁵	ɣ a ʔ ³¹ + k ɛ̃ ∼ ³¹ + s a ŋ ⁵⁵ + n j u ŋ ⁵⁵	i n c t + i n c t + i n c t + i m n c t	13053 13050 13054 13051
-10102	Lashi	rainbow	11	sə̱ŋ⁵⁵jaŋ³³jɔ³¹kan³³	ˀs ə ŋ ⁵⁵ + /ʔ j a ŋ ³³ + /ʔ j ɔ ³¹ + k a n ³³	i n c t + i m n c t + i m n t + i n c t	13054 13051 13055 13050
-11803	Old_Burmese	rainbow	11	sak◦tam	s a k ⁴ + t a m ²²	i n c t + i n c t	13056 13054
+6738	Maru	rainbow	11	ɣɔʔ³¹kaŋ³⁵saŋ³¹ŋjɔ̃³¹	ɣ ɔ ʔ ³¹ + k a ŋ ³⁵ + s a ŋ ³¹ + ŋ j ɔ̃ ∼ ³¹	i n c t + i n c t + i n c t + i m n c t	13053 13058 13050 13051
+8362	Bola	rainbow	11	ɣaʔ³¹kɛ̃³¹saŋ⁵⁵njuŋ⁵⁵	ɣ a ʔ ³¹ + k ɛ̃ ∼ ³¹ + s a ŋ ⁵⁵ + n j u ŋ ⁵⁵	i n c t + i n c t + i n c t + i m n c t	13053 13055 13050 13051
+10102	Lashi	rainbow	11	sə̱ŋ⁵⁵jaŋ³³jɔ³¹kan³³	ˀs ə ŋ ⁵⁵ + /ʔ j a ŋ ³³ + /ʔ j ɔ ³¹ + k a n ³³	i n c t + i m n c t + i m n t + i n c t	13056 13051 13057 13050
+11803	Old_Burmese	rainbow	11	sak◦tam	s a k ⁴ + t a m ²²	i n c t + i n c t	13053 13050
 #
 1646	Rangoon	raise (chickens)	1631	mwe⁵⁵	m w e ⁵⁵	i m n t	13080
 3351	Achang_Longchuan	raise (chickens)	1631	leŋ³¹	l e ŋ ³¹	i n c t	13078
@@ -9324,11 +9324,11 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9823	Bola	receive	1515	ju⁵⁵	/ʔ j u ⁵⁵	i m n t	13157
 11388	Lashi	receive	1515	jɔ:⁵⁵ju³¹	/ʔ j ɔ: ⁵⁵ + /ʔ j u ³¹	i m n t + i m n t	13158 13157
 #
-740	Rangoon	recently / lately	737	jɑ⁵³khu⁵³tɑ⁵³lɔ⁵⁵	/ʔ j ɑ ⁵³ + kʰ u ⁵³ + t ɑ ⁵³ + l ɔ ⁵⁵	i m n t + i n t + i n t + i n t	13172 13173 13177 13178
+740	Rangoon	recently / lately	737	jɑ⁵³khu⁵³tɑ⁵³lɔ⁵⁵	/ʔ j ɑ ⁵³ + kʰ u ⁵³ + t ɑ ⁵³ + l ɔ ⁵⁵	i m n t + i n t + i n t + i n t	13173 13174 13178 13179
 2500	Achang_Longchuan	recently / lately	737	xai⁵⁵tɕin⁵⁵ȵen³¹	x ai ⁵⁵ + tɕ i n ⁵⁵ + ȵ e n ³¹	i n t + i n c t + i n c t	13167 13168 13169
-5669	Atsi	recently / lately	737	xji⁵⁵kji²¹ʒo²¹	x j i ⁵⁵ + k j i ²¹ + ʒ o ²¹	i m n t + i m n t + i n t	13167 13170 13171
-9050	Bola	recently / lately	737	a³¹khui⁵⁵u³¹	/ʔ a ³¹ + kh ui ⁵⁵ + /ʔ u ³¹	i n t + i n t + i n t	13172 13173 13174
-10705	Lashi	recently / lately	737	a³¹mjan⁵⁵mo³¹	/ʔ a ³¹ + m j a n ⁵⁵ + m o ³¹	i n t + i m n c t + i n t	13172 13175 13176
+5669	Atsi	recently / lately	737	xji⁵⁵kji²¹ʒo²¹	x j i ⁵⁵ + k j i ²¹ + ʒ o ²¹	i m n t + i m n t + i n t	13170 13171 13172
+9050	Bola	recently / lately	737	a³¹khui⁵⁵u³¹	/ʔ a ³¹ + kh ui ⁵⁵ + /ʔ u ³¹	i n t + i n t + i n t	13173 13174 13175
+10705	Lashi	recently / lately	737	a³¹mjan⁵⁵mo³¹	/ʔ a ³¹ + m j a n ⁵⁵ + m o ³¹	i n t + i m n c t + i n t	13173 13176 13177
 #
 1489	Rangoon	recognize	1478	tθi⁵³	tθ i ⁵³	i n t	13185
 3200	Achang_Longchuan	recognize	1478	sa³⁵	s a ³⁵	i n t	13184
@@ -9557,11 +9557,11 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 8703	Bola	rice (paddy)	378	i³¹thauŋ³¹kauʔ³¹	/ʔ i ³¹ + th au ŋ ³¹ + k au ʔ ³¹	i n t + i n c t + i n c t	13488 13485 13487
 10413	Lashi	rice (paddy)	378	kuk³¹	k u k ³¹	i n c t	13487
 #
-386	Rangoon	rice (unhusked)	384	sɑ⁵³pɑ⁵⁵si⁵³	s ɑ ⁵³ + p ɑ ⁵⁵ + s i ⁵³	i n t + i n t + i n t	13501 13504 13505
+386	Rangoon	rice (unhusked)	384	sɑ⁵³pɑ⁵⁵si⁵³	s ɑ ⁵³ + p ɑ ⁵⁵ + s i ⁵³	i n t + i n t + i n t	13501 13505 13506
 2184	Achang_Longchuan	rice (unhusked)	384	ka³¹tsui³¹lum³¹	k a ³¹ + ts ui ³¹ + l u m ³¹	i n t + i n t + i n c t	13500 13501 13502
 3828	Xiandao	rice (unhusked)	384	kuʔ⁵⁵lum³¹	k u ʔ ⁵⁵ + l u m ³¹	i n c t + i n c t	13500 13502
 5318	Atsi	rice (unhusked)	384	kuʔ²¹tʃham²¹	k u ʔ ²¹ + tʃʰ a m ²¹	i n c t + i n c t	13500 13503
-7070	Maru	rice (unhusked)	384	kauk³¹tʃhɛʔ⁵⁵	k au k ³¹ + tʃh ɛ ʔ ⁵⁵	i n c t + i n c t	13500 13503
+7070	Maru	rice (unhusked)	384	kauk³¹tʃhɛʔ⁵⁵	k au k ³¹ + tʃh ɛ ʔ ⁵⁵	i n c t + i n c t	13500 13504
 8709	Bola	rice (unhusked)	384	kauʔ³¹ʃɿ³⁵	k au ʔ ³¹ + ʃ ɿ ³⁵	i n c t + i n t	13500 13501
 10419	Lashi	rice (unhusked)	384	tʃham⁵⁵	tʃh a m ⁵⁵	i n c t	13503
 #
@@ -9612,14 +9612,14 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 7539	Maru	right / obverse side	906	thɔʔ⁵⁵	th ɔ ʔ ⁵⁵	i n c t	13571
 9220	Bola	right / obverse side	906	taŋ³⁵	t a ŋ ³⁵	i n c t	13570
 #
-457	Rangoon	ring	455	lɛʔ⁴suʔ⁴	l ɛ ʔ ⁴ + s u ʔ ⁴	i n c t + i n c t	13578 13580
-3874	Xiandao	ring	455	lɔʔ⁵⁵tʂɔp⁵⁵	l ɔ ʔ ⁵⁵ + tʂ ɔ p ⁵⁵	i n c t + i n c t	13578 13579
+457	Rangoon	ring	455	lɛʔ⁴suʔ⁴	l ɛ ʔ ⁴ + s u ʔ ⁴	i n c t + i n c t	13578 13582
+3874	Xiandao	ring	455	lɔʔ⁵⁵tʂɔp⁵⁵	l ɔ ʔ ⁵⁵ + tʂ ɔ p ⁵⁵	i n c t + i n c t	13578 13583
 5388	Atsi	ring	455	loʔ²¹tʃo̱p⁵⁵	l o ʔ ²¹ + ˀtʃ o p ⁵⁵	i n c t + i n c t	13578 13579
-7130	Maru	ring	455	lɔʔ³¹tʃɔʔ⁵⁵	l ɔ ʔ ³¹ + tʃ ɔ ʔ ⁵⁵	i n c t + i n c t	13578 13579
-10477	Lashi	ring	455	lɔʔ³¹tʃɔ̱p⁵⁵	l ɔ ʔ ³¹ + ˀtʃ ɔ p ⁵⁵	i n c t + i n c t	13578 13579
+7130	Maru	ring	455	lɔʔ³¹tʃɔʔ⁵⁵	l ɔ ʔ ³¹ + tʃ ɔ ʔ ⁵⁵	i n c t + i n c t	13578 13581
+10477	Lashi	ring	455	lɔʔ³¹tʃɔ̱p⁵⁵	l ɔ ʔ ³¹ + ˀtʃ ɔ p ⁵⁵	i n c t + i n c t	13578 13580
 #
-564	Rangoon	ring in cow's nose used to lead it about	562	nɑ⁵³phɑ⁵⁵kwĩ⁵⁵	/ʔ n ɑ ⁵³ + pʰ ɑ ⁵⁵ + k w ĩ ∼ ⁵⁵	i m n t + i n t + i m n c t	13592 13593 13591
-3951	Xiandao	ring in cow's nose used to lead it about	562	laʔ³¹ʂɔi⁵¹	l a ʔ ³¹ + ʂ ɔi ⁵¹	i n c t + i n t	13594 13590
+564	Rangoon	ring in cow's nose used to lead it about	562	nɑ⁵³phɑ⁵⁵kwĩ⁵⁵	/ʔ n ɑ ⁵³ + pʰ ɑ ⁵⁵ + k w ĩ ∼ ⁵⁵	i m n t + i n t + i m n c t	13589 13592 13591
+3951	Xiandao	ring in cow's nose used to lead it about	562	laʔ³¹ʂɔi⁵¹	l a ʔ ³¹ + ʂ ɔi ⁵¹	i n c t + i n t	13593 13590
 5494	Atsi	ring in cow's nose used to lead it about	562	no̱⁵¹ʃon⁵⁵	ˀn o ⁵¹ + ʃ o n ⁵⁵	i n t + i n c t	13589 13590
 7228	Maru	ring in cow's nose used to lead it about	562	nŭŋ³⁵ʃɔi³⁵	n ŭ ŋ ³⁵ + ʃ ɔi ³⁵	i n c t + i n t	13589 13590
 8882	Bola	ring in cow's nose used to lead it about	562	na̱⁵⁵ʃø³¹	ˀn a ⁵⁵ + ʃ ø ³¹	i n t + i n t	13589 13590
@@ -9835,7 +9835,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 10136	Lashi	rust	55	tsə̆³³kjei³³	ts ə̆ ³³ + k j ei ³³	i n t + i m n t	13851 13852
 11376	Lashi	rust	55	juːk³¹	/ʔ j uː k ³¹	i m n c t	13856
 #
-1407	Rangoon	s.b.'s turn	1396	ɑ⁵³ɬɛ⁵³jɑuʔ⁴	/ʔ ɑ ⁵³ + ɬ ɛ ⁵³ + /ʔ j ɑ u ʔ ⁴	i n t + i n t + i m n N c t	13874 13878 13879
+1407	Rangoon	s.b.'s turn	1396	ɑ⁵³ɬɛ⁵³jɑuʔ⁴	/ʔ ɑ ⁵³ + ɬ ɛ ⁵³ + /ʔ j ɑ u ʔ ⁴	i n t + i n t + i m n N c t	13874 13879 13880
 3121	Achang_Longchuan	s.b.'s turn	1396	a³¹ka⁵⁵pan³⁵te³⁵	/ʔ a ³¹ + k a ⁵⁵ + p a n ³⁵ + t e ³⁵	i n t + i n t + i n c t + i n t	13874 13875 13876 13877
 6339	Atsi	s.b.'s turn	1396	thai⁵⁵	tʰ a i ⁵⁵	i n N t	13877
 7979	Maru	s.b.'s turn	1396	tʃø⁵⁵	tʃ ø ⁵⁵	i n t	13877
@@ -9860,14 +9860,14 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 5959	Atsi	safe and sound	1021	jup²¹jo⁵¹	/ʔ j u p ²¹ + /ʔ j o ⁵¹	i m n c t + i m n t	13908 13909
 9337	Bola	safe and sound	1021	ŋji⁵⁵kai⁵⁵	ŋ j i ⁵⁵ + k ai ⁵⁵	i m n t + i n t	13910 13911
 #
-154	Rangoon	saliva	154	tθwɑ⁵⁵je²²	tθ w ɑ ⁵⁵ + /ʔ j e ²²	i m n t + i m n t	13922 13923
+154	Rangoon	saliva	154	tθwɑ⁵⁵je²²	tθ w ɑ ⁵⁵ + /ʔ j e ²²	i m n t + i m n t	13921 13922
 1974	Achang_Longchuan	saliva	154	a³¹ʐuiʔ³¹	/ʔ a ³¹ + ʐ ui ʔ ³¹	i n t + i n c t	13915 13916
-3628	Xiandao	saliva	154	a³¹cui³¹	/ʔ a ³¹ + c ui ³¹	i n t + i n t	13915 13920
+3628	Xiandao	saliva	154	a³¹cui³¹	/ʔ a ³¹ + c ui ³¹	i n t + i n t	13915 13916
 5088	Atsi	saliva	154	tʃi̱²¹	ˀtʃ i ²¹	i n t	13917
 6860	Maru	saliva	154	ɣui⁵⁵	ɣ u i ⁵⁵	i m n t	13919
 8494	Bola	saliva	154	khə̆³¹ta̱i³⁵	kh ə̆ ³¹ + ˀt ai ³⁵	i n t + i n t	13918 13917
 10218	Lashi	saliva	154	ɣə⁵⁵	ɣ ə ⁵⁵	i n t	13919
-11900	Old_Burmese	saliva	154	so₁ḥ◦riy	s o ⁵⁵ + r ə j ²²	i n t + i n c t	13920 13921
+11900	Old_Burmese	saliva	154	so₁ḥ◦riy	s o ⁵⁵ + r ə j ²²	i n t + i n c t	13916 13920
 #
 60	Rangoon	salt	60	shɑ⁵⁵	sʰ ɑ ⁵⁵	i n t	13929
 1886	Achang_Longchuan	salt	60	tɕhɔ³¹	tɕʰ ɔ ³¹	i n t	13929
@@ -9901,7 +9901,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9532	Bola	satisfy (conditions, requireme	1226	tʃɔ³¹	tʃ ɔ ³¹	i n t	13961
 11133	Lashi	satisfy (conditions, requireme	1226	tsuːm³¹	ts uː m ³¹	i n c t	13962
 #
-979	Rangoon	savory / appetizing	975	shẽ⁵³	sʰ ẽ ∼ ⁵³	i n c t	13972
+979	Rangoon	savory / appetizing	975	shẽ⁵³	sʰ ẽ ∼ ⁵³	i n c t	13969
 2737	Achang_Longchuan	savory / appetizing	975	up⁵⁵	/ʔ u p ⁵⁵	i n c t	13968
 4291	Xiandao	savory / appetizing	975	xom³⁵	x o m ³⁵	i n c t	13969
 5912	Atsi	savory / appetizing	975	xom⁵⁵	x o m ⁵⁵	i n c t	13969
@@ -9967,15 +9967,15 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 #
 6252	Atsi	scissor (wool, hair)	1861	jam²¹	/ʔ j a m ²¹	i m n c t	14060
 #
-546	Rangoon	scissors	544	kɑʔ⁴tɕe⁵⁵	k ɑ ʔ ⁴ + tɕ e ⁵⁵	i n c t + i n t	14065 14066
+546	Rangoon	scissors	544	kɑʔ⁴tɕe⁵⁵	k ɑ ʔ ⁴ + tɕ e ⁵⁵	i n c t + i n t	14066 14067
 2333	Achang_Longchuan	scissors	544	tɕam³¹ȵ̥ip³⁵	tɕ a m ³¹ + ȵ̥ i p ³⁵	i n c t + i n c t	14062 14063
-3943	Xiandao	scissors	544	chiŋ⁵⁵fum⁵⁵	ch i ŋ ⁵⁵ + f u m ⁵⁵	i n c t + i n c t	14062 14067
-5476	Atsi	scissors	544	thŏ⁵⁵tsen²¹	tʰ ŏ ⁵⁵ + ts e n ²¹	i n t + i n c t	14064 14062
-7213	Maru	scissors	544	thə̆³¹tsɛn³¹	th ə̆ ³¹ + ts ɛ n ³¹	i n t + i n c t	14064 14062
-8865	Bola	scissors	544	thə³¹tsɛn³¹	th ə ³¹ + ts ɛ n ³¹	i n t + i n c t	14064 14062
-10554	Lashi	scissors	544	thŏ⁵⁵tsɛn³³	th ŏ ⁵⁵ + ts ɛ n ³³	i n t + i n c t	14064 14062
+3943	Xiandao	scissors	544	chiŋ⁵⁵fum⁵⁵	ch i ŋ ⁵⁵ + f u m ⁵⁵	i n c t + i n c t	14065 14068
+5476	Atsi	scissors	544	thŏ⁵⁵tsen²¹	tʰ ŏ ⁵⁵ + ts e n ²¹	i n t + i n c t	14064 14065
+7213	Maru	scissors	544	thə̆³¹tsɛn³¹	th ə̆ ³¹ + ts ɛ n ³¹	i n t + i n c t	14064 14065
+8865	Bola	scissors	544	thə³¹tsɛn³¹	th ə ³¹ + ts ɛ n ³¹	i n t + i n c t	14064 14065
+10554	Lashi	scissors	544	thŏ⁵⁵tsɛn³³	th ŏ ⁵⁵ + ts ɛ n ³³	i n t + i n c t	14064 14065
 #
-1413	Rangoon	scold	1402	shɛ⁵⁵	sʰ ɛ ⁵⁵	i n t	14080
+1413	Rangoon	scold	1402	shɛ⁵⁵	sʰ ɛ ⁵⁵	i n t	14077
 3127	Achang_Longchuan	scold	1402	tʂə⁵⁵	tʂ ə ⁵⁵	i n t	14077
 4609	Xiandao	scold	1402	tsi⁵⁵	ts i ⁵⁵	i n t	14077
 6345	Atsi	scold	1402	ni̱ŋ²¹	ˀn i ŋ ²¹	i n c t	14078
@@ -10246,13 +10246,13 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 10636	Lashi	shadow	653	a⁵⁵lo̱³³	/ʔ a ⁵⁵ + ˀl o ³³	i n t + i n t	14455 14458
 11836	Old_Burmese	shadow	653	aʔ◦rip	ʔ a ⁵³ + r i p ⁴	i n t + i n c t	14455 14456
 #
-1648	Rangoon	shake (one's head)	1633	khɑ²²	kʰ ɑ ²²	i n t	14476
+1648	Rangoon	shake (one's head)	1633	khɑ²²	kʰ ɑ ²²	i n t	14477
 3353	Achang_Longchuan	shake (one's head)	1633	ȵ̥on³⁵	ȵ̥ o n ³⁵	i n c t	14472
-4816	Xiandao	shake (one's head)	1633	l̥ɛ³⁵	l̥ ɛ ³⁵	i n t	14477
+4816	Xiandao	shake (one's head)	1633	l̥ɛ³⁵	l̥ ɛ ³⁵	i n t	14478
 6583	Atsi	shake (one's head)	1633	χe⁵¹	χ e ⁵¹	i n t	14473
-8214	Maru	shake (one's head)	1633	fak⁵⁵	f a k ⁵⁵	i n c t	14473
-9942	Bola	shake (one's head)	1633	u̱³⁵fak⁵⁵fak⁵⁵	ˀ/ʔ u ³⁵ + f a k ⁵⁵ + f a k ⁵⁵	i n t + i n c t + i n c t	14474 14473 14475
-11489	Lashi	shake (one's head)	1633	fɛ̱ː⁵⁵	ˀf ɛː ⁵⁵	i n t	14473
+8214	Maru	shake (one's head)	1633	fak⁵⁵	f a k ⁵⁵	i n c t	14475
+9942	Bola	shake (one's head)	1633	u̱³⁵fak⁵⁵fak⁵⁵	ˀ/ʔ u ³⁵ + f a k ⁵⁵ + f a k ⁵⁵	i n t + i n c t + i n c t	14474 14475 14476
+11489	Lashi	shake (one's head)	1633	fɛ̱ː⁵⁵	ˀf ɛː ⁵⁵	i n t	14475
 #
 1691	Rangoon	shake / quake	1676	tõ²²khɑ²²	t õ ∼ ²² + kʰ ɑ ²²	i n c t + i n t	14482 14484
 3393	Achang_Longchuan	shake / quake	1676	than³⁵	tʰ a n ³⁵	i n c t	14482
@@ -10297,7 +10297,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 7846	Maru	shave (hairs) / scrape	1249	khjat⁵⁵	kh j a t ⁵⁵	i m n c t	14529
 9555	Bola	shave (hairs) / scrape	1249	khjɔt⁵⁵	khj ɔ t ⁵⁵	i n c t	14529
 11153	Lashi	shave (hairs) / scrape	1249	a³¹juːʔ³¹	/ʔ a ³¹ + /ʔ j uː ʔ ³¹	i n t + i m n c t	14531 14530
-11956	Old_Burmese	shave (hairs) / scrape	1249	rit	r i t ⁴	i n c t	14529
+11956	Old_Burmese	shave (hairs) / scrape	1249	rit	r i t ⁴	i n c t	14532
 #
 1564	Rangoon	shave (the head)	1551	tõ⁵⁵	t õ ∼ ⁵⁵	i n c t	14540
 3276	Achang_Longchuan	shave (the head)	1551	ʐoʔ⁵⁵	ʐ o ʔ ⁵⁵	i n c t	14539
@@ -10355,9 +10355,9 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 8794	Bola	sheepfold / pen (sheep)	473	tʃhɔt⁵⁵pɛ̱ʔ⁵⁵ khap⁵⁵	tʃh ɔ t ⁵⁵ + ˀp ɛ ʔ ⁵⁵ + kh a p ⁵⁵	i n c t + i n c t + i n c t	14614 14611 14612
 10492	Lashi	sheepfold / pen (sheep)	473	tʃhɔt⁵⁵pat³¹khɔm³³	tʃh ɔ t ⁵⁵ + p a t ³¹ + kh ɔ m ³³	i n c t + i n c t + i n c t	14614 14611 14612
 #
-789	Rangoon	sheet (of paper)	786	jwɛʔ⁴	/ʔ ɥ ɛ ʔ ⁴	i m n c t	14630
+789	Rangoon	sheet (of paper)	786	jwɛʔ⁴	/ʔ ɥ ɛ ʔ ⁴	i m n c t	14632
 2544	Achang_Longchuan	sheet (of paper)	786	tuŋ³¹	t u ŋ ³¹	i n c t	14629
-4113	Xiandao	sheet (of paper)	786	tʂap⁵⁵	tʂ a p ⁵⁵	i n c t	14632
+4113	Xiandao	sheet (of paper)	786	tʂap⁵⁵	tʂ a p ⁵⁵	i n c t	14633
 5717	Atsi	sheet (of paper)	786	khjap⁵⁵	kʰ j a p ⁵⁵	i m n c t	14630
 7420	Maru	sheet (of paper)	786	khjɛʔ⁵⁵	kh j ɛ ʔ ⁵⁵	i m n c t	14630
 9099	Bola	sheet (of paper)	786	khjɛʔ⁵⁵	khj ɛ ʔ ⁵⁵	i n c t	14630
@@ -10481,14 +10481,14 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 11164	Lashi	shy, be / bashful	1261	ʃɔ̱ːʔ⁵⁵	ˀʃ ɔː ʔ ⁵⁵	i n c t	14790
 11807	Old_Burmese	shy, be / bashful	1261	rhak	r̥ a k ⁴	i n c t	14791
 #
-586	Rangoon	sickle	584	tɑ̃²²sĩ²²	t ɑ̃ ∼ ²² + s ĩ ∼ ²²	i n c t + i n c t	14806 14800
+586	Rangoon	sickle	584	tɑ̃²²sĩ²²	t ɑ̃ ∼ ²² + s ĩ ∼ ²²	i n c t + i n c t	14807 14804
 2369	Achang_Longchuan	sickle	584	ʐit⁵⁵mɔʔ³¹	ʐ i t ⁵⁵ + m ɔ ʔ ³¹	i n c t + i n c t	14800 14801
 3963	Xiandao	sickle	584	ʐɯt⁵⁵mɔ³¹	ʐ ɯ t ⁵⁵ + m ɔ ³¹	i n c t + i n t	14800 14801
 5515	Atsi	sickle	584	jeŋ²¹khoi⁵⁵	/ʔ j e ŋ ²¹ + kʰ o i ⁵⁵	i m n c t + i n N t	14802 14803
-7244	Maru	sickle	584	ʃɛ̃³¹ŋø̱³⁵	ʃ ɛ̃ ∼ ³¹ + ˀŋ ø ³⁵	i n c t + i n t	14800 14804
-8904	Bola	sickle	584	ʃɛ̃⁵⁵ŋø̱³⁵	ʃ ɛ̃ ∼ ⁵⁵ + ˀŋ ø ³⁵	i n c t + i n t	14800 14804
-10582	Lashi	sickle	584	ʃə̱m³³ŋu̱i⁵⁵	ˀʃ ə m ³³ + ˀŋ ui ⁵⁵	i n c t + i n t	14800 14804
-11831	Old_Burmese	sickle	584	tam◦cañ	t a m ²² + tɕ a ɲ ²²	i n c t + i n c t	14805 14800
+7244	Maru	sickle	584	ʃɛ̃³¹ŋø̱³⁵	ʃ ɛ̃ ∼ ³¹ + ˀŋ ø ³⁵	i n c t + i n t	14804 14805
+8904	Bola	sickle	584	ʃɛ̃⁵⁵ŋø̱³⁵	ʃ ɛ̃ ∼ ⁵⁵ + ˀŋ ø ³⁵	i n c t + i n t	14804 14805
+10582	Lashi	sickle	584	ʃə̱m³³ŋu̱i⁵⁵	ˀʃ ə m ³³ + ˀŋ ui ⁵⁵	i n c t + i n t	14804 14805
+11831	Old_Burmese	sickle	584	tam◦cañ	t a m ²² + tɕ a ɲ ²²	i n c t + i n c t	14806 14804
 #
 666	Rangoon	side	664	be⁵⁵	b e ⁵⁵	i n t	14819
 2435	Achang_Longchuan	side	664	a³¹ʑam⁵⁵	/ʔ a ³¹ + ʑ a m ⁵⁵	i n t + i n c t	14817 14818
@@ -10564,13 +10564,13 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 8571	Bola	sister-in-law (elder brother's)	233	a³¹pai³¹	/ʔ a ³¹ + p ai ³¹	i n t + i n t	14908 14906
 10290	Lashi	sister-in-law (elder brother's)	233	a⁵⁵pei³³	/ʔ a ⁵⁵ + p ei ³³	i n t + i n t	14908 14906
 #
-232	Rangoon	sisters	232	ȵi²²iʔ⁴ mɑ⁵³	ɲ i ²² + /ʔ i ʔ ⁴ + m ɑ ⁵³	i n t + i n c t + i n t	14922 14926 14921
+232	Rangoon	sisters	232	ȵi²²iʔ⁴ mɑ⁵³	ɲ i ²² + /ʔ i ʔ ⁴ + m ɑ ⁵³	i n t + i n c t + i n t	14921 14928 14929
 2048	Achang_Longchuan	sisters	232	a³¹maŋ³¹ȵi⁵⁵	/ʔ a ³¹ + m a ŋ ³¹ + ȵ i ⁵⁵	i n t + i n c t + i n t	14920 14921 14922
-3700	Xiandao	sisters	232	a³¹pɛ³¹a³¹naŋ⁵⁵	/ʔ a ³¹ + p ɛ ³¹ + /ʔ a ³¹ + n a ŋ ⁵⁵	i n t + i n t + i n t + i n c t	14920 14925 14927 14922
-5167	Atsi	sisters	232	a⁵⁵ku²¹a⁵⁵na̱⁵⁵	/ʔ a ⁵⁵ + k u ²¹ + /ʔ a ⁵⁵ + ˀn a ⁵⁵	i n t + i n t + i n t + i n t	14920 14923 14924 14922
-6934	Maru	sisters	232	mɔ³⁵na̱uŋ³⁵	m ɔ ³⁵ + ˀn au ŋ ³⁵	i n t + i n c t	14921 14922
-8570	Bola	sisters	232	pai³¹na̱uŋ³⁵	p ai ³¹ + ˀn au ŋ ³⁵	i n t + i n c t	14925 14922
-10289	Lashi	sisters	232	nə̱k⁵⁵ta̱ŋ³³	ˀn ə k ⁵⁵ + ˀt a ŋ ³³	i n c t + i n c t	14922 14921
+3700	Xiandao	sisters	232	a³¹pɛ³¹a³¹naŋ⁵⁵	/ʔ a ³¹ + p ɛ ³¹ + /ʔ a ³¹ + n a ŋ ⁵⁵	i n t + i n t + i n t + i n c t	14920 14925 14930 14921
+5167	Atsi	sisters	232	a⁵⁵ku²¹a⁵⁵na̱⁵⁵	/ʔ a ⁵⁵ + k u ²¹ + /ʔ a ⁵⁵ + ˀn a ⁵⁵	i n t + i n t + i n t + i n t	14920 14923 14924 14921
+6934	Maru	sisters	232	mɔ³⁵na̱uŋ³⁵	m ɔ ³⁵ + ˀn au ŋ ³⁵	i n t + i n c t	14927 14921
+8570	Bola	sisters	232	pai³¹na̱uŋ³⁵	p ai ³¹ + ˀn au ŋ ³⁵	i n t + i n c t	14925 14921
+10289	Lashi	sisters	232	nə̱k⁵⁵ta̱ŋ³³	ˀn ə k ⁵⁵ + ˀt a ŋ ³³	i n c t + i n c t	14921 14926
 #
 1715	Rangoon	sit down	1699	thɑ̃i²²	tʰ ɑ̃ i ∼ ²²	i n N c t	14943
 3416	Achang_Longchuan	sit down	1699	ni⁵⁵	n i ⁵⁵	i n t	14941
@@ -10594,7 +10594,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 4093	Xiandao	sixteen	763	sip⁵⁵xoʔ³¹	s i p ⁵⁵ + x o ʔ ³¹	i n c t + i n c t	14964 14959
 5694	Atsi	sixteen	763	lă²¹tshe⁵¹ŋo²¹	l ă ²¹ + tsʰ e ⁵¹ + ŋ o ²¹	i n t + i n t + i n t	14960 14958 14961
 7397	Maru	sixteen	763	tă³¹tshɛ³¹khjauk⁵⁵	t ă ³¹ + tsh ɛ ³¹ + kh j au k ⁵⁵	i n t + i n t + i m n c t	14958 14963 14959
-9076	Bola	sixteen	763	ta³¹thai⁵⁵khauʔ⁵⁵	t a ³¹ + th ai ⁵⁵ + kh au ʔ ⁵⁵	i n t + i n t + i n c t	14958 14962 14959
+9076	Bola	sixteen	763	ta³¹thai⁵⁵khauʔ⁵⁵	t a ³¹ + th ai ⁵⁵ + kh au ʔ ⁵⁵	i n t + i n t + i n c t	14962 14958 14959
 10728	Lashi	sixteen	763	tshĕ³³khjuk⁵⁵	tsh ĕ ³³ + kh j u k ⁵⁵	i n t + i m n c t	14958 14959
 #
 774	Rangoon	sixty	771	tɕhɑuʔ⁴shɛ²²	tɕʰ ɑ u ʔ ⁴ + sʰ ɛ ²²	i n N c t + i n t	14976 14977
@@ -10659,7 +10659,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 11402	Lashi	sleep	1530	ju̱ːp⁵⁵	ˀ/ʔ j uː p ⁵⁵	i m n c t	15060
 11744	Old_Burmese	sleep	1530	ip	ʔ i p ⁴	i n c t	15060
 #
-1386	Rangoon	sleepy, be	1375	ŋɑiʔ⁴	ŋ ɑi ʔ ⁴	i n c t	15072
+1386	Rangoon	sleepy, be	1375	ŋɑiʔ⁴	ŋ ɑi ʔ ⁴	i n c t	15069
 3101	Achang_Longchuan	sleepy, be	1375	ɕɔ³¹	ɕ ɔ ³¹	i n t	15068
 6319	Atsi	sleepy, be	1375	ŋu⁵⁵	ŋ u ⁵⁵	i n t	15069
 7959	Maru	sleepy, be	1375	mjauŋ³⁵	m j au ŋ ³⁵	i m n c t	15071
@@ -10800,7 +10800,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 #
 599	Rangoon	snare / trap	597	tɕɔ⁵³kwĩ⁵⁵	tɕ ɔ ⁵³ + k w ĩ ∼ ⁵⁵	i n t + i m n c t	15246 15247
 #
-12	Rangoon	snow	12	shi⁵⁵n̥ĩ⁵⁵	sʰ i ⁵⁵ + n̥ ĩ ∼ ⁵⁵	i n t + i n c t	15253 15252
+12	Rangoon	snow	12	shi⁵⁵n̥ĩ⁵⁵	sʰ i ⁵⁵ + n̥ ĩ ∼ ⁵⁵	i n t + i n c t	15250 15252
 1843	Achang_Longchuan	snow	12	xan³¹ʑai⁵⁵	x a n ³¹ + ʑ ai ⁵⁵	i n c t + i n t	15249 15250
 4949	Atsi	snow	12	kjoʔ²¹	k j o ʔ ²¹	i m n c t	15251
 8363	Bola	snow	12	ŋɛ̱̃⁵⁵	ˀŋ ɛ̃ ∼ ⁵⁵	i n c t	15252
@@ -10815,15 +10815,15 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 11223	Lashi	soak / steep	1335	ŋju̱ːn⁵⁵	ˀŋ j uː n ⁵⁵	i m n c t	15258
 12067	Old_Burmese	soak / steep	1335	cim	tɕ i m ²²	i n c t	15257
 #
-497	Rangoon	soap	495	shɑʔ⁴pjɑ²²	sʰ ɑ ʔ ⁴ + p j ɑ ²²	i n c t + i m n t	15268 15267
+497	Rangoon	soap	495	shɑʔ⁴pjɑ²²	sʰ ɑ ʔ ⁴ + p j ɑ ²²	i n c t + i m n t	15269 15268
 2285	Achang_Longchuan	soap	495	tshau³¹piau³¹	tsʰ au ³¹ + p i au ³¹	i n t + i m n t	15266 15267
-3906	Xiandao	soap	495	ça³¹pʐa³⁵	ç a ³¹ + pʐ a ³⁵	i n t + i n t	15266 15267
-5427	Atsi	soap	495	sa²¹pja²¹	s a ²¹ + p j a ²¹	i n t + i m n t	15266 15267
-7168	Maru	soap	495	sa³¹pja³¹	s a ³¹ + p j a ³¹	i n t + i m n t	15266 15267
-8816	Bola	soap	495	sa³¹pja³¹	s a ³¹ + p j a ³¹	i n t + i m n t	15266 15267
-10511	Lashi	soap	495	sə̆³¹pja³¹	s ə̆ ³¹ + p j a ³¹	i n t + i m n t	15266 15267
+3906	Xiandao	soap	495	ça³¹pʐa³⁵	ç a ³¹ + pʐ a ³⁵	i n t + i n t	15266 15268
+5427	Atsi	soap	495	sa²¹pja²¹	s a ²¹ + p j a ²¹	i n t + i m n t	15266 15268
+7168	Maru	soap	495	sa³¹pja³¹	s a ³¹ + p j a ³¹	i n t + i m n t	15266 15268
+8816	Bola	soap	495	sa³¹pja³¹	s a ³¹ + p j a ³¹	i n t + i m n t	15266 15268
+10511	Lashi	soap	495	sə̆³¹pja³¹	s ə̆ ³¹ + p j a ³¹	i n t + i m n t	15266 15268
 #
-451	Rangoon	sock / stocking	449	tɕhe²²eʔ⁴	tɕʰ e ²² + /ʔ e ʔ ⁴	i n t + i n c t	15283 15281
+451	Rangoon	sock / stocking	449	tɕhe²²eʔ⁴	tɕʰ e ²² + /ʔ e ʔ ⁴	i n t + i n c t	15285 15281
 2241	Achang_Longchuan	sock / stocking	449	uaʔ³¹	/ʔ ua ʔ ³¹	i n c t	15281
 5383	Atsi	sock / stocking	449	mo⁵⁵tsa⁵⁵	m o ⁵⁵ + ts a ⁵⁵	i n t + i n t	15282 15283
 7126	Maru	sock / stocking	449	va³¹tsɛ³¹	v a ³¹ + ts ɛ ³¹	i n t + i n t	15284 15283
@@ -10989,9 +10989,9 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 #
 313	Rangoon	sparrow hawk	311	sũ²²	s ũ ∼ ²²	i n c t	15513
 5247	Atsi	sparrow hawk	311	tsun⁵¹mui⁵⁵	ts u n ⁵¹ + m u i ⁵⁵	i n c t + i m n t	15513 15514
-7007	Maru	sparrow hawk	311	ŋɔ̱ʔ⁵⁵nɔʔ²¹	ˀŋ ɔ ʔ ⁵⁵ + n ɔ ʔ ²¹	i n c t + i n c t	15518 15519
+7007	Maru	sparrow hawk	311	ŋɔ̱ʔ⁵⁵nɔʔ²¹	ˀŋ ɔ ʔ ⁵⁵ + n ɔ ʔ ²¹	i n c t + i n c t	15517 15518
 8642	Bola	sparrow hawk	311	tsɔn⁵⁵kjɔ̱̃³⁵	ts ɔ n ⁵⁵ + ˀk j ɔ̃ ∼ ³⁵	i n c t + i m n c t	15513 15515
-10357	Lashi	sparrow hawk	311	laŋ³³ta̱³³	l a ŋ ³³ + ˀt a ³³	i n c t + i n t	15516 15517
+10357	Lashi	sparrow hawk	311	laŋ³³ta̱³³	l a ŋ ³³ + ˀt a ³³	i n c t + i n t	15513 15516
 #
 1546	Rangoon	speak	1533	pjɔ⁵⁵	p j ɔ ⁵⁵	i m n t	15525
 3257	Achang_Longchuan	speak	1533	kʐai⁵⁵	k ʐ ai ⁵⁵	i m n t	15523
@@ -11028,10 +11028,10 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9518	Bola	spin (into yarn)	1212	nai³¹	n ai ³¹	i n t	15563
 11120	Lashi	spin (into yarn)	1212	tuːi³¹	t uːi ³¹	i n t	15562
 #
-132	Rangoon	spine / backbone	132	tɕɔ⁵⁵jo⁵⁵	tɕ ɔ ⁵⁵ + /ʔ j o ⁵⁵	i n t + i m n t	15576 15577
+132	Rangoon	spine / backbone	132	tɕɔ⁵⁵jo⁵⁵	tɕ ɔ ⁵⁵ + /ʔ j o ⁵⁵	i n t + i m n t	15575 15576
 1954	Achang_Longchuan	spine / backbone	132	xa³¹luŋ³⁵ʐau³¹	x a ³¹ + l u ŋ ³⁵ + ʐ au ³¹	i n t + i n c t + i n t	15570 15571 15572
-3610	Xiandao	spine / backbone	132	tu³¹tum⁵¹ ʐau³¹	t u ³¹ + t u m ⁵¹ + ʐ au ³¹	i n t + i n c t + i n t	15578 15579 15572
-5066	Atsi	spine / backbone	132	nuŋ²¹kuŋ⁵⁵vui²¹	n u ŋ ²¹ + k u ŋ ⁵⁵ + v u i ²¹	i n c t + i n c t + i m n t	15573 15574 15575
+3610	Xiandao	spine / backbone	132	tu³¹tum⁵¹ ʐau³¹	t u ³¹ + t u m ⁵¹ + ʐ au ³¹	i n t + i n c t + i n t	15577 15578 15572
+5066	Atsi	spine / backbone	132	nuŋ²¹kuŋ⁵⁵vui²¹	n u ŋ ²¹ + k u ŋ ⁵⁵ + v u i ²¹	i n c t + i n c t + i m n t	15573 15571 15574
 #
 629	Rangoon	spirit (evil) / demon	627	nɑʔ⁴sho⁵⁵	/ʔ n ɑ ʔ ⁴ + sʰ o ⁵⁵	i m n c t + i n t	15586 15587
 2409	Achang_Longchuan	spirit (evil) / demon	627	kin³¹kʐai³⁵	k i n ³¹ + k ʐ ai ³⁵	i n c t + i m n t	15582 15583
@@ -11093,10 +11093,10 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9055	Bola	spring (season)	742	kɔ³⁵ŋjɛn³¹jaʔ³¹	k ɔ ³⁵ + ŋ j ɛ n ³¹ + /ʔ j a ʔ ³¹	i n t + i m n c t + i m n c t	15648 15649 15650
 10708	Lashi	spring (season)	742	tshuŋ⁵⁵nam⁵⁵	tsh u ŋ ⁵⁵ + n a m ⁵⁵	i n c t + i n c t	15651 15652
 #
-49	Rangoon	spring (water)	49	sɑ̃⁵⁵je²²	s ɑ̃ ∼ ⁵⁵ + /ʔ j e ²²	i n c t + i m n t	15661 15662
+49	Rangoon	spring (water)	49	sɑ̃⁵⁵je²²	s ɑ̃ ∼ ⁵⁵ + /ʔ j e ²²	i n c t + i m n t	15660 15661
 1878	Achang_Longchuan	spring (water)	49	ti⁵⁵mut⁵⁵	t i ⁵⁵ + m u t ⁵⁵	i n t + i n c t	15655 15656
 4986	Atsi	spring (water)	49	vui⁵¹tho⁵¹	v u i ⁵¹ + tʰ o ⁵¹	i m n t + i n t	15657 15655
-6771	Maru	spring (water)	49	ɣək³¹thuk⁵⁵	ɣ ə k ³¹ + th u k ⁵⁵	i n c t + i n c t	15659 15660
+6771	Maru	spring (water)	49	ɣək³¹thuk⁵⁵	ɣ ə k ³¹ + th u k ⁵⁵	i n c t + i n c t	15659 15655
 8397	Bola	spring (water)	49	pam⁵⁵ɣəi⁵⁵	p a m ⁵⁵ + ɣ əi ⁵⁵	i n c t + i n t	15658 15659
 #
 1494	Rangoon	sprinkle / spray	1483	phjɑ̃⁵⁵	pʰ j ɑ̃ ∼ ⁵⁵	i m n c t	15666
@@ -11230,7 +11230,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 1852	Achang_Longchuan	steam	21	a³¹sɔʔ⁵⁵	/ʔ a ³¹ + s ɔ ʔ ⁵⁵	i n t + i n c t	15833 15834
 3395	Achang_Longchuan	steam	21	poŋ³¹	p o ŋ ³¹	i n c t	15838
 3517	Xiandao	steam	21	sɔʔ⁵⁵	s ɔ ʔ ⁵⁵	i n c t	15834
-4853	Xiandao	steam	21	pʐu³⁵	pʐ u ³⁵	i n t	15839
+4853	Xiandao	steam	21	pʐu³⁵	pʐ u ³⁵	i n t	15838
 4958	Atsi	steam	21	soʔ⁵⁵	s o ʔ ⁵⁵	i n c t	15834
 6628	Atsi	steam	21	puŋ²¹	p u ŋ ²¹	i n c t	15838
 6746	Maru	steam	21	soʔ⁵⁵	s o ʔ ⁵⁵	i n c t	15834
@@ -11373,16 +11373,16 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 #
 43	Rangoon	stone	43	tɕɑuʔ⁴	tɕ ɑ u ʔ ⁴	i n N c t	16026
 1873	Achang_Longchuan	stone	43	laŋ³¹kɔʔ⁵⁵	l a ŋ ³¹ + k ɔ ʔ ⁵⁵	i n c t + i n c t	16025 16026
-3536	Xiandao	stone	43	luʔ⁵⁵koʔ⁵⁵	l u ʔ ⁵⁵ + k o ʔ ⁵⁵	i n c t + i n c t	16027 16026
-4980	Atsi	stone	43	luʔ²¹kok²¹	l u ʔ ²¹ + k o k ²¹	i n c t + i n c t	16027 16026
-6766	Maru	stone	43	lauk³¹tsaŋ³¹	l au k ³¹ + ts a ŋ ³¹	i n c t + i n c t	16027 16025
-8392	Bola	stone	43	lauʔ³¹taŋ³¹	l au ʔ ³¹ + t a ŋ ³¹	i n c t + i n c t	16027 16025
-10127	Lashi	stone	43	luk³¹tsəŋ³¹	l u k ³¹ + ts ə ŋ ³¹	i n c t + i n c t	16027 16025
+3536	Xiandao	stone	43	luʔ⁵⁵koʔ⁵⁵	l u ʔ ⁵⁵ + k o ʔ ⁵⁵	i n c t + i n c t	16025 16026
+4980	Atsi	stone	43	luʔ²¹kok²¹	l u ʔ ²¹ + k o k ²¹	i n c t + i n c t	16025 16026
+6766	Maru	stone	43	lauk³¹tsaŋ³¹	l au k ³¹ + ts a ŋ ³¹	i n c t + i n c t	16025 16027
+8392	Bola	stone	43	lauʔ³¹taŋ³¹	l au ʔ ³¹ + t a ŋ ³¹	i n c t + i n c t	16025 16027
+10127	Lashi	stone	43	luk³¹tsəŋ³¹	l u k ³¹ + ts ə ŋ ³¹	i n c t + i n c t	16025 16027
 12080	Old_Burmese	stone	43	kyo₂k	k j ʊ k ⁴	i m n c t	16026
 #
 492	Rangoon	stool / bench	490	thɑ̃i²²khõ²²	tʰ ɑ̃ i ∼ ²² + kʰ õ ∼ ²²	i n N c t + i n c t	16040 16043
 2280	Achang_Longchuan	stool / bench	490	taŋ³¹kuak⁵⁵	t a ŋ ³¹ + k ua k ⁵⁵	i n c t + i n c t	16040 16041
-3903	Xiandao	stool / bench	490	thɔŋ⁵⁵fu³¹	th ɔ ŋ ⁵⁵ + f u ³¹	i n c t + i n t	16040 16044
+3903	Xiandao	stool / bench	490	thɔŋ⁵⁵fu³¹	th ɔ ŋ ⁵⁵ + f u ³¹	i n c t + i n t	16040 16042
 5423	Atsi	stool / bench	490	ta̱ŋ⁵⁵ khuʔ⁵⁵	ˀt a ŋ ⁵⁵ + kʰ u ʔ ⁵⁵	i n c t + i n c t	16040 16042
 7164	Maru	stool / bench	490	tɔ̱̃⁵⁵khau⁵⁵	ˀt ɔ̃ ∼ ⁵⁵ + kh au ⁵⁵	i n c t + i n t	16040 16042
 8812	Bola	stool / bench	490	tɔ̃³⁵khu³¹	t ɔ̃ ∼ ³⁵ + kh u ³¹	i n c t + i n t	16040 16042
@@ -11489,7 +11489,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 #
 1424	Rangoon	stroke / touch	1413	sɑ̃⁵⁵	s ɑ̃ ∼ ⁵⁵	i n c t	16185
 3137	Achang_Longchuan	stroke / touch	1413	sut⁵⁵	s u t ⁵⁵	i n c t	16184
-4620	Xiandao	stroke / touch	1413	o³¹	/ʔ o ³¹	i n t	16184
+4620	Xiandao	stroke / touch	1413	o³¹	/ʔ o ³¹	i n t	16186
 6356	Atsi	stroke / touch	1413	sop⁵⁵	s o p ⁵⁵	i n c t	16184
 7995	Maru	stroke / touch	1413	sø̱⁵⁵	ˀs ø ⁵⁵	i n t	16184
 9719	Bola	stroke / touch	1413	søʔ⁵⁵	s ø ʔ ⁵⁵	i n c t	16184
@@ -11596,12 +11596,12 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9198	Bola	sunken / dented	884	khauŋ³⁵	kh au ŋ ³⁵	i n c t	16320
 10846	Lashi	sunken / dented	884	khuːŋ⁵⁵	kh uː ŋ ⁵⁵	i n c t	16320
 #
-1300	Rangoon	support / raise	1291	tɕwe⁵⁵mwe⁵⁵	tɕ w e ⁵⁵ + m w e ⁵⁵	i m n t + i m n t	16331 16332
+1300	Rangoon	support / raise	1291	tɕwe⁵⁵mwe⁵⁵	tɕ w e ⁵⁵ + m w e ⁵⁵	i m n t + i m n t	16332 16333
 3026	Achang_Longchuan	support / raise	1291	liŋ³¹tut⁵⁵	l i ŋ ³¹ + t u t ⁵⁵	i n c t + i n c t	16325 16326
-6234	Atsi	support / raise	1291	lo̱ʔ⁵⁵tui⁵¹	ˀl o ʔ ⁵⁵ + t u i ⁵¹	i n c t + i m n t	16327 16326
-7887	Maru	support / raise	1291	lɔ̱ʔ⁵⁵tɔi³¹	ˀl ɔ ʔ ⁵⁵ + t ɔi ³¹	i n c t + i n t	16327 16326
-9600	Bola	support / raise	1291	mju̱ŋ⁵⁵ŋji⁵⁵	ˀm j u ŋ ⁵⁵ + ŋ j i ⁵⁵	i m n c t + i m n t	16328 16329
-11187	Lashi	support / raise	1291	khuː³³təː³¹	kh uː ³³ + t əː ³¹	i n t + i n t	16330 16326
+6234	Atsi	support / raise	1291	lo̱ʔ⁵⁵tui⁵¹	ˀl o ʔ ⁵⁵ + t u i ⁵¹	i n c t + i m n t	16327 16328
+7887	Maru	support / raise	1291	lɔ̱ʔ⁵⁵tɔi³¹	ˀl ɔ ʔ ⁵⁵ + t ɔi ³¹	i n c t + i n t	16327 16328
+9600	Bola	support / raise	1291	mju̱ŋ⁵⁵ŋji⁵⁵	ˀm j u ŋ ⁵⁵ + ŋ j i ⁵⁵	i m n c t + i m n t	16329 16330
+11187	Lashi	support / raise	1291	khuː³³təː³¹	kh uː ³³ + t əː ³¹	i n t + i n t	16331 16328
 #
 1082	Rangoon	support s.b. with one's hand	1078	phe⁵⁵mɑ⁵³	pʰ e ⁵⁵ + m ɑ ⁵³	i n t + i n t	16342 16343
 2831	Achang_Longchuan	support s.b. with one's hand	1078	kʐau⁵⁵	k ʐ au ⁵⁵	i m n t	16338
@@ -11616,7 +11616,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 7292	Maru	surname / name (family)	1825	xu³⁵	x u ³⁵	i n t	16349
 10627	Lashi	surname / name (family)	1825	xu⁵⁵	x u ⁵⁵	i n t	16349
 #
-676	Rangoon	surroundings	673	pɑʔ⁴ wũ⁵⁵tɕĩ²²	p ɑ ʔ ⁴ + /ʔ w ũ ∼ ⁵⁵ + tɕ ĩ ∼ ²²	i n c t + i m n c t + i n c t	16357 16354 16358
+676	Rangoon	surroundings	673	pɑʔ⁴ wũ⁵⁵tɕĩ²²	p ɑ ʔ ⁴ + /ʔ w ũ ∼ ⁵⁵ + tɕ ĩ ∼ ²²	i n c t + i m n c t + i n c t	16357 16358 16354
 2445	Achang_Longchuan	surroundings	673	a³¹ʑam⁵⁵	/ʔ a ³¹ + ʑ a m ⁵⁵	i n t + i n c t	16353 16354
 4020	Xiandao	surroundings	673	ʐɔ⁵⁵mɔ⁵⁵	ʐ ɔ ⁵⁵ + m ɔ ⁵⁵	i n t + i n t	16359 16360
 5605	Atsi	surroundings	673	li̱ŋ⁵¹khjuʔ²¹	ˀl i ŋ ⁵¹ + kʰ j u ʔ ²¹	i n c t + i m n c t	16355 16356
@@ -11632,25 +11632,25 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9741	Bola	sustain losses (in business)	1435	tshɛʔ⁵⁵	tsh ɛ ʔ ⁵⁵	i n c t	16369
 11313	Lashi	sustain losses (in business)	1435	the⁵³	th e ⁵³	i n t	16369
 #
-317	Rangoon	swallow	315	pjɑ̃²²ɬwɑ⁵⁵	p j ɑ̃ ∼ ²² + ɬ w ɑ ⁵⁵	i m n c t + i m n t	16385 16386
-1588	Rangoon	swallow	315	mjo²²	m j o ²²	i m n t	16381
+317	Rangoon	swallow	315	pjɑ̃²²ɬwɑ⁵⁵	p j ɑ̃ ∼ ²² + ɬ w ɑ ⁵⁵	i m n c t + i m n t	16387 16388
+1588	Rangoon	swallow	315	mjo²²	m j o ²²	i m n t	16382
 2121	Achang_Longchuan	swallow	315	tʂak⁵⁵len³⁵	tʂ a k ⁵⁵ + l e n ³⁵	i n c t + i n c t	16379 16380
-3299	Achang_Longchuan	swallow	315	thun³¹	tʰ u n ³¹	i n c t	16380
-3771	Xiandao	swallow	315	tʂau³¹vɛn³⁵	tʂ au ³¹ + v ɛ n ³⁵	i n t + i n c t	16380 16387
-4767	Xiandao	swallow	315	ɲau⁵⁵	ɲ au ⁵⁵	i n t	16388
-5251	Atsi	swallow	315	siŋ²¹kji̱²¹	s i ŋ ²¹ + ˀk j i ²¹	i n c t + i m n t	16380 16381
-6523	Atsi	swallow	315	mji̱⁵¹	ˀm j i ⁵¹	i m n t	16381
-7009	Maru	swallow	315	tʃi̱ŋ³⁵tʃɔ̃³¹	ˀtʃ i ŋ ³⁵ + tʃ ɔ̃ ∼ ³¹	i n c t + i n c t	16380 16384
-8158	Maru	swallow	315	mjuk³¹	m j u k ³¹	i m n c t	16381
-8645	Bola	swallow	315	tʃɔ̱n³⁵tʃɔ̃⁵¹	ˀtʃ ɔ n ³⁵ + tʃ ɔ̃ ∼ ⁵¹	i n c t + i n c t	16382 16380
-9885	Bola	swallow	315	mjuŋ⁵⁵	m j u ŋ ⁵⁵	i m n c t	16381
-10359	Lashi	swallow	315	tʃɛ̱n⁵⁵tʃaŋ³³	ˀtʃ ɛ n ⁵⁵ + tʃ a ŋ ³³	i n c t + i n c t	16383 16380
-11968	Old_Burmese	swallow	315	myuiw	m j ə w ²²	i m n c t	16381
+3299	Achang_Longchuan	swallow	315	thun³¹	tʰ u n ³¹	i n c t	16384
+3771	Xiandao	swallow	315	tʂau³¹vɛn³⁵	tʂ au ³¹ + v ɛ n ³⁵	i n t + i n c t	16384 16380
+4767	Xiandao	swallow	315	ɲau⁵⁵	ɲ au ⁵⁵	i n t	16389
+5251	Atsi	swallow	315	siŋ²¹kji̱²¹	s i ŋ ²¹ + ˀk j i ²¹	i n c t + i m n t	16381 16382
+6523	Atsi	swallow	315	mji̱⁵¹	ˀm j i ⁵¹	i m n t	16382
+7009	Maru	swallow	315	tʃi̱ŋ³⁵tʃɔ̃³¹	ˀtʃ i ŋ ³⁵ + tʃ ɔ̃ ∼ ³¹	i n c t + i n c t	16384 16386
+8158	Maru	swallow	315	mjuk³¹	m j u k ³¹	i m n c t	16382
+8645	Bola	swallow	315	tʃɔ̱n³⁵tʃɔ̃⁵¹	ˀtʃ ɔ n ³⁵ + tʃ ɔ̃ ∼ ⁵¹	i n c t + i n c t	16383 16384
+9885	Bola	swallow	315	mjuŋ⁵⁵	m j u ŋ ⁵⁵	i m n c t	16382
+10359	Lashi	swallow	315	tʃɛ̱n⁵⁵tʃaŋ³³	ˀtʃ ɛ n ⁵⁵ + tʃ a ŋ ³³	i n c t + i n c t	16384 16385
+11968	Old_Burmese	swallow	315	myuiw	m j ə w ²²	i m n c t	16382
 #
-1207	Rangoon	swear / vow	1201	tɕɑ̃⁵⁵tɕẽ²²	tɕ ɑ̃ ∼ ⁵⁵ + tɕ ẽ ∼ ²²	i n c t + i n c t	16403 16405
+1207	Rangoon	swear / vow	1201	tɕɑ̃⁵⁵tɕẽ²²	tɕ ɑ̃ ∼ ⁵⁵ + tɕ ẽ ∼ ²²	i n c t + i n c t	16401 16404
 2947	Achang_Longchuan	swear / vow	1201	tɔ⁵¹	t ɔ ⁵¹	i n t	16401
 6141	Atsi	swear / vow	1201	mau²¹to⁵⁵	m a u ²¹ + t o ⁵⁵	i n N t + i n t	16402 16401
-9511	Bola	swear / vow	1201	tɔ̃³¹tək⁵⁵	t ɔ̃ ∼ ³¹ + t ə k ⁵⁵	i n c t + i n c t	16403 16404
+9511	Bola	swear / vow	1201	tɔ̃³¹tək⁵⁵	t ɔ̃ ∼ ³¹ + t ə k ⁵⁵	i n c t + i n c t	16401 16403
 #
 152	Rangoon	sweat	152	tɕhwe⁵⁵	tɕʰ w e ⁵⁵	i m n t	16414
 1972	Achang_Longchuan	sweat	152	a³¹xə³⁵	/ʔ a ³¹ + x ə ³⁵	i n t + i n t	16409 16410
@@ -11660,7 +11660,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 10216	Lashi	sweat	152	pei³¹ky⁵⁵	p ei ³¹ + k y ⁵⁵	i n t + i n t	16412 16413
 11917	Old_Burmese	sweat	152	khruyḥ	kh r u j ⁵⁵	i m n c t	16413
 #
-1500	Rangoon	sweep	1489	ɬɛ⁵⁵	ɬ ɛ ⁵⁵	i n t	16423
+1500	Rangoon	sweep	1489	ɬɛ⁵⁵	ɬ ɛ ⁵⁵	i n t	16422
 3211	Achang_Longchuan	sweep	1489	lum³¹	l u m ³¹	i n c t	16422
 4686	Xiandao	sweep	1489	lom³¹	l o m ³¹	i n c t	16422
 6432	Atsi	sweep	1489	ʃum²¹	ʃ u m ²¹	i n c t	16422
@@ -11728,13 +11728,13 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 #
 254	Rangoon	tail	252	ɑ⁵³mji⁵⁵	/ʔ ɑ ⁵³ + m j i ⁵⁵	i n t + i m n t	16511 16512
 2067	Achang_Longchuan	tail	252	tɕhi³¹ȵaŋ³⁵	tɕʰ i ³¹ + ȵ a ŋ ³⁵	i n t + i n c t	16509 16510
-3721	Xiandao	tail	252	n̥i³¹tʂhɔ³¹	n̥ i ³¹ + tʂh ɔ ³¹	i n t + i n t	16513 16514
+3721	Xiandao	tail	252	n̥i³¹tʂhɔ³¹	n̥ i ³¹ + tʂh ɔ ³¹	i n t + i n t	16512 16513
 5189	Atsi	tail	252	ʃŏ²¹mji²¹	ʃ ŏ ²¹ + m j i ²¹	i n t + i m n t	16511 16512
 6956	Maru	tail	252	ʃɔ̆³⁵mji³¹	ʃ ɔ̆ ³⁵ + m j i ³¹	i n t + i m n t	16511 16512
 8589	Bola	tail	252	ʃă³⁵mi³¹	ʃ ă ³⁵ + m i ³¹	i n t + i n t	16511 16512
 10310	Lashi	tail	252	ʃŏ⁵⁵mji³³	ʃ ŏ ⁵⁵ + m j i ³³	i n t + i m n t	16511 16512
 11761	Old_Burmese	tail	252	aʔ◦mriḥ	ʔ a ⁵³ + m r i ⁵⁵	i n t + i m n t	16511 16512
-12056	Old_Burmese	tail	252	pyaḥ	p j a ⁵⁵	i m n t	16515
+12056	Old_Burmese	tail	252	pyaḥ	p j a ⁵⁵	i m n t	16514
 #
 1427	Rangoon	take / hold / get	1416	ju²²	/ʔ j u ²²	i m n t	16528
 3140	Achang_Longchuan	take / hold / get	1416	ȵu⁵⁵	ȵ u ⁵⁵	i n t	16527
@@ -11846,15 +11846,15 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 8496	Bola	tears	156	ŋau⁵⁵pi⁵⁵	ŋ au ⁵⁵ + p i ⁵⁵	i n t + i n t	16664 16665
 10220	Lashi	tears	156	ŋou³¹pi³¹	ŋ ou ³¹ + p i ³¹	i n t + i n t	16664 16665
 #
-1242	Rangoon	tell	1235	tɑ̃i²²	t ɑ̃ i ∼ ²²	i n N c t	16682
+1242	Rangoon	tell	1235	tɑ̃i²²	t ɑ̃ i ∼ ²²	i n N c t	16683
 2976	Achang_Longchuan	tell	1235	kʐai⁵⁵tsi³¹	k ʐ ai ⁵⁵ + ts i ³¹	i m n t + i n t	16679 16680
-4486	Xiandao	tell	1235	ʂat⁵⁵	ʂ a t ⁵⁵	i n c t	16683
-6174	Atsi	tell	1235	tai²¹kjo̱²¹	t a i ²¹ + ˀk j o ²¹	i n N t + i m n t	16680 16679
-7833	Maru	tell	1235	ta̱⁵⁵kjɔ̱³⁵	ˀt a ⁵⁵ + ˀk j ɔ ³⁵	i n t + i m n t	16680 16679
-9541	Bola	tell	1235	ti̱³⁵kja̱³⁵	ˀt i ³⁵ + ˀk j a ³⁵	i n t + i m n t	16680 16679
+4486	Xiandao	tell	1235	ʂat⁵⁵	ʂ a t ⁵⁵	i n c t	16684
+6174	Atsi	tell	1235	tai²¹kjo̱²¹	t a i ²¹ + ˀk j o ²¹	i n N t + i m n t	16680 16681
+7833	Maru	tell	1235	ta̱⁵⁵kjɔ̱³⁵	ˀt a ⁵⁵ + ˀk j ɔ ³⁵	i n t + i m n t	16680 16681
+9541	Bola	tell	1235	ti̱³⁵kja̱³⁵	ˀt i ³⁵ + ˀk j a ³⁵	i n t + i m n t	16680 16681
 11142	Lashi	tell	1235	ta̱ːi⁵³	ˀt aːi ⁵³	i n t	16680
-12049	Old_Burmese	tell	1235	pro₂ḥ	p r ʊ ⁵⁵	i m n t	16681
-12050	Old_Burmese	tell	1235	tuiṅ	t ə ŋ ²²	i n c t	16682
+12049	Old_Burmese	tell	1235	pro₂ḥ	p r ʊ ⁵⁵	i m n t	16682
+12050	Old_Burmese	tell	1235	tuiṅ	t ə ŋ ²²	i n c t	16683
 #
 1319	Rangoon	tell (a story)	1310	pjɔ⁵⁵	p j ɔ ⁵⁵	i m n t	16697
 3041	Achang_Longchuan	tell (a story)	1310	kai⁵⁵	k ai ⁵⁵	i n t	16693
@@ -11897,7 +11897,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 10787	Lashi	ten cents	824	kjɔ³¹	k j ɔ ³¹	i m n t	16740
 #
 784	Rangoon	ten million	781	ku⁵³te²²	k u ⁵³ + t e ²²	i n t + i n t	16751 16748
-4111	Xiandao	ten million	781	xɛŋ⁵¹m̥un³¹	x ɛ ŋ ⁵¹ + m̥ u n ³¹	i n c t + i n c t	16752 16753
+4111	Xiandao	ten million	781	xɛŋ⁵¹m̥un³¹	x ɛ ŋ ⁵¹ + m̥ u n ³¹	i n c t + i n c t	16752 16750
 7415	Maru	ten million	781	tă³¹tʃhɛn³⁵van³⁵	t ă ³¹ + tʃh ɛ n ³⁵ + v a n ³⁵	i n t + i n c t + i n c t	16748 16749 16750
 #
 781	Rangoon	ten thousand	778	tθɑ̃u⁵⁵	tθ ɑ̃ u ∼ ⁵⁵	i n N c t	16757
@@ -11932,9 +11932,9 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9263	Bola	tense / tight / taut	948	taŋ³⁵	t a ŋ ³⁵	i n c t	16789
 10905	Lashi	tense / tight / taut	948	tə̱ːŋ⁵³	ˀt əː ŋ ⁵³	i n c t	16789
 #
-115	Rangoon	testicle	115	gwe⁵⁵se⁵³	g w e ⁵⁵ + s e ⁵³	i m n t + i n t	16798 16796
+115	Rangoon	testicle	115	gwe⁵⁵se⁵³	g w e ⁵⁵ + s e ⁵³	i m n t + i n t	16797 16796
 1939	Achang_Longchuan	testicle	115	ȵ̥i³¹tsiʔ³¹	ȵ̥ i ³¹ + ts i ʔ ³¹	i n t + i n c t	16795 16796
-3597	Xiandao	testicle	115	li⁵³tsi³¹	l i ⁵³ + ts i ³¹	i n t + i n t	16799 16796
+3597	Xiandao	testicle	115	li⁵³tsi³¹	l i ⁵³ + ts i ³¹	i n t + i n t	16798 16796
 5051	Atsi	testicle	115	njĭ̱²¹tʃi⁵⁵	ˀn j ĭ ²¹ + tʃ i ⁵⁵	i m n t + i n t	16795 16796
 6831	Maru	testicle	115	nji̱³⁵tʃi̱k⁵⁵	ˀn j i ³⁵ + ˀtʃ i k ⁵⁵	i m n t + i n c t	16795 16796
 8462	Bola	testicle	115	ŋji̱³⁵tʃɿ³⁵	ˀŋ j i ³⁵ + tʃ ɿ ³⁵	i m n t + i n t	16795 16796
@@ -11965,13 +11965,13 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9182	Bola	that (way) / (like) that	867	thɔ̆i⁵⁵khja³¹	th ɔ̆i ⁵⁵ + khj a ³¹	i n t + i n t	16829 16833
 10829	Lashi	that (way) / (like) that	867	thə³³su⁵⁵	th ə ³³ + s u ⁵⁵	i n t + i n t	16829 16832
 #
-869	Rangoon	that side / there	866	tho²² bɛʔ⁴	tʰ o ²² + b ɛ ʔ ⁴	i n t + i n c t	16844 16849
+869	Rangoon	that side / there	866	tho²² bɛʔ⁴	tʰ o ²² + b ɛ ʔ ⁴	i n t + i n c t	16844 16850
 2625	Achang_Longchuan	that side / there	866	the⁵⁵ thɔʔ⁵⁵	tʰ e ⁵⁵ + tʰ ɔ ʔ ⁵⁵	i n t + i n c t	16844 16845
-4188	Xiandao	that side / there	866	thɛ⁵⁵pa³¹	th ɛ ⁵⁵ + p a ³¹	i n t + i n t	16844 16848
+4188	Xiandao	that side / there	866	thɛ⁵⁵pa³¹	th ɛ ⁵⁵ + p a ³¹	i n t + i n t	16844 16849
 5799	Atsi	that side / there	866	xje⁵¹ ma⁵⁵	x j e ⁵¹ + m a ⁵⁵	i m n t + i n t	16846 16847
-7500	Maru	that side / there	866	thø⁵⁵ khjɔ³¹	th ø ⁵⁵ + kh j ɔ ³¹	i n t + i m n t	16844 16846
-9181	Bola	that side / there	866	thɔ̆i⁵⁵khja⁵⁵	th ɔ̆i ⁵⁵ + khj a ⁵⁵	i n t + i n t	16844 16846
-10828	Lashi	that side / there	866	thə³³phjaŋ⁵⁵	th ə ³³ + ph j a ŋ ⁵⁵	i n t + i m n c t	16844 16848
+7500	Maru	that side / there	866	thø⁵⁵ khjɔ³¹	th ø ⁵⁵ + kh j ɔ ³¹	i n t + i m n t	16844 16848
+9181	Bola	that side / there	866	thɔ̆i⁵⁵khja⁵⁵	th ɔ̆i ⁵⁵ + khj a ⁵⁵	i n t + i n t	16844 16848
+10828	Lashi	that side / there	866	thə³³phjaŋ⁵⁵	th ə ³³ + ph j a ŋ ⁵⁵	i n t + i m n c t	16844 16849
 #
 868	Rangoon	there	865	tho²² ɑ⁵³nɑ⁵⁵	tʰ o ²² + /ʔ ɑ ⁵³ + /ʔ n ɑ ⁵⁵	i n t + i n t + i m n t	16859 16863 16864
 2624	Achang_Longchuan	there	865	the⁵⁵ thɔʔ⁵⁵	tʰ e ⁵⁵ + tʰ ɔ ʔ ⁵⁵	i n t + i n c t	16859 16860
@@ -12021,13 +12021,13 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9167	Bola	they	851	jɔ̃³¹maʔ³¹	/ʔ j ɔ̃ ∼ ³¹ + m a ʔ ³¹	i m n c t + i n c t	16917 16918
 10813	Lashi	they	851	ŋja³³nuŋ³³	ŋ j a ³³ + n u ŋ ³³	i m n t + i n c t	16919 16915
 #
-853	Rangoon	they two	850	tθu²² to⁵³ hniʔ⁴ jɑuʔ⁴	tθ u ²² + t o ⁵³ + n̥ i ʔ ⁴ + /ʔ j ɑ u ʔ ⁴	i n t + i n t + i n c t + i m n N c t	16934 16935 16931 16936
+853	Rangoon	they two	850	tθu²² to⁵³ hniʔ⁴ jɑuʔ⁴	tθ u ²² + t o ⁵³ + n̥ i ʔ ⁴ + /ʔ j ɑ u ʔ ⁴	i n t + i n t + i n c t + i m n N c t	16933 16934 16931 16935
 2609	Achang_Longchuan	they two	850	ȵ̥aŋ³¹ n̥ək⁵⁵	ȵ̥ a ŋ ³¹ + n̥ ə k ⁵⁵	i n c t + i n c t	16930 16931
-4174	Xiandao	they two	850	ɲ̊aŋ³¹ n̥ɣk³⁵	ɲ̊ a ŋ ³¹ + n̥ ɣk ³⁵	i n c t + i c t	16930 16937
+4174	Xiandao	they two	850	ɲ̊aŋ³¹ n̥ɣk³⁵	ɲ̊ a ŋ ³¹ + n̥ ɣk ³⁵	i n c t + i c t	16930 16936
 5783	Atsi	they two	850	ja̱ŋ⁵⁵ ni̱k⁵⁵	ˀ/ʔ j a ŋ ⁵⁵ + ˀn i k ⁵⁵	i m n c t + i n c t	16930 16931
 7485	Maru	they two	850	jɔ̃³⁵na̱k⁵⁵	/ʔ j ɔ̃ ∼ ³⁵ + ˀn a k ⁵⁵	i m n c t + i n c t	16930 16931
 9166	Bola	they two	850	jɔ̃³¹tɔ̱̃⁵⁵	/ʔ j ɔ̃ ∼ ³¹ + ˀt ɔ̃ ∼ ⁵⁵	i m n c t + i n c t	16930 16932
-10812	Lashi	they two	850	ŋjaŋ³³ta̱ŋ³³	ŋ j a ŋ ³³ + ˀt a ŋ ³³	i m n c t + i n c t	16930 16933
+10812	Lashi	they two	850	ŋjaŋ³³ta̱ŋ³³	ŋ j a ŋ ³³ + ˀt a ŋ ³³	i m n c t + i n c t	16930 16932
 #
 896	Rangoon	thick	893	thu²²	tʰ u ²²	i n t	16948
 2651	Achang_Longchuan	thick	893	kan³¹	k a n ³¹	i n c t	16947
@@ -12219,12 +12219,12 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 10715	Lashi	three	750	sɔm⁵⁵	s ɔ m ⁵⁵	i n c t	17196
 11768	Old_Burmese	three	750	sumḥ	s u m ⁵⁵	i n c t	17196
 #
-698	Rangoon	three days ago	695	tɑ⁵³mjɑ̃²²mɑ⁵³ne⁵³	t ɑ ⁵³ + m j ɑ̃ ∼ ²² + m ɑ ⁵³ + n e ⁵³	i n t + i m n c t + i n t + i n t	17216 17217 17218 17210
+698	Rangoon	three days ago	695	tɑ⁵³mjɑ̃²²mɑ⁵³ne⁵³	t ɑ ⁵³ + m j ɑ̃ ∼ ²² + m ɑ ⁵³ + n e ⁵³	i n t + i m n c t + i n t + i n t	17213 17214 17215 17207
 2463	Achang_Longchuan	three days ago	695	si⁵¹si³¹ȵen³⁵	s i ⁵¹ + s i ³¹ + ȵ e n ³⁵	i n t + i n t + i n c t	17205 17206 17207
-5625	Atsi	three days ago	695	pho⁵¹va⁵¹ŋji⁵⁵	pʰ o ⁵¹ + v a ⁵¹ + ŋ j i ⁵⁵	i n t + i n t + i m n t	17208 17209 17210
-7335	Maru	three days ago	695	xək⁵⁵ɣɔ⁵⁵nɛʔ³¹	x ə k ⁵⁵ + ɣ ɔ ⁵⁵ + n ɛ ʔ ³¹	i n c t + i n t + i n c t	17209 17215 17212
-9007	Bola	three days ago	695	xəi⁵⁵ɣa³¹nɛʔ³¹	x əi ⁵⁵ + ɣ a ³¹ + n ɛ ʔ ³¹	i n t + i n t + i n c t	17209 17211 17212
-10664	Lashi	three days ago	695	ʃə̱k⁵⁵kɛ³¹jɔ³¹ŋjei⁵⁵	ˀʃ ə k ⁵⁵ + k ɛ ³¹ + /ʔ j ɔ ³¹ + ŋ j ei ⁵⁵	i n c t + i n t + i m n t + i m n t	17213 17209 17214 17210
+5625	Atsi	three days ago	695	pho⁵¹va⁵¹ŋji⁵⁵	pʰ o ⁵¹ + v a ⁵¹ + ŋ j i ⁵⁵	i n t + i n t + i m n t	17208 17205 17207
+7335	Maru	three days ago	695	xək⁵⁵ɣɔ⁵⁵nɛʔ³¹	x ə k ⁵⁵ + ɣ ɔ ⁵⁵ + n ɛ ʔ ³¹	i n c t + i n t + i n c t	17205 17212 17207
+9007	Bola	three days ago	695	xəi⁵⁵ɣa³¹nɛʔ³¹	x əi ⁵⁵ + ɣ a ³¹ + n ɛ ʔ ³¹	i n t + i n t + i n c t	17205 17209 17207
+10664	Lashi	three days ago	695	ʃə̱k⁵⁵kɛ³¹jɔ³¹ŋjei⁵⁵	ˀʃ ə k ⁵⁵ + k ɛ ³¹ + /ʔ j ɔ ³¹ + ŋ j ei ⁵⁵	i n c t + i n t + i m n t + i m n t	17210 17205 17211 17207
 #
 2466	Achang_Longchuan	three days from now	1826	phă⁵⁵ȵui⁵⁵	pʰ ă ⁵⁵ + ȵ ui ⁵⁵	i n t + i n t	17226 17227
 5628	Atsi	three days from now	1826	nuʔ²¹phə⁵¹nap²¹	n u ʔ ²¹ + pʰ ə ⁵¹ + n a p ²¹	i n c t + i n t + i n c t	17228 17226 17227
@@ -12284,7 +12284,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 1932	Achang_Longchuan	thumb	108	lɔʔ⁵⁵mɔʔ³¹	l ɔ ʔ ⁵⁵ + m ɔ ʔ ³¹	i n c t + i n c t	17301 17302
 3591	Xiandao	thumb	108	lɔʔ⁵⁵mɔ³¹	l ɔ ʔ ⁵⁵ + m ɔ ³¹	i n c t + i n t	17301 17302
 5044	Atsi	thumb	108	loʔ²¹mo⁵⁵tʃham²¹	l o ʔ ²¹ + m o ⁵⁵ + tʃʰ a m ²¹	i n c t + i n t + i n c t	17301 17302 17303
-6824	Maru	thumb	108	lɔʔ³¹mɔ⁵⁵tʃhɛʔ⁵⁵	l ɔ ʔ ³¹ + m ɔ ⁵⁵ + tʃh ɛ ʔ ⁵⁵	i n c t + i n t + i n c t	17301 17302 17303
+6824	Maru	thumb	108	lɔʔ³¹mɔ⁵⁵tʃhɛʔ⁵⁵	l ɔ ʔ ³¹ + m ɔ ⁵⁵ + tʃh ɛ ʔ ⁵⁵	i n c t + i n t + i n c t	17301 17302 17304
 8455	Bola	thumb	108	laʔ³¹ma³⁵tʃhɛ̃³¹	l a ʔ ³¹ + m a ³⁵ + tʃh ɛ̃ ∼ ³¹	i n c t + i n t + i n c t	17301 17302 17303
 10181	Lashi	thumb	108	lɔʔ³¹mo⁵⁵tsham⁵⁵	l ɔ ʔ ³¹ + m o ⁵⁵ + tsh a m ⁵⁵	i n c t + i n t + i n c t	17301 17302 17303
 #
@@ -12303,12 +12303,12 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 10100	Lashi	thunder	8	mou³³kɔm³³	m ou ³³ + k ɔ m ³³	i n t + i n c t	17320 17323
 11068	Lashi	thunder	8	mou³³kɔm³³kum³³	m ou ³³ + k ɔ m ³³ + k u m ³³	i n t + i n c t + i n c t	17320 17323 17325
 #
-864	Rangoon	thus / this (way) / (like) this	861	i²² tθo⁵³	/ʔ i ²² + tθ o ⁵³	i n t + i n t	17357 17358
+864	Rangoon	thus / this (way) / (like) this	861	i²² tθo⁵³	/ʔ i ²² + tθ o ⁵³	i n t + i n t	17356 17357
 2620	Achang_Longchuan	thus / this (way) / (like) this	861	xai⁵⁵ miu⁵⁵	x ai ⁵⁵ + m i u ⁵⁵	i n t + i m n t	17352 17353
 4183	Xiandao	thus / this (way) / (like) this	861	xai⁵⁵ su³¹	x ai ⁵⁵ + s u ³¹	i n t + i n t	17352 17354
 5794	Atsi	thus / this (way) / (like) this	861	xji⁵¹ su²¹	x j i ⁵¹ + s u ²¹	i m n t + i n t	17352 17354
 7495	Maru	thus / this (way) / (like) this	861	tʃhɛ̆³¹ ʒu³¹	tʃh ɛ̆ ³¹ + ʒ u ³¹	i n t + i n t	17355 17354
-9177	Bola	thus / this (way) / (like) this	861	tʃhə̆⁵⁵khja³¹	tʃh ə̆ ⁵⁵ + khj a ³¹	i n t + i n t	17355 17356
+9177	Bola	thus / this (way) / (like) this	861	tʃhə̆⁵⁵khja³¹	tʃh ə̆ ⁵⁵ + khj a ³¹	i n t + i n t	17355 17352
 10823	Lashi	thus / this (way) / (like) this	861	xjɛ³³su⁵⁵	x j ɛ ³³ + s u ⁵⁵	i m n t + i n t	17352 17354
 #
 1542	Rangoon	tie (a cow) to	1529	tɕhi²²	tɕʰ i ²²	i n t	17369
@@ -12328,13 +12328,13 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 10339	Lashi	tiger	287	lə̆³³mo⁵⁵	l ə̆ ³³ + m o ⁵⁵	i n t + i n t	17375 17376
 11824	Old_Burmese	tiger	287	klaḥ	k l a ⁵⁵	i m n t	17375
 #
-478	Rangoon	tile	476	oʔ⁴tɕuʔ⁴	/ʔ o ʔ ⁴ + tɕ u ʔ ⁴	i n c t + i n c t	17389 17390
+478	Rangoon	tile	476	oʔ⁴tɕuʔ⁴	/ʔ o ʔ ⁴ + tɕ u ʔ ⁴	i n c t + i n c t	17390 17391
 2265	Achang_Longchuan	tile	476	ua⁵⁵	/ʔ ua ⁵⁵	i n t	17388
-3890	Xiandao	tile	476	va⁵⁵	v a ⁵⁵	i n t	17388
-5408	Atsi	tile	476	va⁵¹	v a ⁵¹	i n t	17388
-7149	Maru	tile	476	va³¹	v a ³¹	i n t	17388
-8797	Bola	tile	476	va³¹	v a ³¹	i n t	17388
-10494	Lashi	tile	476	wa³³	/ʔ w a ³³	i m n t	17388
+3890	Xiandao	tile	476	va⁵⁵	v a ⁵⁵	i n t	17389
+5408	Atsi	tile	476	va⁵¹	v a ⁵¹	i n t	17389
+7149	Maru	tile	476	va³¹	v a ³¹	i n t	17389
+8797	Bola	tile	476	va³¹	v a ³¹	i n t	17389
+10494	Lashi	tile	476	wa³³	/ʔ w a ³³	i m n t	17389
 #
 694	Rangoon	time	691	ɑ⁵³tɕhẽ²²	/ʔ ɑ ⁵³ + tɕʰ ẽ ∼ ²²	i n t + i n c t	17398 17399
 5621	Atsi	time	691	nam⁵⁵	n a m ⁵⁵	i n c t	17397
@@ -12476,13 +12476,13 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 8477	Bola	tooth	135	tui⁵⁵	t ui ⁵⁵	i n t	17603
 10202	Lashi	tooth	135	tsɿ³¹	ts ɿ ³¹	i n t	17603
 #
-1163	Rangoon	topple / tear down (a wall)	1158	phjo²²	pʰ j o ²²	i m n t	17614
+1163	Rangoon	topple / tear down (a wall)	1158	phjo²²	pʰ j o ²²	i m n t	17616
 2904	Achang_Longchuan	topple / tear down (a wall)	1158	tun³¹ tɕhiŋ³¹	t u n ³¹ + tɕʰ i ŋ ³¹	i n c t + i n c t	17611 17612
 4423	Xiandao	topple / tear down (a wall)	1158	l̥in³¹	l̥ i n ³¹	i n c t	17612
 6097	Atsi	topple / tear down (a wall)	1158	lo̱ʔ⁵⁵le̱ŋ²¹	ˀl o ʔ ⁵⁵ + ˀl e ŋ ²¹	i n c t + i n c t	17613 17612
 7763	Maru	topple / tear down (a wall)	1158	la̱ŋ⁵⁵	ˀl a ŋ ⁵⁵	i n c t	17612
-9469	Bola	topple / tear down (a wall)	1158	la̱ʔ⁵⁵laŋ³⁵	ˀl a ʔ ⁵⁵ + l a ŋ ³⁵	i n c t + i n c t	17613 17612
-11078	Lashi	topple / tear down (a wall)	1158	lɔ̱ʔ⁵⁵lə̱ːŋ⁵⁵	ˀl ɔ ʔ ⁵⁵ + ˀl əː ŋ ⁵⁵	i n c t + i n c t	17613 17612
+9469	Bola	topple / tear down (a wall)	1158	la̱ʔ⁵⁵laŋ³⁵	ˀl a ʔ ⁵⁵ + l a ŋ ³⁵	i n c t + i n c t	17614 17612
+11078	Lashi	topple / tear down (a wall)	1158	lɔ̱ʔ⁵⁵lə̱ːŋ⁵⁵	ˀl ɔ ʔ ⁵⁵ + ˀl əː ŋ ⁵⁵	i n c t + i n c t	17615 17612
 #
 507	Rangoon	torch	505	mi⁵⁵toʔ⁴	m i ⁵⁵ + t o ʔ ⁴	i n t + i n c t	17625 17626
 2293	Achang_Longchuan	torch	505	thuaŋ³¹ su³¹	tʰ ua ŋ ³¹ + s u ³¹	i n c t + i n t	17623 17624
@@ -12566,7 +12566,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9269	Bola	true	954	kai⁵⁵	k ai ⁵⁵	i n t	17742
 10910	Lashi	true	954	ŋu̱ːt⁵⁵	ˀŋ uː t ⁵⁵	i n c t	17743
 #
-353	Rangoon	trunk	351	pĩ²²si²²	p ĩ ∼ ²² + s i ²²	i n c t + i n t	17755 17751
+353	Rangoon	trunk	351	pĩ²²si²²	p ĩ ∼ ²² + s i ²²	i n c t + i n t	17751 17756
 2154	Achang_Longchuan	trunk	351	saŋ³¹tseŋ⁵⁵tan³¹	s a ŋ ³¹ + ts e ŋ ⁵⁵ + t a n ³¹	i n c t + i n c t + i n c t	17750 17751 17752
 3802	Xiandao	trunk	351	ʂɯk⁵⁵tʂɯŋ⁵⁵	ʂ ɯ k ⁵⁵ + tʂ ɯ ŋ ⁵⁵	i n c t + i n c t	17753 17751
 5287	Atsi	trunk	351	sik⁵⁵lat²¹	s i k ⁵⁵ + l a t ²¹	i n c t + i n c t	17753 17754
@@ -12598,7 +12598,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 8269	Maru	turn (a corner)	1687	kɔ̱i³¹	ˀk ɔi ³¹	i n t	17792
 9997	Bola	turn (a corner)	1687	ku̱i⁵⁵	ˀk ui ⁵⁵	i n t	17792
 #
-1705	Rangoon	turn (cause to)	1689	ɬɛ⁵³	ɬ ɛ ⁵³	i n t	17801
+1705	Rangoon	turn (cause to)	1689	ɬɛ⁵³	ɬ ɛ ⁵³	i n t	17798
 6640	Atsi	turn (cause to)	1689	li̱ŋ⁵¹	ˀl i ŋ ⁵¹	i n c t	17798
 8271	Maru	turn (cause to)	1689	la̱ŋ³¹	ˀl a ŋ ³¹	i n c t	17798
 9999	Bola	turn (cause to)	1689	la̱ŋ⁵⁵	ˀl a ŋ ⁵⁵	i n c t	17798
@@ -12668,7 +12668,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 #
 770	Rangoon	twenty	767	hniʔ⁴shɛ²²	n̥ i ʔ ⁴ + sʰ ɛ ²²	i n c t + i n t	17904 17901
 2526	Achang_Longchuan	twenty	767	tă³¹sau⁵⁵	t ă ³¹ + s au ⁵⁵	i n t + i n t	17900 17901
-4097	Xiandao	twenty	767	ta³¹sau⁵⁵	t a ³¹ + s au ⁵⁵	i n t + i n t	17905 17901
+4097	Xiandao	twenty	767	ta³¹sau⁵⁵	t a ³¹ + s au ⁵⁵	i n t + i n t	17901 17905
 5698	Atsi	twenty	767	i⁵⁵tshe⁵¹	/ʔ i ⁵⁵ + tsʰ e ⁵¹	i n t + i n t	17902 17901
 7401	Maru	twenty	767	ʃi̱k⁵⁵tshɛ³¹	ˀʃ i k ⁵⁵ + tsh ɛ ³¹	i n c t + i n t	17903 17901
 9080	Bola	twenty	767	i̱³⁵thai⁵⁵	ˀ/ʔ i ³⁵ + th ai ⁵⁵	i n t + i n t	17902 17901
@@ -12744,8 +12744,8 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 #
 3495	Achang_Longchuan	uncle (father's younger sister's husband)nd	1851	xoi⁵⁵	x oi ⁵⁵	i n t	18012
 #
-234	Rangoon	uncle (mother's brother)	234	u⁵⁵ le⁵⁵	/ʔ u ⁵⁵ + /ʔ l e ⁵⁵	i n t + i m n t	18014 18019
-3702	Xiandao	uncle (mother's brother)	234	koi⁵⁵	k oi ⁵⁵	i n t	18020
+234	Rangoon	uncle (mother's brother)	234	u⁵⁵ le⁵⁵	/ʔ u ⁵⁵ + /ʔ l e ⁵⁵	i n t + i m n t	18019 18020
+3702	Xiandao	uncle (mother's brother)	234	koi⁵⁵	k oi ⁵⁵	i n t	18021
 5169	Atsi	uncle (mother's brother)	234	a⁵⁵tsa̱²¹	/ʔ a ⁵⁵ + ˀts a ²¹	i n t + i n t	18014 18015
 6936	Maru	uncle (mother's brother)	234	ŋji³¹	ŋ j i ³¹	i m n t	18018
 8572	Bola	uncle (mother's brother)	234	jauʔ³¹pha³⁵	/ʔ j au ʔ ³¹ + ph a ³⁵	i m n c t + i n t	18016 18017
@@ -12826,9 +12826,9 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9793	Bola	untie / undo	1488	la̱ʔ⁵⁵ phəi⁵⁵	ˀl a ʔ ⁵⁵ + ph əi ⁵⁵	i n c t + i n t	18114 18113
 11361	Lashi	untie / undo	1488	phɔːi³¹	ph ɔːi ³¹	i n t	18113
 #
-692	Rangoon	upper half of the body	689	ɑ⁵³thɛʔ⁴pɑ̃i⁵⁵	/ʔ ɑ ⁵³ + tʰ ɛ ʔ ⁴ + p ɑ̃ i ∼ ⁵⁵	i n t + i n c t + i n N c t	18122 18126 18127
+692	Rangoon	upper half of the body	689	ɑ⁵³thɛʔ⁴pɑ̃i⁵⁵	/ʔ ɑ ⁵³ + tʰ ɛ ʔ ⁴ + p ɑ̃ i ∼ ⁵⁵	i n t + i n c t + i n N c t	18122 18127 18128
 2458	Achang_Longchuan	upper half of the body	689	a³¹lum⁵¹tɕheŋ³¹	/ʔ a ³¹ + l u m ⁵¹ + tɕʰ e ŋ ³¹	i n t + i n c t + i n c t	18122 18123 18124
-9001	Bola	upper half of the body	689	phi³¹tam³¹thaʔ⁵⁵	ph i ³¹ + t a m ³¹ + th a ʔ ⁵⁵	i n t + i n c t + i n c t	18125 18123 18126
+9001	Bola	upper half of the body	689	phi³¹tam³¹thaʔ⁵⁵	ph i ³¹ + t a m ³¹ + th a ʔ ⁵⁵	i n t + i n c t + i n c t	18125 18126 18127
 #
 679	Rangoon	upper part of / upper reaches	676	ɑ⁵³ȵɑ²²	/ʔ ɑ ⁵³ + ɲ ɑ ²²	i n t + i n t	18132 18138
 2448	Achang_Longchuan	upper part of / upper reaches	676	a³¹lum³¹	/ʔ a ³¹ + l u m ³¹	i n t + i n c t	18132 18133
@@ -12861,11 +12861,11 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 #
 150	Rangoon	urine	150	shi⁵⁵	sʰ i ⁵⁵	i n t	18187
 1970	Achang_Longchuan	urine	150	kă³¹tʂhə³⁵	k ă ³¹ + tʂʰ ə ³⁵	i n t + i n t	18186 18187
-3626	Xiandao	urine	150	ʂɿ³¹ʂɯ³⁵	ʂ ɿ ³¹ + ʂ ɯ ³⁵	i n t + i n t	18187 18188
-5084	Atsi	urine	150	i²¹	/ʔ i ²¹	i n t	18187
-6856	Maru	urine	150	i̱k⁵⁵	ˀ/ʔ i k ⁵⁵	i n c t	18187
-8490	Bola	urine	150	i̱³⁵	ˀ/ʔ i ³⁵	i n t	18187
-10214	Lashi	urine	150	je̱i⁵⁵	ˀ/ʔ j ei ⁵⁵	i m n t	18187
+3626	Xiandao	urine	150	ʂɿ³¹ʂɯ³⁵	ʂ ɿ ³¹ + ʂ ɯ ³⁵	i n t + i n t	18187 18189
+5084	Atsi	urine	150	i²¹	/ʔ i ²¹	i n t	18188
+6856	Maru	urine	150	i̱k⁵⁵	ˀ/ʔ i k ⁵⁵	i n c t	18188
+8490	Bola	urine	150	i̱³⁵	ˀ/ʔ i ³⁵	i n t	18188
+10214	Lashi	urine	150	je̱i⁵⁵	ˀ/ʔ j ei ⁵⁵	i m n t	18188
 11907	Old_Burmese	urine	150	chiḥ	tɕh i ⁵⁵	i n t	18187
 #
 658	Rangoon	use	656	ɑ⁵³tθõ⁵⁵	/ʔ ɑ ⁵³ + tθ õ ∼ ⁵⁵	i n t + i n c t	18200 18198
@@ -12889,19 +12889,19 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9273	Bola	used / old	958	tʃhau³⁵	tʃh au ³⁵	i n t	18215
 10913	Lashi	used / old	958	tshaːu⁵⁵	tsh aːu ⁵⁵	i n t	18215
 #
-138	Rangoon	uvula	138	ɕɑ²²khĩ²²	ɕ ɑ ²² + kʰ ĩ ∼ ²²	i n t + i n c t	18229 18224
+138	Rangoon	uvula	138	ɕɑ²²khĩ²²	ɕ ɑ ²² + kʰ ĩ ∼ ²²	i n t + i n c t	18230 18224
 1960	Achang_Longchuan	uvula	138	khən³¹tuŋ³¹len⁵¹	kʰ ə n ³¹ + t u ŋ ³¹ + l e n ⁵¹	i n c t + i n c t + i n c t	18224 18225 18226
-3616	Xiandao	uvula	138	khʐoŋ³¹tʐɔʔ³⁵	khʐ o ŋ ³¹ + tʐ ɔ ʔ ³⁵	i n c t + i n c t	18224 18230
+3616	Xiandao	uvula	138	khʐoŋ³¹tʐɔʔ³⁵	khʐ o ŋ ³¹ + tʐ ɔ ʔ ³⁵	i n c t + i n c t	18224 18231
 5072	Atsi	uvula	138	khjuŋ²¹tsui⁵¹	kʰ j u ŋ ²¹ + ts u i ⁵¹	i m n c t + i m n t	18224 18227
-6846	Maru	uvula	138	khjauŋ³⁵saŋ³⁵	kh j au ŋ ³⁵ + s a ŋ ³⁵	i m n c t + i n c t	18224 18228
-8480	Bola	uvula	138	khjauŋ³¹tui⁵⁵	khj au ŋ ³¹ + t ui ⁵⁵	i n c t + i n t	18224 18227
+6846	Maru	uvula	138	khjauŋ³⁵saŋ³⁵	kh j au ŋ ³⁵ + s a ŋ ³⁵	i m n c t + i n c t	18224 18229
+8480	Bola	uvula	138	khjauŋ³¹tui⁵⁵	khj au ŋ ³¹ + t ui ⁵⁵	i n c t + i n t	18224 18228
 #
-25	Rangoon	valley	25	ɕo²²m̥jɑ̃u²²	ɕ o ²² + m̥ j ɑ̃ u ∼ ²²	i n t + i m n N c t	18242 18243
+25	Rangoon	valley	25	ɕo²²m̥jɑ̃u²²	ɕ o ²² + m̥ j ɑ̃ u ∼ ²²	i n t + i m n N c t	18243 18244
 1856	Achang_Longchuan	valley	25	xui³¹uaŋ³¹	x ui ³¹ + /ʔ ua ŋ ³¹	i n t + i n c t	18238 18239
-3521	Xiandao	valley	25	a³¹khʐoʔ⁵⁵	/ʔ a ³¹ + khʐ o ʔ ⁵⁵	i n t + i n c t	18244 18245
-4962	Atsi	valley	25	vui⁵¹khuŋ²¹	v u i ⁵¹ + kʰ u ŋ ²¹	i m n t + i n c t	18240 18239
-6750	Maru	valley	25	lɔ̃³⁵khauŋ²¹	l ɔ̃ ∼ ³⁵ + kh au ŋ ²¹	i n c t + i n c t	18241 18239
-8376	Bola	valley	25	lɔ̃³¹khauŋ³⁵	l ɔ̃ ∼ ³¹ + kh au ŋ ³⁵	i n c t + i n c t	18241 18239
+3521	Xiandao	valley	25	a³¹khʐoʔ⁵⁵	/ʔ a ³¹ + khʐ o ʔ ⁵⁵	i n t + i n c t	18245 18246
+4962	Atsi	valley	25	vui⁵¹khuŋ²¹	v u i ⁵¹ + kʰ u ŋ ²¹	i m n t + i n c t	18240 18241
+6750	Maru	valley	25	lɔ̃³⁵khauŋ²¹	l ɔ̃ ∼ ³⁵ + kh au ŋ ²¹	i n c t + i n c t	18242 18241
+8376	Bola	valley	25	lɔ̃³¹khauŋ³⁵	l ɔ̃ ∼ ³¹ + kh au ŋ ³⁵	i n c t + i n c t	18242 18241
 #
 527	Rangoon	vat / jar	525	sĩ⁵³o⁵⁵	s ĩ ∼ ⁵³ + /ʔ o ⁵⁵	i n c t + i n t	18252 18253
 2312	Achang_Longchuan	vat / jar	525	əŋ³⁵	/ʔ ə ŋ ³⁵	i n c t	18251
@@ -12927,9 +12927,9 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9226	Bola	vertical	912	tsauŋ³⁵	ts au ŋ ³⁵	i n c t	18274
 10872	Lashi	vertical	912	tsɔ̱ːŋ³³	ˀts ɔː ŋ ³³	i n c t	18274
 #
-677	Rangoon	vicinity / nearby	674	ɑ⁵³nɑ⁵⁵	/ʔ ɑ ⁵³ + /ʔ n ɑ ⁵⁵	i n t + i m n t	18283 18287
+677	Rangoon	vicinity / nearby	674	ɑ⁵³nɑ⁵⁵	/ʔ ɑ ⁵³ + /ʔ n ɑ ⁵⁵	i n t + i m n t	18283 18284
 2446	Achang_Longchuan	vicinity / nearby	674	a³¹ne⁵¹	/ʔ a ³¹ + n e ⁵¹	i n t + i n t	18283 18284
-4021	Xiandao	vicinity / nearby	674	ʐɔ⁵⁵mɔ⁵⁵	ʐ ɔ ⁵⁵ + m ɔ ⁵⁵	i n t + i n t	18288 18289
+4021	Xiandao	vicinity / nearby	674	ʐɔ⁵⁵mɔ⁵⁵	ʐ ɔ ⁵⁵ + m ɔ ⁵⁵	i n t + i n t	18287 18288
 5606	Atsi	vicinity / nearby	674	tʃa̱ŋ⁵⁵jam⁵¹	ˀtʃ a ŋ ⁵⁵ + /ʔ j a m ⁵¹	i n c t + i m n c t	18285 18286
 7317	Maru	vicinity / nearby	674	jɛ̃³¹	/ʔ j ɛ̃ ∼ ³¹	i m n c t	18286
 8986	Bola	vicinity / nearby	674	tʃɔ̱̃³⁵jɛ̃⁵⁵	ˀtʃ ɔ̃ ∼ ³⁵ + /ʔ j ɛ̃ ∼ ⁵⁵	i n c t + i m n c t	18285 18286
@@ -12990,10 +12990,10 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 #
 3434	Achang_Longchuan	wall (note:+earthen)	1718	tʂhaŋ³¹	tʂʰ a ŋ ³¹	i n c t	18365
 4891	Xiandao	wall (note:+earthen)	1718	tshiaŋ³¹	tsh i a ŋ ³¹	i m n c t	18365
-6670	Atsi	wall (note:+earthen)	1718	tshĕ⁵⁵vam⁵¹	tsʰ ĕ ⁵⁵ + v a m ⁵¹	i n t + i n c t	18365 18366
-8301	Maru	wall (note:+earthen)	1718	tshə̆³¹ɣɛ̃³¹	tsh ə̆ ³¹ + ɣ ɛ̃ ∼ ³¹	i n t + i n c t	18365 18366
-10028	Bola	wall (note:+earthen)	1718	tsɑ̱̆i³⁵tshaŋ³¹	ˀts ɑ̆i ³⁵ + tsh a ŋ ³¹	i n t + i n c t	18367 18365
-11560	Lashi	wall (note:+earthen)	1718	tshə̆⁵³jam³¹	tsh ə̆ ⁵³ + /ʔ j a m ³¹	i n t + i m n c t	18365 18366
+6670	Atsi	wall (note:+earthen)	1718	tshĕ⁵⁵vam⁵¹	tsʰ ĕ ⁵⁵ + v a m ⁵¹	i n t + i n c t	18366 18367
+8301	Maru	wall (note:+earthen)	1718	tshə̆³¹ɣɛ̃³¹	tsh ə̆ ³¹ + ɣ ɛ̃ ∼ ³¹	i n t + i n c t	18366 18367
+10028	Bola	wall (note:+earthen)	1718	tsɑ̱̆i³⁵tshaŋ³¹	ˀts ɑ̆i ³⁵ + tsh a ŋ ³¹	i n t + i n c t	18366 18365
+11560	Lashi	wall (note:+earthen)	1718	tshə̆⁵³jam³¹	tsh ə̆ ⁵³ + /ʔ j a m ³¹	i n t + i m n c t	18366 18367
 #
 377	Rangoon	walnut	375	tθiʔ⁴tɕɑ⁵⁵tθi⁵⁵	tθ i ʔ ⁴ + tɕ ɑ ⁵⁵ + tθ i ⁵⁵	i n c t + i n t + i n t	18380 18381 18382
 2176	Achang_Longchuan	walnut	375	maʔ³¹tɔi³⁵	m a ʔ ³¹ + t ɔi ³⁵	i n c t + i n t	18376 18377
@@ -13040,14 +13040,14 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 7142	Maru	warehouse / storehouse	469	kau³¹ta̱ŋ³¹	k au ³¹ + ˀt a ŋ ³¹	i n t + i n c t	18435 18434
 8790	Bola	warehouse / storehouse	469	tshaŋ³⁵khu³¹	tsh a ŋ ³⁵ + kh u ³¹	i n c t + i n t	18434 18435
 #
-973	Rangoon	warm	969	nwe⁵⁵thwe⁵⁵	n w e ⁵⁵ + tʰ w e ⁵⁵	i m n t + i m n t	18448 18449
+973	Rangoon	warm	969	nwe⁵⁵thwe⁵⁵	n w e ⁵⁵ + tʰ w e ⁵⁵	i m n t + i m n t	18447 18448
 2731	Achang_Longchuan	warm	969	lum⁵⁵	l u m ⁵⁵	i n c t	18446
 4285	Xiandao	warm	969	lum⁵⁵	l u m ⁵⁵	i n c t	18446
 5906	Atsi	warm	969	ŋje²¹	ŋ j e ²¹	i m n t	18447
 7601	Maru	warm	969	ŋjø³⁵	ŋ j ø ³⁵	i m n t	18447
 9285	Bola	warm	969	lam⁵⁵	l a m ⁵⁵	i n c t	18446
-10924	Lashi	warm	969	ŋyː³³	ŋ yː ³³	i n t	18448
-12025	Old_Burmese	warm	969	nuyḥ	n u j ⁵⁵	i n c t	18448
+10924	Lashi	warm	969	ŋyː³³	ŋ yː ³³	i n t	18447
+12025	Old_Burmese	warm	969	nuyḥ	n u j ⁵⁵	i n c t	18447
 12026	Old_Burmese	warm	969	lum	l u m ²²	i n c t	18446
 #
 1374	Rangoon	warm oneself by (a fire)	1363	ɬõ²²	ɬ õ ∼ ²²	i n c t	18458
@@ -13111,11 +13111,11 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 48	Rangoon	wave	48	ɬɑĩ⁵⁵	ɬ ɑ̃ i ∼ ⁵⁵	i n N c t	18525
 4985	Atsi	wave	48	vui⁵¹kjun⁵¹	v u i ⁵¹ + k j u n ⁵¹	i m n t + i m n c t	18523 18524
 #
-1287	Rangoon	wave / wield	1278	jɑ̃⁵⁵	/ʔ j ɑ̃ ∼ ⁵⁵	i m n c t	18530
+1287	Rangoon	wave / wield	1278	jɑ̃⁵⁵	/ʔ j ɑ̃ ∼ ⁵⁵	i m n c t	18531
 3018	Achang_Longchuan	wave / wield	1278	ve⁵⁵	v e ⁵⁵	i n t	18527
-6221	Atsi	wave / wield	1278	xe⁵¹tu̱i⁵¹	x e ⁵¹ + ˀt u i ⁵¹	i n t + i n N t	18527 18528
+6221	Atsi	wave / wield	1278	xe⁵¹tu̱i⁵¹	x e ⁵¹ + ˀt u i ⁵¹	i n t + i n N t	18528 18529
 7875	Maru	wave / wield	1278	fa̱k⁵⁵	ˀf a k ⁵⁵	i n c t	18527
-9587	Bola	wave / wield	1278	la̱ʔ³¹fa̱k⁵⁵	ˀl a ʔ ³¹ + ˀf a k ⁵⁵	i n c t + i n c t	18529 18527
+9587	Bola	wave / wield	1278	la̱ʔ³¹fa̱k⁵⁵	ˀl a ʔ ³¹ + ˀf a k ⁵⁵	i n c t + i n c t	18530 18527
 11176	Lashi	wave / wield	1278	fɛ̱ː⁵⁵	ˀf ɛː ⁵⁵	i n t	18527
 #
 848	Rangoon	we	845	ŋɑ²² to⁵³	ŋ ɑ ²² + t o ⁵³	i n t + i n t	18536 18537
@@ -13153,7 +13153,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 5787	Atsi	we all	854	lu̱ŋ⁵⁵ la̱ŋ⁵⁵ paŋ²¹	ˀl u ŋ ⁵⁵ + ˀl a ŋ ⁵⁵ + p a ŋ ²¹	i n c t + i n c t + i n c t	18599 18600 18601
 7488	Maru	we all	854	pəŋ³¹ ʃɔʔ⁵⁵ mɔʔ⁵⁵	p ə ŋ ³¹ + ʃ ɔ ʔ ⁵⁵ + m ɔ ʔ ⁵⁵	i n c t + i n c t + i n c t	18601 18602 18603
 9170	Bola	we all	854	pɛ̃⁵⁵ʃaʔ⁵⁵maʔ³¹	p ɛ̃ ∼ ⁵⁵ + ʃ a ʔ ⁵⁵ + m a ʔ ³¹	i n c t + i n c t + i n c t	18601 18602 18603
-10816	Lashi	we all	854	pan³¹ʃɔ̱ʔ⁵⁵paŋ³³	p a n ³¹ + ˀʃ ɔ ʔ ⁵⁵ + p a ŋ ³³	i n c t + i n c t + i n c t	18604 18602 18601
+10816	Lashi	we all	854	pan³¹ʃɔ̱ʔ⁵⁵paŋ³³	p a n ³¹ + ˀʃ ɔ ʔ ⁵⁵ + p a ŋ ³³	i n c t + i n c t + i n c t	18601 18602 18604
 #
 1159	Rangoon	wear (a bracelet)	1154	wuʔ⁴	/ʔ w u ʔ ⁴	i m n c t	18616
 2900	Achang_Longchuan	wear (a bracelet)	1154	xut⁵⁵	x u t ⁵⁵	i n c t	18616
@@ -13247,9 +13247,9 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 8223	Maru	welcome, bid s.b. / greet	1642	tɔ̱i³¹	ˀt ɔi ³¹	i n t	18713
 9951	Bola	welcome, bid s.b. / greet	1642	ta̱i⁵⁵	ˀt ai ⁵⁵	i n t	18713
 #
-1272	Rangoon	weld / solder	1265	gɑ⁵³he²²shɛʔ⁴	g ɑ ⁵³ + h e ²² + sʰ ɛ ʔ ⁴	i n t + i n t + i n c t	18724 18725 18723
+1272	Rangoon	weld / solder	1265	gɑ⁵³he²²shɛʔ⁴	g ɑ ⁵³ + h e ²² + sʰ ɛ ʔ ⁴	i n t + i n t + i n c t	18725 18726 18723
 6206	Atsi	weld / solder	1265	nam⁵¹san⁵⁵ta̱p⁵⁵	n a m ⁵¹ + s a n ⁵⁵ + ˀt a p ⁵⁵	i n c t + i n c t + i n c t	18721 18722 18723
-9572	Bola	weld / solder	1265	ŋɛ̱³⁵tɛ̱ʔ⁵⁵	ˀŋ ɛ ³⁵ + ˀt ɛ ʔ ⁵⁵	i n t + i n c t	18721 18723
+9572	Bola	weld / solder	1265	ŋɛ̱³⁵tɛ̱ʔ⁵⁵	ˀŋ ɛ ³⁵ + ˀt ɛ ʔ ⁵⁵	i n t + i n c t	18724 18723
 #
 35	Rangoon	well	35	je²²twĩ⁵⁵	/ʔ j e ²² + t w ĩ ∼ ⁵⁵	i m n t + i m n c t	18736 18737
 1866	Achang_Longchuan	well	35	ti⁵⁵mɔ³⁵	t i ⁵⁵ + m ɔ ³⁵	i n t + i n t	18730 18731
@@ -13366,14 +13366,14 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 10876	Lashi	white	915	phjuː³³	ph j uː ³³	i m n t	18904
 11777	Old_Burmese	white	915	phlu	ph l u ²²	i m n t	18904
 #
-871	Rangoon	who	868	mi²²tθu²²	m i ²² + tθ u ²²	i n t + i n t	18917 18913
+871	Rangoon	who	868	mi²²tθu²²	m i ²² + tθ u ²²	i n t + i n t	18918 18917
 2627	Achang_Longchuan	who	868	xau⁵⁵	x au ⁵⁵	i n t	18913
 4190	Xiandao	who	868	xau⁵⁵	x au ⁵⁵	i n t	18913
 5801	Atsi	who	868	o⁵⁵	/ʔ o ⁵⁵	i n t	18914
 7502	Maru	who	868	khə̆³¹jauk³¹	kh ə̆ ³¹ + /ʔ j au k ³¹	i n t + i m n c t	18913 18916
 9183	Bola	who	868	khak⁵⁵jauʔ³¹	kh a k ⁵⁵ + /ʔ j au ʔ ³¹	i n c t + i m n c t	18915 18916
 10830	Lashi	who	868	xaŋ⁵⁵	x a ŋ ⁵⁵	i n c t	18913
-11778	Old_Burmese	who	868	su	s u ²²	i n t	18913
+11778	Old_Burmese	who	868	su	s u ²²	i n t	18917
 #
 1768	Rangoon	wide (in diameter) / coarse (note:coarse)	1751	toʔ⁴	t o ʔ ⁴	i n c t	18927
 3466	Achang_Longchuan	wide (in diameter) / coarse (note:coarse)	1751	kʐə³¹	k ʐ ə ³¹	i m n t	18925
@@ -13408,13 +13408,13 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 8577	Bola	wife	241	jõ³¹mi³¹	/ʔ j õ ∼ ³¹ + m i ³¹	i m n c t + i n t	18963 18962
 10298	Lashi	wife	241	mji³³	m j i ³³	i m n t	18962
 #
-362	Rangoon	willow	360	mo⁵⁵mɑ⁵³khɑ⁵³	/ʔ m o ⁵⁵ + m ɑ ⁵³ + kʰ ɑ ⁵³	i m n t + i n t + i n t	18980 18981 18974
+362	Rangoon	willow	360	mo⁵⁵mɑ⁵³khɑ⁵³	/ʔ m o ⁵⁵ + m ɑ ⁵³ + kʰ ɑ ⁵³	i m n t + i n t + i n t	18980 18981 18982
 2163	Achang_Longchuan	willow	360	xaiʔ⁵⁵tseŋ⁵⁵	x ai ʔ ⁵⁵ + ts e ŋ ⁵⁵	i n c t + i n c t	18973 18974
 5296	Atsi	willow	360	pan²¹tu²¹	p a n ²¹ + t u ²¹	i n c t + i n t	18975 18976
 7049	Maru	willow	360	pə̱ŋ³¹tau³⁵	ˀp ə ŋ ³¹ + t au ³⁵	i n c t + i n t	18975 18976
 8686	Bola	willow	360	ɣəi⁵⁵pɛ̱̃⁵⁵tu³¹kɛ̃⁵⁵	ɣ əi ⁵⁵ + ˀp ɛ̃ ∼ ⁵⁵ + t u ³¹ + k ɛ̃ ∼ ⁵⁵	i n t + i n c t + i n t + i n c t	18977 18975 18976 18974
 10400	Lashi	willow	360	ʃɿ⁵⁵xɔm⁵⁵kam³¹	ʃ ɿ ⁵⁵ + x ɔ m ⁵⁵ + k a m ³¹	i n t + i n c t + i n c t	18978 18979 18974
-11841	Old_Burmese	willow	360	muiwḥ◦maʔ◦khaʔ	m ə w ⁵⁵ + m a ⁵³ + kh a ⁵³	i n c t + i n t + i n t	18980 18981 18974
+11841	Old_Burmese	willow	360	muiwḥ◦maʔ◦khaʔ	m ə w ⁵⁵ + m a ⁵³ + kh a ⁵³	i n c t + i n t + i n t	18980 18981 18982
 #
 3360	Achang_Longchuan	win	1641	ɔŋ⁵⁵	/ʔ ɔ ŋ ⁵⁵	i n c t	18993
 4823	Xiandao	win	1641	uŋ⁵⁵	/ʔ u ŋ ⁵⁵	i n c t	18993
@@ -13516,7 +13516,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 8528	Bola	wizard / sorcerer	189	tam³¹sa³⁵	t a m ³¹ + s a ³⁵	i n c t + i n t	19115 19116
 10247	Lashi	wizard / sorcerer	189	tɔm³³sa⁵³	t ɔ m ³³ + s a ⁵³	i n c t + i n t	19115 19116
 #
-513	Rangoon	wok (frying)	511	hĩ⁵⁵o⁵⁵	h ĩ ∼ ⁵⁵ + /ʔ o ⁵⁵	i n c t + i n t	19137 19133
+513	Rangoon	wok (frying)	511	hĩ⁵⁵o⁵⁵	h ĩ ∼ ⁵⁵ + /ʔ o ⁵⁵	i n c t + i n t	19133 19137
 2299	Achang_Longchuan	wok (frying)	511	mă³¹lin³¹	m ă ³¹ + l i n ³¹	i n t + i n c t	19129 19130
 3915	Xiandao	wok (frying)	511	au³¹	/ʔ au ³¹	i n t	19133
 5443	Atsi	wok (frying)	511	sun²¹ ne̱⁵¹au²¹	s u n ²¹ + ˀn e ⁵¹ + /ʔ a u ²¹	i n c t + i n t + i n N t	19131 19132 19133
@@ -13602,13 +13602,13 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 9256	Bola	woven, tightly (fabric)	940	tsak³¹	ts a k ³¹	i n c t	19285
 10899	Lashi	woven, tightly (fabric)	940	tʃeːi⁵⁵	tʃ eːi ⁵⁵	i n t	19284
 #
-1048	Rangoon	wrap	1044	thoʔ⁴	tʰ o ʔ ⁴	i n c t	19294
+1048	Rangoon	wrap	1044	thoʔ⁴	tʰ o ʔ ⁴	i n c t	19295
 2799	Achang_Longchuan	wrap	1044	tshet⁵⁵	tsʰ e t ⁵⁵	i n c t	19292
 4336	Xiandao	wrap	1044	tshɛt⁵⁵	tsh ɛ t ⁵⁵	i n c t	19292
 5982	Atsi	wrap	1044	kjeʔ²¹	k j e ʔ ²¹	i m n c t	19293
-7663	Maru	wrap	1044	ka̱k⁵⁵	ˀk a k ⁵⁵	i n c t	19293
-9359	Bola	wrap	1044	ka̱k⁵⁵	ˀk a k ⁵⁵	i n c t	19293
-10983	Lashi	wrap	1044	kə̱ːk⁵⁵	ˀk əː k ⁵⁵	i n c t	19293
+7663	Maru	wrap	1044	ka̱k⁵⁵	ˀk a k ⁵⁵	i n c t	19294
+9359	Bola	wrap	1044	ka̱k⁵⁵	ˀk a k ⁵⁵	i n c t	19294
+10983	Lashi	wrap	1044	kə̱ːk⁵⁵	ˀk əː k ⁵⁵	i n c t	19294
 #
 119	Rangoon	wrinkle	119	ɑ⁵³je²²tũ⁵³	/ʔ ɑ ⁵³ + /ʔ j e ²² + t ũ ∼ ⁵³	i n t + i m n t + i n c t	19300 19303 19301
 1942	Achang_Longchuan	wrinkle	119	a³¹tsuŋ⁵¹	/ʔ a ³¹ + ts u ŋ ⁵¹	i n t + i n c t	19300 19301
@@ -13618,7 +13618,7 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 2664	Achang_Longchuan	wrinkled / creased	905	a³¹tsuŋ³¹	/ʔ a ³¹ + ts u ŋ ³¹	i n t + i n c t	19307 19308
 4222	Xiandao	wrinkled / creased	905	ɲoi³¹	ɲ oi ³¹	i n t	19309
 5839	Atsi	wrinkled / creased	905	ŋjuŋ⁵⁵	ŋ j u ŋ ⁵⁵	i m n c t	19309
-7538	Maru	wrinkled / creased	905	na̱uk⁵⁵	ˀn au k ⁵⁵	i n c t	19310
+7538	Maru	wrinkled / creased	905	na̱uk⁵⁵	ˀn au k ⁵⁵	i n c t	19309
 9219	Bola	wrinkled / creased	905	nja̱uŋ⁵⁵	ˀn j au ŋ ⁵⁵	i m n c t	19309
 10867	Lashi	wrinkled / creased	905	ŋju̱ː³³	ˀŋ j uː ³³	i m n t	19309
 #
@@ -13758,13 +13758,13 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 10878	Lashi	yellow	917	xəː³³	x əː ³³	i n t	19490
 11784	Old_Burmese	yellow	917	wa	w a ²²	i n t	19492
 #
-696	Rangoon	yesterday	693	mɑ⁵³ne⁵³kɑ⁵³	m ɑ ⁵³ + n e ⁵³ + k ɑ ⁵³	i n t + i n t + i n t	19498 19500 19502
+696	Rangoon	yesterday	693	mɑ⁵³ne⁵³kɑ⁵³	m ɑ ⁵³ + n e ⁵³ + k ɑ ⁵³	i n t + i n t + i n t	19498 19500 19505
 2461	Achang_Longchuan	yesterday	693	man³⁵	m a n ³⁵	i n c t	19498
-4030	Xiandao	yesterday	693	n³¹m̥an³⁵	n ³¹ + m̥ a n ³⁵	i t + i n c t	19503 19498
+4030	Xiandao	yesterday	693	n³¹m̥an³⁵	n ³¹ + m̥ a n ³⁵	i t + i n c t	19506 19498
 5623	Atsi	yesterday	693	a²¹ŋji⁵⁵nap²¹	/ʔ a ²¹ + ŋ j i ⁵⁵ + n a p ²¹	i n t + i m n t + i n c t	19499 19500 19501
-7333	Maru	yesterday	693	a³¹ŋji³¹nɛʔ³¹	/ʔ a ³¹ + ŋ j i ³¹ + n ɛ ʔ ³¹	i n t + i m n t + i n c t	19499 19500 19501
-9005	Bola	yesterday	693	a³¹ŋji³⁵nɛʔ³¹	/ʔ a ³¹ + ŋ j i ³⁵ + n ɛ ʔ ³¹	i n t + i m n t + i n c t	19499 19500 19501
-10662	Lashi	yesterday	693	a³¹ŋjei⁵⁵nap³¹	/ʔ a ³¹ + ŋ j ei ⁵⁵ + /ʔ n a p ³¹	i n t + i m n t + i m n c t	19499 19500 19501
+7333	Maru	yesterday	693	a³¹ŋji³¹nɛʔ³¹	/ʔ a ³¹ + ŋ j i ³¹ + n ɛ ʔ ³¹	i n t + i m n t + i n c t	19499 19504 19500
+9005	Bola	yesterday	693	a³¹ŋji³⁵nɛʔ³¹	/ʔ a ³¹ + ŋ j i ³⁵ + n ɛ ʔ ³¹	i n t + i m n t + i n c t	19499 19502 19500
+10662	Lashi	yesterday	693	a³¹ŋjei⁵⁵nap³¹	/ʔ a ³¹ + ŋ j ei ⁵⁵ + /ʔ n a p ³¹	i n t + i m n t + i m n c t	19499 19500 19503
 #
 703	Rangoon	yesterday evening / last night	700	mɑ⁵³ne⁵³ȵɑ⁵³	m ɑ ⁵³ + n e ⁵³ + ɲ ɑ ⁵³	i n t + i n t + i n t	19517 19521 19518
 2469	Achang_Longchuan	yesterday evening / last night	700	man³⁵ni³¹kʐɔm⁵⁵	m a n ³⁵ + n i ³¹ + k ʐ ɔ m ⁵⁵	i n c t + i n t + i m n c t	19517 19518 19519
@@ -13827,11 +13827,11 @@ ID	DOCULECT	CONCEPT	GLOSSID	IPA	TOKENS	STRUCTURE	COGIDS
 10072	Bola	younger brother (address by o. sister) (note:+older_sister_address)	1762	a³¹mauŋ⁵⁵	/ʔ a ³¹ + m au ŋ ⁵⁵	i n t + i n c t	19617 19618
 #
 2041	Achang_Longchuan	younger sister	1816	a³¹ȵi⁵⁵	/ʔ a ³¹ + ȵ i ⁵⁵	i n t + i n t	19622 19623
-3693	Xiandao	younger sister	1816	a³¹naŋ⁵⁵	/ʔ a ³¹ + n a ŋ ⁵⁵	i n t + i n c t	19622 19625
+3693	Xiandao	younger sister	1816	a³¹naŋ⁵⁵	/ʔ a ³¹ + n a ŋ ⁵⁵	i n t + i n c t	19622 19623
 5160	Atsi	younger sister	1816	a⁵⁵ku²¹	/ʔ a ⁵⁵ + k u ²¹	i n t + i n t	19622 19624
-6927	Maru	younger sister	1816	a³¹na̱uŋ³⁵	/ʔ a ³¹ + ˀn au ŋ ³⁵	i n t + i n c t	19622 19625
-8563	Bola	younger sister	1816	a⁵⁵na̱uŋ³⁵	/ʔ a ⁵⁵ + ˀn au ŋ ³⁵	i n t + i n c t	19622 19625
-10282	Lashi	younger sister	1816	a⁵⁵nɔʔ³¹	/ʔ a ⁵⁵ + n ɔ ʔ ³¹	i n t + i n c t	19622 19626
+6927	Maru	younger sister	1816	a³¹na̱uŋ³⁵	/ʔ a ³¹ + ˀn au ŋ ³⁵	i n t + i n c t	19622 19623
+8563	Bola	younger sister	1816	a⁵⁵na̱uŋ³⁵	/ʔ a ⁵⁵ + ˀn au ŋ ³⁵	i n t + i n c t	19622 19623
+10282	Lashi	younger sister	1816	a⁵⁵nɔʔ³¹	/ʔ a ⁵⁵ + n ɔ ʔ ³¹	i n t + i n c t	19622 19625
 #
 1782	Rangoon	younger sister (address by o. brother) (note:+older_brother_address)	1765	n̥ɑ⁵³mɑ⁵³	n̥ ɑ ⁵³ + m ɑ ⁵³	i n t + i n t	19635 19636
 #

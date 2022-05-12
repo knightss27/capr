@@ -1,0 +1,200 @@
+Grapheme	Segments	CLPA	Structure	Unicode	Frequency	Reflexes	Examples
+³¹	³¹	³¹	t	U+00b3 U+00b9	1105	Maru	xa³¹
+⁵⁵	⁵⁵	⁵⁵	t	U+2075 U+2075	705	Maru	pau⁵⁵
+³⁵	³⁵	³⁵	t	U+00b3 U+2075	505	Maru	tsaŋ³⁵
+²¹	²¹	²¹	t	U+00b2 U+00b9	12	Maru	laŋ²¹
+⁵¹	⁵¹	⁵¹	t	U+2075 U+00b9	7	Maru	xɔ⁵¹
+³	³	³	t	U+00b3	1	Maru	jɛ̃∼³
+ɔʔ	ɔ ʔ	ɔ ʔ	n c	U+0254 U+0020 U+0294	95	Maru	mɔʔ⁵⁵
+uk	u k	u k	n c	U+0075 U+0020 U+006b	79	Maru	nuk³¹
+ɔ̃	ɔ̃ ∼	ɔ̃ ∼	n c	U+0254 U+0303 U+0020 U+223c	76	Maru	tɔ̃∼⁵⁵
+ɛʔ	ɛ ʔ	ɛ ʔ	n c	U+025b U+0020 U+0294	69	Maru	vɛʔ⁵⁵
+aŋ	a ŋ	a ŋ	n c	U+0061 U+0020 U+014b	65	Maru	laŋ²¹
+auŋ	au ŋ	au ŋ	n c	U+0061 U+0075 U+0020 U+014b	59	Maru	tsauŋ³¹
+ɛ̃	ɛ̃ ∼	ɛ̃ ∼	n c	U+025b U+0303 U+0020 U+223c	42	Maru	tshɛ̃∼³¹
+am	a m	a m	n c	U+0061 U+0020 U+006d	42	Maru	tam³⁵
+əŋ	ə ŋ	ə ŋ	n c	U+0259 U+0020 U+014b	34	Maru	tsəŋ³¹
+um	u m	u m	n c	U+0075 U+0020 U+006d	34	Maru	tum³⁵
+ɛ̱ʔ	ɛ̱ ʔ	ɛ̱ ʔ	n c	U+025b U+0331 U+0020 U+0294	34	Maru	pɛ̱ʔ⁵⁵
+uŋ	u ŋ	u ŋ	n c	U+0075 U+0020 U+014b	31	Maru	puŋ⁵⁵
+auk	au k	au k	n c	U+0061 U+0075 U+0020 U+006b	29	Maru	tʃhauk⁵⁵
+a̱k	a̱ k	a̱ k	n c	U+0061 U+0331 U+0020 U+006b	26	Maru	sa̱k⁵⁵
+an	a n	a n	n c	U+0061 U+0020 U+006e	25	Maru	tʃan³⁵
+a̱t	a̱ t	a̱ t	n c	U+0061 U+0331 U+0020 U+0074	23	Maru	na̱t⁵⁵
+ak	a k	a k	n c	U+0061 U+0020 U+006b	23	Maru	fak⁵⁵
+a̱ŋ	a̱ ŋ	a̱ ŋ	n c	U+0061 U+0331 U+0020 U+014b	22	Maru	ta̱ŋ³⁵
+at	a t	a t	n c	U+0061 U+0020 U+0074	21	Maru	tsat³¹
+ik	i k	i k	n c	U+0069 U+0020 U+006b	20	Maru	tʃik³¹
+ap	a p	a p	n c	U+0061 U+0020 U+0070	19	Maru	xap⁵⁵
+ɔ̱ʔ	ɔ̱ ʔ	ɔ̱ ʔ	n c	U+0254 U+0331 U+0020 U+0294	19	Maru	lɔ̱ʔ⁵⁵
+a̱uŋ	a̱u ŋ	a̱u ŋ	n c	U+0061 U+0331 U+0075 U+0020 U+014b	18	Maru	la̱uŋ³¹
+ɔ̱̃	ɔ̱̃ ∼	ɔ̱̃ ∼	n c	U+0254 U+0331 U+0303 U+0020 U+223c	15	Maru	lɔ̱̃∼³⁵
+a̱uk	a̱u k	a̱u k	n c	U+0061 U+0331 U+0075 U+0020 U+006b	14	Maru	tʃa̱uk⁵⁵
+ək	ə k	ə k	n c	U+0259 U+0020 U+006b	13	Maru	xək⁵⁵
+i̱k	i̱ k	i̱ k	n c	U+0069 U+0331 U+0020 U+006b	12	Maru	ʃi̱k⁵⁵
+u̱k	u̱ k	u̱ k	n c	U+0075 U+0331 U+0020 U+006b	12	Maru	tsu̱k⁵⁵
+ɔn	ɔ n	ɔ n	n c	U+0254 U+0020 U+006e	11	Maru	ŋɔn³⁵
+ŭŋ	ŭ ŋ	ŭ ŋ	n c	U+016d U+0020 U+014b	11	Maru	nŭŋ³⁵
+a̱m	a̱ m	a̱ m	n c	U+0061 U+0331 U+0020 U+006d	10	Maru	tʃa̱m³¹
+a̱p	a̱ p	a̱ p	n c	U+0061 U+0331 U+0020 U+0070	9	Maru	tsa̱p⁵⁵
+øʔ	ø ʔ	ø ʔ	n c	U+00f8 U+0020 U+0294	8	Maru	løʔ³¹
+ɛ̱̃	ɛ̱̃ ∼	ɛ̱̃ ∼	n c	U+025b U+0331 U+0303 U+0020 U+223c	7	Maru	lɛ̱̃∼³¹
+un	u n	u n	n c	U+0075 U+0020 U+006e	7	Maru	pun³¹
+iŋ	i ŋ	i ŋ	n c	U+0069 U+0020 U+014b	7	Maru	ʃiŋ³⁵
+a̱n	a̱ n	a̱ n	n c	U+0061 U+0331 U+0020 U+006e	6	Maru	ŋa̱n³⁵
+ɔŋ	ɔ ŋ	ɔ ŋ	n c	U+0254 U+0020 U+014b	5	Maru	xɔŋ³¹
+ɛn	ɛ n	ɛ n	n c	U+025b U+0020 U+006e	5	Maru	tsɛn³¹
+oʔ	o ʔ	o ʔ	n c	U+006f U+0020 U+0294	4	Maru	soʔ⁵⁵
+ə̱ŋ	ə̱ ŋ	ə̱ ŋ	n c	U+0259 U+0331 U+0020 U+014b	4	Maru	pə̱ŋ³¹
+u̱m	u̱ m	u̱ m	n c	U+0075 U+0331 U+0020 U+006d	4	Maru	tu̱m³¹
+õ	õ ∼	õ ∼	n c	U+00f5 U+0020 U+223c	3	Maru	khõ∼³⁵
+ø̱ʔ	ø̱ ʔ	ø̱ ʔ	n c	U+00f8 U+0331 U+0020 U+0294	3	Maru	pø̱ʔ⁵⁵
+i̱ŋ	i̱ ŋ	i̱ ŋ	n c	U+0069 U+0331 U+0020 U+014b	3	Maru	tʃi̱ŋ⁵⁵
+ãu	ãu ∼	ãu ∼	n c	U+00e3 U+0075 U+0020 U+223c	2	Maru	khãu∼³¹
+ẽ	ẽ ∼	ẽ ∼	n c	U+1ebd U+0020 U+223c	2	Maru	vẽ∼³⁵
+auʔ	au ʔ	au ʔ	n c	U+0061 U+0075 U+0020 U+0294	2	Maru	tʃhauʔ⁵⁵
+ɔp	ɔ p	ɔ p	n c	U+0254 U+0020 U+0070	2	Maru	nɔp³¹
+uʔ	u ʔ	u ʔ	n c	U+0075 U+0020 U+0294	2	Maru	ʒuʔ⁵⁵
+iʔ	i ʔ	i ʔ	n c	U+0069 U+0020 U+0294	2	Maru	tʃhiʔ³¹
+ɔm	ɔ m	ɔ m	n c	U+0254 U+0020 U+006d	2	Maru	xɔm³⁵
+in	i n	i n	n c	U+0069 U+0020 U+006e	2	Maru	tin³⁵
+ɔ̱ŋ	ɔ̱ ŋ	ɔ̱ ŋ	n c	U+0254 U+0331 U+0020 U+014b	2	Maru	nɔ̱ŋ⁵⁵
+ɔt	ɔ t	ɔ t	n c	U+0254 U+0020 U+0074	2	Maru	thɔt³¹
+ɔ̃̆	ɔ̃̆ ∼	ɔ̃̆ ∼	n c	U+0254 U+0303 U+0306 U+0020 U+223c	2	Maru	nɔ̃̆∼³¹
+ɛŋ	ɛ ŋ	ɛ ŋ	n c	U+025b U+0020 U+014b	1	Maru	lɛŋ³⁵
+əʔ	ə ʔ	ə ʔ	n c	U+0259 U+0020 U+0294	1	Maru	kəʔ³¹
+en	e n	e n	n c	U+0065 U+0020 U+006e	1	Maru	ʒen³¹
+ɔk	ɔ k	ɔ k	n c	U+0254 U+0020 U+006b	1	Maru	ŋɔk³¹
+aʔ	a ʔ	a ʔ	n c	U+0061 U+0020 U+0294	1	Maru	faʔ⁵⁵
+u̱t	u̱ t	u̱ t	n c	U+0075 U+0331 U+0020 U+0074	1	Maru	ku̱t³¹
+aunŋ	au nŋ	au nŋ	n c	U+0061 U+0075 U+0020 U+006e U+014b	1	Maru	phaunŋ³⁵
+ɔ̱k	ɔ̱ k	ɔ̱ k	n c	U+0254 U+0331 U+0020 U+006b	1	Maru	tʃɔ̱k³¹
+ɔ̱p	ɔ̱ p	ɔ̱ p	n c	U+0254 U+0331 U+0020 U+0070	1	Maru	kɔ̱p³¹
+ɛ̱ŋ	ɛ̱ ŋ	ɛ̱ ŋ	n c	U+025b U+0331 U+0020 U+014b	1	Maru	lɛ̱ŋ⁵⁵
+ɛp	ɛ p	ɛ p	n c	U+025b U+0020 U+0070	1	Maru	thɛp⁵⁵
+u̱ŋ	u̱ ŋ	u̱ ŋ	n c	U+0075 U+0331 U+0020 U+014b	1	Maru	tu̱ŋ⁵⁵
+ɔ	ɔ	ɔ	n	U+0254	138	Maru	vɔ³¹
+a	a	a	n	U+0061	111	Maru	xa³¹
+ə̆	ə̆	ə̆	n	U+0259 U+0306	61	Maru	mə̆³¹
+ɛ	ɛ	ɛ	n	U+025b	59	Maru	mɛ³¹
+au	au	au	n	U+0061 U+0075	54	Maru	pau⁵⁵
+u	u	u	n	U+0075	44	Maru	tu³⁵
+ai	ai	ai	n	U+0061 U+0069	39	Maru	vai³¹
+ɔi	ɔi	ɔi	n	U+0254 U+0069	35	Maru	tɔi³¹
+ɔ̱	ɔ̱	ɔ̱	n	U+0254 U+0331	22	Maru	lɔ̱⁵⁵
+ɔ̆	ɔ̆	ɔ̆	n	U+0254 U+0306	22	Maru	tsɔ̆³⁵
+a̱u	a̱u	a̱u	n	U+0061 U+0331 U+0075	21	Maru	ta̱u³⁵
+ø	ø	ø	n	U+00f8	20	Maru	tʃø³⁵
+ă	ă	ă	n	U+0103	18	Maru	tă³¹
+i	i	i	n	U+0069	17	Maru	ʃi³⁵
+ɔ̱i	ɔ̱i	ɔ̱i	n	U+0254 U+0331 U+0069	16	Maru	kɔ̱i³¹
+a̱i	a̱i	a̱i	n	U+0061 U+0331 U+0069	14	Maru	ma̱i⁵⁵
+a̱	a̱	a̱	n	U+0061 U+0331	11	Maru	la̱³¹
+ɛ̱	ɛ̱	ɛ̱	n	U+025b U+0331	9	Maru	tɛ̱³⁵
+ə	ə	ə	n	U+0259	7	Maru	ɣə³⁵
+u̱i	u̱i	u̱i	n	U+0075 U+0331 U+0069	5	Maru	tʃu̱i³⁵
+ɛ̆	ɛ̆	ɛ̆	n	U+025b U+0306	4	Maru	tʃhɛ̆³¹
+ø̱	ø̱	ø̱	n	U+00f8 U+0331	4	Maru	ŋø̱³⁵
+u̱	u̱	u̱	n	U+0075 U+0331	3	Maru	tʃu̱³¹
+ĭ	ĭ	ĭ	n	U+012d	3	Maru	ʃĭ³⁵
+oi	oi	oi	n	U+006f U+0069	2	Maru	khoi³⁵
+o	o	o	n	U+006f	2	Maru	tso
+ŏ	ŏ	ŏ	n	U+014f	1	Maru	ʃŏ³⁵
+ɔ̆i	ɔ̆i	ɔ̆i	n	U+0254 U+0306 U+0069	1	Maru	phɔ̆i³⁵
+o̱i	o̱i	o̱i	n	U+006f U+0331 U+0069	1	Maru	po̱i³¹
+ĕ	ĕ	ĕ	n	U+0115	1	Maru	kĕ³¹
+ɯ	ɯ	ɯ	n	U+026f	1	Maru	ɣɯ³¹
+ɤ	ɤ	ɤ	n	U+0264	1	Maru	ɤ
+jik	j i k	j i k	m n c	U+006a U+0020 U+0069 U+0020 U+006b	55	Maru	phjik⁵⁵
+jɔ̃	j ɔ̃ ∼	j ɔ̃ ∼	m n c	U+006a U+0020 U+0254 U+0303 U+0020 U+223c	31	Maru	jɔ̃∼³¹
+jauk	j au k	j au k	m n c	U+006a U+0020 U+0061 U+0075 U+0020 U+006b	24	Maru	kjauk³¹
+jaŋ	j a ŋ	j a ŋ	m n c	U+006a U+0020 U+0061 U+0020 U+014b	23	Maru	mjaŋ³¹
+jɔʔ	j ɔ ʔ	j ɔ ʔ	m n c	U+006a U+0020 U+0254 U+0020 U+0294	16	Maru	mjɔʔ³¹
+jauŋ	j au ŋ	j au ŋ	m n c	U+006a U+0020 U+0061 U+0075 U+0020 U+014b	14	Maru	jauŋ⁵⁵
+juk	j u k	j u k	m n c	U+006a U+0020 U+0075 U+0020 U+006b	13	Maru	khjuk⁵⁵
+jɛ̃	j ɛ̃ ∼	j ɛ̃ ∼	m n c	U+006a U+0020 U+025b U+0303 U+0020 U+223c	12	Maru	kjɛ̃∼³¹
+ja̱m	j a̱ m	j a̱ m	m n c	U+006a U+0020 U+0061 U+0331 U+0020 U+006d	12	Maru	kja̱m³⁵
+jɛʔ	j ɛ ʔ	j ɛ ʔ	m n c	U+006a U+0020 U+025b U+0020 U+0294	10	Maru	khjɛʔ⁵⁵
+ji̱k	j i̱ k	j i̱ k	m n c	U+006a U+0020 U+0069 U+0331 U+0020 U+006b	8	Maru	mji̱k⁵⁵
+ja̱uŋ	j a̱u ŋ	j a̱u ŋ	m n c	U+006a U+0020 U+0061 U+0331 U+0075 U+0020 U+014b	7	Maru	ja̱uŋ⁵⁵
+jap	j a p	j a p	m n c	U+006a U+0020 U+0061 U+0020 U+0070	6	Maru	jap³¹
+jøʔ	j ø ʔ	j ø ʔ	m n c	U+006a U+0020 U+00f8 U+0020 U+0294	6	Maru	khjøʔ⁵⁵
+jiŋ	j i ŋ	j i ŋ	m n c	U+006a U+0020 U+0069 U+0020 U+014b	6	Maru	khjiŋ³¹
+jat	j a t	j a t	m n c	U+006a U+0020 U+0061 U+0020 U+0074	6	Maru	kjat³¹
+jak	j a k	j a k	m n c	U+006a U+0020 U+0061 U+0020 U+006b	6	Maru	phjak⁵⁵
+jam	j a m	j a m	m n c	U+006a U+0020 U+0061 U+0020 U+006d	5	Maru	kjam⁵⁵
+ja̱p	j a̱ p	j a̱ p	m n c	U+006a U+0020 U+0061 U+0331 U+0020 U+0070	5	Maru	ŋja̱p⁵⁵
+ju̱k	j u̱ k	j u̱ k	m n c	U+006a U+0020 U+0075 U+0331 U+0020 U+006b	5	Maru	ŋju̱k⁵⁵
+ji̱ŋ	j i̱ ŋ	j i̱ ŋ	m n c	U+006a U+0020 U+0069 U+0331 U+0020 U+014b	4	Maru	kji̱ŋ³⁵
+jɛn	j ɛ n	j ɛ n	m n c	U+006a U+0020 U+025b U+0020 U+006e	4	Maru	pjɛn³⁵
+jɔ̱ʔ	j ɔ̱ ʔ	j ɔ̱ ʔ	m n c	U+006a U+0020 U+0254 U+0331 U+0020 U+0294	4	Maru	kjɔ̱ʔ⁵⁵
+jan	j a n	j a n	m n c	U+006a U+0020 U+0061 U+0020 U+006e	4	Maru	jan³⁵
+ja̱k	j a̱ k	j a̱ k	m n c	U+006a U+0020 U+0061 U+0331 U+0020 U+006b	3	Maru	ja̱k⁵⁵
+ja̱uk	j a̱u k	j a̱u k	m n c	U+006a U+0020 U+0061 U+0331 U+0075 U+0020 U+006b	3	Maru	kja̱uk⁵⁵
+jin	j i n	j i n	m n c	U+006a U+0020 U+0069 U+0020 U+006e	3	Maru	kjin⁵⁵
+jɛt	j ɛ t	j ɛ t	m n c	U+006a U+0020 U+025b U+0020 U+0074	3	Maru	kjɛt³¹
+ja̱t	j a̱ t	j a̱ t	m n c	U+006a U+0020 U+0061 U+0331 U+0020 U+0074	2	Maru	pja̱t³¹
+jɔ̱̃	j ɔ̱̃ ∼	j ɔ̱̃ ∼	m n c	U+006a U+0020 U+0254 U+0331 U+0303 U+0020 U+223c	2	Maru	kjɔ̱̃∼⁵⁵
+ji̱n	j i̱ n	j i̱ n	m n c	U+006a U+0020 U+0069 U+0331 U+0020 U+006e	2	Maru	kji̱n³¹
+jɛ̱t	j ɛ̱ t	j ɛ̱ t	m n c	U+006a U+0020 U+025b U+0331 U+0020 U+0074	2	Maru	pjɛ̱t⁵⁵
+joʔ	j o ʔ	j o ʔ	m n c	U+006a U+0020 U+006f U+0020 U+0294	2	Maru	mjoʔ³¹
+jɛ̱ʔ	j ɛ̱ ʔ	j ɛ̱ ʔ	m n c	U+006a U+0020 U+025b U+0331 U+0020 U+0294	2	Maru	kjɛ̱ʔ⁵⁵
+jɔk	j ɔ k	j ɔ k	m n c	U+006a U+0020 U+0254 U+0020 U+006b	1	Maru	mjɔk³¹
+jɔp	j ɔ p	j ɔ p	m n c	U+006a U+0020 U+0254 U+0020 U+0070	1	Maru	khjɔp³¹
+ju̱ʔ	j u̱ ʔ	j u̱ ʔ	m n c	U+006a U+0020 U+0075 U+0331 U+0020 U+0294	1	Maru	ŋju̱ʔ⁵⁵
+juŋ	j u ŋ	j u ŋ	m n c	U+006a U+0020 U+0075 U+0020 U+014b	1	Maru	mjuŋ³⁵
+ja̱n	j a̱ n	j a̱ n	m n c	U+006a U+0020 U+0061 U+0331 U+0020 U+006e	1	Maru	ŋja̱n³⁵
+jɔn	j ɔ n	j ɔ n	m n c	U+006a U+0020 U+0254 U+0020 U+006e	1	Maru	jɔn³⁵
+juʔ	j u ʔ	j u ʔ	m n c	U+006a U+0020 U+0075 U+0020 U+0294	1	Maru	juʔ³¹
+iɔ̃	i ɔ̃ ∼	i ɔ̃ ∼	m n c	U+0069 U+0020 U+0254 U+0303 U+0020 U+223c	1	Maru	ŋiɔ̃∼⁵⁵
+jum	j u m	j u m	m n c	U+006a U+0020 U+0075 U+0020 U+006d	1	Maru	jum³¹
+ja̱ŋ	j a̱ ŋ	j a̱ ŋ	m n c	U+006a U+0020 U+0061 U+0331 U+0020 U+014b	1	Maru	kja̱ŋ⁵⁵
+jhaŋ	jh a ŋ	jh a ŋ	m n c	U+006a U+0068 U+0020 U+0061 U+0020 U+014b	1	Maru	kjhaŋ³¹
+jɔ	j ɔ	j ɔ	m n	U+006a U+0020 U+0254	31	Maru	pjɔ³¹
+ji	j i	j i	m n	U+006a U+0020 U+0069	30	Maru	phji³¹
+ui	u i	u i	m n	U+0075 U+0020 U+0069	14	Maru	tʃhui³¹
+ju	j u	j u	m n	U+006a U+0020 U+0075	13	Maru	pju³¹
+ji̱	j i̱	j i̱	m n	U+006a U+0020 U+0069 U+0331	11	Maru	mji̱⁵⁵
+jĭ	j ĭ	j ĭ	m n	U+006a U+0020 U+012d	10	Maru	mjĭ³⁵
+jɛ	j ɛ	j ɛ	m n	U+006a U+0020 U+025b	10	Maru	khjɛ³⁵
+jɔ̱	j ɔ̱	j ɔ̱	m n	U+006a U+0020 U+0254 U+0331	7	Maru	mjɔ̱⁵⁵
+jø	j ø	j ø	m n	U+006a U+0020 U+00f8	5	Maru	kjø³⁵
+jɛ̱	j ɛ̱	j ɛ̱	m n	U+006a U+0020 U+025b U+0331	5	Maru	pjɛ̱³⁵
+ja	j a	j a	m n	U+006a U+0020 U+0061	4	Maru	ja³¹
+jɔ̆	j ɔ̆	j ɔ̆	m n	U+006a U+0020 U+0254 U+0306	4	Maru	pjɔ̆³⁵
+jau	j au	j au	m n	U+006a U+0020 U+0061 U+0075	3	Maru	khjau³¹
+ua	u a	u a	m n	U+0075 U+0020 U+0061	2	Maru	xua³⁵
+jo	j o	j o	m n	U+006a U+0020 U+006f	1	Maru	jo³¹
+ja̱u	j a̱u	j a̱u	m n	U+006a U+0020 U+0061 U+0331 U+0075	1	Maru	ŋja̱u³⁵
+ja̱	j a̱	j a̱	m n	U+006a U+0020 U+0061 U+0331	1	Maru	mja̱³¹
+jŭ	j ŭ	j ŭ	m n	U+006a U+0020 U+016d	1	Maru	pjŭ³¹
+jo̱	j o̱	j o̱	m n	U+006a U+0020 U+006f U+0331	1	Maru	kjo̱³¹
+ju̱	j u̱	j u̱	m n	U+006a U+0020 U+0075 U+0331	1	Maru	pju̱³¹
+jɔi	j ɔi	j ɔi	m n	U+006a U+0020 U+0254 U+0069	1	Maru	kjɔi³⁵
+m	m	m	i	U+006d	225	Maru	məŋ⁵⁵
+p	p	p	i	U+0070	200	Maru	pau⁵⁵
+k	k	k	i	U+006b	184	Maru	kjauk³¹
+l	l	l	i	U+006c	168	Maru	laŋ²¹
+n	n	n	i	U+006e	156	Maru	nɔ³¹
+t	t	t	i	U+0074	151	Maru	tă³¹
+kh	kh	kh	i	U+006b U+0068	146	Maru	khjɛʔ⁵⁵
+ts	ts	ts	i	U+0074 U+0073	119	Maru	tsəŋ³¹
+tʃ	tʃ	tʃ	i	U+0074 U+0283	92	Maru	tʃø³⁵
+th	th	th	i	U+0074 U+0068	89	Maru	thɔ̃∼³¹
+ʃ	ʃ	ʃ	i	U+0283	86	Maru	ʃi̱k⁵⁵
+ŋ	ŋ	ŋ	i	U+014b	76	Maru	ŋɔ³¹
+ph	ph	ph	i	U+0070 U+0068	72	Maru	phuk⁵⁵
+s	s	s	i	U+0073	66	Maru	sa̱k⁵⁵
+v	v	v	i	U+0076	63	Maru	vɔ³¹
+tʃh	tʃh	tʃh	i	U+0074 U+0283 U+0068	62	Maru	tʃhɛʔ⁵⁵
+ɣ	ɣ	ɣ	i	U+0263	60	Maru	ɣə³⁵
+tsh	tsh	tsh	i	U+0074 U+0073 U+0068	56	Maru	tshuʔ
+x	x	x	i	U+0078	55	Maru	xa³¹
+f	f	f	i	U+0066	22	Maru	fak⁵⁵
+ʒ	ʒ	ʒ	i	U+0292	14	Maru	ʒɔ̱i³¹
+8	8	8	i	U+0038	1	Maru	8
+ȵ	ȵ	ȵ	i	U+0235	1	Maru	ȵɛ̱³⁵
+mh	mh	mh	i	U+006d U+0068	1	Maru	mhə̆³¹
+uʔ	uʔ	uʔ	c	U+0075 U+0294	1	Maru	tshuʔ
+ɛʔ	ɛʔ	ɛʔ	c	U+025b U+0294	1	Maru	lɛʔ
+ɛ̃	ɛ̃∼	ɛ̃∼	c	U+025b U+0303 U+223c	1	Maru	xɛ̃∼

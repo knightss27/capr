@@ -1,0 +1,200 @@
+Grapheme	Segments	CLPA	Structure	Unicode	Frequency	Reflexes	Examples
+²¹	²¹	²¹	t	U+00b2 U+00b9	1250	Atsi	khjuŋ²¹
+⁵⁵	⁵⁵	⁵⁵	t	U+2075 U+2075	952	Atsi	phə̆⁵⁵
+⁵¹	⁵¹	⁵¹	t	U+2075 U+00b9	627	Atsi	tsui⁵¹
+³¹	³¹	³¹	t	U+00b3 U+00b9	2	Atsi	xo³¹
+³³	³³	³³	t	U+00b3 U+00b3	1	Atsi	kji̱³³
+³⁵	³⁵	³⁵	t	U+00b3 U+2075	1	Atsi	thɔʔ³⁵
+aŋ	a ŋ	a ŋ	n c	U+0061 U+0020 U+014b	105	Atsi	thaŋ⁵¹
+oʔ	o ʔ	o ʔ	n c	U+006f U+0020 U+0294	94	Atsi	soʔ⁵⁵
+uŋ	u ŋ	u ŋ	n c	U+0075 U+0020 U+014b	84	Atsi	muŋ²¹
+am	a m	a m	n c	U+0061 U+0020 U+006d	73	Atsi	vam⁵¹
+an	a n	a n	n c	U+0061 U+0020 U+006e	66	Atsi	pan²¹
+um	u m	u m	n c	U+0075 U+0020 U+006d	60	Atsi	tum²¹
+un	u n	u n	n c	U+0075 U+0020 U+006e	56	Atsi	pun²¹
+iŋ	i ŋ	i ŋ	n c	U+0069 U+0020 U+014b	50	Atsi	niŋ²¹
+at	a t	a t	n c	U+0061 U+0020 U+0074	41	Atsi	tat²¹
+uʔ	u ʔ	u ʔ	n c	U+0075 U+0020 U+0294	40	Atsi	nuʔ⁵⁵
+ut	u t	u t	n c	U+0075 U+0020 U+0074	36	Atsi	vut²¹
+o̱ʔ	o̱ ʔ	o̰ ʔ	n c	U+006f U+0331 U+0020 U+0294	33	Atsi	lo̱ʔ⁵⁵
+ik	i k	i k	n c	U+0069 U+0020 U+006b	32	Atsi	sik⁵⁵
+ap	a p	a p	n c	U+0061 U+0020 U+0070	32	Atsi	tʃhap⁵⁵
+oŋ	o ŋ	o ŋ	n c	U+006f U+0020 U+014b	31	Atsi	toŋ²¹
+a̱ŋ	a̱ ŋ	a̰ ŋ	n c	U+0061 U+0331 U+0020 U+014b	25	Atsi	la̱ŋ⁵⁵
+aʔ	a ʔ	a ʔ	n c	U+0061 U+0020 U+0294	23	Atsi	vaʔ²¹
+u̱m	u̱ m	ṵ m	n c	U+0075 U+0331 U+0020 U+006d	21	Atsi	lu̱m²¹
+on	o n	o n	n c	U+006f U+0020 U+006e	21	Atsi	ŋon⁵⁵
+a̱p	a̱ p	a̰ p	n c	U+0061 U+0331 U+0020 U+0070	20	Atsi	ta̱p⁵⁵
+up	u p	u p	n c	U+0075 U+0020 U+0070	20	Atsi	up⁵⁵
+u̱t	u̱ t	ṵ t	n c	U+0075 U+0331 U+0020 U+0074	18	Atsi	ŋu̱t⁵⁵
+in	i n	i n	n c	U+0069 U+0020 U+006e	17	Atsi	ʃin²¹
+i̱k	i̱ k	ḭ k	n c	U+0069 U+0331 U+0020 U+006b	16	Atsi	ni̱k⁵⁵
+u̱ŋ	u̱ ŋ	ṵ ŋ	n c	U+0075 U+0331 U+0020 U+014b	15	Atsi	lu̱ŋ⁵⁵
+it	i t	i t	n c	U+0069 U+0020 U+0074	15	Atsi	xit⁵⁵
+a̱n	a̱ n	a̰ n	n c	U+0061 U+0331 U+0020 U+006e	13	Atsi	pa̱n⁵⁵
+en	e n	e n	n c	U+0065 U+0020 U+006e	13	Atsi	then²¹
+eʔ	e ʔ	e ʔ	n c	U+0065 U+0020 U+0294	13	Atsi	tʃeʔ²¹
+a̱m	a̱ m	a̰ m	n c	U+0061 U+0331 U+0020 U+006d	12	Atsi	ka̱m⁵⁵
+ot	o t	o t	n c	U+006f U+0020 U+0074	11	Atsi	kot²¹
+i̱ŋ	i̱ ŋ	ḭ ŋ	n c	U+0069 U+0331 U+0020 U+014b	10	Atsi	tsi̱ŋ²¹
+u̱p	u̱ p	ṵ p	n c	U+0075 U+0331 U+0020 U+0070	9	Atsi	tʃu̱p⁵⁵
+u̱ʔ	u̱ ʔ	ṵ ʔ	n c	U+0075 U+0331 U+0020 U+0294	9	Atsi	nu̱ʔ⁵⁵
+eŋ	e ŋ	e ŋ	n c	U+0065 U+0020 U+014b	8	Atsi	seŋ⁵¹
+om	o m	o m	n c	U+006f U+0020 U+006d	7	Atsi	lom⁵¹
+op	o p	o p	n c	U+006f U+0020 U+0070	7	Atsi	sop⁵⁵
+o̱p	o̱ p	o̰ p	n c	U+006f U+0331 U+0020 U+0070	7	Atsi	ŋo̱p⁵⁵
+o̱k	o̱ k	o̰ k	n c	U+006f U+0331 U+0020 U+006b	6	Atsi	tʃo̱k⁵⁵
+ep	e p	e p	n c	U+0065 U+0020 U+0070	6	Atsi	tʃep⁵⁵
+u̱n	u̱ n	ṵ n	n c	U+0075 U+0331 U+0020 U+006e	6	Atsi	tʃu̱n⁵¹
+i̱n	i̱ n	ḭ n	n c	U+0069 U+0331 U+0020 U+006e	6	Atsi	tʃi̱n⁵⁵
+ak	a k	a k	n c	U+0061 U+0020 U+006b	5	Atsi	lak²¹
+a̱t	a̱ t	a̰ t	n c	U+0061 U+0331 U+0020 U+0074	5	Atsi	pa̱t⁵⁵
+a̱k	a̱ k	a̰ k	n c	U+0061 U+0331 U+0020 U+006b	4	Atsi	ta̱k²¹
+ŏ̱ʔ	ŏ̱ ʔ	ă̰ ʔ	n c	U+014f U+0331 U+0020 U+0294	4	Atsi	ŋŏ̱ʔ⁵⁵
+o̱ŋ	o̱ ŋ	o̰ ŋ	n c	U+006f U+0331 U+0020 U+014b	4	Atsi	to̱ŋ⁵¹
+ɔʔ	ɔ ʔ	ɔ ʔ	n c	U+0254 U+0020 U+0294	4	Atsi	lɔʔ²¹
+e̱ŋ	e̱ ŋ	ḛ ŋ	n c	U+0065 U+0331 U+0020 U+014b	4	Atsi	le̱ŋ²¹
+iʔ	i ʔ	i ʔ	n c	U+0069 U+0020 U+0294	3	Atsi	tiʔ²¹
+uk	u k	u k	n c	U+0075 U+0020 U+006b	2	Atsi	puk²¹
+u̱k	u̱ k	u̱ k	n c	U+0075 U+0331 U+0020 U+006b	2	Atsi	pu̱k⁵⁵
+ek	e k	e k	n c	U+0065 U+0020 U+006b	2	Atsi	tek²¹
+ɤk	ɤ k	ɤ k	n c	U+0264 U+0020 U+006b	2	Atsi	pɤk²¹
+ip	i p	i p	n c	U+0069 U+0020 U+0070	2	Atsi	ʒip⁵⁵
+o̱m	o̱ m	o̰ m	n c	U+006f U+0331 U+0020 U+006d	2	Atsi	ko̱m⁵¹
+e̱ʔ	e̱ ʔ	ḛ ʔ	n c	U+0065 U+0331 U+0020 U+0294	2	Atsi	ʒe̱ʔ⁵⁵
+ok	o k	o k	n c	U+006f U+0020 U+006b	2	Atsi	kok⁵⁵
+i̱ʔ	i̱ ʔ	ḭ ʔ	n c	U+0069 U+0331 U+0020 U+0294	2	Atsi	ti̱ʔ⁵⁵
+em	e m	e m	n c	U+0065 U+0020 U+006d	1	Atsi	them²¹
+et	e t	e t	n c	U+0065 U+0020 U+0074	1	Atsi	let⁵⁵
+ăʔ	ă ʔ	ă ʔ	n c	U+0103 U+0020 U+0294	1	Atsi	tăʔ²¹
+e̱k	e̱ k	ḛ k	n c	U+0065 U+0331 U+0020 U+006b	1	Atsi	te̱k⁵⁵
+jŋ	j ŋ	j ŋ	n c	U+006a U+0020 U+014b	1	Atsi	ŋjŋ⁵⁵
+i̱t	i̱ t	ḭ t	n c	U+0069 U+0331 U+0020 U+0074	1	Atsi	tʃi̱t⁵⁵
+a̱ʔ	a̱ ʔ	a̰ ʔ	n c	U+0061 U+0331 U+0020 U+0294	1	Atsi	ŋa̱ʔ²¹
+e̱p	e̱ p	ḛ p	n c	U+0065 U+0331 U+0020 U+0070	1	Atsi	te̱p⁵⁵
+o̱t	o̱ t	o̰ t	n c	U+006f U+0331 U+0020 U+0074	1	Atsi	to̱t²¹
+ɤŋ	ɤ ŋ	ɤ ŋ	n c	U+0264 U+0020 U+014b	1	Atsi	kɤŋ²¹
+i̱m	i̱ m	ḭ m	n c	U+0069 U+0331 U+0020 U+006d	1	Atsi	tʃi̱m⁵¹
+o̱n	o̱ n	o̰ n	n c	U+006f U+0331 U+0020 U+006e	1	Atsi	ʒo̱n⁵¹
+o	o	o	n	U+006f	168	Atsi	mo⁵⁵
+a	a	a	n	U+0061	128	Atsi	ʒa⁵¹
+u	u	u	n	U+0075	92	Atsi	tu²¹
+e	e	e	n	U+0065	83	Atsi	tʃe⁵⁵
+au	a u	a u	n N	U+0061 U+0075	79	Atsi	pau⁵⁵
+i	i	i	n	U+0069	64	Atsi	i⁵⁵
+ă	ă	ă	n	U+0103	44	Atsi	lă²¹
+ai	a i	a i	n N	U+0061 U+0069	43	Atsi	lai⁵⁵
+ĕ	ĕ	ĕ	n	U+0115	36	Atsi	mĕ²¹
+o̱	o̱	o̰	n	U+006f U+0331	32	Atsi	ko̱²¹
+ŏ	ŏ	ŏ	n	U+014f	32	Atsi	tsŏ²¹
+e̱	e̱	ḛ	n	U+0065 U+0331	17	Atsi	te̱⁵⁵
+u̱	u̱	ṵ	n	U+0075 U+0331	14	Atsi	ku̱²¹
+a̱	a̱	a̰	n	U+0061 U+0331	14	Atsi	ka̱⁵⁵
+oi	o i	o i	n N	U+006f U+0069	13	Atsi	khoi⁵⁵
+u̱i	u̱ i	ṵ i	n N	U+0075 U+0331 U+0069	12	Atsi	tu̱i²¹
+a̱i	a̱ i	a̰ i	n N	U+0061 U+0331 U+0069	12	Atsi	la̱i⁵¹
+a̱u	a̱ u	a̱ u	n N	U+0061 U+0331 U+0075	12	Atsi	ta̱u⁵⁵
+ĭ	ĭ	ĭ	n	U+012d	10	Atsi	tʃhĭ⁵⁵
+i̱	i̱	ḭ	n	U+0069 U+0331	9	Atsi	tʃi̱⁵⁵
+o̱i	o̱ i	o̰ i	n N	U+006f U+0331 U+0069	8	Atsi	vo̱i⁵⁵
+ə	ə	ə	n	U+0259	8	Atsi	mə⁵⁵
+ə̆	ə̆	ə̆	n	U+0259 U+0306	6	Atsi	phə̆⁵⁵
+ŏ̱	ŏ̱	ŏ̰	n	U+014f U+0331	6	Atsi	lŏ̱⁵⁵
+ŭ	ŭ	ŭ	n	U+016d	6	Atsi	ŭ²¹
+ə̱	ə̱	ə̰	n	U+0259 U+0331	2	Atsi	pə̱²¹
+ɔ	ɔ	ɔ	n	U+0254	1	Atsi	tsɔ²¹
+ŭ̱	ŭ̱	ṵ̆	n	U+016d U+0331	1	Atsi	tŭ̱⁵⁵
+ǒ̆	ǒ̆	ŏ	n	U+01d2 U+0306	1	Atsi	pǒ̆²¹
+yan	y a n	y a n	m n c	U+0079 U+0061 U+006e	1	Atsi	yan
+jaŋ	j a ŋ	j a ŋ	m n c	U+006a U+0020 U+0061 U+0020 U+014b	38	Atsi	jaŋ²¹
+joʔ	j o ʔ	j o ʔ	m n c	U+006a U+0020 U+006f U+0020 U+0294	21	Atsi	mjoʔ²¹
+jiŋ	j i ŋ	j i ŋ	m n c	U+006a U+0020 U+0069 U+0020 U+014b	21	Atsi	mjiŋ⁵¹
+jam	j a m	j a m	m n c	U+006a U+0020 U+0061 U+0020 U+006d	19	Atsi	kjam²¹
+juʔ	j u ʔ	j u ʔ	m n c	U+006a U+0020 U+0075 U+0020 U+0294	17	Atsi	kjuʔ²¹
+jit	j i t	j i t	m n c	U+006a U+0020 U+0069 U+0020 U+0074	14	Atsi	mjit²¹
+jap	j a p	j a p	m n c	U+006a U+0020 U+0061 U+0020 U+0070	12	Atsi	khjap⁵⁵
+jin	j i n	j i n	m n c	U+006a U+0020 U+0069 U+0020 U+006e	12	Atsi	jin⁵⁵
+juŋ	j u ŋ	j u ŋ	m n c	U+006a U+0020 U+0075 U+0020 U+014b	8	Atsi	khjuŋ²¹
+ju̱m	j u̱ m	j ṵ m	m n c	U+006a U+0020 U+0075 U+0331 U+0020 U+006d	8	Atsi	ju̱m⁵¹
+ja̱ŋ	j a̱ ŋ	j a̰ ŋ	m n c	U+006a U+0020 U+0061 U+0331 U+0020 U+014b	7	Atsi	kja̱ŋ⁵¹
+jo̱ʔ	j o̱ ʔ	j o̰ ʔ	m n c	U+006a U+0020 U+006f U+0331 U+0020 U+0294	7	Atsi	pjo̱ʔ⁵⁵
+ju̱p	j u̱ p	j ṵ p	m n c	U+006a U+0020 U+0075 U+0331 U+0020 U+0070	6	Atsi	ju̱p⁵⁵
+jun	j u n	j u n	m n c	U+006a U+0020 U+0075 U+0020 U+006e	6	Atsi	ŋjun⁵¹
+ja̱m	j a̱ m	j a̰ m	m n c	U+006a U+0020 U+0061 U+0331 U+0020 U+006d	6	Atsi	kja̱m⁵⁵
+jik	j i k	j i k	m n c	U+006a U+0020 U+0069 U+0020 U+006b	5	Atsi	phjik⁵⁵
+ji̱n	j i̱ n	j ḭ n	m n c	U+006a U+0020 U+0069 U+0331 U+0020 U+006e	4	Atsi	kji̱n²¹
+jup	j u p	j u p	m n c	U+006a U+0020 U+0075 U+0020 U+0070	4	Atsi	jup⁵⁵
+jon	j o n	j o n	m n c	U+006a U+0020 U+006f U+0020 U+006e	4	Atsi	kjon²¹
+jaʔ	j a ʔ	j a ʔ	m n c	U+006a U+0020 U+0061 U+0020 U+0294	4	Atsi	kjaʔ⁵⁵
+jom	j o m	j o m	m n c	U+006a U+0020 U+006f U+0020 U+006d	3	Atsi	kjom²¹
+jut	j u t	j u t	m n c	U+006a U+0020 U+0075 U+0020 U+0074	3	Atsi	kjut²¹
+ji̱k	j i̱ k	j ḭ k	m n c	U+006a U+0020 U+0069 U+0331 U+0020 U+006b	3	Atsi	pji̱k⁵⁵
+jan	j a n	j a n	m n c	U+006a U+0020 U+0061 U+0020 U+006e	3	Atsi	jan⁵⁵
+ja̱p	j a̱ p	j a̰ p	m n c	U+006a U+0020 U+0061 U+0331 U+0020 U+0070	3	Atsi	mja̱p²¹
+jo̱n	j o̱ n	j o̰ n	m n c	U+006a U+0020 U+006f U+0331 U+0020 U+006e	2	Atsi	jo̱n⁵⁵
+ju̱ʔ	j u̱ ʔ	j ṵ ʔ	m n c	U+006a U+0020 U+0075 U+0331 U+0020 U+0294	2	Atsi	kju̱ʔ⁵⁵
+jen	j e n	j e n	m n c	U+006a U+0020 U+0065 U+0020 U+006e	2	Atsi	pjen⁵⁵
+jop	j o p	j o p	m n c	U+006a U+0020 U+006f U+0020 U+0070	2	Atsi	khjop²¹
+je̱t	j e̱ t	j ḛ t	m n c	U+006a U+0020 U+0065 U+0331 U+0020 U+0074	2	Atsi	pje̱t⁵⁵
+ju̱n	j u̱ n	j ṵ n	m n c	U+006a U+0020 U+0075 U+0331 U+0020 U+006e	2	Atsi	ŋju̱n²¹
+ju̱ŋ	j u̱ ŋ	j ṵ ŋ	m n c	U+006a U+0020 U+0075 U+0331 U+0020 U+014b	2	Atsi	pju̱ŋ²¹
+jeʔ	j e ʔ	j e ʔ	m n c	U+006a U+0020 U+0065 U+0020 U+0294	2	Atsi	phjeʔ²¹
+je̱ʔ	j e̱ ʔ	j ḛ ʔ	m n c	U+006a U+0020 U+0065 U+0331 U+0020 U+0294	1	Atsi	pje̱ʔ²¹
+jum	j u m	j u m	m n c	U+006a U+0020 U+0075 U+0020 U+006d	1	Atsi	mjum⁵¹
+je̱n	j e̱ n	j ḛ n	m n c	U+006a U+0020 U+0065 U+0331 U+0020 U+006e	1	Atsi	pje̱n⁵⁵
+jek	j e k	j e k	m n c	U+006a U+0020 U+0065 U+0020 U+006b	1	Atsi	khjek⁵⁵
+je̱k	j e̱ k	j ḛ k	m n c	U+006a U+0020 U+0065 U+0331 U+0020 U+006b	1	Atsi	kje̱k⁵⁵
+ja̱ʔ	j a̱ ʔ	j a̰ ʔ	m n c	U+006a U+0020 U+0061 U+0331 U+0020 U+0294	1	Atsi	kja̱ʔ⁵⁵
+ja̱t	j a̱ t	j a̰ t	m n c	U+006a U+0020 U+0061 U+0331 U+0020 U+0074	1	Atsi	pja̱t²¹
+jet	j e t	j e t	m n c	U+006a U+0020 U+0065 U+0020 U+0074	1	Atsi	khjet⁵⁵
+joŋ	j o ŋ	j o ŋ	m n c	U+006a U+0020 U+006f U+0020 U+014b	1	Atsi	khjoŋ⁵⁵
+jeŋ	j e ŋ	j e ŋ	m n c	U+006a U+0020 U+0065 U+0020 U+014b	1	Atsi	jeŋ²¹
+jo̱m	j o̱ m	j o̰ m	m n c	U+006a U+0020 U+006f U+0331 U+0020 U+006d	1	Atsi	ŋjo̱m⁵⁵
+jep	j e p	j e p	m n c	U+006a U+0020 U+0065 U+0020 U+0070	1	Atsi	kjep²¹
+jok	j o k	j o k	m n c	U+006a U+0020 U+006f U+0020 U+006b	1	Atsi	kjok²¹
+ui	u i	u i	m n	U+0075 U+0020 U+0069	103	Atsi	tsui⁵¹
+ji	j i	j i	m n	U+006a U+0020 U+0069	103	Atsi	mji²¹
+jo	j o	j o	m n	U+006a U+0020 U+006f	34	Atsi	jo²¹
+je	j e	j e	m n	U+006a U+0020 U+0065	22	Atsi	ŋje⁵⁵
+ji̱	j i̱	j ḭ	m n	U+006a U+0020 U+0069 U+0331	22	Atsi	mji̱²¹
+ju	j u	j u	m n	U+006a U+0020 U+0075	20	Atsi	ju⁵¹
+jui	j u i	j u i	m n N	U+006a U+0075 U+0020 U+0069	10	Atsi	khjui²¹
+jo̱	j o̱	j o̰	m n	U+006a U+0020 U+006f U+0331	10	Atsi	kjo̱²¹
+ja	j a	j a	m n	U+006a U+0020 U+0061	8	Atsi	ja²¹
+jau	j a u	j a u	m n N	U+006a U+0020 U+0061 U+0075	4	Atsi	khjau⁵⁵
+ju̱i	j u̱ i	j ṵ i	m n N	U+006a U+0020 U+0075 U+0331 U+0069	4	Atsi	ŋju̱i²¹
+jĭ	j ĭ	j ĭ	m n	U+006a U+0020 U+012d	3	Atsi	jĭ⁵⁵
+jŏ	j ŏ	j ŏ	m n	U+006a U+0020 U+014f	3	Atsi	pjŏ²¹
+je̱	j e̱	j ḛ	m n	U+006a U+0020 U+0065 U+0331	3	Atsi	ŋje̱⁵⁵
+ja̱	j a̱	j a̰	m n	U+006a U+0020 U+0061 U+0331	2	Atsi	ŋja̱⁵⁵
+ja̱u	j a̱ u	j a̰ u	m n N	U+006a U+0020 U+0061 U+0331 U+0075	1	Atsi	ŋja̱u⁵⁵
+io	i o	i o	m n	U+0069 U+0020 U+006f	1	Atsi	ŋio⁵⁵
+ju̱	j u̱	j ṵ	m n	U+006a U+0020 U+0075 U+0331	1	Atsi	pju̱⁵¹
+jĭ̱	j ĭ̱	j ḭ̆	m n	U+006a U+0020 U+012d U+0331	1	Atsi	njĭ̱²¹
+ngu²¹	ng u ²¹	ŋ u ²¹	i n t	U+0067 U+0020 U+0075	1	Atsi	ngu²¹
+khjuŋ	kh j u ŋ	kʰ j u ŋ	i m n c	U+006a U+0020 U+0075 U+014b	1	Atsi	khjuŋ
+kɣŋ²¹	k ɣ ŋ ²¹	k ɣ ŋ ²¹	i n c t	U+0263 U+014b	1	Atsi	kɣŋ²¹
+m	m	m	i	U+006d	263	Atsi	mji²¹
+k	k	k	i	U+006b	243	Atsi	ko̱²¹
+p	p	p	i	U+0070	222	Atsi	pan²¹
+l	l	l	i	U+006c	209	Atsi	lŏ̱⁵⁵
+t	t	t	i	U+0074	187	Atsi	tat²¹
+kh	kh	kʰ	i	U+006b U+0068	171	Atsi	khjuŋ²¹
+n	n	n	i	U+006e	161	Atsi	no⁵¹
+ts	ts	ts	i	U+0074 U+0073	147	Atsi	tsui⁵¹
+tʃ	tʃ	tʃ	i	U+0074 U+0283	137	Atsi	tʃi̱⁵⁵
+v	v	v	i	U+0076	132	Atsi	va²¹
+ŋ	ŋ	ŋ	i	U+014b	121	Atsi	ŋo⁵¹
+s	s	s	i	U+0073	117	Atsi	sik⁵⁵
+th	th	tʰ	i	U+0074 U+0068	98	Atsi	thaŋ⁵¹
+ʃ	ʃ	ʃ	i	U+0283	98	Atsi	ʃoʔ⁵⁵
+ph	ph	pʰ	i	U+0070 U+0068	81	Atsi	phə̆⁵⁵
+x	x	x	i	U+0078	79	Atsi	xi⁵⁵
+tʃh	tʃh	tʃʰ	i	U+0074 U+0283 U+0068	55	Atsi	tʃhaŋ²¹
+tsh	tsh	tsʰ	i	U+0074 U+0073 U+0068	45	Atsi	tsham⁵¹
+ʒ	ʒ	ʒ	i	U+0292	32	Atsi	ʒa⁵¹
+g	g	g	i	U+0067	2	Atsi	gon⁵⁵
+χ	χ	χ	i	U+03c7	2	Atsi	χui²¹
+tʃeŋ	tʃ e ŋ	tʃ e ŋ	i n c	U+0065 U+014b	1	Atsi	tʃheŋ
+s i k	s i k	s i k	i n c	U+0069 U+006b	1	Atsi	sik
+ʃv̩²¹	ʃ v̩ ²¹	ʃ v̩ ²¹	i n c	U+0076 U+0329	1	Atsi	ʃv̩²¹

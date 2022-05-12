@@ -1,0 +1,186 @@
+Grapheme	Segments	CLPA	Structure	Unicode	Frequency	Reflexes	Examples
+⁵⁵	⁵⁵	⁵⁵	t	U+2075 U+2075	1106	Bola	phə̆⁵⁵
+³¹	³¹	³¹	t	U+00b3 U+00b9	959	Bola	va³¹
+³⁵	³⁵	³⁵	t	U+00b3 U+2075	633	Bola	ə³⁵
+⁵¹	⁵¹	⁵¹	t	U+2075 U+00b9	24	Bola	pan⁵¹
+⁵³	⁵³	⁵³	t	U+2075 U+00b3	3	Bola	ŋa⁵³
+³¹ˉ⁵¹	³¹ˉ⁵¹	³¹ˉ⁵¹	t	U+00b3 U+00b9 U+02c9 U+2075 U+00b9	1	Bola	pai³¹ˉ⁵¹
+⁵	⁵	⁵	t	U+2075	1	Bola	khja⁵
+²¹	²¹	²¹	t	U+00b2 U+00b9	1	Bola	kjɛ̱t²¹
+³¹p⁵⁵	³¹p⁵⁵	³¹p⁵⁵	t	U+00b3 U+00b9 U+0070 U+2075 U+2075	1	Bola	³¹pi⁵⁵
+³¹_ˍ	³¹_ˍ	³¹_ˍ	t	U+00b3 U+00b9 U+005f U+02cd	1	Bola	tʃauŋ³¹_ˍ
+aʔ	a ʔ	a ʔ	n c	U+0061 U+0020 U+0294	104	Bola	maʔ⁵⁵
+ɔ̃	ɔ̃ ∼	ɔ̃ ∼	n c	U+0254 U+0303 U+0020 U+223c	104	Bola	ɣɔ̃∼³¹
+ɛ̃	ɛ̃ ∼	ɛ̃ ∼	n c	U+025b U+0303 U+0020 U+223c	98	Bola	tɛ̃∼⁵⁵
+ɛʔ	ɛ ʔ	ɛ ʔ	n c	U+025b U+0020 U+0294	76	Bola	vɛʔ⁵⁵
+auŋ	au ŋ	au ŋ	n c	U+0061 U+0075 U+0020 U+014b	74	Bola	tsauŋ³¹
+aŋ	a ŋ	a ŋ	n c	U+0061 U+0020 U+014b	70	Bola	taŋ³¹
+am	a m	a m	n c	U+0061 U+0020 U+006d	69	Bola	tʃam³¹
+ɔn	ɔ n	ɔ n	n c	U+0254 U+0020 U+006e	62	Bola	tɔn³¹
+ak	a k	a k	n c	U+0061 U+0020 U+006b	47	Bola	sak⁵⁵
+uŋ	u ŋ	u ŋ	n c	U+0075 U+0020 U+014b	44	Bola	muŋ³¹
+ɔt	ɔ t	ɔ t	n c	U+0254 U+0020 U+0074	35	Bola	ŋɔt⁵⁵
+auʔ	au ʔ	au ʔ	n c	U+0061 U+0075 U+0020 U+0294	33	Bola	tʃhauʔ⁵⁵
+ɛ̱ʔ	ɛ̱ ʔ	ɛ̱ ʔ	n c	U+025b U+0331 U+0020 U+0294	33	Bola	kɛ̱ʔ⁵⁵
+a̱ʔ	a̱ ʔ	a̱ ʔ	n c	U+0061 U+0331 U+0020 U+0294	31	Bola	la̱ʔ⁵⁵
+ap	a p	a p	n c	U+0061 U+0020 U+0070	27	Bola	thap⁵⁵
+ɛ̱̃	ɛ̱̃ ∼	ɛ̱̃ ∼	n c	U+025b U+0331 U+0303 U+0020 U+223c	26	Bola	pɛ̱̃∼⁵⁵
+ɔ̱t	ɔ̱ t	ɔ̱ t	n c	U+0254 U+0331 U+0020 U+0074	24	Bola	kɔ̱t⁵⁵
+ɔ̱̃	ɔ̱̃ ∼	ɔ̱̃ ∼	n c	U+0254 U+0331 U+0303 U+0020 U+223c	23	Bola	nɔ̱̃∼⁵⁵
+a̱k	a̱ k	a̱ k	n c	U+0061 U+0331 U+0020 U+006b	22	Bola	na̱k⁵⁵
+an	a n	a n	n c	U+0061 U+0020 U+006e	18	Bola	pan⁵¹
+ɔ̱n	ɔ̱ n	ɔ̱ n	n c	U+0254 U+0331 U+0020 U+006e	17	Bola	tʃɔ̱n³⁵
+a̱m	a̱ m	a̱ m	n c	U+0061 U+0331 U+0020 U+006d	16	Bola	ka̱m³⁵
+a̱ŋ	a̱ ŋ	a̱ ŋ	n c	U+0061 U+0331 U+0020 U+014b	16	Bola	la̱ŋ⁵⁵
+ɔʔ	ɔ ʔ	ɔ ʔ	n c	U+0254 U+0020 U+0294	15	Bola	ɣɔʔ³¹
+a̱uʔ	a̱u ʔ	a̱u ʔ	n c	U+0061 U+0331 U+0075 U+0020 U+0294	15	Bola	ŋa̱uʔ⁵⁵
+a̱uŋ	a̱u ŋ	a̱u ŋ	n c	U+0061 U+0331 U+0075 U+0020 U+014b	14	Bola	na̱uŋ³⁵
+a̱p	a̱ p	a̱ p	n c	U+0061 U+0331 U+0020 U+0070	11	Bola	la̱p⁵⁵
+øʔ	ø ʔ	ø ʔ	n c	U+00f8 U+0020 U+0294	11	Bola	tøʔ³¹
+un	u n	u n	n c	U+0075 U+0020 U+006e	8	Bola	lun³¹
+ɔŋ	ɔ ŋ	ɔ ŋ	n c	U+0254 U+0020 U+014b	7	Bola	kɔŋ³¹
+ø̱ʔ	ø̱ ʔ	ø̱ ʔ	n c	U+00f8 U+0331 U+0020 U+0294	6	Bola	ŋø̱ʔ⁵⁵
+u̱ŋ	u̱ ŋ	u̱ ŋ	n c	U+0075 U+0331 U+0020 U+014b	5	Bola	pu̱ŋ³⁵
+ɛn	ɛ n	ɛ n	n c	U+025b U+0020 U+006e	5	Bola	tʃɛn³¹
+in	i n	i n	n c	U+0069 U+0020 U+006e	4	Bola	tʃin³⁵
+at	a t	a t	n c	U+0061 U+0020 U+0074	4	Bola	phat⁵⁵
+ɔ̱ʔ	ɔ̱ ʔ	ɔ̱ ʔ	n c	U+0254 U+0331 U+0020 U+0294	4	Bola	pɔ̱ʔ⁵⁵
+ăk	ă k	ă k	n c	U+0103 U+0020 U+006b	4	Bola	khăk⁵⁵
+ɔ̱ŋ	ɔ̱ ŋ	ɔ̱ ŋ	n c	U+0254 U+0331 U+0020 U+014b	3	Bola	pɔ̱ŋ³¹
+ø̃	ø̃ ∼	ø̃ ∼	n c	U+00f8 U+0303 U+0020 U+223c	3	Bola	tʃhø̃∼³⁵
+iʔ	i ʔ	i ʔ	n c	U+0069 U+0020 U+0294	2	Bola	niʔ³¹
+uk	u k	u k	n c	U+0075 U+0020 U+006b	2	Bola	kuk⁵⁵
+ə̱ŋ	ə̱ ŋ	ə̱ ŋ	n c	U+0259 U+0331 U+0020 U+014b	2	Bola	tsə̱ŋ³⁵
+auk	au k	au k	n c	U+0061 U+0075 U+0020 U+006b	1	Bola	nauk⁵⁵
+ɛk	ɛ k	ɛ k	n c	U+025b U+0020 U+006b	1	Bola	tɛk³¹
+ɛŋ	ɛ ŋ	ɛ ŋ	n c	U+025b U+0020 U+014b	1	Bola	sɛŋ⁵⁵
+ɛt	ɛ t	ɛ t	n c	U+025b U+0020 U+0074	1	Bola	tʃhɛt³¹
+əŋ	ə ŋ	ə ŋ	n c	U+0259 U+0020 U+014b	1	Bola	təŋ³¹
+aiʔ	ai ʔ	ai ʔ	n c	U+0061 U+0069 U+0020 U+0294	1	Bola	kaiʔ³¹
+ɑn	ɑ n	ɑ n	n c	U+0251 U+0020 U+006e	1	Bola	sɑn⁵⁵
+ɛ̱̃ʔ	ɛ̱̃ ∼ʔ	ɛ̱̃ ∼ʔ	n c	U+025b U+0331 U+0303 U+0020 U+223c U+0294	1	Bola	nɛ̱̃∼ʔ⁵⁵
+ɛ̃ʔ	ɛ̃ ∼ʔ	ɛ̃ ∼ʔ	n c	U+025b U+0303 U+0020 U+223c U+0294	1	Bola	tʃhɛ̃∼ʔ⁵⁵
+ut	u t	u t	n c	U+0075 U+0020 U+0074	1	Bola	kut³¹
+ə̱k	ə̱ k	ə̱ k	n c	U+0259 U+0331 U+0020 U+006b	1	Bola	ə̱k⁵⁵
+ɛ̱p	ɛ̱ p	ɛ̱ p	n c	U+025b U+0331 U+0020 U+0070	1	Bola	lɛ̱p⁵⁵
+um	u m	u m	n c	U+0075 U+0020 U+006d	1	Bola	sum³¹
+ɛ̆t	ɛ̆ t	ɛ̆ t	n c	U+025b U+0306 U+0020 U+0074	1	Bola	tʃhɛ̆t³¹
+ə̆ʔ	ə̆ ʔ	ə̆ ʔ	n c	U+0259 U+0306 U+0020 U+0294	1	Bola	tʃə̆ʔ³¹
+a̱n	a̱ n	a̱ n	n c	U+0061 U+0331 U+0020 U+006e	1	Bola	ka̱n⁵⁵
+ək	ə k	ə k	n c	U+0259 U+0020 U+006b	1	Bola	tək⁵⁵
+ɔ̱p	ɔ̱ p	ɔ̱ p	n c	U+0254 U+0331 U+0020 U+0070	1	Bola	kɔ̱p⁵⁵
+a	a	a	n	U+0061	228	Bola	ʒa⁵⁵
+ai	ai	ai	n	U+0061 U+0069	77	Bola	kai⁵⁵
+ə̆	ə̆	ə̆	n	U+0259 U+0306	75	Bola	phə̆⁵⁵
+au	au	au	n	U+0061 U+0075	73	Bola	nau⁵⁵
+u	u	u	n	U+0075	73	Bola	pu³⁵
+ɔ	ɔ	ɔ	n	U+0254	55	Bola	phɔ⁵⁵
+i	i	i	n	U+0069	54	Bola	phi³¹
+ɛ	ɛ	ɛ	n	U+025b	48	Bola	xɛ⁵⁵
+əi	əi	əi	n	U+0259 U+0069	38	Bola	məi³¹
+ă	ă	ă	n	U+0103	31	Bola	ʃă³⁵
+a̱	a̱	a̱	n	U+0061 U+0331	26	Bola	ta̱³⁵
+ɿ	ɿ	ɿ	n	U+027f	25	Bola	ʃɿ³⁵
+ø	ø	ø	n	U+00f8	22	Bola	tʃø³⁵
+i̱	i̱	i̱	n	U+0069 U+0331	21	Bola	i̱³⁵
+u̱	u̱	u̱	n	U+0075 U+0331	21	Bola	tu̱³⁵
+a̱u	a̱u	a̱u	n	U+0061 U+0331 U+0075	18	Bola	pa̱u⁵⁵
+u̱i	u̱i	u̱i	n	U+0075 U+0331 U+0069	17	Bola	tu̱i³⁵
+a̱i	a̱i	a̱i	n	U+0061 U+0331 U+0069	14	Bola	la̱i³⁵
+ɛ̱	ɛ̱	ɛ̱	n	U+025b U+0331	14	Bola	tsɛ̱⁵¹
+ɔ̱	ɔ̱	ɔ̱	n	U+0254 U+0331	12	Bola	kɔ̱⁵⁵
+ɔ̆	ɔ̆	ɔ̆	n	U+0254 U+0306	12	Bola	nɔ̆³¹
+ə	ə	ə	n	U+0259	9	Bola	ə³⁵
+ŭ	ŭ	ŭ	n	U+016d	7	Bola	ŭ³¹
+ɔi	ɔi	ɔi	n	U+0254 U+0069	6	Bola	ʒɔi⁵⁵
+ø̱	ø̱	ø̱	n	U+00f8 U+0331	6	Bola	ŋø̱³⁵
+ɔ̆i	ɔ̆i	ɔ̆i	n	U+0254 U+0306 U+0069	5	Bola	thɔ̆i⁵⁵
+ŭ̱	ŭ̱	ŭ̱	n	U+016d U+0331	3	Bola	ŭ̱³⁵
+ĭ	ĭ	ĭ	n	U+012d	3	Bola	ʃĭ³⁵
+ə̱i	ə̱i	ə̱i	n	U+0259 U+0331 U+0069	3	Bola	mə̱i³⁵
+ɿ̄	ɿ̄	ɿ̄	n	U+027f U+0304	1	Bola	tʃɿ̄³⁵
+ɯ	ɯ	ɯ	n	U+026f	1	Bola	pɯ³¹
+ɑ̱̆	ɑ̱̆	ɑ̱̆	n	U+0251 U+0331 U+0306	1	Bola	tɑ̱̆³¹
+ui	ui	ui	n	U+0075 U+0069	1	Bola	ui⁵⁵
+ɪ̆	ɪ̆	ɪ̆	n	U+026a U+0306	1	Bola	ʃɪ̆³⁵
+ə̆i	ə̆i	ə̆i	n	U+0259 U+0306 U+0069	1	Bola	ɣə̆i⁵⁵
+ɑ̱̆i	ɑ̱̆i	ɑ̱̆i	n	U+0251 U+0331 U+0306 U+0069	1	Bola	tsɑ̱̆i³⁵
+auʔ	auʔ	auʔ	n	U+0061 U+0075 U+0294	1	Bola	phauʔ
+jɔ̃	j ɔ̃ ∼	j ɔ̃ ∼	m n c	U+006a U+0020 U+0254 U+0303 U+0020 U+223c	36	Bola	jɔ̃∼³¹
+jaŋ	j a ŋ	j a ŋ	m n c	U+006a U+0020 U+0061 U+0020 U+014b	27	Bola	mjaŋ⁵⁵
+jauʔ	j au ʔ	j au ʔ	m n c	U+006a U+0020 U+0061 U+0075 U+0020 U+0294	24	Bola	kjauʔ³¹
+jɔt	j ɔ t	j ɔ t	m n c	U+006a U+0020 U+0254 U+0020 U+0074	22	Bola	phjɔt⁵⁵
+jaʔ	j a ʔ	j a ʔ	m n c	U+006a U+0020 U+0061 U+0020 U+0294	22	Bola	mjaʔ³¹
+jɛʔ	j ɛ ʔ	j ɛ ʔ	m n c	U+006a U+0020 U+025b U+0020 U+0294	13	Bola	khjɛʔ⁵⁵
+ja̱m	j a̱ m	j a̱ m	m n c	U+006a U+0020 U+0061 U+0331 U+0020 U+006d	12	Bola	ja̱m⁵⁵
+jauŋ	j au ŋ	j au ŋ	m n c	U+006a U+0020 U+0061 U+0075 U+0020 U+014b	11	Bola	jauŋ³⁵
+jɛ̃	j ɛ̃ ∼	j ɛ̃ ∼	m n c	U+006a U+0020 U+025b U+0303 U+0020 U+223c	11	Bola	kjɛ̃∼³¹
+jɔn	j ɔ n	j ɔ n	m n c	U+006a U+0020 U+0254 U+0020 U+006e	11	Bola	khjɔn⁵⁵
+ja̱p	j a̱ p	j a̱ p	m n c	U+006a U+0020 U+0061 U+0331 U+0020 U+0070	9	Bola	ja̱p⁵⁵
+ju̱ŋ	j u̱ ŋ	j u̱ ŋ	m n c	U+006a U+0020 U+0075 U+0331 U+0020 U+014b	9	Bola	ŋju̱ŋ³⁵
+jak	j a k	j a k	m n c	U+006a U+0020 U+0061 U+0020 U+006b	7	Bola	mjak³¹
+juŋ	j u ŋ	j u ŋ	m n c	U+006a U+0020 U+0075 U+0020 U+014b	7	Bola	ŋjuŋ⁵⁵
+jɛ̱ʔ	j ɛ̱ ʔ	j ɛ̱ ʔ	m n c	U+006a U+0020 U+025b U+0331 U+0020 U+0294	6	Bola	pjɛ̱ʔ⁵⁵
+ja̱uŋ	j a̱u ŋ	j a̱u ŋ	m n c	U+006a U+0020 U+0061 U+0331 U+0075 U+0020 U+014b	6	Bola	kja̱uŋ³⁵
+jɛn	j ɛ n	j ɛ n	m n c	U+006a U+0020 U+025b U+0020 U+006e	5	Bola	ŋjɛn³¹
+ja̱ʔ	j a̱ ʔ	j a̱ ʔ	m n c	U+006a U+0020 U+0061 U+0331 U+0020 U+0294	5	Bola	kja̱ʔ⁵⁵
+jɔ̱̃	j ɔ̱̃ ∼	j ɔ̱̃ ∼	m n c	U+006a U+0020 U+0254 U+0331 U+0303 U+0020 U+223c	5	Bola	mjɔ̱̃∼⁵⁵
+jɔ̱n	j ɔ̱ n	j ɔ̱ n	m n c	U+006a U+0020 U+0254 U+0331 U+0020 U+006e	4	Bola	kjɔ̱n³⁵
+jøʔ	j ø ʔ	j ø ʔ	m n c	U+006a U+0020 U+00f8 U+0020 U+0294	3	Bola	khjøʔ⁵⁵
+jin	j i n	j i n	m n c	U+006a U+0020 U+0069 U+0020 U+006e	3	Bola	kjin³¹
+ja̱uʔ	j a̱u ʔ	j a̱u ʔ	m n c	U+006a U+0020 U+0061 U+0331 U+0075 U+0020 U+0294	3	Bola	kja̱uʔ⁵⁵
+jap	j a p	j a p	m n c	U+006a U+0020 U+0061 U+0020 U+0070	3	Bola	khjap⁵⁵
+ja̱k	j a̱ k	j a̱ k	m n c	U+006a U+0020 U+0061 U+0331 U+0020 U+006b	2	Bola	ja̱k⁵⁵
+jɔ̱t	j ɔ̱ t	j ɔ̱ t	m n c	U+006a U+0020 U+0254 U+0331 U+0020 U+0074	2	Bola	pjɔ̱t⁵⁵
+jɛ̱t	j ɛ̱ t	j ɛ̱ t	m n c	U+006a U+0020 U+025b U+0331 U+0020 U+0074	2	Bola	pjɛ̱t⁵⁵
+ja̱ŋ	j a̱ ŋ	j a̱ ŋ	m n c	U+006a U+0020 U+0061 U+0331 U+0020 U+014b	2	Bola	pja̱ŋ³⁵
+jan	j a n	j a n	m n c	U+006a U+0020 U+0061 U+0020 U+006e	2	Bola	jan³⁵
+jam	j a m	j a m	m n c	U+006a U+0020 U+0061 U+0020 U+006d	1	Bola	pjam⁵⁵
+jɛ̱̃	j ɛ̱̃ ∼	j ɛ̱̃ ∼	m n c	U+006a U+0020 U+025b U+0331 U+0303 U+0020 U+223c	1	Bola	kjɛ̱̃∼³⁵
+ja̱t	j a̱ t	j a̱ t	m n c	U+006a U+0020 U+0061 U+0331 U+0020 U+0074	1	Bola	pja̱t³¹
+ji̱n	j i̱ n	j i̱ n	m n c	U+006a U+0020 U+0069 U+0331 U+0020 U+006e	1	Bola	kji̱n³⁵
+jø̃	j ø̃ ∼	j ø̃ ∼	m n c	U+006a U+0020 U+00f8 U+0303 U+0020 U+223c	1	Bola	jø̃∼⁵⁵
+jɔʔ	j ɔ ʔ	j ɔ ʔ	m n c	U+006a U+0020 U+0254 U+0020 U+0294	1	Bola	kjɔʔ³¹
+jiŋ	j i ŋ	j i ŋ	m n c	U+006a U+0020 U+0069 U+0020 U+014b	1	Bola	khjiŋ³⁵
+jõ	j õ ∼	j õ ∼	m n c	U+006a U+0020 U+00f5 U+0020 U+223c	1	Bola	jõ∼³¹
+ui	u i	u i	m n	U+0075 U+0020 U+0069	53	Bola	tui⁵⁵
+ja	j a	j a	m n	U+006a U+0020 U+0061	52	Bola	ja³¹
+ji	j i	j i	m n	U+006a U+0020 U+0069	48	Bola	khji⁵⁵
+ju	j u	j u	m n	U+006a U+0020 U+0075	30	Bola	khju³⁵
+ja̱	j a̱	j a̱	m n	U+006a U+0020 U+0061 U+0331	9	Bola	kja̱⁵⁵
+jɛ	j ɛ	j ɛ	m n	U+006a U+0020 U+025b	8	Bola	jɛ³¹
+jau	j au	j au	m n	U+006a U+0020 U+0061 U+0075	5	Bola	khjau³¹
+ji̱	j i̱	j i̱	m n	U+006a U+0020 U+0069 U+0331	5	Bola	kji̱⁵⁵
+ju̱	j u̱	j u̱	m n	U+006a U+0020 U+0075 U+0331	4	Bola	kju̱³⁵
+jɛ̱	j ɛ̱	j ɛ̱	m n	U+006a U+0020 U+025b U+0331	3	Bola	pjɛ̱³⁵
+jui	ju i	ju i	m n	U+006a U+0075 U+0020 U+0069	2	Bola	jui⁵⁵
+jø	j ø	j ø	m n	U+006a U+0020 U+00f8	2	Bola	kjø³¹
+jɔ	j ɔ	j ɔ	m n	U+006a U+0020 U+0254	1	Bola	phjɔ³¹
+ja̱u	j a̱u	j a̱u	m n	U+006a U+0020 U+0061 U+0331 U+0075	1	Bola	kja̱u⁵⁵
+jø̱	j ø̱	j ø̱	m n	U+006a U+0020 U+00f8 U+0331	1	Bola	kjø̱³⁵
+jɛ̃	j ɛ̃∼	j ɛ̃∼	m c	U+006a U+0020 U+025b U+0303 U+223c	1	Bola	khjɛ̃∼
+t	t	t	i	U+0074	261	Bola	ta³¹
+m	m	m	i	U+006d	243	Bola	mɛ̃∼³⁵
+k	k	k	i	U+006b	243	Bola	kɔ̱t⁵⁵
+p	p	p	i	U+0070	226	Bola	pan⁵¹
+l	l	l	i	U+006c	197	Bola	lə̆³¹
+kh	kh	kh	i	U+006b U+0068	174	Bola	khji⁵⁵
+n	n	n	i	U+006e	157	Bola	na⁵⁵
+tʃ	tʃ	tʃ	i	U+0074 U+0283	119	Bola	tʃin³⁵
+th	th	th	i	U+0074 U+0068	115	Bola	thap⁵⁵
+ŋ	ŋ	ŋ	i	U+014b	107	Bola	ŋa⁵⁵
+s	s	s	i	U+0073	96	Bola	sak⁵⁵
+ʃ	ʃ	ʃ	i	U+0283	95	Bola	ʃaʔ⁵⁵
+ph	ph	ph	i	U+0070 U+0068	82	Bola	phə̆⁵⁵
+ts	ts	ts	i	U+0074 U+0073	79	Bola	tsaŋ
+tʃh	tʃh	tʃh	i	U+0074 U+0283 U+0068	74	Bola	tʃhɛʔ⁵⁵
+v	v	v	i	U+0076	63	Bola	va³¹
+ɣ	ɣ	ɣ	i	U+0263	56	Bola	ɣɔ̃∼³¹
+x	x	x	i	U+0078	46	Bola	xɛ⁵⁵
+tsh	tsh	tsh	i	U+0074 U+0073 U+0068	24	Bola	tshan³¹
+f	f	f	i	U+0066	19	Bola	fɔn³⁵
+ʒ	ʒ	ʒ	i	U+0292	8	Bola	ʒa⁵⁵
+khj	khj	khj	i	U+006b U+0068 U+006a	1	Bola	khj⁵⁵
+aŋ	aŋ	aŋ	c	U+0061 U+014b	1	Bola	tsaŋ
+ɛʔ	ɛʔ	ɛʔ	c	U+025b U+0294	1	Bola	ɣɛʔ
+ɔ̱̃	ɔ̱̃∼	ɔ̱̃∼	c	U+0254 U+0331 U+0303 U+223c	1	Bola	lɔ̱̃∼

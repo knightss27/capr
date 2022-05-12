@@ -1,0 +1,160 @@
+Grapheme	Segments	CLPA	Structure	Unicode	Frequency	Reflexes	Examples
+⁵⁵	⁵⁵	⁵⁵	t	U+2075 U+2075	898	Xiandao	ŋɔ⁵⁵
+³¹	³¹	³¹	t	U+00b3 U+00b9	839	Xiandao	khaʔ³¹
+³⁵	³⁵	³⁵	t	U+00b3 U+2075	301	Xiandao	sɔŋ³⁵
+⁵¹	⁵¹	⁵¹	t	U+2075 U+00b9	35	Xiandao	tu⁵¹
+⁵³	⁵³	⁵³	t	U+2075 U+00b3	3	Xiandao	pum⁵³
+ɔʔ	ɔ ʔ	ɔ ʔ	n c	U+0254 U+0020 U+0294	89	Xiandao	sɔʔ⁵⁵
+aŋ	a ŋ	a ŋ	n c	U+0061 U+0020 U+014b	75	Xiandao	chaŋ³¹
+ɔŋ	ɔ ŋ	ɔ ŋ	n c	U+0254 U+0020 U+014b	57	Xiandao	phɔŋ³¹
+oŋ	o ŋ	o ŋ	n c	U+006f U+0020 U+014b	56	Xiandao	n̥oŋ⁵⁵
+am	a m	a m	n c	U+0061 U+0020 U+006d	49	Xiandao	tʂham³¹
+an	a n	a n	n c	U+0061 U+0020 U+006e	47	Xiandao	an³⁵
+oʔ	o ʔ	o ʔ	n c	U+006f U+0020 U+0294	47	Xiandao	khʐoʔ⁵⁵
+um	u m	u m	n c	U+0075 U+0020 U+006d	45	Xiandao	ʐum³¹
+ɯŋ	ɯ ŋ	ɯ ŋ	n c	U+026f U+0020 U+014b	43	Xiandao	tʂɯŋ⁵⁵
+ap	a p	a p	n c	U+0061 U+0020 U+0070	41	Xiandao	kʐap⁵⁵
+uʔ	u ʔ	u ʔ	n c	U+0075 U+0020 U+0294	41	Xiandao	pʐuʔ⁵⁵
+ut	u t	u t	n c	U+0075 U+0020 U+0074	35	Xiandao	n̥ut⁵⁵
+uŋ	u ŋ	u ŋ	n c	U+0075 U+0020 U+014b	34	Xiandao	tuŋ³¹
+un	u n	u n	n c	U+0075 U+0020 U+006e	30	Xiandao	tun³¹
+in	i n	i n	n c	U+0069 U+0020 U+006e	28	Xiandao	lin³⁵
+ɤk	ɤ k	ɤ k	n c	U+0264 U+0020 U+006b	28	Xiandao	n̥ɤk⁵⁵
+at	a t	a t	n c	U+0061 U+0020 U+0074	26	Xiandao	lat³⁵
+ɛn	ɛ n	ɛ n	n c	U+025b U+0020 U+006e	25	Xiandao	pɛn³¹
+aʔ	a ʔ	a ʔ	n c	U+0061 U+0020 U+0294	22	Xiandao	khaʔ³¹
+ak	a k	a k	n c	U+0061 U+0020 U+006b	19	Xiandao	sak⁵⁵
+ɛt	ɛ t	ɛ t	n c	U+025b U+0020 U+0074	17	Xiandao	tsɛt⁵⁵
+ɯk	ɯ k	ɯ k	n c	U+026f U+0020 U+006b	16	Xiandao	ʂɯk⁵⁵
+ɔk	ɔ k	ɔ k	n c	U+0254 U+0020 U+006b	15	Xiandao	kɔk³⁵
+om	o m	o m	n c	U+006f U+0020 U+006d	15	Xiandao	om⁵⁵
+ɤŋ	ɤ ŋ	ɤ ŋ	n c	U+0264 U+0020 U+014b	15	Xiandao	tɤŋ⁵⁵
+ɔt	ɔ t	ɔ t	n c	U+0254 U+0020 U+0074	15	Xiandao	n̥ɔt⁵⁵
+iŋ	i ŋ	i ŋ	n c	U+0069 U+0020 U+014b	14	Xiandao	liŋ³⁵
+ɛŋ	ɛ ŋ	ɛ ŋ	n c	U+025b U+0020 U+014b	14	Xiandao	lɛŋ³⁵
+ip	i p	i p	n c	U+0069 U+0020 U+0070	13	Xiandao	sip⁵⁵
+ot	o t	o t	n c	U+006f U+0020 U+0074	11	Xiandao	chot⁵⁵
+it	i t	i t	n c	U+0069 U+0020 U+0074	11	Xiandao	tsit⁵⁵
+ɔn	ɔ n	ɔ n	n c	U+0254 U+0020 U+006e	11	Xiandao	ɲɔn³⁵
+op	o p	o p	n c	U+006f U+0020 U+0070	9	Xiandao	khʐop⁵⁵
+up	u p	u p	n c	U+0075 U+0020 U+0070	9	Xiandao	tʂhup⁵⁵
+iʔ	i ʔ	i ʔ	n c	U+0069 U+0020 U+0294	8	Xiandao	tsiʔ⁵⁵
+on	o n	o n	n c	U+006f U+0020 U+006e	8	Xiandao	xon³¹
+ɤn	ɤ n	ɤ n	n c	U+0264 U+0020 U+006e	7	Xiandao	lɤn³¹
+ɛʔ	ɛ ʔ	ɛ ʔ	n c	U+025b U+0020 U+0294	6	Xiandao	ɲ̊ɛʔ⁵⁵
+ɯm	ɯ m	ɯ m	n c	U+026f U+0020 U+006d	6	Xiandao	khɯm⁵⁵
+ɛk	ɛ k	ɛ k	n c	U+025b U+0020 U+006b	6	Xiandao	tɛk⁵⁵
+ɛm	ɛ m	ɛ m	n c	U+025b U+0020 U+006d	5	Xiandao	tɛm³¹
+ɔp	ɔ p	ɔ p	n c	U+0254 U+0020 U+0070	4	Xiandao	m̥ʐɔp⁵⁵
+ɤt	ɤ t	ɤ t	n c	U+0264 U+0020 U+0074	4	Xiandao	kɤt³⁵
+ɯt	ɯ t	ɯ t	n c	U+026f U+0020 U+0074	4	Xiandao	ʐɯt⁵⁵
+im	i m	i m	n c	U+0069 U+0020 U+006d	2	Xiandao	ɲ̊im⁵¹
+uk	u k	u k	n c	U+0075 U+0020 U+006b	1	Xiandao	kuk⁵⁵
+iaahŋ	ia ahŋ	ia ahŋ	n c	U+0069 U+0061 U+0020 U+0061 U+0068 U+014b	1	Xiandao	tahiaŋ³¹
+ɯn	ɯ n	ɯ n	n c	U+026f U+0020 U+006e	1	Xiandao	kɯn⁵⁵
+ɛʈ	ɛ ʈ	ɛ ʈ	n c	U+025b U+0020 U+0288	1	Xiandao	çɛʈ⁵⁵
+ɤm	ɤ m	ɤ m	n c	U+0264 U+0020 U+006d	1	Xiandao	tɤm⁵⁵
+ok	o k	o k	n c	U+006f U+0020 U+006b	1	Xiandao	tok³⁵
+ɑʔ	ɑ ʔ	ɑ ʔ	n c	U+0251 U+0020 U+0294	1	Xiandao	ŋʐɑʔ⁵⁵
+ɛp	ɛ p	ɛ p	n c	U+025b U+0020 U+0070	1	Xiandao	l̥ɛp⁵⁵
+ik	i k	i k	n c	U+0069 U+0020 U+006b	1	Xiandao	phik⁵⁵
+ăŋ	ă ŋ	ă ŋ	n c	U+0103 U+0020 U+014b	1	Xiandao	ʂăŋ³¹
+ɤp	ɤ p	ɤ p	n c	U+0264 U+0020 U+0070	1	Xiandao	kɤp³⁵
+oʈ	o ʈ	o ʈ	n c	U+006f U+0020 U+0288	1	Xiandao	choʈ⁵⁵
+ɔ	ɔ	ɔ	n	U+0254	163	Xiandao	ŋɔ⁵⁵
+a	a	a	n	U+0061	156	Xiandao	ta³¹
+i	i	i	n	U+0069	97	Xiandao	chi⁵⁵
+u	u	u	n	U+0075	92	Xiandao	tʂu⁵⁵
+au	au	au	n	U+0061 U+0075	87	Xiandao	xau³¹
+ɛ	ɛ	ɛ	n	U+025b	69	Xiandao	cɛ⁵⁵
+ai	ai	ai	n	U+0061 U+0069	50	Xiandao	tsai⁵⁵
+o	o	o	n	U+006f	42	Xiandao	o³¹
+ɤ	ɤ	ɤ	n	U+0264	33	Xiandao	khɤ³¹
+ɯ	ɯ	ɯ	n	U+026f	19	Xiandao	kɯ³¹
+ɿ	ɿ	ɿ	n	U+027f	19	Xiandao	ʂɿ³¹
+oi	oi	oi	n	U+006f U+0069	10	Xiandao	moi³¹
+ɔi	ɔi	ɔi	n	U+0254 U+0069	8	Xiandao	tsɔi⁵⁵
+ɔ̆	ɔ̆	ɔ̆	n	U+0254 U+0306	5	Xiandao	kɔ̆³⁵
+ă	ă	ă	n	U+0103	5	Xiandao	phă⁵⁵
+ui	ui	ui	n	U+0075 U+0069	2	Xiandao	ui⁵⁵
+ɯ̆	ɯ̆	ɯ̆	n	U+026f U+0306	1	Xiandao	khɯ̆³¹
+ŏ	ŏ	ŏ	n	U+014f	1	Xiandao	nŏ³¹
+ə̆	ə̆	ə̆	n	U+0259 U+0306	1	Xiandao	phə̆³¹
+a̱	a̱	a̱	n	U+0061 U+0331	1	Xiandao	pa̱³¹
+ɤu	ɤu	ɤu	n	U+0264 U+0075	1	Xiandao	khɤu³⁵
+ɑ̆	ɑ̆	ɑ̆	n	U+0251 U+0306	1	Xiandao	phɑ̆³¹
+ɛ̆	ɛ̆	ɛ̆	n	U+025b U+0306	1	Xiandao	tsɛ̆³¹
+ɛi	ɛi	ɛi	n	U+025b U+0069	1	Xiandao	ʂɛi³⁵
+jam	j a m	j a m	m n c	U+006a U+0020 U+0061 U+0020 U+006d	10	Xiandao	jam³¹
+jaŋ	j a ŋ	j a ŋ	m n c	U+006a U+0020 U+0061 U+0020 U+014b	4	Xiandao	jaŋ³¹
+iaŋ	i a ŋ	i a ŋ	m n c	U+0069 U+0020 U+0061 U+0020 U+014b	4	Xiandao	miaŋ⁵⁵
+uan	u a n	u a n	m n c	U+0075 U+0020 U+0061 U+0020 U+006e	3	Xiandao	tʂuan⁵⁵
+juʔ	j u ʔ	j u ʔ	m n c	U+006a U+0020 U+0075 U+0020 U+0294	2	Xiandao	juʔ⁵⁵
+jap	j a p	j a p	m n c	U+006a U+0020 U+0061 U+0020 U+0070	2	Xiandao	jap⁵⁵
+jɔt	j ɔ t	j ɔ t	m n c	U+006a U+0020 U+0254 U+0020 U+0074	1	Xiandao	jɔt⁵⁵
+jɔm	j ɔ m	j ɔ m	m n c	U+006a U+0020 U+0254 U+0020 U+006d	1	Xiandao	jɔm³¹
+jum	j u m	j u m	m n c	U+006a U+0020 U+0075 U+0020 U+006d	1	Xiandao	jum³⁵
+jan	j a n	j a n	m n c	U+006a U+0020 U+0061 U+0020 U+006e	1	Xiandao	jan⁵⁵
+jin	j i n	j i n	m n c	U+006a U+0020 U+0069 U+0020 U+006e	1	Xiandao	jin⁵⁵
+iak	i a k	i a k	m n c	U+0069 U+0020 U+0061 U+0020 U+006b	1	Xiandao	tiak⁵⁵
+jɔʔ	j ɔ ʔ	j ɔ ʔ	m n c	U+006a U+0020 U+0254 U+0020 U+0294	1	Xiandao	jɔʔ³⁵
+joŋ	j o ŋ	j o ŋ	m n c	U+006a U+0020 U+006f U+0020 U+014b	1	Xiandao	joŋ⁵⁵
+jɔn	j ɔ n	j ɔ n	m n c	U+006a U+0020 U+0254 U+0020 U+006e	1	Xiandao	jɔn³¹
+ui	u i	u i	m n	U+0075 U+0020 U+0069	39	Xiandao	tsui³⁵
+jɔ	j ɔ	j ɔ	m n	U+006a U+0020 U+0254	9	Xiandao	jɔ⁵⁵
+ji	j i	j i	m n	U+006a U+0020 U+0069	4	Xiandao	ji³¹
+iau	i au	i au	m n	U+0069 U+0020 U+0061 U+0075	4	Xiandao	liau³⁵
+jau	j au	j au	m n	U+006a U+0020 U+0061 U+0075	3	Xiandao	pjau³¹
+ju	j u	j u	m n	U+006a U+0020 U+0075	1	Xiandao	ju⁵⁵
+iu	i u	i u	m n	U+0069 U+0020 U+0075	1	Xiandao	miu⁵⁵
+ja	j a	j a	m n	U+006a U+0020 U+0061	1	Xiandao	ja³¹
+juʔ	j uʔ	j uʔ	m c	U+006a U+0020 U+0075 U+0294	1	Xiandao	juʔ
+p	p	p	i	U+0070	133	Xiandao	pɛn³¹
+t	t	t	i	U+0074	132	Xiandao	ta³¹
+l	l	l	i	U+006c	122	Xiandao	lɤn³¹
+k	k	k	i	U+006b	109	Xiandao	kɯ³¹
+m	m	m	i	U+006d	104	Xiandao	mui³¹
+n	n	n	i	U+006e	95	Xiandao	ni³¹
+s	s	s	i	U+0073	87	Xiandao	sɔŋ³⁵
+x	x	x	i	U+0078	79	Xiandao	xɤ⁵⁵
+th	th	th	i	U+0074 U+0068	73	Xiandao	thɛ³¹
+ts	ts	ts	i	U+0074 U+0073	72	Xiandao	tsui³⁵
+ʂ	ʂ	ʂ	i	U+0282	63	Xiandao	ʂɿ³¹
+tʂ	tʂ	tʂ	i	U+0074 U+0282	59	Xiandao	tʂu⁵⁵
+c	c	c	i	U+0063	59	Xiandao	cɔ⁵⁵
+ph	ph	ph	i	U+0070 U+0068	56	Xiandao	phɔŋ³¹
+ʐ	ʐ	ʐ	i	U+0290	55	Xiandao	ʐum³¹
+ch	ch	ch	i	U+0063 U+0068	52	Xiandao	chot⁵⁵
+ɲ	ɲ	ɲ	i	U+0272	51	Xiandao	ɲɔ³¹
+n̥	n̥	n̥	i	U+006e U+0325	50	Xiandao	n̥oŋ⁵⁵
+kʐ	kʐ	kʐ	i	U+006b U+0290	42	Xiandao	kʐap⁵⁵
+tʂh	tʂh	tʂh	i	U+0074 U+0282 U+0068	37	Xiandao	tʂham³¹
+tsh	tsh	tsh	i	U+0074 U+0073 U+0068	37	Xiandao	tshi⁵⁵
+l̥	l̥	l̥	i	U+006c U+0325	28	Xiandao	l̥ai³⁵
+kh	kh	kh	i	U+006b U+0068	26	Xiandao	khaʔ³¹
+khʐ	khʐ	khʐ	i	U+006b U+0068 U+0290	25	Xiandao	khʐoʔ⁵⁵
+ŋ	ŋ	ŋ	i	U+014b	23	Xiandao	ŋɔ⁵⁵
+m̥	m̥	m̥	i	U+006d U+0325	20	Xiandao	m̥an⁵⁵
+pʐ	pʐ	pʐ	i	U+0070 U+0290	20	Xiandao	pʐoŋ³¹
+f	f	f	i	U+0066	20	Xiandao	fum³¹
+ɲ̊	ɲ̊	ɲ̊	i	U+0272 U+030a	19	Xiandao	ɲ̊ɛʔ⁵⁵
+ç	ç	ç	i	U+00e7	17	Xiandao	çot⁵⁵
+m̥ʐ	m̥ʐ	m̥ʐ	i	U+006d U+0325 U+0290	16	Xiandao	m̥ʐoʔ³⁵
+v	v	v	i	U+0076	15	Xiandao	van⁵⁵
+mʐ	mʐ	mʐ	i	U+006d U+0290	12	Xiandao	mʐɔ³¹
+phʐ	phʐ	phʐ	i	U+0070 U+0068 U+0290	12	Xiandao	phʐap⁵⁵
+ŋ̊	ŋ̊	ŋ̊	i	U+014b U+030a	11	Xiandao	ŋ̊am³¹
+xʐ	xʐ	xʐ	i	U+0078 U+0290	11	Xiandao	xʐam⁵⁵
+tʐ	tʐ	tʐ	i	U+0074 U+0290	11	Xiandao	tʐoŋ³¹
+ŋʐ	ŋʐ	ŋʐ	i	U+014b U+0290	3	Xiandao	ŋʐan⁵⁵
+thʐ	thʐ	thʐ	i	U+0074 U+0068 U+0290	2	Xiandao	thʐoŋ³¹
+khʒ	khʒ	khʒ	i	U+006b U+0068 U+0292	1	Xiandao	khʒap⁵⁵
+tʂɹ	tʂɹ	tʂɹ	i	U+0074 U+0282 U+0279	1	Xiandao	tʂɹ³¹
+n̩	n̩	n̩	i	U+006e U+0329	1	Xiandao	n̩⁵⁵
+ɕ	ɕ	ɕ	i	U+0255	1	Xiandao	ɕɛ⁵⁵
+ȵ	ȵ	ȵ	i	U+0235	1	Xiandao	ȵɔ³¹
+ɲ̇	ɲ̇	ɲ̇	i	U+0272 U+0307	1	Xiandao	ɲ̇on⁵⁵
+tɣ	tɣ	tɣ	i	U+0074 U+0263	1	Xiandao	tɣ⁵⁵
+ɳ	ɳ	ɳ	i	U+0273	1	Xiandao	ɳɛn³¹
+ɯŋ	ɯŋ	ɯŋ	c	U+026f U+014b	1	Xiandao	tʂɯŋ
+ɣk	ɣk	ɣk	c	U+0263 U+006b	1	Xiandao	n̥ɣk³⁵
