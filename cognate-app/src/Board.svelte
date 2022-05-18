@@ -23,11 +23,23 @@
         items = e.detail.items;
         loaded.boards[$currentBoard].columnIds = e.detail.items.map(i => i.name);
     }
+
+    // Handle dragging and dropping between columns, passed down to each column
+    const handleColConsider = (id: string, e: any) => {
+        let cIdx = columnItems.findIndex(c => c.id == id);
+        columnItems[cIdx].items = e.detail.items;
+        // console.log(e.detail.items)
+        // console.log(columnItems[cIdx])
+    }
+    const handleColFinalize = (id: string, e: any) => {
+        handleColConsider(id, e);
+        loaded.columns[id].syllableIds = e.detail.items.map(i => i.id);
+    }
 </script>
 
 <div class="board" use:dndzone={{items: items, type: 'columns'}} on:consider={handleConsider} on:finalize={handleFinalize}>
     {#each items as c(c.id)}
-    <ColumnComp column={columns[c.name]} syllables={loaded.syllables} fstUp={loaded.fstUp} words={loaded.words} bind:loaded bind:columnItems />
+    <ColumnComp column={columns[c.name]} syllables={loaded.syllables} fstUp={loaded.fstUp} words={loaded.words} handleConsider={handleColConsider} handleFinalize={handleColFinalize} bind:loaded bind:columnItems />
     {/each}
 </div>
 

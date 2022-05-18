@@ -12,6 +12,9 @@
     export let columnItems: { id: string, items: Syllable[]}[];
     export let loaded: CognateApp;
 
+    export let handleConsider: (id: string, e: any) => void;
+    export let handleFinalize: (id: string, e: any) => void;
+
     // Update the words in the column when we get a new column!
     let columnSyllables = column.syllableIds.map(s => syllables[s]);
     $: columnSyllables = column.syllableIds.map(s => syllables[s]);
@@ -48,22 +51,22 @@
         }
     }
 
+    generateSharedReconstructions();
+
+    let pastID = column.id;
+
     // Regenerate when a new board is selected (otherwise Svelte attempts to optimize too much of this)
     $: if ($currentBoard) {
         generateSharedReconstructions();
-    }
-    
-
-    // For dragging and dropping between columns:
-    const handleConsider = (id: string, e: any) => {
-        let cIdx = columnItems.findIndex(c => c.id == column.id);
-        columnItems[cIdx].items = e.detail.items;
+        console.log('calling generate')
     }
 
-    const handleFinalize = (id: string, e: any) => {
-        handleConsider(id, e);
-        loaded.columns[id].syllableIds = e.detail.items.map(i => i.id);
+    // Regenerate after switching columns (otherwise we think we are a different column then we are supposed to be)
+    $: if (column.id != pastID) {
+        pastID = column.id;
+        generateSharedReconstructions();
     }
+
 </script>
 
 <div class="column" >
@@ -85,6 +88,7 @@
 		border-radius: 0.25rem;
 		margin: 0 0.25rem;
         background-color: white;
+        max-width: 10rem;
 	}
 
     div.dropzone {
