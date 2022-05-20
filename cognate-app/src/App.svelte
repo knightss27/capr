@@ -4,7 +4,7 @@
 	import { currentBoard } from './stores';
 	import type { CognateApp } from './types';
 	
-	// Imports starting JSON data for running as an example.
+	// Imports starting JSON data for running as POC (proof of concept).
 	// This data is a little too long, which is why HMR fails. Just reload the page manually.
 	// @ts-ignore
 	import initialData from './initialData';
@@ -14,19 +14,44 @@
 		...initialData,
 	} as unknown as CognateApp;
 
-	let hasLoaded = false;
+	// Set hasLoaded to true while we are just testing for POC.
+	let hasLoaded = true;
 
-	const rootUrl = "localhost:3000"
+	// Status info for the top bar.
+	let statusMessage = "Board loaded."
+	let statusError = false;
 
+	// Where our api is
+	const rootUrl = "http://localhost:5000"
+
+	// Handles the refish call
 	const handleRefish = async () => {
-		const res = await fetch(`${rootUrl}/refish-board`, {
-			method: 'POST',
-			body: {
+		statusMessage = "Refishing current board..."
+		await fetch(`${rootUrl}/refish-board`, {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json"
+			},
+			body: JSON.stringify({
 				columns: loaded.columns,
 				boards: loaded.boards
-			},
-			
+			})
 		})
+			.then((res => res.json()))
+			.then((data: any) => {
+				// If we have our data, we should have refished correctly.
+				console.log("Successfully refished.")
+				loaded.columns = data.columns,
+				loaded.boards = data.boards
+				statusMessage = "Refishing completed."
+			})
+			.catch(e => {
+				// If we have an error, we've got some issues.
+				console.log("Error encountered while refishing:")
+				console.error(e);
+				statusError = true;
+				statusMessage = e.message;
+			})
 	}
 </script>
 
@@ -37,6 +62,7 @@
 	{:else}
 		<div>
 			<button on:click={handleRefish}>Refish Board</button>
+			<span class:statusError>Status: {statusMessage}</span>
 		</div>
 		<!-- The list of all possible boards -->
 		<BoardList boards={Object.values(loaded.boards)} />
@@ -55,5 +81,20 @@
 		height: 100%;
 		padding: 0px;
 		margin: 0 auto;
+	}
+
+	span {
+		margin: auto 1rem;
+		padding: 0.5rem 1rem;
+		background-color: lightgreen;
+		border-radius: 0.5rem;
+	}
+
+	span.statusError {
+		background-color: lightcoral;
+	}
+
+	button {
+		border-radius: 0.5rem;
 	}
 </style>
