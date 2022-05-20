@@ -13,17 +13,38 @@
 	let loaded: CognateApp = {
 		...initialData,
 	} as unknown as CognateApp;
+
+	let hasLoaded = false;
+
+	const rootUrl = "localhost:3000"
+
+	const handleRefish = async () => {
+		const res = await fetch(`${rootUrl}/refish-board`, {
+			method: 'POST',
+			body: {
+				columns: loaded.columns,
+				boards: loaded.boards
+			},
+			
+		})
+	}
 </script>
 
 
 <main>
-	<!-- TODO: Add buttons to call the server routes! -->
-	<!-- The list of all possible boards -->
-	<BoardList boards={Object.values(loaded.boards)} />
-	<!-- The current board's title -->
-	<h1>{loaded.boards[$currentBoard].title}</h1>
-	<!-- The Board component for displaying columns -->
-	<Board columnIds={loaded.boards[$currentBoard].columnIds} columns={loaded.columns} bind:loaded />
+	{#if !hasLoaded}
+		<button on:click={() => {hasLoaded = true}}>Load Board</button>
+	{:else}
+		<div>
+			<button on:click={handleRefish}>Refish Board</button>
+		</div>
+		<!-- The list of all possible boards -->
+		<BoardList boards={Object.values(loaded.boards)} />
+		<!-- The current board's title -->
+		<h1>{loaded.boards[$currentBoard].title}</h1>
+		<!-- The Board component for displaying columns -->
+		<Board columnIds={loaded.boards[$currentBoard].columnIds} columns={loaded.columns} bind:loaded />
+	{/if}
 </main>
 
 <style>
