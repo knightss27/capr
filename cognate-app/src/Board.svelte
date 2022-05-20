@@ -2,8 +2,8 @@
     // Displays a board and all the columns
     import {default as ColumnComp}  from "./Column.svelte";
     import type { CognateApp, Column } from "./types";
-    import {dndzone} from "svelte-dnd-action";
-    import {currentBoard} from "./stores";
+    import  {dndzone } from "svelte-dnd-action";
+    import { currentBoard } from "./stores";
 
     export let columnIds: string[];
     export let columns: { [key: string]: Column}

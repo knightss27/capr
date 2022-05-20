@@ -11,6 +11,7 @@
     export let words:  { [key: string]: Word}
     export let columnItems: { id: string, items: Syllable[]}[];
     export let loaded: CognateApp;
+    // export let isShadow: boolean;
 
     export let handleConsider: (id: string, e: any) => void;
     export let handleFinalize: (id: string, e: any) => void;
@@ -69,7 +70,10 @@
 
 </script>
 
-<div class="column" >
+<!-- {#if isShadow}
+<span class="shadow"></span>
+{:else} -->
+<div class="column">
     <h3>
         {'*' + (column.syllableIds.length > 1 ? crossid_reconstructions.join(', ') : "")}
     </h3>
@@ -79,6 +83,9 @@
         {/each}
     </div>
 </div>
+<!-- {/if} -->
+
+
 
 <style>
     div.column {
@@ -99,5 +106,10 @@
         margin: 0rem;
         padding: 0.25rem 0.5rem;
         border-bottom: 1px solid gray;
+    }
+
+    span.shadow {
+        width: 4px;
+        border: 2px solid blue;
     }
 </style>

@@ -1,8 +1,58 @@
-from flask import Flask, jsonify
+from os import abort
+from flask import Flask, Response, jsonify, request
+from functools import wraps
 from compile_lexicon_to_json import compile_to_json
+from refish import refish
+
 
 app = Flask(__name__)
 
-@app.route("/")
-def hello_world():
-    return jsonify(compile_to_json("../output/burmish-pipeline/stage2/burmish-stage2-tmp-merged.tsv"))
+def _resp(success: bool, message: str, data: object = None):
+    """
+    Return a JSON API response
+    :param success: did the request succeed?
+    :param message: what happened?
+    :param data: any application specific data
+    """
+
+    return Response({
+        "meta": {
+            "success": success,
+            "message": message
+        },
+        "data": data
+    }, mimetype="application/json")
+
+def with_json(*outer_args):
+    """
+    Get JSON API request body
+    :param outer_args: *args (str) of JSON keys
+    """
+
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            _json_body = {}
+            for arg in outer_args:
+                if not request.json:
+                    return _resp(False, "JSON body must not be empty")
+                val = request.json.get(arg)
+                if val != None and val != "":
+                    _json_body[arg] = val
+                else:
+                    return _resp(False, "Required argument " + arg + " is not defined.")
+            return func(*args, **kwargs, json_body=_json_body)
+
+        return wrapper
+
+    return decorator
+
+@app.route("/new-board")
+def new_board():
+    return compile_to_json("../output/burmish-pipeline/stage2/burmish-stage2-tmp-merged.tsv")
+
+@app.route("/refish-board", methods=["POST"])
+@with_json("columns", "boards")
+def refish_board(json_body):
+    new_board = refish(json_body)
+    return new_board

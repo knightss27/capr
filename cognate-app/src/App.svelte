@@ -17,6 +17,7 @@
 
 
 <main>
+	<!-- TODO: Add buttons to call the server routes! -->
 	<!-- The list of all possible boards -->
 	<BoardList boards={Object.values(loaded.boards)} />
 	<!-- The current board's title -->
