@@ -9,6 +9,7 @@
 	// This data is a little too long, which is why HMR fails. Just reload the page manually.
 	// @ts-ignore
 	import initialData from './initialData';
+	import FstComparator from './FstComparator.svelte';
 	
 	
 	// Loads our initial data into a central state (TODO: think about extracting to a store)
@@ -57,11 +58,7 @@
 	}
 
 	let showNewFst = false;
-	let oldFst = "old";
-	let newFst = "new";
-
 	let showCognateInterface = false;
-
 	let fstEditorWidth = 300;
 </script>
 
@@ -88,11 +85,7 @@
 			<!-- The Board component for displaying columns -->
 			<Board columnIds={loaded.boards[$currentBoard].columnIds} columns={loaded.columns} bind:loaded />
 		{:else}
-			{#if showNewFst}
-				<FstEditor bind:fst={newFst} bind:fstEditorWidth />
-			{:else}
-				<FstEditor bind:fst={oldFst} bind:fstEditorWidth />
-			{/if}
+			<FstComparator data={loaded} />
 		{/if}
 	{/if}
 </main>
@@ -112,6 +105,12 @@
 		align-items: center;
 		width: 100%;
 		padding-bottom: 1rem;
+	}
+
+	div.editor-wrap {
+		height: 100%;
+		padding: 0px;
+		max-width: 50%;
 	}
 
 	span {

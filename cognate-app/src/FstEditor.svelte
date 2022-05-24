@@ -1,6 +1,7 @@
 <script lang="ts">
     export let fst: string;
-    export let fstEditorWidth: number;
+    export let fstEditorWidth: number = 300;
+    export let id: number;
 
     import {basicSetup} from "@codemirror/basic-setup"
     import {EditorState} from "@codemirror/state"
@@ -21,7 +22,7 @@
 
         let view = new EditorView({
             state: startState,
-            parent: document.getElementById('editor')
+            parent: document.getElementById(`editor-${id}`)
             
         }) 
 
@@ -35,7 +36,7 @@
 <div class="wrap" id="wrap">
     <div class="resizer" style="--initialWidth:{initWidth}px;" bind:clientWidth={fstEditorWidth}></div>
     <div class="resize-handle"></div>
-    <div class="editor" id="editor"></div>
+    <div class="editor" id="editor-{id}"></div>
 </div>
 
 <style>
