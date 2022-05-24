@@ -3,11 +3,13 @@
 	import Board from './Board.svelte';
 	import { currentBoard } from './stores';
 	import type { CognateApp } from './types';
+	import FstEditor from './FstEditor.svelte';
 	
 	// Imports starting JSON data for running as POC (proof of concept).
 	// This data is a little too long, which is why HMR fails. Just reload the page manually.
 	// @ts-ignore
 	import initialData from './initialData';
+	
 	
 	// Loads our initial data into a central state (TODO: think about extracting to a store)
 	let loaded: CognateApp = {
@@ -53,6 +55,14 @@
 				statusMessage = e.message;
 			})
 	}
+
+	let showNewFst = false;
+	let oldFst = "old";
+	let newFst = "new";
+
+	let showCognateInterface = false;
+
+	let fstEditorWidth = 300;
 </script>
 
 
@@ -61,15 +71,29 @@
 		<button on:click={() => {hasLoaded = true}}>Load Board</button>
 	{:else}
 		<div>
-			<button on:click={handleRefish}>Refish Board</button>
-			<span class:statusError>Status: {statusMessage}</span>
+			{#if showCognateInterface}
+				<button on:click={handleRefish}>Refish Board</button>
+				<span class:statusError>Status: {statusMessage}</span>
+			{:else}
+				<button on:click={() => {showNewFst = !showNewFst}}>Switch FST</button>
+				<span class="info">Current FST: {showNewFst ? "New" : "Old"}</span>
+			{/if}
+			<button class="sticky" on:click={() => {showCognateInterface = !showCognateInterface}}>{showCognateInterface ? "Show FST Editor" : "Show Cognate Editor"}</button>
 		</div>
-		<!-- The list of all possible boards -->
-		<BoardList boards={Object.values(loaded.boards)} />
-		<!-- The current board's title -->
-		<h1>{loaded.boards[$currentBoard].title}</h1>
-		<!-- The Board component for displaying columns -->
-		<Board columnIds={loaded.boards[$currentBoard].columnIds} columns={loaded.columns} bind:loaded />
+		{#if showCognateInterface}
+			<!-- The list of all possible boards -->
+			<BoardList boards={Object.values(loaded.boards)} />
+			<!-- The current board's title -->
+			<h1>{loaded.boards[$currentBoard].title}</h1>
+			<!-- The Board component for displaying columns -->
+			<Board columnIds={loaded.boards[$currentBoard].columnIds} columns={loaded.columns} bind:loaded />
+		{:else}
+			{#if showNewFst}
+				<FstEditor bind:fst={newFst} bind:fstEditorWidth />
+			{:else}
+				<FstEditor bind:fst={oldFst} bind:fstEditorWidth />
+			{/if}
+		{/if}
 	{/if}
 </main>
 
@@ -83,11 +107,22 @@
 		margin: 0 auto;
 	}
 
+	div {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		padding-bottom: 1rem;
+	}
+
 	span {
-		margin: auto 1rem;
+		margin: auto 0.5rem;
 		padding: 0.5rem 1rem;
 		background-color: lightgreen;
 		border-radius: 0.5rem;
+	}
+
+	span.info {
+		background-color: #f4f4f4;
 	}
 
 	span.statusError {
@@ -95,6 +130,12 @@
 	}
 
 	button {
+		margin: 0px;
+		display: flex;
 		border-radius: 0.5rem;
+	}
+
+	button.sticky {
+		margin-left: auto;
 	}
 </style>
