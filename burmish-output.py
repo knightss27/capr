@@ -5,7 +5,7 @@ from lexibase.lexibase import *
 from collections import defaultdict
 from tabulate import tabulate
 from burmtools import *
-from merge_phonemes import merge_phonemes
+from server.merge_phonemes import merge_phonemes
 from copy import copy
 
 # languages = cop.cols

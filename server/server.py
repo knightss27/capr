@@ -1,11 +1,13 @@
 from os import abort
 from flask import Flask, Response, jsonify, request
+from flask_cors import CORS
 from functools import wraps
 from compile_lexicon_to_json import compile_to_json
 from refish import refish
-
+from compare_fst import compare_fst
 
 app = Flask(__name__)
+CORS(app)
 
 def _resp(success: bool, message: str, data: object = None):
     """
@@ -56,3 +58,9 @@ def new_board():
 def refish_board(json_body):
     new_board = refish(json_body)
     return new_board
+
+@app.route("/compare-fst", methods=["POST"])
+@with_json("langsUnderStudy", "oldTransducer", "newTransducer", "board")
+def compare(json_body):
+    print(json_body['langsUnderStudy'])
+    return compare_fst(json_body)
