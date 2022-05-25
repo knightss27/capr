@@ -43,7 +43,7 @@
                     <td>{row.old_reconstruction ? row.old_reconstruction : ""}</td>
                     {#each row.old_reconstructions as recs}
                         <td>
-                            <FstReconstruction recs={recs.split(", ")} />
+                            <FstReconstruction recs={recs.length > 0 ? recs.split(", "): []} />
                         </td>
                     {/each}
                 </tr>
@@ -51,7 +51,7 @@
                     <td>{row.new_reconstruction ? row.new_reconstruction : ""}</td>
                     {#each row.new_reconstructions as recs}
                         <td>
-                            <FstReconstruction recs={recs.split(", ")} />
+                            <FstReconstruction recs={recs.length > 0 ? recs.split(", "): []} />
                         </td>
                     {/each}
                     <td>
@@ -82,5 +82,9 @@
 
     td {
         text-align: center;
+    }
+
+    div {
+        overflow: auto;
     }
 </style>
