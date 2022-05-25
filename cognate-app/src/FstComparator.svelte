@@ -1,8 +1,9 @@
 <script lang="ts">
     import FstEditor from "./FstEditor.svelte";
     import Select from "svelte-select";
-    import type { CognateApp } from "./types";
+    import type { CognateApp, FstComparison } from "./types";
     import initialTransducers from "./initialTransducers"
+    import FstOutput from "./FstOutput.svelte";
 
     export let data: CognateApp;
 
@@ -44,12 +45,15 @@
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            console.log("Successfully compared FSTs");
+            comparisonData = data;
         })
         .catch(e => {
             console.log(e)
         })
     }
+
+    let comparisonData: FstComparison = null;
 </script>
 
 
@@ -63,6 +67,9 @@
             <Select items={doculects} isMulti={true} bind:value={selectedDoculects} />
             <button on:click={handleComparison}>Go</button>
         </div>
+        {#if comparisonData}
+            <FstOutput data={comparisonData} langsUnderStudy={selectedDoculects.map(p => p.value)} />
+        {/if}
     </div>
 </main>
 

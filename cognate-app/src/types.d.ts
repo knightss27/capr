@@ -10,7 +10,6 @@ export interface CognateApp {
     fstDoculects: any[],
     fstDown: any,
     fstUp: any,
-    
 }
 
 export interface Board {
@@ -41,4 +40,26 @@ export interface Word {
     gloss: string,
     glossid: string,
     syllables: string[]
+}
+
+export interface FstComparison {
+    chapters: {
+        i: Section[],
+        m: Section[],
+        r: Section[],
+        t: Section[]
+    }
+}
+
+export interface Section {
+    rows: {
+        gloss: string,
+        ipas: string[],
+        new_reconstruction: string,
+        new_reconstructions: string[],
+        old_reconstruction: string,
+        old_reconstructions: string[],
+        status: string
+    }[],
+    title: string
 }
