@@ -57,9 +57,8 @@
 			})
 	}
 
-	let showNewFst = false;
 	let showCognateInterface = false;
-	let fstEditorWidth = 300;
+	let showNewFst = false;
 </script>
 
 
@@ -85,7 +84,7 @@
 			<!-- The Board component for displaying columns -->
 			<Board columnIds={loaded.boards[$currentBoard].columnIds} columns={loaded.columns} bind:loaded />
 		{:else}
-			<FstComparator data={loaded} />
+			<FstComparator data={loaded} {showNewFst} />
 		{/if}
 	{/if}
 </main>

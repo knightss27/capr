@@ -6,11 +6,14 @@
     import FstOutput from "./FstOutput.svelte";
 
     export let data: CognateApp;
+    export let showNewFst = false;
 
+    // Temporarily set our FSTs to existing options for testing.
     let oldFst = initialTransducers.oldTransducer;
 	let newFst = initialTransducers.newTransducer;
 
-
+    // Doculects to be selected from.
+    // Should really be returned from server or something where they can be centrally defined.
     let doculects = [
         'Old_Burmese', 
         'Achang_Longchuan',
@@ -21,10 +24,13 @@
         'Lashi'
     ]
 
+    // Currently selected doculect list.
     let selectedDoculects = [];
 
     // TODO: move this to just replace call
     let rootUrl = "http://localhost:5000"
+
+    // Calls the comparison route with our FSTs, returning the new data.
     const handleComparison = async () => {
         console.log('Calling comparison generator')
 
@@ -53,17 +59,26 @@
         })
     }
 
+    // Holds the data returned by the `compare-fst` route
     let comparisonData: FstComparison = null;
+    // Lets us keep the editor widths the same when switching between new/old
+	let fstEditorWidth = 300;
 </script>
 
 
 <main>
+    <!-- Both of the FST editors, which are CodeMirror 6 instances -->
     <div class="editor">
-        <FstEditor bind:fst={oldFst} id={1} />
-        <FstEditor bind:fst={newFst} id={2} />
+        {#if showNewFst}
+        <FstEditor bind:fst={newFst} id={1} bind:fstEditorWidth {oldFst} />
+        {:else}
+        <FstEditor bind:fst={oldFst} id={2} bind:fstEditorWidth {oldFst} />
+        {/if}
     </div>
+    <!-- The compare list, which is a massive table with a Select at the top -->
     <div class="compare">
         <div class="compare-list">
+            <!-- Select component from @svelte-select -->
             <Select items={doculects} isMulti={true} bind:value={selectedDoculects} />
             <button on:click={handleComparison}>Go</button>
         </div>
@@ -108,5 +123,7 @@
         border-radius: 0.5rem;
         margin: 0px;
         height: 100%;
+        margin-left: 0.5rem;
+        padding: 0rem 1rem;
     }
 </style>

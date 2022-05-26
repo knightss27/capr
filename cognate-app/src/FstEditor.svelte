@@ -2,22 +2,82 @@
     export let fst: string;
     export let fstEditorWidth: number = 300;
     export let id: number;
+    export let oldFst: string;
 
     import {basicSetup} from "@codemirror/basic-setup"
-    import {EditorState} from "@codemirror/state"
-    import {EditorView, keymap} from "@codemirror/view"
+    import {EditorState, Extension, Facet, RangeSetBuilder} from "@codemirror/state"
+    import {Decoration, DecorationSet, EditorView, keymap, ViewPlugin, ViewUpdate} from "@codemirror/view"
     import {defaultKeymap} from "@codemirror/commands"
     import { onMount } from "svelte";
+    import * as Diff from "diff";
 
-    const onUpdate = EditorView.updateListener.of((v) => {
-        fst = v.state.doc.toString();
-    });
+    // Diff calculation for displaying changes
+    let changedRanges: Diff.Hunk[] = [];
+    const calcDiff = (): Diff.Hunk[] => {
+        let diff = Diff.structuredPatch('OLD FST', 'NEW FST', oldFst, fst, '', '', {context: 0});
+        return diff.hunks
+    }
 
+    // Colors for displaying the diffs as line highlights
+    const baseTheme = EditorView.baseTheme({
+        "&light .cm-code-addition": {backgroundColor: "#90ee903d"},
+        "&light .cm-code-removal": {backgroundColor: "#f080803d"},
+        ".cm-selectionMatch": {backgroundColor: "lightblue !important"}
+    })
+
+    // A bunch of CodeMirror specific stuff for highlighting diff regions.
+    // It works so I'm using it, though it is definitely not the cleanest solution.
+    const colorLine = (type: boolean): Decoration => {
+        return Decoration.line({
+            attributes: {class: `cm-code-${type ? 'addition' : 'removal'}`}
+        })
+    } 
+    function stripeDeco(view: EditorView) {
+        let builder = new RangeSetBuilder<Decoration>()
+        changedRanges = calcDiff();
+        for (let {from, to} of view.visibleRanges) {
+            // console.log(from, to)
+            for (let pos = from; pos <= to; pos++) {
+                let line = view.state.doc.lineAt(pos);
+                for (let r of changedRanges) {
+                    if (line.number >= r.newStart && line.number < r.newStart+r.newLines) {
+                        builder.add(line.from, line.from, colorLine(r.newLines >= r.oldLines));
+                    }
+                }
+            }
+        }
+        return builder.finish()
+    }
+    const showStripes = ViewPlugin.fromClass(class {
+        decorations: DecorationSet
+
+        constructor(view: EditorView) {
+            this.decorations = stripeDeco(view)
+        }
+
+        update(update: ViewUpdate) {
+            if (update.docChanged || update.viewportChanged) {
+                fst = update.state.doc.toString();
+                this.decorations = stripeDeco(update.view)
+            }
+        }
+        }, {
+        decorations: v => v.decorations
+    })
+    const diffHighlight = (): Extension => {
+        return [
+            baseTheme,
+            showStripes
+        ]
+    }
+
+    // When the component loads, we create the CodeMirror component,
+    // destroying it once the component is unloaded.
     onMount(() => {
 
         let startState = EditorState.create({
             doc: fst,
-            extensions: [basicSetup, keymap.of(defaultKeymap), onUpdate]
+            extensions: [basicSetup, keymap.of(defaultKeymap), diffHighlight()]
         })
 
         let view = new EditorView({
@@ -29,7 +89,7 @@
         return () => {view.destroy()}
     })
 
-
+    // Temp. variable to let us not update our width too many times.
     let initWidth = fstEditorWidth;
 </script>
 

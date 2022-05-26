@@ -1,12 +1,15 @@
 <script lang="ts">
     import FstReconstruction from "./FstReconstruction.svelte";
     import type { FstComparison } from "./types";
+    import VirtualList from "@sveltejs/svelte-virtual-list";
 
     export let data: FstComparison;
     export let langsUnderStudy: string[];
 
+    // The titles of our chapters. Don't know why the server doesn't just return these...
     let chapterTitles = {i:'Initials', m:'Medials', r:'Rimes', t:'Tones'};
 
+    // Allows us to set the background color as necessary for visual status updates
     const getBg = (status: string) => {
         if (status === "smiling") {
             return "lightgreen"
@@ -16,52 +19,61 @@
             return "white"
         }
     }
-
+    
+    // While testing, useful to know what we should be seeing.
     console.log(data);
+
+    let listData = [].concat(...Object.keys(data.chapters).map(id => {
+        return [{isTitle: true, title: chapterTitles[id]}, ...data.chapters[id]]
+    }))
 </script>
 
 <div>
-    {#each Object.keys(data.chapters) as chapterId}
-        <h1>{chapterTitles[chapterId]}</h1>
-        {#each data.chapters[chapterId] as section}
-            <h2>{section.title}</h2>
-            <table>
-                <tr>
-                    <th>Gloss</th>
-                    {#each langsUnderStudy as lang}
-                        <th>{lang}</th>
-                    {/each}
-                </tr>
-                {#each section.rows as row}
-                <tr style="background-color:{getBg(row.status)};">
-                    <td>{row.gloss ? `"${row.gloss}"` : ""}</td>
-                    {#each row.ipas as ipa}
-                    <td class="sourceipa"><b>{ipa}</b></td>
-                    {/each}
-                </tr>
-                <tr style="background-color:{getBg(row.status)};">
-                    <td>{row.old_reconstruction ? row.old_reconstruction : ""}</td>
-                    {#each row.old_reconstructions as recs}
-                        <td>
-                            <FstReconstruction recs={recs.length > 0 ? recs.split(", "): []} />
-                        </td>
-                    {/each}
-                </tr>
-                <tr class="last" style="background-color:{getBg(row.status)};">
-                    <td>{row.new_reconstruction ? row.new_reconstruction : ""}</td>
-                    {#each row.new_reconstructions as recs}
-                        <td>
-                            <FstReconstruction recs={recs.length > 0 ? recs.split(", "): []} />
-                        </td>
-                    {/each}
-                    <td>
-                        {(row.status == "smiling") ? '😊' : (row.status == "frowning") ? '🙁' : ''}
-                    </td>
-                </tr>
+    <!-- Goes through each chapter (i, m, r, t) and its sections as one big list -->
+    <!-- Using a virtual list means we save a LOT of performance -->
+    <VirtualList items={listData} let:item >
+        {#if item.isTitle}
+        <h1>{item.title}</h1>
+        {:else}
+        <h2>{item.title}</h2>
+        <!-- Lay it out in a big table... -->
+        <table>
+            <tr>
+                <th>Gloss</th>
+                {#each langsUnderStudy as lang}
+                    <th>{lang}</th>
                 {/each}
-            </table>
-        {/each}
-    {/each}
+            </tr>
+            {#each item.rows as row}
+            <tr style="background-color:{getBg(row.status)};">
+                <td>{row.gloss ? `"${row.gloss}"` : ""}</td>
+                {#each row.ipas as ipa}
+                <td class="sourceipa"><b>{ipa}</b></td>
+                {/each}
+            </tr>
+            <tr style="background-color:{getBg(row.status)};">
+                <td>{row.old_reconstruction ? row.old_reconstruction : ""}</td>
+                {#each row.old_reconstructions as recs}
+                    <td>
+                        <FstReconstruction recs={recs.length > 0 ? recs.split(", "): []} />
+                    </td>
+                {/each}
+            </tr>
+            <tr class="last" style="background-color:{getBg(row.status)};">
+                <td>{row.new_reconstruction ? row.new_reconstruction : ""}</td>
+                {#each row.new_reconstructions as recs}
+                    <td>
+                        <FstReconstruction recs={recs.length > 0 ? recs.split(", "): []} />
+                    </td>
+                {/each}
+                <td>
+                    {(row.status == "smiling") ? '😊' : (row.status == "frowning") ? '🙁' : ''}
+                </td>
+            </tr>
+            {/each}
+        </table>
+        {/if}
+    </VirtualList>
 </div>
 
 
@@ -86,5 +98,10 @@
 
     div {
         overflow: auto;
+        height: 100%;
+    }
+
+    h2 {
+        text-align: center;
     }
 </style>
