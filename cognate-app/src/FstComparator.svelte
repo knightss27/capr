@@ -4,9 +4,12 @@
     import type { CognateApp, FstComparison } from "./types";
     import initialTransducers from "./initialTransducers"
     import FstOutput from "./FstOutput.svelte";
+    import { Circle2 } from "svelte-loading-spinners";
 
     export let data: CognateApp;
     export let showNewFst = false;
+    export let statusMessage: string;
+    export let statusError: boolean;
 
     // Temporarily set our FSTs to existing options for testing.
     let oldFst = initialTransducers.oldTransducer;
@@ -24,15 +27,19 @@
         'Lashi'
     ]
 
+    let fst_names = {'Old_Burmese': 'burmese', 'Achang_Longchuan': 'ngochang', 'Xiandao': 'xiandao', 'Maru': 'maru', 'Bola': 'bola', 'Atsi': 'atsi', 'Lashi': 'lashi'}
+
     // Currently selected doculect list.
-    let selectedDoculects = [];
+    export let selectedDoculects = [];
 
     // TODO: move this to just replace call
     let rootUrl = "http://localhost:5000"
 
     // Calls the comparison route with our FSTs, returning the new data.
     const handleComparison = async () => {
-        console.log('Calling comparison generator')
+        statusMessage = "Calculating correspondence patterns..."
+        comparisonData = null;
+        loadingData = true;
 
         fetch(`${rootUrl}/compare-fst`, {
             method: 'POST',
@@ -51,18 +58,26 @@
         })
         .then(res => res.json())
         .then(data => {
-            console.log("Successfully compared FSTs");
+            // If we have our data, we should have calculated correctly.
+            console.log("Successfully calculated correspondence.")
             comparisonData = data;
+            statusMessage = "Patterns calculated."
+            loadingData = false;
         })
         .catch(e => {
-            console.log(e)
+            // If we have an error, we've got some issues.
+            console.log("Error encountered while calculating correspondence:")
+            console.error(e);
+            statusError = true;
+            statusMessage = e.message;
         })
     }
 
     // Holds the data returned by the `compare-fst` route
-    let comparisonData: FstComparison = null;
+    export let comparisonData: FstComparison = null;
+    let loadingData = false;
     // Lets us keep the editor widths the same when switching between new/old
-	let fstEditorWidth = 300;
+	let fstEditorWidth = 600;
 </script>
 
 
@@ -84,6 +99,10 @@
         </div>
         {#if comparisonData}
             <FstOutput data={comparisonData} langsUnderStudy={selectedDoculects.map(p => p.value)} />
+        {:else if loadingData}
+            <div class="loader">
+                <Circle2 />            
+            </div>
         {/if}
     </div>
 </main>
@@ -113,10 +132,17 @@
         display: flex;
         width: 100%;
         align-items: center;
+        padding-bottom: 1rem;
     }
 
     div.compare-list :global(.selectContainer) {
         flex-grow: 1;
+    }
+
+    div.loader {
+        display: flex;
+        width: 100%;
+        justify-content: center;
     }
 
     button {

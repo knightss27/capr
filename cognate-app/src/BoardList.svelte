@@ -7,6 +7,7 @@
 </script>
 
 <div>
+    <span class="title">Boards:</span>
     {#each boards as b, i}
     <span class:current={$currentBoard == b.id} on:click={() => {$currentBoard = b.id}}>{b.title}</span>
     {/each}
@@ -34,5 +35,16 @@
     span.current {
         color: white;
         background-color: dimgray;
+    }
+
+    span.title {
+        padding: 0.25rem 1rem; 
+        position: sticky; 
+        left: 0px; 
+        margin: 0px; 
+        padding: 0.35rem; 
+        border: 1px solid black;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
     }
 </style>

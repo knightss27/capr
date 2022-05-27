@@ -2,7 +2,7 @@
 	import BoardList from './BoardList.svelte';
 	import Board from './Board.svelte';
 	import { currentBoard } from './stores';
-	import type { CognateApp } from './types';
+	import type { CognateApp, FstComparison } from './types';
 	import FstEditor from './FstEditor.svelte';
 	
 	// Imports starting JSON data for running as POC (proof of concept).
@@ -10,7 +10,6 @@
 	// @ts-ignore
 	import initialData from './initialData';
 	import FstComparator from './FstComparator.svelte';
-	
 	
 	// Loads our initial data into a central state (TODO: think about extracting to a store)
 	let loaded: CognateApp = {
@@ -29,7 +28,7 @@
 
 	// Handles the refish call
 	const handleRefish = async () => {
-		statusMessage = "Refishing current board..."
+		statusMessage = "Refishing current boards..."
 		await fetch(`${rootUrl}/refish-board`, {
 			method: "POST",
 			headers: {
@@ -57,8 +56,15 @@
 			})
 	}
 
-	let showCognateInterface = false;
+	const saveBoardsLocally = () => {
+		window.localStorage.setItem('boards', JSON.stringify({ boards: loaded.boards, columns: loaded.columns }))
+	}
+
+	let showCognateInterface = true;
 	let showNewFst = false;
+
+	let comparisonData: FstComparison = null;
+	let selectedDoculects = [];
 </script>
 
 
@@ -70,9 +76,11 @@
 			{#if showCognateInterface}
 				<button on:click={handleRefish}>Refish Board</button>
 				<span class:statusError>Status: {statusMessage}</span>
+				<button on:click={saveBoardsLocally}>Save Boards</button>
 			{:else}
 				<button on:click={() => {showNewFst = !showNewFst}}>Switch FST</button>
 				<span class="info">Current FST: {showNewFst ? "New" : "Old"}</span>
+				<span class:statusError>Status: {statusMessage}</span>
 			{/if}
 			<button class="sticky" on:click={() => {showCognateInterface = !showCognateInterface}}>{showCognateInterface ? "Show FST Editor" : "Show Cognate Editor"}</button>
 		</div>
@@ -84,7 +92,7 @@
 			<!-- The Board component for displaying columns -->
 			<Board columnIds={loaded.boards[$currentBoard].columnIds} columns={loaded.columns} bind:loaded />
 		{:else}
-			<FstComparator data={loaded} {showNewFst} />
+			<FstComparator data={loaded} {showNewFst} bind:comparisonData bind:selectedDoculects bind:statusMessage bind:statusError />
 		{/if}
 	{/if}
 </main>
