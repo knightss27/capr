@@ -30,7 +30,7 @@
 	let statusError = false;
 
 	// Where our api is
-	const rootUrl = "http://localhost:5000"
+	const rootUrl = "/api"
 	// Just some info about the POC inputs
 	const currentSourceFile = "burmish-primitive-2000-with-ob.tsv"
 
