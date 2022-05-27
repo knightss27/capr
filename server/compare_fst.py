@@ -9,6 +9,12 @@
 #   newTransducer: (New version)
 #   board: (Board file)
 
+## Single # = Xun Gong's notes
+## Double ## = Seth Knights's notes
+
+## For disabling eprints that are unecessary
+production = True
+
 # Constants
 language_title = {'Old_Burmese': 'OBurm', 'Achang_Longchuan': 'Acha-LC', 'Xiandao': 'Acha-XD', 'Maru': 'Maru', 'Bola': 'Bola', 'Atsi': 'Atsi', 'Lashi': 'Lashi'}
 fst_index = {'Old_Burmese': 'burmese', 'Achang_Longchuan': 'ngochang', 'Xiandao': 'xiandao', 'Maru': 'maru', 'Bola': 'bola', 'Atsi': 'atsi', 'Lashi': 'lashi'}
@@ -204,7 +210,7 @@ def compare_fst(input_json):
         if row['CROSSIDS']:
             crossids = row['CROSSIDS'].split(' ')
         else:
-            eprint('SANITY: empty crossid: ', row['ID'])
+            if not production: eprint('SANITY: empty crossid: ', row['ID'])
             return
 
         word_id = 'word-' + row['ID']
@@ -435,4 +441,5 @@ def compare_fst(input_json):
             this_section['rows'] = rows
             json_chapters[pos].append(this_section)
 
+    eprint("Successful comparison.")
     return {'chapters': json_chapters}

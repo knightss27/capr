@@ -49,16 +49,25 @@ def with_json(*outer_args):
 
     return decorator
 
+
+# /new-board gives us the compiled format of our source material aftre it has been run through Lexstat
 @app.route("/new-board")
 def new_board():
     return compile_to_json("../output/burmish-pipeline/stage2/burmish-stage2-tmp-merged.tsv")
 
+
+# /refish-board returns the output of the refishing algorithm for cognate reassignment 
 @app.route("/refish-board", methods=["POST"])
-@with_json("columns", "boards")
+@with_json("columns", "boards", "transducer")
 def refish_board(json_body):
+    if (json_body['transducer'] == 'internal'):
+        del json_body['transducer']
+
     new_board = refish(json_body)
     return new_board
 
+
+# /compare-fst returns the correspondence patterns for the transducer interface
 @app.route("/compare-fst", methods=["POST"])
 @with_json("langsUnderStudy", "oldTransducer", "newTransducer", "board")
 def compare(json_body):

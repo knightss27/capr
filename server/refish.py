@@ -3,6 +3,9 @@
 ## Single # = Xun Gong's notes
 ## Double ## = Seth Knights's notes
 
+## For disabling eprints that are unecessary
+production = True
+
 # Constants
 language_title = {'Old_Burmese': 'OBurm', 'Achang_Longchuan': 'Acha-LC', 'Xiandao': 'Acha-XD', 'Maru': 'Maru', 'Bola': 'Bola', 'Atsi': 'Atsi', 'Lashi': 'Lashi'}
 fst_index = {'Old_Burmese': 'burmese', 'Achang_Longchuan': 'ngochang', 'Xiandao': 'xiandao', 'Maru': 'maru', 'Bola': 'bola', 'Atsi': 'atsi', 'Lashi': 'lashi'}
@@ -148,10 +151,29 @@ def refish(jsonfile, csvfile = "lexicon.tsv", fstfile = "refishing-fst.txt"):
     script_path = os.path.dirname(os.path.realpath(__file__))
 
     fsts_new = {}
+    new_transducer = ""
 
-    # Read and compile the FST
-    with open(fstfile) as fst_file:
-        new_transducer = fst_file.read()
+    eprint('Processing json input...')
+    if (isinstance(jsonfile, dict)):
+        eprint("Parsing board as inputted JSON")
+
+        if 'transducer' in jsonfile:
+            eprint("Using user provided transducer")
+            new_transducer = jsonfile['transducer']
+        else:
+            eprint("Using default transducer")
+            with open(fstfile) as fst_file:
+                new_transducer = fst_file.read()
+
+        input_board = jsonfile
+    else:
+        eprint("Parsing board as file")
+        input_board = json.load(open(jsonfile, 'r+'))
+
+        # Read and compile the FST
+        with open(fstfile) as fst_file:
+            new_transducer = fst_file.read()
+
 
     with tempfile.TemporaryDirectory() as tmpdirname:
         os.chdir(tmpdirname)
@@ -195,15 +217,6 @@ def refish(jsonfile, csvfile = "lexicon.tsv", fstfile = "refishing-fst.txt"):
         words = {}
         for row in csvreader:
             process_row(row)
-
-    eprint('Processing boards...')
-    if (isinstance(jsonfile, dict)):
-        eprint("Parsing board as inputted JSON")
-        input_board = jsonfile
-    else:
-        eprint("Parsing board as file")
-        with open(jsonfile) as json_file:
-            input_board = json.load(open(jsonfile, 'r+'))
 
     old_columns = input_board['columns']
     old_boards = input_board['boards']
@@ -249,14 +262,14 @@ def refish(jsonfile, csvfile = "lexicon.tsv", fstfile = "refishing-fst.txt"):
         columns = sorted(ds_round1.group[equivclass_id])
         # how to merge columns? Simple: be conservative, don't merge them
         if len(columns) > 1:
-            eprint(columns)
+            if not production: eprint(columns)
             for col in columns:
                 # prepare a report
                 report = []
                 for syl_id in old_columns[col]["syllableIds"]:
                     syl = input_syllables[syl_id]
                     report.append(syl["glossid"] + syl["syllable"])
-                eprint(', '.join(report))
+                if not production: eprint(', '.join(report))
 
     new_columns = {}
     new_column_of_old_column = {}
@@ -432,11 +445,12 @@ def refish(jsonfile, csvfile = "lexicon.tsv", fstfile = "refishing-fst.txt"):
                         new_board_of_any = new_board_of_column[boardmate]
                         continue
                 if new_board_of_any:
-                    eprint(column_id, str(reconstructions_of_column[column_id]), 'reassigned to', new_board_of_any, json_boards[new_board_of_any]['title'])
+                    if not production: eprint(column_id, str(reconstructions_of_column[column_id]), 'reassigned to', new_board_of_any, json_boards[new_board_of_any]['title'])
                     json_boards[new_board_of_any]["columnIds"].append(column_id)
         else:
             # no change, let's not clobber the interface
             if 'refishingStatus' in input_columns[column_id]:
                 del input_columns[column_id]['refishingStatus']
-
+    
+    eprint("Successful refishing.")
     return {'columns': input_columns, 'boards': json_boards}
