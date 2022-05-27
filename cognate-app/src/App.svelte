@@ -3,7 +3,6 @@
 	import Board from './Board.svelte';
 	import { currentBoard } from './stores';
 	import type { CognateApp, FstComparison } from './types';
-	import FstEditor from './FstEditor.svelte';
 	
 	// Imports starting JSON data for running as POC (proof of concept).
 	// This data is a little too long, which is why HMR fails. Just reload the page manually.
@@ -12,8 +11,15 @@
 	import FstComparator from './FstComparator.svelte';
 	
 	// Loads our initial data into a central state (TODO: think about extracting to a store)
-	let loaded: CognateApp = {
+	let loaded: CognateApp = window.localStorage.getItem('boards') == null ? {
 		...initialData,
+	} as unknown as CognateApp : {
+		...JSON.parse(window.localStorage.getItem('boards')),
+		fstDoculects: initialData.fstDoculects,
+		fstUp: initialData.fstUp,
+		fstDown: initialData.fstDown,
+		words: initialData.words,
+		syllables: initialData.syllables,
 	} as unknown as CognateApp;
 
 	// Set hasLoaded to true while we are just testing for POC.
@@ -24,11 +30,21 @@
 	let statusError = false;
 
 	// Where our api is
-	const rootUrl = "/api"
+	const rootUrl = "http://localhost:5000"
+	// Just some info about the POC inputs
+	const currentSourceFile = "burmish-primitive-2000-with-ob.tsv"
 
 	// Handles the refish call
 	const handleRefish = async () => {
+		if (useNewFst && newFst.length == 0) {
+			statusMessage = "No new FST loaded."
+			statusError = true;
+			return
+		}
+		
+		statusError = false;
 		statusMessage = "Refishing current boards..."
+		
 		await fetch(`${rootUrl}/refish-board`, {
 			method: "POST",
 			headers: {
@@ -36,7 +52,8 @@
 			},
 			body: JSON.stringify({
 				columns: loaded.columns,
-				boards: loaded.boards
+				boards: loaded.boards,
+				transducer: useNewFst ? newFst : "internal"
 			})
 		})
 			.then((res => res.json()))
@@ -46,6 +63,7 @@
 				loaded.columns = data.columns,
 				loaded.boards = data.boards
 				statusMessage = "Refishing completed."
+				$currentBoard = "board-1";
 			})
 			.catch(e => {
 				// If we have an error, we've got some issues.
@@ -57,14 +75,23 @@
 	}
 
 	const saveBoardsLocally = () => {
-		window.localStorage.setItem('boards', JSON.stringify({ boards: loaded.boards, columns: loaded.columns }))
+		window.localStorage.setItem('boards', JSON.stringify({ boards: loaded.boards, columns: loaded.columns }));
+	}
+
+	const saveFSTLocally = () => {
+		window.localStorage.setItem('fsts', JSON.stringify({oldFst, newFst}));
 	}
 
 	let showCognateInterface = true;
 	let showNewFst = false;
 
+	// Whether or not we should use our new FST from the editor for refishing
+	let useNewFst = false;
+
 	let comparisonData: FstComparison = null;
 	let selectedDoculects = [];
+	let oldFst = "";
+	let newFst = "";
 </script>
 
 
@@ -75,14 +102,20 @@
 		<div>
 			{#if showCognateInterface}
 				<button on:click={handleRefish}>Refish Board</button>
+				<span class="info checkbox">
+					<label for="useNewFst">Use new FST?</label>
+					<input style="margin: 0px 0px 0px 0.25rem;" type="checkbox" name="useNewFst" bind:checked={useNewFst} />
+				</span>
 				<span class:statusError>Status: {statusMessage}</span>
 				<button on:click={saveBoardsLocally}>Save Boards</button>
 			{:else}
 				<button on:click={() => {showNewFst = !showNewFst}}>Switch FST</button>
 				<span class="info">Current FST: {showNewFst ? "New" : "Old"}</span>
+				<button on:click={saveFSTLocally}>Save FSTs</button>
 				<span class:statusError>Status: {statusMessage}</span>
 			{/if}
-			<button class="sticky" on:click={() => {showCognateInterface = !showCognateInterface}}>{showCognateInterface ? "Show FST Editor" : "Show Cognate Editor"}</button>
+			<span class="info sticky">Using source: <a href="/sources/{currentSourceFile}">{currentSourceFile}</a> (<a href="/sources/{currentSourceFile.substring(0, currentSourceFile.length-4)}-lexicon.{currentSourceFile.substring(currentSourceFile.length-3)}">lexicon</a>)</span>
+			<button on:click={() => {showCognateInterface = !showCognateInterface}}>{showCognateInterface ? "Show FST Editor" : "Show Cognate Editor"}</button>
 		</div>
 		{#if showCognateInterface}
 			<!-- The list of all possible boards -->
@@ -92,7 +125,7 @@
 			<!-- The Board component for displaying columns -->
 			<Board columnIds={loaded.boards[$currentBoard].columnIds} columns={loaded.columns} bind:loaded />
 		{:else}
-			<FstComparator data={loaded} {showNewFst} bind:comparisonData bind:selectedDoculects bind:statusMessage bind:statusError />
+			<FstComparator data={loaded} {showNewFst} bind:oldFst bind:newFst bind:comparisonData bind:selectedDoculects bind:statusMessage bind:statusError />
 		{/if}
 	{/if}
 </main>
@@ -127,6 +160,12 @@
 		border-radius: 0.5rem;
 	}
 
+	span.checkbox {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
 	span.info {
 		background-color: #f4f4f4;
 	}
@@ -141,7 +180,7 @@
 		border-radius: 0.5rem;
 	}
 
-	button.sticky {
-		margin-left: auto;
+	.sticky {
+		margin-left: auto !important;
 	}
 </style>
