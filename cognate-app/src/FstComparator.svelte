@@ -10,10 +10,19 @@
     export let showNewFst = false;
     export let statusMessage: string;
     export let statusError: boolean;
+    export let oldFst: string = "";
+    export let newFst: string = "";
 
     // Temporarily set our FSTs to existing options for testing.
-    let oldFst = initialTransducers.oldTransducer;
-	let newFst = initialTransducers.newTransducer;
+    if (window.localStorage.getItem('fsts') != null) {
+        let fsts = JSON.parse(window.localStorage.getItem('fsts'));
+        oldFst = fsts.oldFst;
+        newFst = fsts.newFst;
+    } else {
+        oldFst = initialTransducers.oldTransducer;
+        newFst = initialTransducers.newTransducer;
+    }
+
 
     // Doculects to be selected from.
     // Should really be returned from server or something where they can be centrally defined.
@@ -87,7 +96,7 @@
         {#if showNewFst}
         <FstEditor bind:fst={newFst} id={1} bind:fstEditorWidth {oldFst} />
         {:else}
-        <FstEditor bind:fst={oldFst} id={2} bind:fstEditorWidth {oldFst} />
+        <FstEditor bind:fst={oldFst} id={2} bind:fstEditorWidth />
         {/if}
     </div>
     <!-- The compare list, which is a massive table with a Select at the top -->

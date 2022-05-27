@@ -2,7 +2,7 @@
     export let fst: string;
     export let fstEditorWidth: number = 300;
     export let id: number;
-    export let oldFst: string;
+    export let oldFst: string = "";
 
     import {basicSetup} from "@codemirror/basic-setup"
     import {EditorState, Extension, Facet, RangeSetBuilder} from "@codemirror/state"
@@ -22,7 +22,8 @@
     const baseTheme = EditorView.baseTheme({
         "&light .cm-code-addition": {backgroundColor: "#90ee903d"},
         "&light .cm-code-removal": {backgroundColor: "#f080803d"},
-        ".cm-selectionMatch": {backgroundColor: "lightblue !important"}
+        ".cm-selectionMatch": {backgroundColor: "lightblue !important"},
+        ".cm-code-fst-header": {color: "red"}
     })
 
     // A bunch of CodeMirror specific stuff for highlighting diff regions.
@@ -34,11 +35,20 @@
     } 
     function stripeDeco(view: EditorView) {
         let builder = new RangeSetBuilder<Decoration>()
+        if (id != 1) {
+            return builder.finish();
+        }
+
         changedRanges = calcDiff();
         for (let {from, to} of view.visibleRanges) {
-            // console.log(from, to)
             for (let pos = from; pos <= to; pos++) {
                 let line = view.state.doc.lineAt(pos);
+
+                // Some optional highlighting for common '###' format for differentiating FST sections.
+                if (line.text.lastIndexOf("#") == line.text.length-1) {
+                    builder.add(line.from, line.from, Decoration.line({attributes: {class: 'cm-code-fst-header'}}))
+                }
+
                 for (let r of changedRanges) {
                     if (line.number >= r.newStart && line.number < r.newStart+r.newLines) {
                         builder.add(line.from, line.from, colorLine(r.newLines >= r.oldLines));
@@ -58,13 +68,16 @@
         update(update: ViewUpdate) {
             if (update.docChanged || update.viewportChanged) {
                 fst = update.state.doc.toString();
-                this.decorations = stripeDeco(update.view)
+                // Don't do highlighting if we are the old FST
+                if (id == 1) {
+                    this.decorations = stripeDeco(update.view)
+                }
             }
         }
         }, {
         decorations: v => v.decorations
     })
-    const diffHighlight = (): Extension => {
+    const diffHighlight = (): Extension => {  
         return [
             baseTheme,
             showStripes
@@ -83,7 +96,6 @@
         let view = new EditorView({
             state: startState,
             parent: document.getElementById(`editor-${id}`)
-            
         }) 
 
         return () => {view.destroy()}
