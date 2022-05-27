@@ -9,12 +9,18 @@
     "check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
+    "@codemirror/basic-setup": "^0.20.0",
+    "@codemirror/commands": "^0.20.0",
+    "@codemirror/state": "^0.20.0",
+    "@codemirror/view": "^0.20.6",
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
     "@rollup/plugin-typescript": "^8.0.0",
+    "@sveltejs/svelte-virtual-list": "^3.0.1",
     "@tsconfig/svelte": "^2.0.0",
     "@types/diff": "^5.0.2",
+    "diff": "^5.1.0",
     "rollup": "^2.3.4",
     "rollup-plugin-css-only": "^3.1.0",
     "rollup-plugin-livereload": "^2.0.0",
@@ -25,6 +31,7 @@
     "svelte-dnd-action": "^0.9.18",
     "svelte-loading-spinners": "^0.1.7",
     "svelte-preprocess": "^4.0.0",
+    "svelte-select": "^4.4.7",
     "tslib": "^2.0.0",
     "typescript": "^4.0.0"
   },

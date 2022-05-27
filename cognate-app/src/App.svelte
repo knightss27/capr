@@ -24,7 +24,7 @@
 	let statusError = false;
 
 	// Where our api is
-	const rootUrl = "http://localhost:5000"
+	const rootUrl = "/api"
 
 	// Handles the refish call
 	const handleRefish = async () => {

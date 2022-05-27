@@ -33,7 +33,7 @@
     export let selectedDoculects = [];
 
     // TODO: move this to just replace call
-    let rootUrl = "http://localhost:5000"
+    let rootUrl = "/api"
 
     // Calls the comparison route with our FSTs, returning the new data.
     const handleComparison = async () => {
