@@ -19,3 +19,8 @@ npm i
 npm run dev
 # opens interface on localhost:8080
 ```
+
+You must have `libfoma0` and `libfoma0-dev` installed for the API to work.
+```
+sudo apt-get install libfoma0 libfoma0-dev
+```
