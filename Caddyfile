@@ -1,4 +1,4 @@
-23.170.176.5
+capr.seth.cx
 
 route /api/* {
     uri strip_prefix /api

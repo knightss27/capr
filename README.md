@@ -8,7 +8,7 @@ To run while developing:
 
 ```
 cd server
-export FLASK_APP=capr
+export FLASK_APP=server
 flask run
 # opens API on localhost:5000
 ```
