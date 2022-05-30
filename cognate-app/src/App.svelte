@@ -74,6 +74,25 @@
 			})
 	}
 
+	let highestColNum = -1;
+	const addNewColumn = () => {
+		if (highestColNum == -1) {
+			for (let num in loaded.columns) {
+				let parsed = parseInt(num.substring(7))
+				if (parsed > highestColNum) {
+					highestColNum = parsed;
+				}
+			}
+		}
+		highestColNum += 1;
+		let newColumn = `column-${highestColNum}`
+		loaded.columns[newColumn] = {
+			id: newColumn,
+			syllableIds: []
+		}
+		loaded.boards[$currentBoard].columnIds.push(newColumn)
+	}
+
 	const saveBoardsLocally = () => {
 		window.localStorage.setItem('boards', JSON.stringify({ boards: loaded.boards, columns: loaded.columns }));
 	}
@@ -101,6 +120,7 @@
 	{:else}
 		<div>
 			{#if showCognateInterface}
+				<button on:click={addNewColumn}>Add Column</button>
 				<button on:click={handleRefish}>Refish Board</button>
 				<span class="info checkbox">
 					<label for="useNewFst">Use new FST?</label>
@@ -147,14 +167,8 @@
 		padding-bottom: 1rem;
 	}
 
-	div.editor-wrap {
-		height: 100%;
-		padding: 0px;
-		max-width: 50%;
-	}
-
 	span {
-		margin: auto 0.5rem;
+		margin: auto 0.25rem;
 		padding: 0.5rem 1rem;
 		background-color: lightgreen;
 		border-radius: 0.5rem;
@@ -175,9 +189,9 @@
 	}
 
 	button {
-		margin: 0px;
 		display: flex;
 		border-radius: 0.5rem;
+		margin: 0px 0.25rem;
 	}
 
 	.sticky {

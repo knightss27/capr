@@ -55,6 +55,7 @@
     generateSharedReconstructions();
 
     let pastID = column.id;
+    let pastSyllables = column.syllableIds.length;
 
     // Regenerate when a new board is selected (otherwise Svelte attempts to optimize too much of this)
     $: if ($currentBoard) {
@@ -65,6 +66,12 @@
     // Regenerate after switching columns (otherwise we think we are a different column then we are supposed to be)
     $: if (column.id != pastID) {
         pastID = column.id;
+        generateSharedReconstructions();
+    }
+
+    // Regnerate after adding or removing things from a column (shallow comparison doesn't catch this)
+    $: if (column.syllableIds.length != pastSyllables) {
+        pastSyllables = columnSyllables.length;
         generateSharedReconstructions();
     }
 
