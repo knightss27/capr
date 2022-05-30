@@ -21,11 +21,31 @@
     }
     
     // While testing, useful to know what we should be seeing.
-    console.log(data);
+    //console.log(data);
 
+    // Construct data into a format that works well for virtual lists
     let listData = [].concat(...Object.keys(data.chapters).map(id => {
         return [{isTitle: true, title: chapterTitles[id]}, ...data.chapters[id]]
     }))
+
+    // If we are missing a transducer, we gotta add in a column where it should have been!
+    if (data.missing_transducers.length > 0) {
+        let missingIndices = data.missing_transducers.map(n => langsUnderStudy.indexOf(n))
+        listData = listData.map(i => {
+            let n = i;
+            if (!n.isTitle) {
+                for (let j = 0; j < n.rows.length; j++) {
+                    for (let missingIndex of missingIndices) {
+                        n.rows[j].old_reconstructions.splice(missingIndex, 0, "")
+                        n.rows[j].new_reconstructions.splice(missingIndex, 0, "")
+                    }
+                }
+            }
+            return n;
+        })
+    }
+
+    //console.log('listData', listData)
 </script>
 
 <div>

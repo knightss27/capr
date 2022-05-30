@@ -20,6 +20,7 @@ language_title = {'Old_Burmese': 'OBurm', 'Achang_Longchuan': 'Acha-LC', 'Xianda
 fst_index = {'Old_Burmese': 'burmese', 'Achang_Longchuan': 'ngochang', 'Xiandao': 'xiandao', 'Maru': 'maru', 'Bola': 'bola', 'Atsi': 'atsi', 'Lashi': 'lashi'}
 
 # Basic imports
+from hashlib import new
 import sys
 import re
 import json
@@ -195,6 +196,15 @@ def compare_fst(input_json):
                 fsts_new[doculect_name] = FST.load(fst_index[doculect_name] + '.bin')
         os.chdir(script_path)
         eprint('FSTs loaded:', ', '.join(fsts_new))
+
+    both_missing = []
+    if not all(b in fsts_new for b in langs_under_study) and not all(b in fsts_old for b in langs_under_study):
+        old_missing = set(langs_under_study).difference(fsts_old)
+        new_missing = set(langs_under_study).difference(fsts_new)
+        eprint('Missing old FST for languages:', ', '.join(old_missing))
+        eprint('Missing new FST for languages:', ', '.join(new_missing))
+        both_missing = list((old_missing) & (new_missing))
+        langs_under_study = [lang for lang in langs_under_study if lang not in both_missing]
 
     # read the word CSV
     # import fileinput
@@ -442,4 +452,4 @@ def compare_fst(input_json):
             json_chapters[pos].append(this_section)
 
     eprint("Successful comparison.")
-    return {'chapters': json_chapters}
+    return {'chapters': json_chapters, 'missing_transducers': both_missing}

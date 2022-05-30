@@ -49,6 +49,7 @@
         statusMessage = "Calculating correspondence patterns..."
         comparisonData = null;
         loadingData = true;
+        statusError = false;
 
         fetch(`${rootUrl}/compare-fst`, {
             method: 'POST',
@@ -71,6 +72,10 @@
             console.log("Successfully calculated correspondence.")
             comparisonData = data;
             statusMessage = "Patterns calculated."
+            statusError = false;
+            if (data.missing_transducers.length > 0) {
+                statusMessage += " Missing FSTs: " + data.missing_transducers.join(",");
+            }
             loadingData = false;
         })
         .catch(e => {
