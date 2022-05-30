@@ -46,5 +46,8 @@
 <style>
     div.board {
 		display: flex;
+        overflow-x: auto;
+        max-width: 100%;
+        min-height: fit-content;
 	}
 </style>

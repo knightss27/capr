@@ -103,10 +103,12 @@
 		margin: 0 0.25rem;
         background-color: white;
         max-width: 10rem;
+        height: 100%;
 	}
 
     div.dropzone {
-        min-height: 4rem;
+        min-height: 100%;
+        min-width: 4rem;
     }
 
     h3 {
