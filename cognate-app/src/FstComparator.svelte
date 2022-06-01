@@ -114,7 +114,7 @@
     <div class="compare">
         <div class="compare-list">
             <!-- Select component from @svelte-select -->
-            <Select items={doculects} isMulti={true} bind:value={selectedDoculects} />
+            <Select placeholder="Select languages" placeholderAlwaysShow={true} items={doculects} isMulti={true} bind:value={selectedDoculects} />
             <button on:click={handleComparison}>Go</button>
         </div>
         {#if compilerErrors.length > 0}
@@ -158,6 +158,7 @@
         width: 100%;
         align-items: center;
         padding-bottom: 1rem;
+        --inputFontSize: 1rem;
     }
 
     div.compare-list :global(.selectContainer) {
