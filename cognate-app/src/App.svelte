@@ -3,6 +3,7 @@
 	import Board from './Board.svelte';
 	import { currentBoard } from './stores';
 	import type { CognateApp, FstComparison } from './types';
+	import { saveAs } from 'file-saver';
 	
 	// Imports starting JSON data for running as POC (proof of concept).
 	// This data is a little too long, which is why HMR fails. Just reload the page manually.
@@ -97,6 +98,16 @@
 		window.localStorage.setItem('boards', JSON.stringify({ boards: loaded.boards, columns: loaded.columns }));
 	}
 
+	const exportBoards = () => {
+		const boardsToExport = {boards: loaded.boards, columns: loaded.columns}
+		const blob = new Blob([JSON.stringify(boardsToExport)], { type: "application/json;charset=utf-8" })
+		saveAs(blob, `capr-board-${new Date().toLocaleDateString()}.json`)
+	}
+
+	const loadBoards = () => {
+
+	}
+
 	const saveFSTLocally = () => {
 		window.localStorage.setItem('fsts', JSON.stringify({oldFst, newFst}));
 	}
@@ -111,6 +122,21 @@
 	let selectedDoculects = [];
 	let oldFst = "";
 	let newFst = "";
+
+	// Uploaded board management
+	let files: FileList;
+	$: if (files) {
+		console.log(files)
+		if (files[0] && files[0].type == "application/json") {
+			const reader = new FileReader();
+			reader.onload = (e: any) => {
+				let newJSON = JSON.parse(e.target.result);
+				loaded.columns = newJSON.columns;
+				loaded.boards = newJSON.boards;
+			};
+			reader.readAsText(files[0])
+		}
+	}
 </script>
 
 
@@ -120,14 +146,12 @@
 	{:else}
 		<div>
 			{#if showCognateInterface}
-				<button on:click={addNewColumn}>Add Column</button>
 				<button on:click={handleRefish}>Refish Board</button>
 				<span class="info checkbox">
 					<label for="useNewFst">Use new FST?</label>
 					<input style="margin: 0px 0px 0px 0.25rem;" type="checkbox" name="useNewFst" bind:checked={useNewFst} />
 				</span>
 				<span class:statusError>Status: {statusMessage}</span>
-				<button on:click={saveBoardsLocally}>Save Boards</button>
 			{:else}
 				<button on:click={() => {showNewFst = !showNewFst}}>Switch FST</button>
 				<span class="info">Current FST: {showNewFst ? "New" : "Old"}</span>
@@ -140,10 +164,22 @@
 		{#if showCognateInterface}
 			<!-- The list of all possible boards -->
 			<BoardList boards={Object.values(loaded.boards)} />
-			<!-- The current board's title -->
-			<h1>{loaded.boards[$currentBoard].title}</h1>
+			<!-- The current board's title and some relevant options -->
+			<div class="board-title">
+				<h1>{loaded.boards[$currentBoard].title}</h1>
+				<div class="options">
+					Board Options:
+					<button class="option" on:click={addNewColumn}>Add Column</button>
+					<button class="option" on:click={saveBoardsLocally}>Save</button>
+					<button class="option" on:click={exportBoards}>Export</button>
+					<input accept="application/json" id="board-upload" type="file" bind:files/>
+					<label for="board-upload" class="option custom-file-upload">
+						Load
+					</label>
+				</div>
+			</div>
 			<!-- The Board component for displaying columns -->
-			<Board columnIds={loaded.boards[$currentBoard].columnIds} columns={loaded.columns} bind:loaded />
+			<Board columnIds={loaded.boards[$currentBoard].columnIds} columns={loaded.columns} bind:loaded {addNewColumn} />
 		{:else}
 			<FstComparator data={loaded} {showNewFst} bind:oldFst bind:newFst bind:comparisonData bind:selectedDoculects bind:statusMessage bind:statusError />
 		{/if}
@@ -165,6 +201,35 @@
 		align-items: center;
 		width: 100%;
 		padding-bottom: 1rem;
+	}
+
+	div.board-title {
+		justify-content: space-between;
+	}
+
+	div.options {
+		width: fit-content;
+		padding: 0px 1rem;
+		background-color: #f4f4f4;
+		border-radius: 0.5rem;
+	}
+
+	.option {
+		border-radius: 0px;
+		margin: 0px;
+		padding: 0.5rem;
+		border-top: none;
+		border-bottom: none;
+		cursor: pointer;
+	}
+
+	.option:first-child {
+		border-left: 2px solid #ccc;
+		margin-left: 1rem;
+	}
+
+	.option:last-child {
+		border-right: 2px solid #ccc;
 	}
 
 	span {
@@ -196,5 +261,13 @@
 
 	.sticky {
 		margin-left: auto !important;
+	}
+
+	input[type="file"] {
+		display: none;
+	}
+
+	label.custom-file-upload {
+		border-left: 1px solid #ccc;
 	}
 </style>

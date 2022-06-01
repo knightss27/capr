@@ -4,10 +4,14 @@
     import type { CognateApp, Column } from "./types";
     import  {dndzone } from "svelte-dnd-action";
     import { currentBoard } from "./stores";
+    import Menu from "./menu/Menu.svelte";
+    import MenuOption from "./menu/MenuOption.svelte";
 
     export let columnIds: string[];
     export let columns: { [key: string]: Column}
     export let loaded: CognateApp;
+    // Callback for adding a new column
+    export let addNewColumn: () => void;
 
     // Creates copies of our data for dragging and dropping, central state is only mutated on finalization
     let items = columnIds.map((c, i) => {return {id: i, name: c}});
@@ -35,13 +39,37 @@
         handleColConsider(id, e);
         loaded.columns[id].syllableIds = e.detail.items.map(i => i.id);
     }
+
+    // Menu stuff
+    let pos = { x: 0, y: 0 };
+	let showMenu = false;
+	async function onRightClick(e) {
+		if (showMenu) {
+			showMenu = false;
+			await new Promise(res => setTimeout(res, 100));
+		}
+		
+		pos = { x: e.clientX, y: e.clientY };
+		showMenu = true;
+	}
+	function closeMenu() {
+		showMenu = false;
+	}
 </script>
 
-<div class="board" use:dndzone={{items: items, type: 'columns'}} on:consider={handleConsider} on:finalize={handleFinalize}>
+<div on:contextmenu|preventDefault={onRightClick} class="board" use:dndzone={{items: items, type: 'columns'}} on:consider={handleConsider} on:finalize={handleFinalize}>
     {#each items as c(c.id)}
     <ColumnComp column={columns[c.name]} syllables={loaded.syllables} fstUp={loaded.fstUp} words={loaded.words} handleConsider={handleColConsider} handleFinalize={handleColFinalize} bind:loaded bind:columnItems />
     {/each}
 </div>
+
+{#if showMenu}
+	<Menu {...pos} on:click={closeMenu} on:clickoutside={closeMenu}>
+		<MenuOption 
+			on:click={addNewColumn} 
+			text="Add Column" />
+	</Menu>
+{/if}
 
 <style>
     div.board {
