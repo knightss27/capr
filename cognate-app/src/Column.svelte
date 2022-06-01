@@ -4,6 +4,7 @@
     import { dndzone } from "svelte-dnd-action";
     import { currentBoard } from "./stores";
     import type { CognateApp, Column, Syllable, Word } from "./types";
+    import { onMount, tick } from "svelte";
 
     export let fstUp: any;
     export let column: Column;
@@ -60,7 +61,6 @@
     // Regenerate when a new board is selected (otherwise Svelte attempts to optimize too much of this)
     $: if ($currentBoard) {
         generateSharedReconstructions();
-        console.log('calling generate')
     }
 
     // Regenerate after switching columns (otherwise we think we are a different column then we are supposed to be)
@@ -73,25 +73,56 @@
     $: if (column.syllableIds.length != pastSyllables) {
         pastSyllables = columnSyllables.length;
         generateSharedReconstructions();
+        generateProtogloss();
     }
 
+    // Generate the protogloss, using a basic set unless otherwise defined (i.e. a user-inputted gloss).
+    let protogloss = "";
+    const generateProtogloss = async () => {
+        if (column.protogloss) {
+            protogloss = column.protogloss;
+        } else {
+            let glosses = new Set();
+            for (let syllable of columnSyllables) {
+                glosses.add(syllable.gloss)
+            }
+            protogloss = [...glosses].join("; ")
+        }
+        await tick();
+        handleTextareaResize();
+    }
+
+    // Some basic manipulation to allow the editible gloss to shrink its height.
+    let textarea: HTMLTextAreaElement;
+    const handleTextareaResize = () => {
+        textarea.style.height = "34px";
+        textarea.style.height = textarea.scrollHeight + "px";
+
+        // Once you edit the gloss, we make it into a permanent one.
+        loaded.columns[column.id].protogloss = protogloss;
+    }
+
+    // Since we don't have the textarea reference until we have mounted, we call generateProtgloss afterwards.
+    onMount(() => {
+        generateProtogloss();
+    })
 </script>
 
-<!-- {#if isShadow}
-<span class="shadow"></span>
-{:else} -->
+
 <div class="column">
+    <!-- Shared reconstructions (if we have more than one word) -->
     <h3>
         {'*' + (column.syllableIds.length > 1 ? crossid_reconstructions.join(', ') : "")}
     </h3>
+    <!-- Our headwords / column gloss -->
+    <textarea bind:this={textarea} bind:value={protogloss} on:input={handleTextareaResize} />
+    <!-- Drag and drop zone with our cards of each syllable/word -->
     <div class="dropzone" use:dndzone={{items: columnItems[columnItems.findIndex(c => c.id == column.id)].items}} on:consider={(e) => {handleConsider(column.id, e)}} on:finalize={(e) => {handleFinalize(column.id, e)}}>
         {#each columnItems[columnItems.findIndex(c => c.id == column.id)].items as syl(syl.id)}
         <Card syllable={syl} word={words[syl.wordId]} />
         {/each}
     </div>
 </div>
-<!-- {/if} -->
-
 
 
 <style>
@@ -114,11 +145,15 @@
     h3 {
         margin: 0rem;
         padding: 0.25rem 0.5rem;
-        border-bottom: 1px solid gray;
     }
 
-    span.shadow {
-        width: 4px;
-        border: 2px solid blue;
+    textarea {
+        font-style: italic !important;
+        resize: none;
+        border: none;
+        border-bottom: 1px solid gray;
+        border-radius: 0px;
+        overflow: hidden;
+        height: 34px;
     }
 </style>

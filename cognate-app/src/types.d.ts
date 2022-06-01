@@ -20,7 +20,8 @@ export interface Board {
 
 export interface Column {
     id: string,
-    syllableIds: string[]
+    syllableIds: string[],
+    protogloss?: string
 }
 
 export interface Syllable {
