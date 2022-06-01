@@ -61,12 +61,14 @@
     // Regenerate when a new board is selected (otherwise Svelte attempts to optimize too much of this)
     $: if ($currentBoard) {
         generateSharedReconstructions();
+        generateProtogloss();
     }
 
     // Regenerate after switching columns (otherwise we think we are a different column then we are supposed to be)
     $: if (column.id != pastID) {
         pastID = column.id;
         generateSharedReconstructions();
+        generateProtogloss();
     }
 
     // Regnerate after adding or removing things from a column (shallow comparison doesn't catch this)
@@ -79,6 +81,7 @@
     // Generate the protogloss, using a basic set unless otherwise defined (i.e. a user-inputted gloss).
     let protogloss = "";
     const generateProtogloss = async () => {
+        await tick();
         if (column.protogloss) {
             protogloss = column.protogloss;
         } else {
@@ -97,7 +100,9 @@
     const handleTextareaResize = () => {
         textarea.style.height = "34px";
         textarea.style.height = textarea.scrollHeight + "px";
+    }
 
+    const setAsGloss = () => {
         // Once you edit the gloss, we make it into a permanent one.
         loaded.columns[column.id].protogloss = protogloss;
     }
@@ -115,7 +120,7 @@
         {'*' + (column.syllableIds.length > 1 ? crossid_reconstructions.join(', ') : "")}
     </h3>
     <!-- Our headwords / column gloss -->
-    <textarea bind:this={textarea} bind:value={protogloss} on:input={handleTextareaResize} />
+    <textarea bind:this={textarea} bind:value={protogloss} on:input={() => {handleTextareaResize(); setAsGloss();}} />
     <!-- Drag and drop zone with our cards of each syllable/word -->
     <div class="dropzone" use:dndzone={{items: columnItems[columnItems.findIndex(c => c.id == column.id)].items}} on:consider={(e) => {handleConsider(column.id, e)}} on:finalize={(e) => {handleFinalize(column.id, e)}}>
         {#each columnItems[columnItems.findIndex(c => c.id == column.id)].items as syl(syl.id)}
@@ -131,15 +136,15 @@
 		flex-direction: column;
 		border: 1px solid gray;
 		border-radius: 0.25rem;
-		margin: 0 0.25rem;
+		margin: 0 0.25rem 2rem;
         background-color: white;
         max-width: 10rem;
         height: 100%;
 	}
 
     div.dropzone {
-        min-height: 100%;
         min-width: 4rem;
+        min-height: 10rem;
     }
 
     h3 {

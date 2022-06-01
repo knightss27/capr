@@ -124,7 +124,7 @@
 <style>
     main {
         width: 100%;
-        height: calc(100% - 62px);
+        height: calc(100vh - 70px);
         display: flex;
     }
 
