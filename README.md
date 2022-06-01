@@ -58,16 +58,16 @@ If you would like to run the entire app at once (i.e. on a server or linux machi
 ## Project Structure
 ```
 .
-├── cognate-app
+├── cognate-app/
 │   └── [svelte code for cognate reassignment and fst editor]
-├── orthoprofiles
+├── orthoprofiles/
 │   └── [orthographical profiles for pipeline stages]
-├── pipeline
+├── pipeline/
 │   └── [wordlist to tokenized lexicon, ran through lexstat to find intial cognates]
-├── reconstruct
+├── reconstruct/
 │   └── [intial fsts for pipeline usage]
-└── server
+└── server/
     └── [all api routes and associated functions]
 ```
 
-You can read more abotu each individual folder in their respective READMEs.
+You can read more about each individual folder in their respective READMEs.
