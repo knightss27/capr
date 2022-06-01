@@ -50,6 +50,7 @@
         comparisonData = null;
         loadingData = true;
         statusError = false;
+        compilerErrors = [];
 
         fetch(`${rootUrl}/compare-fst`, {
             method: 'POST',
@@ -95,8 +96,8 @@
     let loadingData = false;
     // Lets us keep the editor widths the same when switching between new/old
 	let fstEditorWidth = 600;
+    // Keep track of `foma` compiling errors.
     let compilerErrors: string[] = [];
-    compilerErrors = ["Error loading new transducers: Unknown command 'd' on line 318. Aborting.\n"]
 </script>
 
 
@@ -183,5 +184,6 @@
         display: flex;
         justify-content: center;
         padding: 0.5rem;
+        margin-bottom: 0.25rem;
     }
 </style>

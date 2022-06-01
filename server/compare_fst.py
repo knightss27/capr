@@ -12,6 +12,10 @@
 ## Single # = Xun Gong's notes
 ## Double ## = Seth Knights's notes
 
+## Deleting lines 504-5 in the default transducer of the site leaves terms (i.e. 'forehead') where
+## for changing between languages if one changes for the worse, it leaves blank the 'old' version..
+## No clue at all why this happens...
+
 ## For disabling eprints that are unecessary
 production = True
 
@@ -168,15 +172,23 @@ def compare_fst(input_json):
     fsts_old = {}
     fsts_new = {}
 
+    errors = []
+
     # Reading old transducers
     with tempfile.TemporaryDirectory() as tmpdirname:
         os.chdir(tmpdirname)
         eprint('Compiling FSTs (old)')
-        eprint(input_json['oldTransducer'])
         with open('transducer.foma', 'w') as fp:
             fp.write(input_json['oldTransducer'])
         output = subprocess.check_output(['foma', '-f', 'transducer.foma']).decode('UTF-8')
-        eprint('\n'.join(output.split('\n')[-5:]))
+        # eprint('\n'.join(output.split('\n')[-5:]))
+
+        ## Check for errors, to be passed back to the program
+        if '***' in output:
+            error = "Error loading old transducers: " + output.split('***')[1]
+            eprint(error)
+            errors.append(error)
+
         for doculect_name in fst_index:
             if os.path.isfile(fst_index[doculect_name] + '.bin'):
                 fsts_old[doculect_name] = FST.load(fst_index[doculect_name] + '.bin')
@@ -190,7 +202,13 @@ def compare_fst(input_json):
         with open('transducer.foma', 'w') as fp:
             fp.write(input_json['newTransducer'])
         output = subprocess.check_output(['foma', '-f', 'transducer.foma']).decode('UTF-8')
-        eprint('\n'.join(output.split('\n')[-5:]))
+
+        ## Check for errors, to be passed back to the program
+        if '***' in output:
+            error = "Error loading new transducers: " + output.split('***')[1]
+            eprint(error)
+            errors.append(error)
+
         for doculect_name in fst_index:
             if os.path.isfile(fst_index[doculect_name] + '.bin'):
                 fsts_new[doculect_name] = FST.load(fst_index[doculect_name] + '.bin')
@@ -452,4 +470,4 @@ def compare_fst(input_json):
             json_chapters[pos].append(this_section)
 
     eprint("Successful comparison.")
-    return {'chapters': json_chapters, 'missing_transducers': both_missing}
+    return {'chapters': json_chapters, 'missing_transducers': both_missing, 'errors': errors}
