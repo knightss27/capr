@@ -49,7 +49,7 @@ export interface FstComparison {
         m: Section[],
         r: Section[],
         t: Section[]
-    }
+    },
 }
 
 export interface Section {

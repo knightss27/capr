@@ -76,6 +76,9 @@
             if (data.missing_transducers.length > 0) {
                 statusMessage += " Missing FSTs: " + data.missing_transducers.join(",");
             }
+            if (data.errors.length > 0) {
+                compilerErrors = data.errors;
+            }
             loadingData = false;
         })
         .catch(e => {
@@ -92,6 +95,8 @@
     let loadingData = false;
     // Lets us keep the editor widths the same when switching between new/old
 	let fstEditorWidth = 600;
+    let compilerErrors: string[] = [];
+    compilerErrors = ["Error loading new transducers: Unknown command 'd' on line 318. Aborting.\n"]
 </script>
 
 
@@ -111,6 +116,11 @@
             <Select items={doculects} isMulti={true} bind:value={selectedDoculects} />
             <button on:click={handleComparison}>Go</button>
         </div>
+        {#if compilerErrors.length > 0}
+            {#each compilerErrors as err}
+            <span class="compiler-error">{err}</span>
+            {/each}
+        {/if}
         {#if comparisonData}
             <FstOutput data={comparisonData} langsUnderStudy={selectedDoculects.map(p => p.value)} />
         {:else if loadingData}
@@ -165,5 +175,13 @@
         height: 100%;
         margin-left: 0.5rem;
         padding: 0rem 1rem;
+    }
+
+    span.compiler-error {
+        background-color: lightcoral;
+        border-radius: 0.5rem;
+        display: flex;
+        justify-content: center;
+        padding: 0.5rem;
     }
 </style>
