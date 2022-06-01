@@ -122,7 +122,7 @@
         </h3>
         <!-- Refishing status (if it is known) -->
         {#if column.refishingStatus}
-        <img src={column.refishingStatus == "new" ? "newfish.png" : "deadfish.png"} alt="fish" width="30px" />
+        <img src={column.refishingStatus == "new" ? "goodfish.png" : "deadfish.png"} alt="fish" width="30px" />
         {/if}
     </div>
     <!-- Our headwords / column gloss -->
