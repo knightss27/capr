@@ -99,17 +99,19 @@
 	}
 
 	const exportBoards = () => {
-		const boardsToExport = {boards: loaded.boards, columns: loaded.columns}
-		const blob = new Blob([JSON.stringify(boardsToExport)], { type: "application/json;charset=utf-8" })
-		saveAs(blob, `capr-board-${new Date().toLocaleDateString()}.json`)
-	}
-
-	const loadBoards = () => {
-
+		const boardsToExport = {boards: loaded.boards, columns: loaded.columns};
+		const blob = new Blob([JSON.stringify(boardsToExport)], { type: "application/json;charset=utf-8" });
+		saveAs(blob, `capr-board-${new Date().toLocaleDateString()}.json`);
 	}
 
 	const saveFSTLocally = () => {
 		window.localStorage.setItem('fsts', JSON.stringify({oldFst, newFst}));
+	}
+
+	const exportFST = () => {
+		const fstToExport = "------------OLD FST:-------------\n" + oldFst + "\n------------NEW FST:-------------\n" + newFst;
+		const blob = new Blob([fstToExport], { type: "text/plain" });
+		saveAs(blob, `capr-fst-${new Date().toLocaleDateString()}.txt`);
 	}
 
 	let showCognateInterface = true;
@@ -156,6 +158,7 @@
 				<button on:click={() => {showNewFst = !showNewFst}}>Switch FST</button>
 				<span class="info">Current FST: {showNewFst ? "New" : "Old"}</span>
 				<button on:click={saveFSTLocally}>Save FSTs</button>
+				<button on:click={exportFST}>Export FSTs</button>
 				<span class:statusError>Status: {statusMessage}</span>
 			{/if}
 			<span class="info sticky">Using source: <a href="/sources/{currentSourceFile}">{currentSourceFile}</a> (<a href="/sources/{currentSourceFile.substring(0, currentSourceFile.length-4)}-lexicon.{currentSourceFile.substring(currentSourceFile.length-3)}">lexicon</a>)</span>
