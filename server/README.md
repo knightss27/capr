@@ -13,7 +13,7 @@ Each of these tasks are accomplished with code found in their respective files:
 And found at the respective routes for the server:
 | Route | Method | Request Body | Response |
 | :---- | :----- | :----------- | :------- |
-| /new-board | GET | | |
+| /new-board | GET | | `{ boards, columns, currentBoard, fstIndex, maxColumn, searchColumns, syllables, words, fstDoculects, fstDown, fstUp }` |
 | /refish-board | POST | `{ columns, boards, transducer }` | `{ columns, boards }` |
 | /compare-fst | POST | `{ langsUnderStudy, oldTransducer, newTransducer, board }` | `{ chapters, missing_transducers, errors }` |
 
