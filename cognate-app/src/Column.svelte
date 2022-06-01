@@ -115,10 +115,16 @@
 
 
 <div class="column">
-    <!-- Shared reconstructions (if we have more than one word) -->
-    <h3>
-        {'*' + (column.syllableIds.length > 1 ? crossid_reconstructions.join(', ') : "")}
-    </h3>
+    <div class="title">
+        <!-- Shared reconstructions (if we have more than one word) -->
+        <h3>
+            {'*' + (column.syllableIds.length > 1 ? crossid_reconstructions.join(', ') : "")}
+        </h3>
+        <!-- Refishing status (if it is known) -->
+        {#if column.refishingStatus}
+        <img src={column.refishingStatus == "new" ? "newfish.png" : "deadfish.png"} alt="fish" width="30px" />
+        {/if}
+    </div>
     <!-- Our headwords / column gloss -->
     <textarea bind:this={textarea} bind:value={protogloss} on:input={() => {handleTextareaResize(); setAsGloss();}} />
     <!-- Drag and drop zone with our cards of each syllable/word -->
@@ -147,6 +153,12 @@
         min-height: 10rem;
     }
 
+    div.title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     h3 {
         margin: 0rem;
         padding: 0.25rem 0.5rem;
@@ -160,5 +172,11 @@
         border-radius: 0px;
         overflow: hidden;
         height: 34px;
+    }
+
+    img {
+        margin: 0px;
+        padding: 0px;
+        padding-right: 0.5rem;
     }
 </style>

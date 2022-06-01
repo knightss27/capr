@@ -21,7 +21,8 @@ export interface Board {
 export interface Column {
     id: string,
     syllableIds: string[],
-    protogloss?: string
+    protogloss?: string,
+    refishingStatus?: string
 }
 
 export interface Syllable {
