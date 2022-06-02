@@ -24,10 +24,18 @@ You must have `libfoma0` and `libfoma0-dev` installed for the API to work.
 ```
 sudo apt-get install libfoma0 libfoma0-dev
 ```
+Do note that due to this [error](https://github.com/mhulden/foma/issues/97) it is possible that using the 0.9.18 version of foma you will end up with un-caught errors in FST compilation, that may end up returning a 500 error from the server. So, please be careful to check the version of the package your are installing with the above command. If you have problems on linux with the version, I strongly recommend just downloading and building the most recent version yourself:
+```
+~# wget https://github.com/mhulden/foma/archive/refs/heads/master.zip
+~# unzip master.zip
+~# cd ./foma-master/foma/
+~/foma-master/foma# make <-- make sure to install the libraries listed below
+~/foma-master/foma# make install 
+```
 
 I would love to have this working for other OS's that aren't linux distros, however getting foma to work with the Python bindings is, frankly, a complete mess (especially for Windows). I will say that one can successfully compile foma from source using Cygwin (using the 0.10.0 version on [Github](https://github.com/mhulden/foma)). Attempting to build the 0.9.18 version (whose source can be found [here](https://bitbucket.org/mhulden/foma/downloads/)) with more recent versions of gcc (what you will by default download with Cygwin), will throw errors.
 
-If you attempt to build with Cygwin, note that you will likely need to edit the `Makefile` to remove the `-ltermcap` flag (as mentioned [here](http://damir.cavar.me/compiling-foma-on-windows-with-cygwin)). Also ensure that you install the `Devel` packages necessary for foma (`graphviz, flex, bison, zlib, libncurses-devel, libreadline-devel`).
+If you attempt to build with Cygwin, note that you will likely need to edit the `Makefile` to remove the `-ltermcap` flag (as mentioned [here](http://damir.cavar.me/compiling-foma-on-windows-with-cygwin)). Also ensure that you install the `Devel` packages necessary for foma (`graphviz, flex, bison, zlib, libncurses-dev, libreadline-dev`).
 
 If you would like to run the entire app at once (i.e. on a server or linux machine) so that you can use it, please install [Caddy](https://caddyserver.com/). Follow the instructions they give for setting up, and once your `caddy` command is available, you can:
 
