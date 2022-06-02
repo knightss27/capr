@@ -91,7 +91,7 @@ id_of_doculect = {doculects[i]: i for i in range(len(doculects))}
 orthoprofile_transducer = ['burmese', False, False, False, False, False, False, False]
 
 orthoprofile_filenames = ['profile-Written_Burmese.tsv', 'profile-Rangoon.tsv', 'profile-Achang.tsv', 'profile-Xiandao.tsv', 'profile-Atsi.tsv', 'profile-Bola.tsv', 'profile-Lashi.tsv', 'profile-Maru.tsv']
-tokenizers = [Tokenizer(profile = Profile.from_file('orthoprofiles/' + fn)) for fn in orthoprofile_filenames]
+tokenizers = [Tokenizer(profile = Profile.from_file('../orthoprofiles/' + fn)) for fn in orthoprofile_filenames]
 
 transducer = {}
 transducer_template = {}
@@ -102,8 +102,8 @@ def burmish_parse(w, language):
         # Do it the new way, by transducer-based thingie
         # Check if transducers are present
         if transducer_name not in transducer:
-            transducer[transducer_name] = FST.load('./reconstruct/' + transducer_name + '-ortho.bin')
-            transducer_template[transducer_name] = FST.load('./reconstruct/' + transducer_name + '-ortho-template.bin')
+            transducer[transducer_name] = FST.load('../reconstruct/' + transducer_name + '-ortho.bin')
+            transducer_template[transducer_name] = FST.load('../reconstruct/' + transducer_name + '-ortho-template.bin')
 
         syllabized_w = syllabize(w)
         # parse every syllable, now every syllable contains
