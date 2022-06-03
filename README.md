@@ -4,7 +4,7 @@ This repository holds the re-write and working implementation of the interface a
 
 > Xun Gong, & Nathan Hill. (2020). Materials for an Etymological Dictionary of Burmish. Zenodo. https://doi.org/10.5281/zenodo.4311182
 
-To run while developing:
+To run while developing (with Python 3):
 
 ```
 cd server
@@ -12,7 +12,7 @@ export FLASK_APP=server
 flask run
 # opens API on localhost:5000
 ```
-and
+and then (with Node >=14)
 ```
 cd cognate-app
 npm i
