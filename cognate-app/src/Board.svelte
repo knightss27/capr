@@ -19,10 +19,8 @@
     let columnItems = columnIds.map((c) => {return {id: c, items: columns[c].syllableIds.map(s => loaded.syllables[s])}})
     let pinnedItems = [];
 
-    // $: items = columnIds.map((c, i) => {return {id: i, name: c}});
-
+    // Update items when we switch boards
     let prevBoard = $currentBoard;
-
     $: if ($currentBoard != prevBoard) {
         items = columnIds.map((c, i) => {return {id: i, name: c}});
         columnItems = [...pinnedItems.map((c) => {return {id: c.name, items: columns[c.name].syllableIds.map(s => loaded.syllables[s])}}), ...columnIds.map((c) => {return {id: c, items: columns[c].syllableIds.map(s => loaded.syllables[s])}})];
