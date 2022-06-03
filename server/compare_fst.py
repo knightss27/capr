@@ -29,6 +29,8 @@ import sys
 import re
 import json
 import csv
+
+from numpy import equal
 from merge_phonemes import merge_phonemes
 from functools import reduce
 from collections import Counter
@@ -180,12 +182,19 @@ def compare_fst(input_json):
         eprint('Compiling FSTs (old)')
         with open('transducer.foma', 'w') as fp:
             fp.write(input_json['oldTransducer'])
-        output = subprocess.check_output(['foma', '-f', 'transducer.foma']).decode('UTF-8')
-        # eprint('\n'.join(output.split('\n')[-5:]))
+        eprint("---------")
+        output = subprocess.run(['foma', '-f', 'transducer.foma'], capture_output=True,check=True, text=True)
+
+        # Add errors from stderr
+        if (len(output.stderr) > 0):
+            for err in output.stderr.split("\n"):
+                if len(err) > 0:
+                    errors.append("Error loading old transducer: " + err)
+                    eprint(err)
 
         ## Check for errors, to be passed back to the program
-        if '***' in output:
-            error = "Error loading old transducers: " + output.split('***')[1]
+        if '***' in output.stdout:
+            error = "Error loading old transducer: " + output.stdout.split('***')[1]
             eprint(error)
             errors.append(error)
 
@@ -201,11 +210,19 @@ def compare_fst(input_json):
         eprint('Compiling FSTs (new)')
         with open('transducer.foma', 'w') as fp:
             fp.write(input_json['newTransducer'])
-        output = subprocess.check_output(['foma', '-f', 'transducer.foma']).decode('UTF-8')
+        eprint("---------")
+        output = subprocess.run(['foma', '-f', 'transducer.foma'], capture_output=True,check=True, text=True)
 
-        ## Check for errors, to be passed back to the program
-        if '***' in output:
-            error = "Error loading new transducers: " + output.split('***')[1]
+        # Add errors from stderr
+        if (len(output.stderr) > 0):
+            for err in output.stderr.split("\n"):
+                if len(err) > 0:
+                    errors.append("Error loading new transducer: " + err)
+                    eprint(err)
+
+        # Check for errors in stdout, to be passed back to the program
+        if '***' in output.stdout:
+            error = "Error loading new transducer: " + output.stdout.split('***')[1]
             eprint(error)
             errors.append(error)
 
