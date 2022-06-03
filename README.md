@@ -62,6 +62,19 @@ If you would like to run the entire app at once (i.e. on a server or linux machi
 
 4. Visit the location you specified to use CAPR.
 
+## Important Notes
+When writing FSTs in the editor, you must write them for the languages below (unless you go ahead and change the code). Each language has a corresponding `.bin` name that it must be assigned at the end of that section of the transducer, i.e: `save stack lashi.bin`.
+
+| Language Name | .bin Name |
+| :------------ | :-------- |
+| Old_Burmese | burmese.bin |
+| Achang_Longchuan | ngochang.bin |
+| Xiandao | xiandao.bin |
+| Maru | maru.bin |
+| Bola | bola.bin |
+| Atsi | atsi.bin |
+| Lashi | lashi.bin |
+
 
 ## Project Structure
 ```
