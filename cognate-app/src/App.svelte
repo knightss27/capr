@@ -196,6 +196,7 @@
 		width: 100%;
 		padding: 0px;
 		margin: 0 auto;
+		height: calc(100% - 8px);
 	}
 
 	div {

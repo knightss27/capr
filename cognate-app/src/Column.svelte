@@ -142,7 +142,7 @@
 		flex-direction: column;
 		border: 1px solid gray;
 		border-radius: 0.25rem;
-		margin: 0 0.25rem 2rem;
+		margin: 0 0.25rem 0rem;
         background-color: white;
         max-width: 10rem;
         height: 100%;
