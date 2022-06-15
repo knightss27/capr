@@ -7,6 +7,7 @@ This repository holds the re-write and working implementation of the interface a
 To run while developing (with Python 3):
 
 ```
+pip install -r requirements.txt
 cd server
 export FLASK_APP=server
 flask run
