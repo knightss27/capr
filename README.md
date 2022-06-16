@@ -7,7 +7,6 @@ This repository holds the re-write and working implementation of the interface a
 To run while developing (with Python 3):
 
 ```
-pip install -r requirements.txt
 cd server
 export FLASK_APP=server
 flask run
@@ -25,6 +24,9 @@ You must have `libfoma0` and `libfoma0-dev` installed for the API to work.
 ```
 sudo apt-get install libfoma0 libfoma0-dev
 ```
+
+For much more in-depth instructions, see [SETUP.md]().
+
 Do note that due to this [error](https://github.com/mhulden/foma/issues/97) it is possible that using the 0.9.18 version of foma you will end up with un-caught errors in FST compilation, that may end up returning a 500 error from the server. So, please be careful to check the version of the package your are installing with the above command. If you have problems on linux with the version, I strongly recommend just downloading and building the most recent version yourself:
 ```
 ~# wget https://github.com/mhulden/foma/archive/refs/heads/master.zip

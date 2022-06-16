@@ -1,8 +1,8 @@
-capr.seth.cx
+:5000
 
 route /api/* {
     uri strip_prefix /api
-    reverse_proxy localhost:8000
+    reverse_proxy http://server:8000
 }
 
-reverse_proxy localhost:8080
+reverse_proxy http://app:8080

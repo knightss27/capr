@@ -136,10 +136,10 @@ def sort_row_tuples(row_tuples, reconstructed_sense):
     return row_tuples_sorted_by_senses
 
 def compile_to_json(filepath):
-    fst_burmese = FST.load('../reconstruct/burmese.bin')
-    fst_achang = FST.load('../reconstruct/ngochang.bin')
-    fst_maru = FST.load('../reconstruct/maru.bin')
-    fst_bola = FST.load('../reconstruct/bola.bin')
+    fst_burmese = FST.load('./reconstruct/burmese.bin')
+    fst_achang = FST.load('./reconstruct/ngochang.bin')
+    fst_maru = FST.load('./reconstruct/maru.bin')
+    fst_bola = FST.load('./reconstruct/bola.bin')
     fsts = {'Old_Burmese': fst_burmese, 'Achang_Longchuan': fst_achang, 'Maru': fst_maru, 'Bola': fst_bola}
 
     # JSONs
