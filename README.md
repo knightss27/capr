@@ -33,7 +33,7 @@ You must have `libfoma0` and `libfoma0-dev` installed for the API to work.
 sudo apt-get install libfoma0 libfoma0-dev
 ```
 
-For much more in-depth instructions, see [SETUP.md]().
+For much more in-depth instructions, see [SETUP.md](https://github.com/knightss27/capr/blob/main/SETUP.md).
 
 ## Important Notes
 When writing FSTs in the editor, you must write them for the languages below (unless you go ahead and change the code). Each language has a corresponding `.bin` name that it must be assigned at the end of that section of the transducer, i.e: `save stack lashi.bin`.
