@@ -16,7 +16,13 @@ WORKDIR "./foma-82f9acdef234eae8b7619ccc3a386cc0d7df62bc/foma/"
 RUN make
 RUN make install
 
-WORKDIR "/usr/app"
+# dev stuff
+EXPOSE 5000
+
+WORKDIR /usr/app
 COPY . .
 
-CMD ["gunicorn",  "-b", "0.0.0.0:8000", "server:app"]
+
+# CMD ["flask", "run"]
+
+# CMD ["gunicorn",  "-b", "0.0.0.0:8000", "server:app"]
