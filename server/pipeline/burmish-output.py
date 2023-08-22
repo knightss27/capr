@@ -36,8 +36,8 @@ def merge_phonemes_burmish(old_schema, old_tokens, debug=None):
         return ('','')
 
 wl = Wordlist('./output/burmish-pipeline/stage2/burmish-stage2-2-aligned.tsv')
-wl.add_entries('tmp_structure', 'structure,tokens', lambda x, y: merge_phonemes_burmish(x[y[0]], ' '.join(x[y[1]]), x)[0])
-wl.add_entries('tmp_tokens', 'structure,tokens', lambda x, y: merge_phonemes_burmish(x[y[0]], ' '.join(x[y[1]]), x)[1])
+# wl.add_entries('tmp_structure', 'structure,tokens', lambda x, y: merge_phonemes_burmish(x[y[0]], ' '.join(x[y[1]]), x)[0])
+# wl.add_entries('tmp_tokens', 'structure,tokens', lambda x, y: merge_phonemes_burmish(x[y[0]], ' '.join(x[y[1]]), x)[1])
 
 columns = copy(wl.columns)
 columns.remove('alignment')
@@ -47,11 +47,11 @@ columns.remove('tokens')
 ## Here we output a "temporary" (tmp) merged tsv between the stage 2-1 and 2-2 files, sorted by shared meaning.
 ## Only outputs a subset of the data for the languages defined at the top of the file.
 ## Reference: https://github.com/lingpy/lingpy/blob/44c027e88a7e6e8f96c32c4cddd7c19ea1902c14/src/lingpy/basic/wordlist.py#L861
-wl.output('tsv', filename='./output/burmish-pipeline/stage2/burmish-stage2-tmp-merged', subset=True, rows={"doculect": " in " + str(languages)}, cols=columns)
+wl.output('tsv', filename='./output/germanic-something', subset=True, rows={"doculect": " in " + str(languages)}, cols=columns)
 
 ## CoPaR = Correspondence Pattern Recognition class
-cop = CoPaR('./output/burmish-pipeline/stage2/burmish-stage2-tmp-merged.tsv', ref='crossids', segments='tmp_tokens', fuzzy=True,
-        structure='tmp_structure')
+cop = CoPaR('./output/burmish-pipeline/stage2/burmish-stage2-tmp-merged.tsv', ref='crossids', segments='tokens', fuzzy=True,
+        structure='structure')
 
 cop.get_sites()
 cop.cluster_sites()
