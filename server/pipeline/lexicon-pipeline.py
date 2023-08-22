@@ -25,6 +25,7 @@ def init_argparse() -> argparse.ArgumentParser:
     )
 
     parser.add_argument("--from-aligned", action=argparse.BooleanOptionalAction)
+    parser.add_argument("--pipeline", nargs="?")
     parser.add_argument("file")
 
     return parser
@@ -40,21 +41,35 @@ def from_primitive(file_name, pipeline_name="pipeline"):
     ).exists():
         wl = Wordlist(filename=file_name)
 
-        # parse the ipa
-        ipa_parse = {
-            idx: burmish_parse(wl[idx, "ipa"], wl[idx, "doculect"]) for idx in wl
-        }
+        # # parse the ipa
+        # ipa_parse = {
+        #     idx: burmish_parse(wl[idx, "ipa"], wl[idx, "doculect"]) for idx in wl
+        # }
 
-        print(ipa_parse[1])
+        # print(ipa_parse[1])
 
-        wl.add_entries("tokens", ipa_parse, lambda tup: tup[0])
-        wl.add_entries("structure", ipa_parse, lambda tup: tup[1])
+        # wl.add_entries("tokens", ipa_parse, lambda tup: tup[0])
+        # wl.add_entries("structure", ipa_parse, lambda tup: tup[1])
+
+        # maybe a working way to generate gloss ids?
+        gloss_index = 1
+        entered_ids = {}
+        wl_glossids = {}
+        for idx in wl:
+            if not wl[idx, "concept"] in entered_ids: 
+                entered_ids[wl[idx, "concept"]] = gloss_index
+                gloss_index += 1
+
+            wl_glossids[idx] = entered_ids[wl[idx, "concept"]]
+        wl.add_entries("glossid", wl_glossids, lambda idx: idx)
+
+        
         wl.output(
             "tsv", filename=f"./output/{pipeline_name}/stage1/{pipeline_name}-stage1-tmp"
         )
 
-        # dirty hack
-        # remove everything with �
+        # # dirty hack
+        # # remove everything with �
         system(
             f"grep -v � ./output/{pipeline_name}/stage1/{pipeline_name}-stage1-tmp.tsv > ./output/{pipeline_name}/stage1/{pipeline_name}-stage1.tsv"
         )
@@ -77,10 +92,10 @@ def from_primitive(file_name, pipeline_name="pipeline"):
 
         # check for alignments with missing structure mismatch and exclude them!
         excludes = set()
-        for idx, tokens, structure in par.iter_rows("tokens", "structure"):
-            for m, s in zip(tokens.n, basictypes.lists(structure).n):
-                if len(m) != len(s):
-                    excludes.add(idx)
+        # for idx, tokens, structure in par.iter_rows("tokens", "structure"):
+        #     for m, s in zip(tokens.n, basictypes.lists(structure).n):
+        #         if len(m) != len(s):
+        #             excludes.add(idx)
         # create dictionary that can be read in as a wordlist
         D = {0: par.columns}
         for idx in par:
@@ -122,17 +137,17 @@ def from_aligned(file_name, pipline_name="pipeline", use_template_alignment=Fals
     # align_by_structure(par, segments='tokens', ref='cogids', structure='structure')
     ###
 
-    if use_template_alignment:
+    # if use_template_alignment:
         # VERY Burmish specific stuff here...
-        print("Starting template alignment")
-        template_alignment(
-            alms,
-            ref="cogids",
-            template="imMnNct",  ### This is what is listed as the 'template' default in the old `align_by_structure` method.
-            structure="structure",
-            fuzzy=True,
-            segments="tokens",
-        )
+        # print("Starting template alignment")
+        # template_alignment(
+        #     alms,
+        #     ref="cogids",
+        #     template="imMnNct",  ### This is what is listed as the 'template' default in the old `align_by_structure` method.
+        #     structure="structure",
+        #     fuzzy=True,
+        #     segments="tokens",
+        # )
 
     # All the "ref" usages are also just Burmish specific originally, I have a tiny smidgling of an
     # idea as to why we should switch between cogid / cogids, but if this code is ever supposed
@@ -160,6 +175,7 @@ def from_aligned(file_name, pipline_name="pipeline", use_template_alignment=Fals
         cols=[
             "doculect",
             "concept",
+            "glossid",
             "ipa",
             "tokens",
             "structure",
@@ -175,9 +191,15 @@ print(args)
 fname = args.file
 pname = fname.split("-")[0]
 
+if args.pipeline:
+    pname = args.pipeline
+
 if args.from_aligned:
-    from_aligned(fname, pname)
+    from_aligned(fname, pname, True)
 else:
     from_primitive(fname, pname)
 
-print(f"Pipeline '{pname}' completed!")
+# print(f"Pipeline '{pname}' completed!")
+
+# from_aligned("germanic-data.tsv", "germanic-test")
+# from_primitive("germanic-data.tsv", "germanic-test")
