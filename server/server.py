@@ -2,7 +2,7 @@ from os import abort
 from flask import Flask, Response, jsonify, request
 from flask_cors import CORS
 from functools import wraps
-from compile_lexicon_to_json import compile_to_json
+from compile_lexicon_to_json import compile_to_json, compile_to_json_full_cognates
 from refish import refish
 from compare_fst import compare_fst
 
@@ -53,7 +53,8 @@ def with_json(*outer_args):
 # /new-board gives us the compiled format of our source material after it has been run through Lexstat
 @app.route("/new-board")
 def new_board():
-    return compile_to_json("./pipeline/output/burmish-pipeline/stage2/burmish-stage2-tmp-merged.tsv")
+    return compile_to_json_full_cognates("./pipeline/output/germanic/stage3/germanic-aligned-final.tsv", "Proto-Germanic")
+    # return compile_to_json("./pipeline/output/burmish-pipeline/stage2/burmish-stage2-tmp-merged.tsv")
 
 
 # /refish-board returns the output of the refishing algorithm for cognate reassignment 
