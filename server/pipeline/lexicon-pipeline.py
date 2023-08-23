@@ -41,31 +41,20 @@ def from_primitive(file_name, pipeline_name="pipeline"):
     ).exists():
         wl = Wordlist(filename=file_name)
 
-        # # parse the ipa
-        # ipa_parse = {
-        #     idx: burmish_parse(wl[idx, "ipa"], wl[idx, "doculect"]) for idx in wl
-        # }
+        # parse the ipa
+        if pipeline_name == "burmish":
+            ipa_parse = {
+                idx: burmish_parse(wl[idx, "ipa"], wl[idx, "doculect"]) for idx in wl
+            }
 
-        # print(ipa_parse[1])
+            print(ipa_parse[1])
 
-        # wl.add_entries("tokens", ipa_parse, lambda tup: tup[0])
-        # wl.add_entries("structure", ipa_parse, lambda tup: tup[1])
+            wl.add_entries("tokens", ipa_parse, lambda tup: tup[0])
+            wl.add_entries("structure", ipa_parse, lambda tup: tup[1])
 
-        # maybe a working way to generate gloss ids?
-        gloss_index = 1
-        entered_ids = {}
-        wl_glossids = {}
-        for idx in wl:
-            if not wl[idx, "concept"] in entered_ids: 
-                entered_ids[wl[idx, "concept"]] = gloss_index
-                gloss_index += 1
-
-            wl_glossids[idx] = entered_ids[wl[idx, "concept"]]
-        wl.add_entries("glossid", wl_glossids, lambda idx: idx)
-
-        
         wl.output(
-            "tsv", filename=f"./output/{pipeline_name}/stage1/{pipeline_name}-stage1-tmp"
+            "tsv",
+            filename=f"./output/{pipeline_name}/stage1/{pipeline_name}-stage1-tmp",
         )
 
         # # dirty hack
@@ -77,7 +66,8 @@ def from_primitive(file_name, pipeline_name="pipeline"):
         # Runs to generate COGIDS and cognates.
         # lexstat
         par = Partial(
-            f"./output/{pipeline_name}/stage1/{pipeline_name}-stage1.tsv", segments="tokens"
+            f"./output/{pipeline_name}/stage1/{pipeline_name}-stage1.tsv",
+            segments="tokens",
         )
         get_scorer_kw = dict(runs=10000)
         par.get_scorer(**get_scorer_kw)
@@ -92,10 +82,10 @@ def from_primitive(file_name, pipeline_name="pipeline"):
 
         # check for alignments with missing structure mismatch and exclude them!
         excludes = set()
-        # for idx, tokens, structure in par.iter_rows("tokens", "structure"):
-        #     for m, s in zip(tokens.n, basictypes.lists(structure).n):
-        #         if len(m) != len(s):
-        #             excludes.add(idx)
+        for idx, tokens, structure in par.iter_rows("tokens", "structure"):
+            for m, s in zip(tokens.n, basictypes.lists(structure).n):
+                if len(m) != len(s):
+                    excludes.add(idx)
         # create dictionary that can be read in as a wordlist
         D = {0: par.columns}
         for idx in par:
@@ -119,8 +109,12 @@ def from_primitive(file_name, pipeline_name="pipeline"):
             ],
             prettify=False,
         )
-    
-        from_aligned(f"./output/{pipeline_name}/stage2/{pipeline_name}-stage2-1-lexstat.tsv", pipline_name=pipeline_name, use_template_alignment=True)
+
+        from_aligned(
+            f"./output/{pipeline_name}/stage2/{pipeline_name}-stage2-1-lexstat.tsv",
+            pipline_name=pipeline_name,
+            use_template_alignment=True,
+        )
 
 
 def from_aligned(file_name, pipline_name="pipeline", use_template_alignment=False):
@@ -131,23 +125,60 @@ def from_aligned(file_name, pipline_name="pipeline", use_template_alignment=Fals
         file_name, ref=f"{'cogids' if use_template_alignment else 'cogid'}"
     )
 
+    # maybe a working way to generate gloss ids?
+    # would be good to link ever concept in the data to an id in the concepticon
+    if not "glossid" in alms.columns:
+        gloss_index = 1
+        entered_ids = {}
+        wl_glossids = {}
+        for idx in alms:
+            if not alms[idx, "concept"] in entered_ids:
+                entered_ids[alms[idx, "concept"]] = gloss_index
+                gloss_index += 1
+
+            wl_glossids[idx] = entered_ids[alms[idx, "concept"]]
+        alms.add_entries("glossid", wl_glossids, lambda idx: idx)
+
+    if pipline_name == "germanic":
+        # Set all concepts to English variants, removing data that does not have
+        # an English counterpart...
+        wl_english_concepts = {}
+
+        includes = set()
+        for _, (ids, docs, counts, struct) in alms.iter_cognates("cogid", "doculect", "counterpart", "structure"):
+            print(ids, docs, counts, struct)
+            for idx in ids:
+                wl_english_concepts[idx] = ""
+                if "English" in docs:
+                    wl_english_concepts[idx] = counts[docs.index("English")]
+                    includes.add(idx)
+        
+        alms.add_entries("concept", wl_english_concepts, lambda c: c)
+
+        D = {0: alms.columns}
+        for idx in includes:
+            D[idx] = [alms[idx, c] for c in D[0]]
+
+        alms = Alignments(D)
+
     ###
     # This function does not exist anymore...
     # print("Now running align_by_structure")
     # align_by_structure(par, segments='tokens', ref='cogids', structure='structure')
     ###
 
-    # if use_template_alignment:
+    if use_template_alignment and pipline_name == "burmish":
         # VERY Burmish specific stuff here...
-        # print("Starting template alignment")
-        # template_alignment(
-        #     alms,
-        #     ref="cogids",
-        #     template="imMnNct",  ### This is what is listed as the 'template' default in the old `align_by_structure` method.
-        #     structure="structure",
-        #     fuzzy=True,
-        #     segments="tokens",
-        # )
+        print("Starting template alignment")
+        template_alignment(
+            alms,
+            ref="cogids",
+            template="imMnNct",  ### This is what is listed as the 'template' default in the old `align_by_structure` method.
+            structure="structure",
+            fuzzy=True,
+            segments="tokens",
+        )
+    
 
     # All the "ref" usages are also just Burmish specific originally, I have a tiny smidgling of an
     # idea as to why we should switch between cogid / cogids, but if this code is ever supposed
@@ -159,9 +190,12 @@ def from_aligned(file_name, pipline_name="pipeline", use_template_alignment=Fals
         alms, ref=f"{'cogids' if use_template_alignment else 'cogid'}"
     )
 
+    # generates cross ids
     print("Now running find_colexified_alignments")
     find_colexified_alignments(
-        alms, cognates=f"{'cogids' if use_template_alignment else 'cogid'}", ref="crossids"
+        alms,
+        cognates=f"{'cogids' if use_template_alignment else 'cogid'}",
+        ref="crossids",
     )
 
     # Runs to generate CROSSIDS and ALIGNMENT, without COGIDS (thus the next step is to merge).
@@ -170,8 +204,6 @@ def from_aligned(file_name, pipline_name="pipeline", use_template_alignment=Fals
         "tsv",
         filename=f"./output/{pipline_name}/stage3/{pipline_name}-aligned-final",
         subset=True,
-        # I've removed `glossid` from the line below, this may break things later?
-        # If I knew the best way, I would just generate it for all our data to keep it the same
         cols=[
             "doculect",
             "concept",
@@ -184,6 +216,11 @@ def from_aligned(file_name, pipline_name="pipeline", use_template_alignment=Fals
         ],
     )
 
+
+def fix_structure():
+    wl = Wordlist("")
+
+
 parser = init_argparse()
 args = parser.parse_args()
 
@@ -195,7 +232,7 @@ if args.pipeline:
     pname = args.pipeline
 
 if args.from_aligned:
-    from_aligned(fname, pname, True)
+    from_aligned(fname, pname)
 else:
     from_primitive(fname, pname)
 
