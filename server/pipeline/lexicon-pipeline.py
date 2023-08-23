@@ -142,24 +142,13 @@ def from_aligned(file_name, pipline_name="pipeline", use_template_alignment=Fals
     if pipline_name == "germanic":
         # Set all concepts to English variants, removing data that does not have
         # an English counterpart...
-        wl_english_concepts = {}
 
-        includes = set()
-        for _, (ids, docs, counts, struct) in alms.iter_cognates("cogid", "doculect", "counterpart", "structure"):
-            print(ids, docs, counts, struct)
-            for idx in ids:
-                wl_english_concepts[idx] = ""
-                if "English" in docs:
-                    wl_english_concepts[idx] = counts[docs.index("English")]
-                    includes.add(idx)
-        
-        alms.add_entries("concept", wl_english_concepts, lambda c: c)
+        # NOTE: the concept is the proto-form, since we do not have semantic
+        # reconstructions, so we need to embrace it here, and just go with this
+        # form, I suggest, for this reason, no realy pipeline-specific code is
+        # needed here
+        pass
 
-        D = {0: alms.columns}
-        for idx in includes:
-            D[idx] = [alms[idx, c] for c in D[0]]
-
-        alms = Alignments(D)
 
     ###
     # This function does not exist anymore...
@@ -179,37 +168,47 @@ def from_aligned(file_name, pipline_name="pipeline", use_template_alignment=Fals
             segments="tokens",
         )
     
+        print("Now running find_bad_internal_alignments")
+        find_bad_internal_alignments(
+            alms, ref=f"{'cogids' if use_template_alignment else 'cogid'}"
+        )
 
-    print("Now running find_bad_internal_alignments")
-    find_bad_internal_alignments(
-        alms, ref=f"{'cogids' if use_template_alignment else 'cogid'}"
-    )
+        # generates cross ids
+        print("Now running find_colexified_alignments")
+        find_colexified_alignments(
+            alms,
+            cognates=f"{'cogids' if use_template_alignment else 'cogid'}",
+            ref="crossids",
+        )
 
-    # generates cross ids
-    print("Now running find_colexified_alignments")
-    find_colexified_alignments(
-        alms,
-        cognates=f"{'cogids' if use_template_alignment else 'cogid'}",
-        ref="crossids",
-    )
 
-    # Runs to generate CROSSIDS and ALIGNMENT, without COGIDS (thus the next step is to merge).
-    print("Outputting aligned tsv")
-    alms.output(
-        "tsv",
-        filename=f"./output/{pipline_name}/stage3/{pipline_name}-aligned-final",
-        subset=True,
-        cols=[
-            "doculect",
-            "concept",
-            "glossid",
-            "ipa",
-            "tokens",
-            "structure",
-            "alignment",
-            "crossids",
-        ],
-    )
+        # Runs to generate CROSSIDS and ALIGNMENT, without COGIDS (thus the next step is to merge).
+        print("Outputting aligned tsv")
+        alms.output(
+            "tsv",
+            filename=f"./output/{pipline_name}/stage3/{pipline_name}-aligned-final",
+            subset=True,
+            cols=[
+                "doculect",
+                "concept",
+                "glossid",
+                "ipa",
+                "tokens",
+                "structure",
+                "alignment",
+                "crossids",
+            ],
+            prettify=False, # no "#" and spaces in code
+            ignore="all" # no additional data
+        )
+    else:
+        # we output all data, the new code to convert to json looks at the
+        # header and can process datasets with columns that we don't need
+        alms.output("tsv",
+                    filename=f"./output/{pipline_name}/stage3/{pipline_name}-aligned-final",
+                    prettify=False,
+                    ignore="all"
+                    )
 
 
 def fix_structure():
