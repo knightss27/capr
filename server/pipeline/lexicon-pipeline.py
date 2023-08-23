@@ -180,11 +180,6 @@ def from_aligned(file_name, pipline_name="pipeline", use_template_alignment=Fals
         )
     
 
-    # All the "ref" usages are also just Burmish specific originally, I have a tiny smidgling of an
-    # idea as to why we should switch between cogid / cogids, but if this code is ever supposed
-    # to be extensible, I need solid reasoning behind what Xun was doing here. It's my understanding
-    # that CROSSIDS will not be used with the Germanic data? at least in a different way?
-
     print("Now running find_bad_internal_alignments")
     find_bad_internal_alignments(
         alms, ref=f"{'cogids' if use_template_alignment else 'cogid'}"
