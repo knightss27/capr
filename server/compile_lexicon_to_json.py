@@ -12,6 +12,8 @@ from functools import reduce
 from disjointset import DisjointSet
 from foma import FST
 import argparse
+import fileinput
+from collections import defaultdict
 
 def eprint(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
@@ -135,6 +137,93 @@ def sort_row_tuples(row_tuples, reconstructed_sense):
     row_tuples_sorted_by_senses = sorted(row_tuples_sorted_by_languages, key = lambda x: x[1]['CONCEPT'])
     return row_tuples_sorted_by_senses
 
+
+def compile_to_json_full_cognates(path, proto, cognates="cogid"):
+    """
+    Get the JSON from a wordlist file with "normal" cognates.
+
+    Example
+    -------
+
+    compile_to_json_full_cognates(
+        "pipeline/output/germanic/stage3/germanic-aligned-final.tsv",
+        "Proto-Germanic", cognates="CROSSIDS")
+    """
+    
+    data = []
+    with open(path) as f:
+        for row in f.readlines():
+            data += [[cell.strip() for cell in row.split("\t")]]
+
+    header = [row for row in data if row[0] and not row[0].startswith("#")][0]
+    data_dict = {}
+    for i, row in enumerate(data[1:]):
+        if row[0].startswith("#") or not row[0].strip():
+            pass
+        else:
+            cell_dict = dict(zip(header, row))
+            data_dict[cell_dict["ID"]] = cell_dict
+    # create the board dictionary
+    doculects = sorted(set([row["DOCULECT"] for row in data_dict.values()]))
+    boards = {
+            "fstDoculects": doculects,
+            "fstUp": {d: {} for d in doculects},
+            "fstDown": {d: {} for d in doculects},
+            "boards": {},
+            "words": {},
+            "columns": {},
+            "syllables": {},
+            "boards": {}
+            }
+
+    # fill data with content by iterating over the data_dict
+    for i, row in data_dict.items():
+        idx = "word-"+str(i)
+        boards["words"][idx] = {
+                "id": idx,
+                "doculect": row["DOCULECT"],
+                "syllables": [".".join(row["TOKENS"].split())],
+                "gloss": row["CONCEPT"],
+                "glossid": row["CONCEPT"]
+                }
+        boards["syllables"][idx+"-0"] = {
+                "id": idx+"-0",
+                "doculect": row["DOCULECT"],
+                "syllables": boards["words"][idx]["syllables"],
+                "gloss": boards["words"][idx]["gloss"],
+                "glossid": boards["words"][idx]["glossid"],
+                "wordID": idx,
+                "syllOrder": 0,
+                "syllable": boards["words"][idx]["syllables"][0]
+                }
+
+        # column ids are in fact the cognate sets +++
+        cogid = "column-"+row[cognates]
+        if cogid in boards["columns"]:
+            boards["columns"][cogid]["syllableIds"] += [idx+"-0"]
+        else:
+            boards["columns"][cogid] = {"id": cogid, "syllableIds": [idx+"-0"]}
+
+        # boards are cross-semantic cognates, they group cognate sets into one
+        # group, but for normal data, this is already done, so we assign each
+        # cognate set to its own board
+        if row["DOCULECT"] == proto:
+            boardid = "board-"+row[cognates]
+            boards["boards"][boardid] = {
+                    "id": boardid,
+                    "title": "*"+"".join(row["TOKENS"].split()),
+                    "columnIds": [cogid]
+                    }
+
+    boards["currentBoard"] = "boardid"
+
+    # get the transducers, works only if they are there
+    #fsts = {k: FST.load(".reconstruct/{0}.bin".format(k)) for k in boards["fstDoculects"]}
+    
+    return boards
+
+
+
 def compile_to_json(filepath):
     fst_burmese = FST.load('./reconstruct/burmese.bin')
     fst_achang = FST.load('./reconstruct/ngochang.bin')
@@ -156,7 +245,6 @@ def compile_to_json(filepath):
     json_fst_down = {fst:{} for fst in fsts}
 
     # Use fileinput to imitate standard UNIX utility behaviour
-    import fileinput
     csvreader = csv.DictReader(filter(lambda row: row.strip() and row[0]!='#', fileinput.input(files=filepath, mode='r')), dialect='excel-tab')
 
     # rootid/crossid correspondence
