@@ -55,6 +55,8 @@
 			body: JSON.stringify({
 				columns: loaded.columns,
 				boards: loaded.boards,
+                syllables: loaded.syllables,
+                fstDoculects: loaded.fstDoculects,
 				transducer: useNewFst ? newFst : "internal"
 			})
 		})

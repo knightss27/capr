@@ -59,7 +59,7 @@ def new_board():
 
 # /refish-board returns the output of the refishing algorithm for cognate reassignment 
 @app.route("/refish-board", methods=["POST"])
-@with_json("columns", "boards", "transducer")
+@with_json("columns", "boards", "syllables", "fstDoculects", "transducer")
 def refish_board(json_body):
     if (json_body['transducer'] == 'internal'):
         del json_body['transducer']

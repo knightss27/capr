@@ -1,0 +1,30 @@
+#!/usr/local/bin/foma -f
+# Basic FST for the Germanic dataset
+
+# German
+define German [] ;
+
+clear
+push German
+save stack german.bin
+
+# Dutch
+define Dutch [] ;
+
+clear
+push Dutch
+save stack dutch.bin
+
+# English
+define English [] ;
+
+clear
+push English
+save stack english.bin
+
+# Proto-Germanic
+define Proto-Germanic [] ;
+
+clear
+push Proto-Germanic
+save stack proto-germanic.bin

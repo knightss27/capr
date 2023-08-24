@@ -24,6 +24,10 @@ fst_index = {
     "Bola": "bola",
     "Atsi": "atsi",
     "Lashi": "lashi",
+    "German": "german",
+    "Dutch": "dutch",
+    "English": "english",
+    "Proto-Germanic": "proto-germanic",
 }
 
 # Basic imports
@@ -187,7 +191,7 @@ import subprocess
 from disjointset import DisjointSet
 
 
-def refish(jsonfile, csvfile="lexicon.tsv", fstfile="refishing-fst.txt"):
+def refish(jsonfile, csvfile="lexicon.tsv", fstfile="refishing-fst2.txt"):
     # Board from JSON
     script_path = os.path.dirname(os.path.realpath(__file__))
 
@@ -224,14 +228,14 @@ def refish(jsonfile, csvfile="lexicon.tsv", fstfile="refishing-fst.txt"):
             "UTF-8"
         )
         eprint("\n".join(output.split("\n")[-5:]))
-        for doculect_name in fst_index:
+        for doculect_name in input_board["fstDoculects"]:
             if os.path.isfile(fst_index[doculect_name] + ".bin"):
                 fsts_new[doculect_name] = FST.load(fst_index[doculect_name] + ".bin")
         os.chdir(script_path)
         eprint("FSTs loaded:", ", ".join(fsts_new))
 
     # read the word CSV
-    input_syllables = {}
+    input_syllables = input_board["syllables"]
 
     # import fileinput
     def process_row(row):
@@ -254,15 +258,15 @@ def refish(jsonfile, csvfile="lexicon.tsv", fstfile="refishing-fst.txt"):
             }
             input_syllables[syllable_id] = syllable_row
 
-    with open(fstfile) as csv_file:
-        csvreader = csv.DictReader(
-            filter(lambda row: row.strip() and row[0] != "#", open(csvfile, "r")),
-            dialect="excel-tab",
-        )
-        eprint("Processing TSV rows...")
-        words = {}
-        for row in csvreader:
-            process_row(row)
+    # with open(fstfile) as csv_file:
+    #     csvreader = csv.DictReader(
+    #         filter(lambda row: row.strip() and row[0] != "#", open(csvfile, "r")),
+    #         dialect="excel-tab",
+    #     )
+    #     eprint("Processing TSV rows...")
+    #     words = {}
+    #     for row in csvreader:
+    #         process_row(row)
 
     old_columns = input_board["columns"]
     old_boards = input_board["boards"]
