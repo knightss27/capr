@@ -171,7 +171,7 @@
 		</div>
 		{#if showCognateInterface}
 			<!-- The list of all possible boards -->
-			<BoardList boards={Object.values(loaded.boards)} />
+			<BoardList boards={Object.values(loaded.boards).sort((a, b) => a.title > b.title ? 1 : -1)} />
 			<!-- The current board's title and some relevant options -->
 			<div class="board-title">
 				<h1>{loaded.boards[$currentBoard].title}</h1>
