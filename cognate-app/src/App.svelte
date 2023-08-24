@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { onMount } from 'svelte';
 	import BoardList from './BoardList.svelte';
 	import Board from './Board.svelte';
 	import { currentBoard } from './stores';
@@ -8,7 +9,7 @@
 	// Imports starting JSON data for running as POC (proof of concept).
 	// This data is a little too long, which is why HMR fails. Just reload the page manually.
 	// @ts-ignore
-	import initialData from './initialData';
+	import initialData from './initialData2';
 	import FstComparator from './FstComparator.svelte';
 	
 	// Loads our initial data into a central state (TODO: think about extracting to a store)
@@ -54,6 +55,8 @@
 			body: JSON.stringify({
 				columns: loaded.columns,
 				boards: loaded.boards,
+                syllables: loaded.syllables,
+                fstDoculects: loaded.fstDoculects,
 				transducer: useNewFst ? newFst : "internal"
 			})
 		})
@@ -139,6 +142,10 @@
 			reader.readAsText(files[0])
 		}
 	}
+
+    if (loaded.boards[$currentBoard] === undefined) {
+        $currentBoard = loaded.currentBoard;
+    }
 </script>
 
 
@@ -166,7 +173,7 @@
 		</div>
 		{#if showCognateInterface}
 			<!-- The list of all possible boards -->
-			<BoardList boards={Object.values(loaded.boards)} />
+			<BoardList boards={Object.values(loaded.boards).sort((a, b) => a.title > b.title ? 1 : -1)} />
 			<!-- The current board's title and some relevant options -->
 			<div class="board-title">
 				<h1>{loaded.boards[$currentBoard].title}</h1>
