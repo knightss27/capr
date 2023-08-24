@@ -308,6 +308,7 @@ def compile_to_json(filepath):
     # ds holds the merging relationship of crossids
     ds = DisjointSet()
 
+    # pylint: disable=consider-using-dict-items
     for crossid in rows_of_crossid.keys():
         # First, try to guess the reconstruction by the following rule:
         # 1. Collect all reconstructions for each language

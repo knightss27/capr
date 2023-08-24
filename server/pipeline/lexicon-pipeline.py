@@ -211,10 +211,6 @@ def from_aligned(file_name, pipline_name="pipeline", use_template_alignment=Fals
                     )
 
 
-def fix_structure():
-    wl = Wordlist("")
-
-
 parser = init_argparse()
 args = parser.parse_args()
 

@@ -7,8 +7,24 @@
 production = True
 
 # Constants
-language_title = {'Old_Burmese': 'OBurm', 'Achang_Longchuan': 'Acha-LC', 'Xiandao': 'Acha-XD', 'Maru': 'Maru', 'Bola': 'Bola', 'Atsi': 'Atsi', 'Lashi': 'Lashi'}
-fst_index = {'Old_Burmese': 'burmese', 'Achang_Longchuan': 'ngochang', 'Xiandao': 'xiandao', 'Maru': 'maru', 'Bola': 'bola', 'Atsi': 'atsi', 'Lashi': 'lashi'}
+language_title = {
+    "Old_Burmese": "OBurm",
+    "Achang_Longchuan": "Acha-LC",
+    "Xiandao": "Acha-XD",
+    "Maru": "Maru",
+    "Bola": "Bola",
+    "Atsi": "Atsi",
+    "Lashi": "Lashi",
+}
+fst_index = {
+    "Old_Burmese": "burmese",
+    "Achang_Longchuan": "ngochang",
+    "Xiandao": "xiandao",
+    "Maru": "maru",
+    "Bola": "bola",
+    "Atsi": "atsi",
+    "Lashi": "lashi",
+}
 
 # Basic imports
 import sys
@@ -21,24 +37,34 @@ from tabulate import tabulate
 
 ##### ROUTINES #####
 
+
 def eprint(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
     sys.stderr.flush()
 
+
 # Replace unicode diacritics with ASCII equivalents for sending to the transducers
 UNICODE_MACRON_UNDER = " ̱ "[1]
 UNICODE_TILDE_OVER = " ̃"[1]
+
+
 def replace_diacritics_up(s):
-    return s.replace(UNICODE_MACRON_UNDER, '_').replace(UNICODE_TILDE_OVER, '~').replace('_~', '~_')
+    return (
+        s.replace(UNICODE_MACRON_UNDER, "_")
+        .replace(UNICODE_TILDE_OVER, "~")
+        .replace("_~", "~_")
+    )
+
 
 def replace_diacritics_down(s):
-    return s.replace('_', UNICODE_MACRON_UNDER).replace('~', UNICODE_TILDE_OVER)
+    return s.replace("_", UNICODE_MACRON_UNDER).replace("~", UNICODE_TILDE_OVER)
+
 
 # Convert a piece of text to its component syllables
 # If there is alrady "◦" or a space, use it to separate them
 # Otherwise, separate the tone letters other letters
 def syllabize(text):
-    split_result = re.split(r'([ ◦¹²³⁴⁵˩˨˧˦˥]+)', text)
+    split_result = re.split(r"([ ◦¹²³⁴⁵˩˨˧˦˥]+)", text)
     l = len(split_result)
 
     # There are two possibilities
@@ -49,39 +75,50 @@ def syllabize(text):
     # (5-1)/2 = 2
 
     result = []
-    for i in range((l-1) // 2):
-        result.append(split_result[i*2] + split_result[i*2+1].strip('◦ '))
+    for i in range((l - 1) // 2):
+        result.append(split_result[i * 2] + split_result[i * 2 + 1].strip("◦ "))
     # If last non-zero, then copy to result
-    if split_result[l-1]:
-        result.append(split_result[l-1])
+    if split_result[l - 1]:
+        result.append(split_result[l - 1])
 
     return result
 
-def emphasize_syllable_raw(syllables, syllable_index, usual_formatting = None, emphatic_formatting = None):
+
+def emphasize_syllable_raw(
+    syllables, syllable_index, usual_formatting=None, emphatic_formatting=None
+):
     l = len(syllables)
-    result = ''
+    result = ""
     for i in range(l):
         if i == syllable_index:
-            result = result + (emphatic_formatting or '<%s>') % syllables[i]
+            result = result + (emphatic_formatting or "<%s>") % syllables[i]
         else:
-            result = result + (usual_formatting or '%s') % syllables[i]
+            result = result + (usual_formatting or "%s") % syllables[i]
     return result
 
+
 # emphasize_syllable("mi ma mu", 1) → "mi<ma>mu"
-def emphasize_syllable(text, syllable_index, usual_formatting = None, emphatic_formatting = None):
-    return emphasize_syllable_raw(syllabize(text), syllable_index, usual_formatting, emphatic_formatting)
+def emphasize_syllable(
+    text, syllable_index, usual_formatting=None, emphatic_formatting=None
+):
+    return emphasize_syllable_raw(
+        syllabize(text), syllable_index, usual_formatting, emphatic_formatting
+    )
+
 
 # fetch_syllable("mi ma mu", 1) → "ma"
 def fetch_syllable(text, syllable_index):
     syllables = syllabize(text)
     return syllables[syllable_index]
 
+
 # Convert internal language name to printed name
 def print_language_name(name):
-    if name == 'Old_Burmese':
-        return 'OBur.'
+    if name == "Old_Burmese":
+        return "OBur."
     else:
-        return name.replace('_', r'\_')
+        return name.replace("_", r"\_")
+
 
 # Compute the projected reconstruction from a bunch of syllable_id's and a certain fst
 # syllable_ids: syllable_id's of the syllables in a class, as defined contra "words"
@@ -94,10 +131,10 @@ def back_reconstruct_list(syllable_ids, fsts, words):
     first_form = False
 
     for syllable_id in syllable_ids:
-        word_id, _, n = syllable_id.rpartition('-')
+        word_id, _, n = syllable_id.rpartition("-")
         n = int(n)
-        ipa = words[word_id]['syllables'][n]
-        doculect = words[word_id]['doculect']
+        ipa = words[word_id]["syllables"][n]
+        doculect = words[word_id]["doculect"]
 
         if not first_form:
             first_form = ipa
@@ -123,8 +160,12 @@ def back_reconstruct_list(syllable_ids, fsts, words):
             strict = False
             # kinda lenient way of generating reconstructions
             # try and make intersection of every pair of doculects
-            pairwise_intersections = [set.intersection(reconsts[a], reconsts[b])
-                    for a in reconsts for b in reconsts if a != b]
+            pairwise_intersections = [
+                set.intersection(reconsts[a], reconsts[b])
+                for a in reconsts
+                for b in reconsts
+                if a != b
+            ]
             if pairwise_intersections:
                 inferred_reconstructions = list(set.union(*pairwise_intersections))
             else:
@@ -145,21 +186,21 @@ import subprocess
 
 from disjointset import DisjointSet
 
-def refish(jsonfile, csvfile = "lexicon.tsv", fstfile = "refishing-fst.txt"):
 
+def refish(jsonfile, csvfile="lexicon.tsv", fstfile="refishing-fst.txt"):
     # Board from JSON
     script_path = os.path.dirname(os.path.realpath(__file__))
 
     fsts_new = {}
     new_transducer = ""
 
-    eprint('Processing json input...')
-    if (isinstance(jsonfile, dict)):
+    eprint("Processing json input...")
+    if isinstance(jsonfile, dict):
         eprint("Parsing board as inputted JSON")
 
-        if 'transducer' in jsonfile:
+        if "transducer" in jsonfile:
             eprint("Using user provided transducer")
-            new_transducer = jsonfile['transducer']
+            new_transducer = jsonfile["transducer"]
         else:
             eprint("Using default transducer")
             with open(fstfile) as fst_file:
@@ -168,62 +209,67 @@ def refish(jsonfile, csvfile = "lexicon.tsv", fstfile = "refishing-fst.txt"):
         input_board = jsonfile
     else:
         eprint("Parsing board as file")
-        input_board = json.load(open(jsonfile, 'r+'))
+        input_board = json.load(open(jsonfile, "r+"))
 
         # Read and compile the FST
         with open(fstfile) as fst_file:
             new_transducer = fst_file.read()
 
-
     with tempfile.TemporaryDirectory() as tmpdirname:
         os.chdir(tmpdirname)
-        eprint('Compiling FSTs (new)')
-        with open('transducer.foma', 'w') as fp:
+        eprint("Compiling FSTs (new)")
+        with open("transducer.foma", "w") as fp:
             fp.write(new_transducer)
-        output = subprocess.check_output(['foma', '-f', 'transducer.foma']).decode('UTF-8')
-        eprint('\n'.join(output.split('\n')[-5:]))
+        output = subprocess.check_output(["foma", "-f", "transducer.foma"]).decode(
+            "UTF-8"
+        )
+        eprint("\n".join(output.split("\n")[-5:]))
         for doculect_name in fst_index:
-            if os.path.isfile(fst_index[doculect_name] + '.bin'):
-                fsts_new[doculect_name] = FST.load(fst_index[doculect_name] + '.bin')
+            if os.path.isfile(fst_index[doculect_name] + ".bin"):
+                fsts_new[doculect_name] = FST.load(fst_index[doculect_name] + ".bin")
         os.chdir(script_path)
-        eprint('FSTs loaded:', ', '.join(fsts_new))
+        eprint("FSTs loaded:", ", ".join(fsts_new))
 
     # read the word CSV
     input_syllables = {}
+
     # import fileinput
     def process_row(row):
-        if row['ID'].startswith('#'):
+        if row["ID"].startswith("#"):
             # internal to lingpy
             return
 
-        word_id = 'word-' + row['ID']
-        sylls = syllabize(row['IPA'])
+        word_id = "word-" + row["ID"]
+        sylls = syllabize(row["IPA"])
 
         # Now we can loop on each syllable in the language
         for syl in range(len(sylls)):
             # Put new information into crossid data
-            syllable_id = word_id + '-' + str(syl)
+            syllable_id = word_id + "-" + str(syl)
             syllable_row = {
-                    'id': syllable_id,
-                    'doculect': row['DOCULECT'],
-                    'syllable': sylls[syl],
-                    'glossid': row['GLOSSID']
-                    }
+                "id": syllable_id,
+                "doculect": row["DOCULECT"],
+                "syllable": sylls[syl],
+                "glossid": row["GLOSSID"],
+            }
             input_syllables[syllable_id] = syllable_row
 
     with open(fstfile) as csv_file:
-        csvreader = csv.DictReader(filter(lambda row: row.strip() and row[0]!='#', open(csvfile, 'r')), dialect='excel-tab')
-        eprint('Processing TSV rows...')
+        csvreader = csv.DictReader(
+            filter(lambda row: row.strip() and row[0] != "#", open(csvfile, "r")),
+            dialect="excel-tab",
+        )
+        eprint("Processing TSV rows...")
         words = {}
         for row in csvreader:
             process_row(row)
 
-    old_columns = input_board['columns']
-    old_boards = input_board['boards']
+    old_columns = input_board["columns"]
+    old_boards = input_board["boards"]
 
-    json_boards = {} # new ones to be produced
+    json_boards = {}  # new ones to be produced
 
-    # Before we begin, it's useful to compile a reverse index, detailing to which board a certain column belongs in the old 
+    # Before we begin, it's useful to compile a reverse index, detailing to which board a certain column belongs in the old
     old_board_of_column = dict()
     new_board_of_column = dict()
 
@@ -240,36 +286,40 @@ def refish(jsonfile, csvfile = "lexicon.tsv", fstfile = "refishing-fst.txt"):
 
     # We first use a disjoint set to compute the transitive closure of the relationship "share a strict etymon somehow not recognized by lingpy"
     ds_round1 = DisjointSet()
-    first_column_of_gr = {} # indexed by (glossid, reconstruction)
+    first_column_of_gr = {}  # indexed by (glossid, reconstruction)
 
     # We process each cognate set with ID "column_id"
-    for column_id in input_board['columns']:
+    for column_id in input_board["columns"]:
         ds_round1.add(column_id, column_id)
 
-        for syllable_id in input_board['columns'][column_id]['syllableIds']:
+        for syllable_id in input_board["columns"][column_id]["syllableIds"]:
             syllable = input_syllables[syllable_id]
-            if syllable['doculect'] in fsts_new:
-                the_syl = replace_diacritics_up(syllable['syllable'])
-                reconstructions = list(fsts_new[syllable['doculect']].apply_up(the_syl))
+            if syllable["doculect"] in fsts_new:
+                the_syl = replace_diacritics_up(syllable["syllable"])
+                reconstructions = list(fsts_new[syllable["doculect"]].apply_up(the_syl))
                 for rec in reconstructions:
-                    if (rec, syllable['glossid']) not in first_column_of_gr:
-                        first_column_of_gr[(rec, syllable['glossid'])] = column_id
+                    if (rec, syllable["glossid"]) not in first_column_of_gr:
+                        first_column_of_gr[(rec, syllable["glossid"])] = column_id
                     else:
-                        ds_round1.add(first_column_of_gr[(rec, syllable['glossid'])], column_id)
+                        ds_round1.add(
+                            first_column_of_gr[(rec, syllable["glossid"])], column_id
+                        )
 
     equivclasses = ds_round1.group.keys()
     for equivclass_id in equivclasses:
         columns = sorted(ds_round1.group[equivclass_id])
         # how to merge columns? Simple: be conservative, don't merge them
         if len(columns) > 1:
-            if not production: eprint(columns)
+            if not production:
+                eprint(columns)
             for col in columns:
                 # prepare a report
                 report = []
                 for syl_id in old_columns[col]["syllableIds"]:
                     syl = input_syllables[syl_id]
                     report.append(syl["glossid"] + syl["syllable"])
-                if not production: eprint(', '.join(report))
+                if not production:
+                    eprint(", ".join(report))
 
     new_columns = {}
     new_column_of_old_column = {}
@@ -291,29 +341,31 @@ def refish(jsonfile, csvfile = "lexicon.tsv", fstfile = "refishing-fst.txt"):
     ds = DisjointSet()
 
     # We process each cognate set with ID "column_id"
-    for column_id in input_board['columns']:
-        reconsts = {} # indexed by doculect
+    for column_id in input_board["columns"]:
+        reconsts = {}  # indexed by doculect
         at_least_one = False
-        first_form = False # will contain any daughter-language form, so as to provide a board title in the case of no available reconstruction
+        first_form = False  # will contain any daughter-language form, so as to provide a board title in the case of no available reconstruction
 
-        for syllable_id in input_board['columns'][column_id]['syllableIds']:
+        for syllable_id in input_board["columns"][column_id]["syllableIds"]:
             syllable = input_syllables[syllable_id]
 
             if not first_form:
-                first_form = syllable['syllable']
+                first_form = syllable["syllable"]
 
-            if syllable['doculect'] in fsts_new:
-                the_syl = replace_diacritics_up(syllable['syllable'])
-                rec = list(fsts_new[syllable['doculect']].apply_up(the_syl))
+            if syllable["doculect"] in fsts_new:
+                the_syl = replace_diacritics_up(syllable["syllable"])
+                rec = list(fsts_new[syllable["doculect"]].apply_up(the_syl))
 
                 if rec:
                     # Now at least one syllable-form in the cognate set has a reconstruction!
                     at_least_one = True
                     # Add the reconstruction to that of other word-forms in the same language reconstructed to the same root
-                    if syllable['doculect'] not in reconsts:
-                        reconsts[syllable['doculect']] = set(rec)
+                    if syllable["doculect"] not in reconsts:
+                        reconsts[syllable["doculect"]] = set(rec)
                     else:
-                        reconsts[syllable['doculect']] = reconsts[syllable['doculect']].union(set(rec))
+                        reconsts[syllable["doculect"]] = reconsts[
+                            syllable["doculect"]
+                        ].union(set(rec))
 
         strict = True
         column_reconstructions = []
@@ -327,15 +379,19 @@ def refish(jsonfile, csvfile = "lexicon.tsv", fstfile = "refishing-fst.txt"):
                 strict = False
                 # kinda lenient way of generating reconstructions
                 # the union of the intersections of every pair of doculects
-                pairwise_intersections = [set.intersection(reconsts[a], reconsts[b])
-                        for a in reconsts for b in reconsts if a != b]
+                pairwise_intersections = [
+                    set.intersection(reconsts[a], reconsts[b])
+                    for a in reconsts
+                    for b in reconsts
+                    if a != b
+                ]
                 if pairwise_intersections:
                     column_reconstructions = list(set.union(*pairwise_intersections))
                 else:
                     column_reconstructions = []
 
             # add some asterisks for fun
-            column_reconstructions = ['*' + w for w in column_reconstructions]
+            column_reconstructions = ["*" + w for w in column_reconstructions]
 
         # Now "column_reconstructions" contains a reasonable guess for what should be reconstructed to this cognate set, put them into the global variables
         reconstructions_of_column[column_id] = column_reconstructions
@@ -360,7 +416,9 @@ def refish(jsonfile, csvfile = "lexicon.tsv", fstfile = "refishing-fst.txt"):
 
     # Sort crossids according to reconstruction / form
     # taken from ds
-    equivclasses = sorted(ds.group.keys(), key = lambda column_id: sortkey_of_column[column_id])
+    equivclasses = sorted(
+        ds.group.keys(), key=lambda column_id: sortkey_of_column[column_id]
+    )
 
     created_board_counter = 1
 
@@ -380,7 +438,7 @@ def refish(jsonfile, csvfile = "lexicon.tsv", fstfile = "refishing-fst.txt"):
             continue
 
         # A new board, yeah!
-        board_id = 'board-' + str(created_board_counter)
+        board_id = "board-" + str(created_board_counter)
         created_board_counter += 1
 
         # Enable reverse query "new_board_of_column"
@@ -392,51 +450,53 @@ def refish(jsonfile, csvfile = "lexicon.tsv", fstfile = "refishing-fst.txt"):
         reconstructions = list(set.intersection(*all_reconstructions))
         if not reconstructions:
             strict = False
-            pairwise_intersections = [set.intersection(all_reconstructions[a], all_reconstructions[b])
-                    for a in range(len(all_reconstructions))
-                    for b in range(len(all_reconstructions))
-                    if a != b]
+            pairwise_intersections = [
+                set.intersection(all_reconstructions[a], all_reconstructions[b])
+                for a in range(len(all_reconstructions))
+                for b in range(len(all_reconstructions))
+                if a != b
+            ]
             if pairwise_intersections:
                 reconstructions = list(set.union(*pairwise_intersections))
-            else: # impossible
+            else:  # impossible
                 reconstructions = []
 
         if not reconstructions:
-            board_title = '*???'
+            board_title = "*???"
         else:
-            board_title = ', '.join(reconstructions)
+            board_title = ", ".join(reconstructions)
             if len(board_title) > 12:
-                board_title = board_title[:10] + '...'
+                board_title = board_title[:10] + "..."
             if not strict:
-                board_title += '?'
+                board_title += "?"
 
         board_json = {
-            'id': board_id,
-            'title': board_title,
-            'columnIds': columns,
+            "id": board_id,
+            "title": board_title,
+            "columnIds": columns,
         }
         json_boards[board_id] = board_json
 
-    json_current_board = 'board-1'
+    json_current_board = "board-1"
 
     # Reboarding status & last resource conservative reboarding
     for column_id in list(input_columns.keys()):
-        if not input_columns[column_id]['syllableIds']:
+        if not input_columns[column_id]["syllableIds"]:
             # empty column, can be deleted w/o problem
             del input_columns[column_id]
             continue
 
         if column_id not in old_board_of_column and column_id in new_board_of_column:
             # recently fished
-            input_columns[column_id]['refishingStatus'] = 'new'
+            input_columns[column_id]["refishingStatus"] = "new"
         elif column_id in old_board_of_column and column_id not in new_board_of_column:
-            if 'refishingStatus' in input_columns[column_id]:
-                del input_columns[column_id]['refishingStatus']
+            if "refishingStatus" in input_columns[column_id]:
+                del input_columns[column_id]["refishingStatus"]
             # make a last-ditch effort to put it somewhere
-            input_columns[column_id]['refishingStatus'] = 'deadfish'
+            input_columns[column_id]["refishingStatus"] = "deadfish"
             if column_id not in new_board_of_column:
-                if not input_columns[column_id]['syllableIds']:
-                    continue # empty column, don't complain
+                if not input_columns[column_id]["syllableIds"]:
+                    continue  # empty column, don't complain
                 # let's seek the its old boardmates
                 boardmates = old_boards[old_board_of_column[column_id]]["columnIds"]
                 new_board_of_any = False
@@ -445,12 +505,19 @@ def refish(jsonfile, csvfile = "lexicon.tsv", fstfile = "refishing-fst.txt"):
                         new_board_of_any = new_board_of_column[boardmate]
                         continue
                 if new_board_of_any:
-                    if not production: eprint(column_id, str(reconstructions_of_column[column_id]), 'reassigned to', new_board_of_any, json_boards[new_board_of_any]['title'])
+                    if not production:
+                        eprint(
+                            column_id,
+                            str(reconstructions_of_column[column_id]),
+                            "reassigned to",
+                            new_board_of_any,
+                            json_boards[new_board_of_any]["title"],
+                        )
                     json_boards[new_board_of_any]["columnIds"].append(column_id)
         else:
             # no change, let's not clobber the interface
-            if 'refishingStatus' in input_columns[column_id]:
-                del input_columns[column_id]['refishingStatus']
-    
+            if "refishingStatus" in input_columns[column_id]:
+                del input_columns[column_id]["refishingStatus"]
+
     eprint("Successful refishing.")
-    return {'columns': input_columns, 'boards': json_boards}
+    return {"columns": input_columns, "boards": json_boards}
