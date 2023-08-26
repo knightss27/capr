@@ -308,14 +308,19 @@ def compile_to_json_full_cognates(path, cognates="COGID"):
                 # transducer will work.
                 syl = word[0].replace(".", " ") + " "
 
+                print("trying ", row["DOCULECT"], " on ", syl)
+
                 # Apply the transducer upwards to this word
                 recs = list(fsts[row["DOCULECT"]].apply_up(syl))
+
+                
 
                 # Only worry about reconstructions when we have actually made one
                 if len(recs) > 0:
                     at_least_one = True
                     if row["DOCULECT"] not in reconstructions:
                         reconstructions[row["DOCULECT"]] = set(recs)
+                        print(row["DOCULECT"], recs)
                     else:
                         reconstructions[row["DOCULECT"]] = reconstructions[row["DOCULECT"]].union(
                             set(recs)
@@ -348,13 +353,14 @@ def compile_to_json_full_cognates(path, cognates="COGID"):
 
                 cognate_reconstructions = ["*" + w for w in cognate_reconstructions]
 
-            print(cognate_reconstructions[0])
+            print(cognate_reconstructions)
 
         # TODO: the rest of this, currently almost copied from below but
         # fixed a bit with respect to what is being iterated through
 
     return boards
 
+compile_to_json_full_cognates("./pipeline/output/germanic/stage3/germanic-aligned-final.tsv")
 
 def compile_to_json(filepath):
     fst_burmese = FST.load("./reconstruct/burmese.bin")
