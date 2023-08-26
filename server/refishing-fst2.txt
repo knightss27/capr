@@ -1,13 +1,6 @@
 #!/usr/local/bin/foma -f
 # Basic FST for the Germanic dataset
 
-# German
-define German [] ;
-
-clear
-push German
-save stack german.bin
-
 # Dutch
 define Dutch [] ;
 
@@ -22,9 +15,29 @@ clear
 push English
 save stack english.bin
 
-# Proto-Germanic
-define Proto-Germanic [] ;
+# German
+def PGC "b " | "d " | "f " | "g " | "gʷ " | "j " | "k " | "kʷ " | "kː "
+| "l " | "lː " | "m " | "mː " | "n " | "nː " | "p " | "pː " | "r " | "s
+" | "t " | "w " | "x " | "xʷ " | "z " | "θ ";
+
+def PGV "a " | "ai " | "au " | "e " | "eu " | "eː " | "i " | "iː " | "o
+" | "oː " | "u " | "uː ";
+
+def PGSyllable PGC* PGV* ;
+
+def PGWord PGSyllable* ;
+
+def Grimm "p " -> "pf ", "t " -> "ts ";
+
+def OE "oː " -> "ə ";
+
+def SK "s k " -> "ʃ ";
+
+regex PGWord ;
+regex Grimm .o. OE .o. SK;
+
+def German PGWord .o. Grimm;
 
 clear
-push Proto-Germanic
-save stack proto-germanic.bin
+push German
+save stack german.bin

@@ -53,8 +53,8 @@ def with_json(*outer_args):
 # /new-board gives us the compiled format of our source material after it has been run through Lexstat
 @app.route("/new-board")
 def new_board():
-    return compile_to_json_full_cognates("./pipeline/output/germanic/stage3/germanic-aligned-final.tsv", "Proto-Germanic")
-    # return compile_to_json("./pipeline/output/burmish-pipeline/stage2/burmish-stage2-tmp-merged.tsv")
+    return compile_to_json_full_cognates("./pipeline/output/germanic/stage3/germanic-aligned-final.tsv")
+    # return compile_to_json("./pipeline/output/burmish-pipeline/stage2/burmish-aligned-final.tsv")
 
 
 # /refish-board returns the output of the refishing algorithm for cognate reassignment 
