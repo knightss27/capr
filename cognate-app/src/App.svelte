@@ -25,7 +25,7 @@
 	} as unknown as CognateApp;
 
 	// Set hasLoaded to true while we are just testing for POC.
-	let hasLoaded = true;
+	let hasLoaded = false;
 
 	// Status info for the top bar.
 	let statusMessage = "Board loaded."
@@ -72,6 +72,28 @@
 			.catch(e => {
 				// If we have an error, we've got some issues.
 				console.log("Error encountered while refishing:")
+				console.error(e);
+				statusError = true;
+				statusMessage = e.message;
+			})
+	}
+
+    const loadNewBoard = async () => {
+        await fetch(`${rootUrl}/new-board`, {
+			method: "GET",
+		})
+			.then((res => res.json()))
+			.then((data: any) => {
+				// If we have our data, we should have refished correctly.
+				console.log("Successfully loaded new board.")
+                loaded = data
+				statusMessage = "Loading completed."
+				$currentBoard = "board-1";
+                hasLoaded = true;
+			})
+			.catch(e => {
+				// If we have an error, we've got some issues.
+				console.log("Error encountered while loading board:")
 				console.error(e);
 				statusError = true;
 				statusMessage = e.message;
@@ -151,7 +173,7 @@
 
 <main>
 	{#if !hasLoaded}
-		<button on:click={() => {hasLoaded = true}}>Load Board</button>
+		<button on:click={loadNewBoard}>Load Board</button>
 	{:else}
 		<div>
 			{#if showCognateInterface}
