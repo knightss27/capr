@@ -284,6 +284,14 @@ def compile_to_json_full_cognates(path, cognates="COGID"):
         else:
             rows_of_cognates[entry[cognates]].append((boards["words"][idx]["syllables"], entry))
 
+    # TBD what this stuff does
+    reconstructions_of_crossid = {}
+    strictness_of_crossid = {}
+    # ---
+    sortkey_of_crossid = {}
+    first_crossid_of_reconstruction = {}
+    included_in_clean = set([])
+    # --
 
     # Now go through each cogid we've collected to actuall start running transducers
     for cogid, cogs in rows_of_cognates.items():
@@ -308,7 +316,7 @@ def compile_to_json_full_cognates(path, cognates="COGID"):
                 # transducer will work.
                 syl = word[0].replace(".", " ") + " "
 
-                print("trying ", row["DOCULECT"], " on ", syl)
+                print("trying ", row["DOCULECT"], " on ", syl, " : ", row["CONCEPT"])
 
                 # Apply the transducer upwards to this word
                 recs = list(fsts[row["DOCULECT"]].apply_up(syl))
@@ -335,7 +343,7 @@ def compile_to_json_full_cognates(path, cognates="COGID"):
         if at_least_one:
             strict = True
             cognate_reconstructions = list(set.intersection(*reconstructions.values()))
-
+            
             if not cognate_reconstructions:
                 strict = False
                 # kinda lenient way of generating reconstructions
@@ -358,9 +366,95 @@ def compile_to_json_full_cognates(path, cognates="COGID"):
         # TODO: the rest of this, currently almost copied from below but
         # fixed a bit with respect to what is being iterated through
 
+        reconstructions_of_crossid[cogid] = cognate_reconstructions
+        strictness_of_crossid[cogid] = strict
+
+
+        if cognate_reconstructions:
+            sortkey_of_crossid[cogid] = (0, cognate_reconstructions[0])
+        else:
+            sortkey_of_crossid[cogid] = (1, str(first_form))
+
+
+        # merge with disjoint sets
+        ds.add(cogid, cogid)
+        for reconst in cognate_reconstructions:
+            if reconst not in first_crossid_of_reconstruction:
+                first_crossid_of_reconstruction[reconst] = cogid
+            else:
+                ds.add(first_crossid_of_reconstruction[reconst], cogid)
+
+        # Only output items when the reconstruction is reliable, i.e.
+        # reconstruction present and based on more than one language, are printed
+        # with the "--clean" flag
+        if cognate_reconstructions and len(reconstructions) > 1:
+            included_in_clean.add(cogid)
+        
+    display_crossids = sorted(
+        ds.group.keys(), key=lambda cogid: sortkey_of_crossid[cogid]
+    )
+
+    print(display_crossids)
+
+    boardid_cntr = 1
+
+    # Second round: print the actual content from display_crossids
+    for major_crossid in display_crossids:
+        # get crossids sharing the same reconstruction
+        crossids = sorted(ds.group[major_crossid])
+
+        print("406: ", crossids)
+
+        # get reconstructions and strictness
+        strict = all([strictness_of_crossid[crossid] for crossid in crossids])
+        clean = any([crossid in included_in_clean for crossid in crossids])
+
+        # If not included in "--clean", continue
+        if not clean:
+            print("Not clean, skipping...")
+            continue
+
+        all_reconstructions = [
+            set(reconstructions_of_crossid[crossid]) for crossid in crossids
+        ]
+        reconstructions = list(set.intersection(*all_reconstructions))
+
+        if not reconstructions:
+            strict = False
+            pairwise_intersections = [
+                set.intersection(all_reconstructions[a], all_reconstructions[b])
+                for a in range(len(all_reconstructions))
+                for b in range(len(all_reconstructions))
+                if a != b
+            ]
+            if pairwise_intersections:
+                reconstructions = list(set.union(*pairwise_intersections))
+            else:
+                reconstructions = []
+
+        board_id = "board-" + str(boardid_cntr)
+        boardid_cntr += 1
+
+        board_title = ", ".join(reconstructions)
+        if len(board_title) > 12:
+            board_title = board_title[:10] + "..."
+        elif not board_title:
+            board_title = "*?"
+
+        board_columns = ["column-" + cid for cid in crossids]
+
+        board_json = {
+            "id": board_id,
+            "title": board_title,
+            "columnIds": board_columns,
+        }
+        print(board_json)
+
+        boards["boards"][board_id] = board_json
+
     return boards
 
-compile_to_json_full_cognates("./pipeline/output/germanic/stage3/germanic-aligned-final.tsv")
+# compile_to_json_full_cognates("./pipeline/output/germanic/stage3/germanic-aligned-final.tsv")
 
 def compile_to_json(filepath):
     fst_burmese = FST.load("./reconstruct/burmese.bin")
