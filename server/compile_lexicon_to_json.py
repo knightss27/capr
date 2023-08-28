@@ -321,14 +321,19 @@ def compile_to_json_full_cognates(path, cognates="COGID"):
                 # Apply the transducer upwards to this word
                 recs = list(fsts[row["DOCULECT"]].apply_up(syl))
 
+                # Add the reconstructions to our record, whether or not they exist
+                # We use word[0] here to match the "syllables" entry in the JSON
+                boards["fstUp"][row["DOCULECT"]][word[0]] = sorted(set(recs))
                 
+                # TBD
+                # attested_reconstructions.update(rec)
 
                 # Only worry about reconstructions when we have actually made one
                 if len(recs) > 0:
                     at_least_one = True
                     if row["DOCULECT"] not in reconstructions:
                         reconstructions[row["DOCULECT"]] = set(recs)
-                        print(row["DOCULECT"], recs)
+                        # print(row["DOCULECT"], recs)
                     else:
                         reconstructions[row["DOCULECT"]] = reconstructions[row["DOCULECT"]].union(
                             set(recs)
@@ -363,8 +368,9 @@ def compile_to_json_full_cognates(path, cognates="COGID"):
 
             print(cognate_reconstructions)
 
-        # TODO: the rest of this, currently almost copied from below but
-        # fixed a bit with respect to what is being iterated through
+        # TODO: Actually go through what is written below and clean it up
+        # I have not verified what a lot of this does in the same way I did the
+        # lines above this comment
 
         reconstructions_of_crossid[cogid] = cognate_reconstructions
         strictness_of_crossid[cogid] = strict
@@ -394,7 +400,7 @@ def compile_to_json_full_cognates(path, cognates="COGID"):
         ds.group.keys(), key=lambda cogid: sortkey_of_crossid[cogid]
     )
 
-    print(display_crossids)
+    # print(display_crossids)
 
     boardid_cntr = 1
 
@@ -403,15 +409,13 @@ def compile_to_json_full_cognates(path, cognates="COGID"):
         # get crossids sharing the same reconstruction
         crossids = sorted(ds.group[major_crossid])
 
-        print("406: ", crossids)
-
         # get reconstructions and strictness
         strict = all([strictness_of_crossid[crossid] for crossid in crossids])
         clean = any([crossid in included_in_clean for crossid in crossids])
 
         # If not included in "--clean", continue
         if not clean:
-            print("Not clean, skipping...")
+            # print("Not clean, skipping...")
             continue
 
         all_reconstructions = [
