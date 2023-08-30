@@ -185,6 +185,9 @@ def compile_to_json_full_cognates(path, transducer="internal", fst_path="./refis
         "Proto-Germanic", cognates="CROSSIDS")
     """
 
+    # For some reason, Python sometimes can't find this file...
+    # TODO: figure out why this is (also not sure if it is still
+    # a problem outside of development mode)
     data = []
     with open(os.path.abspath(path)) as f:
         for row in f.readlines():

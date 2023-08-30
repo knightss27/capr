@@ -92,6 +92,9 @@
     // Keep track of `foma` compiling errors.
     let compilerErrors: string[] = [];
 
+    // Keep track of words, and index them by their characters
+    // This is mainly for debugging to show relevant glosses, TBD whether we
+    // should keep it...
     let wordsByWord = {}
     $: Object.values(data.words).forEach((w) => {wordsByWord[w.syllables[0]] = w})
 </script>
