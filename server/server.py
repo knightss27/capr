@@ -1,7 +1,6 @@
-from os import abort, listdir
 import os
 from os.path import isfile, join
-from flask import Flask, Response, jsonify, request
+from flask import Flask, Response, jsonify, request, abort
 from flask_cors import CORS
 from functools import wraps
 from compile_lexicon_to_json import compile_to_json, compile_to_json_full_cognates
@@ -55,15 +54,32 @@ def with_json(*outer_args):
 # /list-inputs returns all input file names
 @app.route("/list-inputs")
 def list_inputs():
-    files = [f.split("/")[-1] for f in glob.glob("./data/*.tsv")]
+    files = [f.split("/")[-1] for f in glob.glob("/usr/app/data/*.tsv")]
     return {"inputs": files}
+
+# /get-transducers will return the text of a transducer file if it exists with
+# the given name in /fsts
+@app.route("/get-transducers", methods=["POST"])
+@with_json("name")
+def get_transducer(json_body):
+    files = [f.split("/")[-1] for f in glob.glob("/usr/app/fsts/*.txt")]
+    
+    new_transducer = ""
+    if json_body["name"] in files:
+        new_transducer = ""
+        with open(os.path.join("/usr/app/fsts/", json_body["name"]), encoding="utf-8") as fst_file:
+            new_transducer = fst_file.read()
+    return {
+        "name": json_body["name"],
+        "transducer": new_transducer
+        }
 
 # /new-board gives us the compiled format of our source material after it has been run through Lexstat
 @app.route("/new-board", methods=["POST"])
 @with_json("dataPath", "transducer")
 def new_board(json_body):
     if json_body["dataPath"]:
-        return compile_to_json_full_cognates(os.path.join('./data', json_body["dataPath"]), json_body["transducer"])
+        return compile_to_json_full_cognates(os.path.join('/usr/app/data', json_body["dataPath"]), json_body["transducer"])
 
     return compile_to_json_full_cognates("./pipeline/output/germanic/stage3/germanic-aligned-final.tsv")
 

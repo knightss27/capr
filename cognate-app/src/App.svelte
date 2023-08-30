@@ -79,7 +79,7 @@
 			})
 	}
 
-    const loadNewBoard = async () => {
+    const loadNewBoard = async (getExistingBoards: boolean) => {
         await fetch(`${rootUrl}/new-board`, {
 			method: "POST",
             headers: {
@@ -107,6 +107,30 @@
 				statusError = true;
 				statusMessage = e.message;
 			})
+        
+        if (getExistingBoards) {
+            await fetch(`${rootUrl}/get-transducers`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    name: `${selectedDataPath.value.split("-")[0]}.txt`
+                })
+            })
+                .then((res => res.json()))
+                .then((data: any) => {
+                    // If we have our data, we should have loaded correctly.
+                    console.log("Successfully loaded existing transducer.")
+                    oldFst = data.transducer;
+                    newFst = data.transducer;
+                })
+                .catch(e => {
+                    // If we have an error, we've got some issues.
+                    console.log("Error encountered while loading existing transducer:")
+                    console.error(e);
+                })
+        }
 	}
 
 	let highestColNum = -1;
@@ -225,7 +249,7 @@
             </span>
         {/if}
         <!-- <span class="info sticky">Using source: <a href="/sources/{currentSourceFile}">{currentSourceFile}</a> (<a href="/sources/{currentSourceFile.substring(0, currentSourceFile.length-4)}-lexicon.{currentSourceFile.substring(currentSourceFile.length-3)}">lexicon</a>)</span> -->
-        <button class="sticky" on:click={loadNewBoard}>Load</button>
+        <button class="sticky" on:click={() => {loadNewBoard(true)}}>Load</button>
         <Select items={dataPaths} placeholder="Available input sources" bind:value={selectedDataPath} />
         <button on:click={() => {showCognateInterface = !showCognateInterface}}>{showCognateInterface ? "Show FST Editor" : "Show Cognate Editor"}</button>
     </div>
@@ -249,9 +273,11 @@
                 </div>
                 <!-- The Board component for displaying columns -->
                 <Board columnIds={loaded.boards[$currentBoard].columnIds} columns={loaded.columns} bind:loaded {addNewColumn} />
+            {:else}
+                <div style="height: 100%; justify-content: center; opacity: 0.6;">Nothing to show here.</div>
             {/if}
         {:else}
-            <FstComparator data={loaded} {showNewFst} bind:oldFst bind:newFst bind:comparisonData bind:selectedDoculects bind:statusMessage bind:statusError />
+            <FstComparator data={loaded} {showNewFst} handleDebugComparison={async () => {await loadNewBoard(false)}} bind:oldFst bind:newFst bind:comparisonData bind:selectedDoculects bind:statusMessage bind:statusError />
         {/if}
 </main>
 
@@ -343,6 +369,7 @@
     .top :global(.selectContainer) {
         flex-grow: 1;
         max-width: 250px;
+        border-radius: 0.5rem !important;
         /* margin-left: auto !important; */
     }
 </style>

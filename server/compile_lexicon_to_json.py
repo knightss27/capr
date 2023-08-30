@@ -173,7 +173,7 @@ def sort_row_tuples(row_tuples, reconstructed_sense):
     return row_tuples_sorted_by_senses
 
 
-def compile_to_json_full_cognates(path, transducer="internal", fst_path="./refishing-fst2.txt", cognates="COGID"):
+def compile_to_json_full_cognates(path, transducer="internal", fst_path="/usr/app/refishing-fst2.txt", cognates="COGID"):
     """
     Get the JSON from a wordlist file with "normal" cognates.
 
@@ -259,7 +259,7 @@ def compile_to_json_full_cognates(path, transducer="internal", fst_path="./refis
     
     if transducer == "internal":
         with open(fst_path, encoding="utf-8") as fst_file:
-                new_transducer = fst_file.read()
+            new_transducer = fst_file.read()
     else:
         new_transducer = transducer
 
