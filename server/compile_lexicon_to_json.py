@@ -173,7 +173,7 @@ def sort_row_tuples(row_tuples, reconstructed_sense):
     return row_tuples_sorted_by_senses
 
 
-def compile_to_json_full_cognates(path, cognates="COGID"):
+def compile_to_json_full_cognates(path, transducer="internal", fst_path="./refishing-fst2.txt", cognates="COGID"):
     """
     Get the JSON from a wordlist file with "normal" cognates.
 
@@ -186,9 +186,11 @@ def compile_to_json_full_cognates(path, cognates="COGID"):
     """
 
     data = []
-    with open(path) as f:
+    with open(os.path.abspath(path)) as f:
         for row in f.readlines():
             data += [[cell.strip() for cell in row.split("\t")]]
+
+    f.close()
 
     header = [row for row in data if row[0] and not row[0].startswith("#")][0]
     data_dict = {}
@@ -250,9 +252,13 @@ def compile_to_json_full_cognates(path, cognates="COGID"):
     }
 
     fsts = {}
-
-    with open("./refishing-fst2.txt", encoding="utf-8") as fst_file:
-            new_transducer = fst_file.read()
+    new_transducer = ""
+    
+    if transducer == "internal":
+        with open(fst_path, encoding="utf-8") as fst_file:
+                new_transducer = fst_file.read()
+    else:
+        new_transducer = transducer
 
     with tempfile.TemporaryDirectory() as tmpdirname:
         os.chdir(tmpdirname)
@@ -316,7 +322,7 @@ def compile_to_json_full_cognates(path, cognates="COGID"):
                 # transducer will work.
                 syl = word[0].replace(".", " ") + " "
 
-                print("trying ", row["DOCULECT"], " on ", syl, " : ", row["CONCEPT"])
+                # print("trying ", row["DOCULECT"], " on ", syl, " : ", row["CONCEPT"])
 
                 # Apply the transducer upwards to this word
                 recs = list(fsts[row["DOCULECT"]].apply_up(syl))
@@ -366,7 +372,7 @@ def compile_to_json_full_cognates(path, cognates="COGID"):
 
                 cognate_reconstructions = ["*" + w for w in cognate_reconstructions]
 
-            print(cognate_reconstructions)
+            # print(cognate_reconstructions)
 
         # TODO: Actually go through what is written below and clean it up
         # I have not verified what a lot of this does in the same way I did the

@@ -26,15 +26,7 @@
 
     // Doculects to be selected from.
     // Should really be returned from server or something where they can be centrally defined.
-    let doculects = [
-        'Old_Burmese', 
-        'Achang_Longchuan',
-        'Xiandao',
-        'Maru',
-        'Bola',
-        'Atsi',
-        'Lashi'
-    ]
+    $: doculects = ['Debug', ...data.fstDoculects];
 
     let fst_names = {'Old_Burmese': 'burmese', 'Achang_Longchuan': 'ngochang', 'Xiandao': 'xiandao', 'Maru': 'maru', 'Bola': 'bola', 'Atsi': 'atsi', 'Lashi': 'lashi'}
 
@@ -88,6 +80,7 @@
             console.error(e);
             statusError = true;
             statusMessage = e.message;
+            loadingData = false;
         })
     }
 
@@ -98,6 +91,9 @@
 	let fstEditorWidth = 600;
     // Keep track of `foma` compiling errors.
     let compilerErrors: string[] = [];
+
+    let wordsByWord = {}
+    $: Object.values(data.words).forEach((w) => {wordsByWord[w.syllables[0]] = w})
 </script>
 
 
@@ -127,6 +123,19 @@
         {:else if loadingData}
             <div class="loader">
                 <Circle2 />            
+            </div>
+        {/if}
+        {#if selectedDoculects && selectedDoculects.map(f => f.value).includes('Debug')}
+            <div style="max-height: 100%; overflow-y: scroll;">
+                {#each Object.entries(data.fstUp) as [language, words]}
+                <h1>{language}</h1>
+                <table class="debug-table">
+                    <tr><th>Gloss</th><th>Word</th><th>Apply Up</th></tr>
+                    {#each Object.entries(words) as [word, applied]}
+                    <tr><td>{wordsByWord[word].gloss}</td><td>{word}</td><td>{applied.join(", ")}</td></tr>
+                    {/each}
+                </table>
+                {/each}
             </div>
         {/if}
     </div>
@@ -186,5 +195,13 @@
         justify-content: center;
         padding: 0.5rem;
         margin-bottom: 0.25rem;
+    }
+
+    table.debug-table td {
+        border: 1px solid #cccccc;
+    }
+
+    table.debug-table {
+        width: 100%;
     }
 </style>

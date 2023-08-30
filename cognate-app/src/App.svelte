@@ -5,6 +5,7 @@
 	import { currentBoard } from './stores';
 	import type { CognateApp, FstComparison } from './types';
 	import { saveAs } from 'file-saver';
+    import Select from 'svelte-select';
 	
 	// Imports starting JSON data for running as POC (proof of concept).
 	// This data is a little too long, which is why HMR fails. Just reload the page manually.
@@ -80,14 +81,22 @@
 
     const loadNewBoard = async () => {
         await fetch(`${rootUrl}/new-board`, {
-			method: "GET",
+			method: "POST",
+            headers: {
+				"Content-Type": "application/json"
+			},
+			body: JSON.stringify({
+				dataPath: selectedDataPath.value,
+                transducer: useNewFst ? newFst : "internal"
+			})
 		})
 			.then((res => res.json()))
 			.then((data: any) => {
-				// If we have our data, we should have refished correctly.
+				// If we have our data, we should have loaded correctly.
 				console.log("Successfully loaded new board.")
-                loaded = data
-				statusMessage = "Loading completed."
+                loaded = data;
+				statusMessage = "Loading completed.";
+                statusError = false;
 				$currentBoard = "board-1";
                 hasLoaded = true;
 			})
@@ -168,54 +177,82 @@
     if (loaded.boards[$currentBoard] === undefined) {
         $currentBoard = loaded.currentBoard;
     }
+
+    // Select stuff
+    let dataPaths = [];
+    let selectedDataPath;
+    const loadDataPaths = async () => {
+        return fetch(`${rootUrl}/list-inputs`, {
+			method: "GET",
+		})
+			.then((res => res.json()))
+			.then((data: any) => {
+				// If we have our data, we should have refished correctly.
+				console.log("Successfully loaded data paths.");
+                dataPaths = data.inputs;
+			})
+			.catch(e => {
+				// If we have an error, we've got some issues.
+				console.log("Error encountered while loading data paths:")
+				console.error(e);
+			})
+    }
+
+    onMount(() => {
+        loadDataPaths();
+    })
 </script>
 
 
 <main>
-	{#if !hasLoaded}
-		<button on:click={loadNewBoard}>Load Board</button>
-	{:else}
-		<div>
-			{#if showCognateInterface}
-				<button on:click={handleRefish}>Refish Board</button>
-				<span class="info checkbox">
-					<label for="useNewFst">Use new FST?</label>
-					<input style="margin: 0px 0px 0px 0.25rem;" type="checkbox" name="useNewFst" bind:checked={useNewFst} />
-				</span>
-				<span class:statusError>Status: {statusMessage}</span>
-			{:else}
-				<button on:click={() => {showNewFst = !showNewFst}}>Switch FST</button>
-				<span class="info">Current FST: {showNewFst ? "New" : "Old"}</span>
-				<button on:click={saveFSTLocally}>Save FSTs</button>
-				<button on:click={exportFST}>Export FSTs</button>
-				<span class:statusError>Status: {statusMessage}</span>
-			{/if}
-			<span class="info sticky">Using source: <a href="/sources/{currentSourceFile}">{currentSourceFile}</a> (<a href="/sources/{currentSourceFile.substring(0, currentSourceFile.length-4)}-lexicon.{currentSourceFile.substring(currentSourceFile.length-3)}">lexicon</a>)</span>
-			<button on:click={() => {showCognateInterface = !showCognateInterface}}>{showCognateInterface ? "Show FST Editor" : "Show Cognate Editor"}</button>
-		</div>
-		{#if showCognateInterface}
-			<!-- The list of all possible boards -->
-			<BoardList boards={Object.values(loaded.boards).sort((a, b) => a.title > b.title ? 1 : -1)} />
-			<!-- The current board's title and some relevant options -->
-			<div class="board-title">
-				<h1>{loaded.boards[$currentBoard].title}</h1>
-				<div class="options">
-					Board Options:
-					<button class="option" on:click={addNewColumn}>Add Column</button>
-					<button class="option" on:click={saveBoardsLocally}>Save</button>
-					<button class="option" on:click={exportBoards}>Export</button>
-					<input accept="application/json" id="board-upload" type="file" bind:files/>
-					<label for="board-upload" class="option custom-file-upload">
-						Load
-					</label>
-				</div>
-			</div>
-			<!-- The Board component for displaying columns -->
-			<Board columnIds={loaded.boards[$currentBoard].columnIds} columns={loaded.columns} bind:loaded {addNewColumn} />
-		{:else}
-			<FstComparator data={loaded} {showNewFst} bind:oldFst bind:newFst bind:comparisonData bind:selectedDoculects bind:statusMessage bind:statusError />
-		{/if}
-	{/if}
+    <div class="top">
+        {#if showCognateInterface}
+            <button on:click={handleRefish}>Refish Board</button>
+            <span class="info checkbox">
+                <label for="useNewFst">Use new FST?</label>
+                <input style="margin: 0px 0px 0px 0.25rem;" type="checkbox" name="useNewFst" bind:checked={useNewFst} />
+            </span>
+            <span class:statusError>Status: {statusMessage}</span>
+        {:else}
+            <button on:click={() => {showNewFst = !showNewFst}}>Switch FST</button>
+            <span class="info">Current FST: {showNewFst ? "New" : "Old"}</span>
+            <button on:click={saveFSTLocally}>Save FSTs</button>
+            <button on:click={exportFST}>Export FSTs</button>
+            <span class:statusError>Status: {statusMessage}</span>
+            <span class="info checkbox">
+                <label for="useNewFst">Use new FST?</label>
+                <input style="margin: 0px 0px 0px 0.25rem;" type="checkbox" name="useNewFst" bind:checked={useNewFst} />
+            </span>
+        {/if}
+        <!-- <span class="info sticky">Using source: <a href="/sources/{currentSourceFile}">{currentSourceFile}</a> (<a href="/sources/{currentSourceFile.substring(0, currentSourceFile.length-4)}-lexicon.{currentSourceFile.substring(currentSourceFile.length-3)}">lexicon</a>)</span> -->
+        <button class="sticky" on:click={loadNewBoard}>Load</button>
+        <Select items={dataPaths} placeholder="Available input sources" bind:value={selectedDataPath} />
+        <button on:click={() => {showCognateInterface = !showCognateInterface}}>{showCognateInterface ? "Show FST Editor" : "Show Cognate Editor"}</button>
+    </div>
+        {#if showCognateInterface}
+            {#if hasLoaded}
+                <!-- The list of all possible boards -->
+                <BoardList boards={Object.values(loaded.boards).sort((a, b) => a.title > b.title ? 1 : -1)} />
+                <!-- The current board's title and some relevant options -->
+                <div class="board-title">
+                    <h1>{loaded.boards[$currentBoard].title}</h1>
+                    <div class="options">
+                        Board Options:
+                        <button class="option" on:click={addNewColumn}>Add Column</button>
+                        <button class="option" on:click={saveBoardsLocally}>Save</button>
+                        <button class="option" on:click={exportBoards}>Export</button>
+                        <input accept="application/json" id="board-upload" type="file" bind:files/>
+                        <label for="board-upload" class="option custom-file-upload">
+                            Load
+                        </label>
+                    </div>
+                </div>
+                <!-- The Board component for displaying columns -->
+                <Board columnIds={loaded.boards[$currentBoard].columnIds} columns={loaded.columns} bind:loaded {addNewColumn} />
+            {/if}
+        {:else}
+            <FstComparator data={loaded} {showNewFst} bind:oldFst bind:newFst bind:comparisonData bind:selectedDoculects bind:statusMessage bind:statusError />
+        {/if}
 </main>
 
 <style>
@@ -302,4 +339,10 @@
 	label.custom-file-upload {
 		border-left: 1px solid #ccc;
 	}
+
+    .top :global(.selectContainer) {
+        flex-grow: 1;
+        max-width: 250px;
+        /* margin-left: auto !important; */
+    }
 </style>

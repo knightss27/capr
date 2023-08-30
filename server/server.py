@@ -1,10 +1,13 @@
-from os import abort
+from os import abort, listdir
+import os
+from os.path import isfile, join
 from flask import Flask, Response, jsonify, request
 from flask_cors import CORS
 from functools import wraps
 from compile_lexicon_to_json import compile_to_json, compile_to_json_full_cognates
 from refish import refish
 from compare_fst import compare_fst
+import glob
 
 app = Flask(__name__)
 CORS(app)
@@ -49,13 +52,20 @@ def with_json(*outer_args):
 
     return decorator
 
+# /list-inputs returns all input file names
+@app.route("/list-inputs")
+def list_inputs():
+    files = [f.split("/")[-1] for f in glob.glob("./data/*.tsv")]
+    return {"inputs": files}
 
 # /new-board gives us the compiled format of our source material after it has been run through Lexstat
-@app.route("/new-board")
-def new_board():
-    return compile_to_json_full_cognates("./pipeline/output/germanic/stage3/germanic-aligned-final.tsv")
-    # return compile_to_json("./pipeline/output/burmish-pipeline/stage2/burmish-aligned-final.tsv")
+@app.route("/new-board", methods=["POST"])
+@with_json("dataPath", "transducer")
+def new_board(json_body):
+    if json_body["dataPath"]:
+        return compile_to_json_full_cognates(os.path.join('./data', json_body["dataPath"]), json_body["transducer"])
 
+    return compile_to_json_full_cognates("./pipeline/output/germanic/stage3/germanic-aligned-final.tsv")
 
 # /refish-board returns the output of the refishing algorithm for cognate reassignment 
 @app.route("/refish-board", methods=["POST"])
@@ -64,8 +74,8 @@ def refish_board(json_body):
     if (json_body['transducer'] == 'internal'):
         del json_body['transducer']
 
-    new_board = refish(json_body)
-    return new_board
+    board = refish(json_body)
+    return board
 
 
 # /compare-fst returns the correspondence patterns for the transducer interface

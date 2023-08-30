@@ -1,20 +1,19 @@
 #!/usr/bin/python
 from os import system
 import argparse
-from lingpy import *
+from pathlib import Path
+from lingpy import Wordlist
 from lingpy.compare.partial import Partial
 from lingpy import basictypes
-from collections import defaultdict
-from tabulate import tabulate
-from copy import copy
-from burmtools import *
+from burmtools import burmish_parse
 from lingrex.colex import find_colexified_alignments, find_bad_internal_alignments
 from lingrex.align import template_alignment
-from lingrex.copar import *
-from pathlib import Path
+from lingrex.copar import Alignments
 
 
 def init_argparse() -> argparse.ArgumentParser:
+    """ Generate argument parser for the lexicon pipeline
+    """
     parser = argparse.ArgumentParser(
         usage="%(prog)s [OPTION] [TSV_FILE]",
         description="Convert an aligned and segmented dataset to CAPR input form",
@@ -139,22 +138,6 @@ def from_aligned(file_name, pipline_name="pipeline", use_template_alignment=Fals
             wl_glossids[idx] = entered_ids[alms[idx, "concept"]]
         alms.add_entries("glossid", wl_glossids, lambda idx: idx)
 
-    if pipline_name == "germanic":
-        # Set all concepts to English variants, removing data that does not have
-        # an English counterpart...
-
-        # NOTE: the concept is the proto-form, since we do not have semantic
-        # reconstructions, so we need to embrace it here, and just go with this
-        # form, I suggest, for this reason, no realy pipeline-specific code is
-        # needed here
-        pass
-
-
-    ###
-    # This function does not exist anymore...
-    # print("Now running align_by_structure")
-    # align_by_structure(par, segments='tokens', ref='cogids', structure='structure')
-    ###
 
     if use_template_alignment and pipline_name == "burmish":
         # VERY Burmish specific stuff here...
@@ -226,7 +209,3 @@ if args.from_aligned:
 else:
     from_primitive(fname, pname)
 
-# print(f"Pipeline '{pname}' completed!")
-
-# from_aligned("germanic-data.tsv", "germanic-test")
-# from_primitive("germanic-data.tsv", "germanic-test")
