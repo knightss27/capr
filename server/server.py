@@ -79,7 +79,7 @@ def get_transducer(json_body):
 @with_json("dataPath", "transducer")
 def new_board(json_body):
     if json_body["dataPath"]:
-        return compile_to_json_full_cognates(os.path.join('/usr/app/data', json_body["dataPath"]), json_body["transducer"])
+        return compile_to_json_full_cognates(json_body["dataPath"], json_body["transducer"])
 
     return compile_to_json_full_cognates("./pipeline/output/germanic/stage3/germanic-aligned-final.tsv")
 

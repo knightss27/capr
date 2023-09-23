@@ -41,7 +41,7 @@ def replace_diacritics_down(s):
 
 
 # Convert a piece of text to its component syllables
-# If there is alrady "◦" or a space, use it to separate them
+# If there is already "◦" or a space, use it to separate them
 # Otherwise, separate the tone letters other letters
 def syllabize(text):
     split_result = re.split(r"([ ◦¹²³⁴⁵˩˨˧˦˥]+)", text)
@@ -173,7 +173,12 @@ def sort_row_tuples(row_tuples, reconstructed_sense):
     return row_tuples_sorted_by_senses
 
 
-def compile_to_json_full_cognates(path, transducer="internal", fst_path="/usr/app/refishing-fst2.txt", cognates="COGID"):
+def compile_to_json_full_cognates(
+    path,
+    transducer="internal",
+    fst_path="/usr/app/refishing-fst.txt",
+    cognates="COGIDS", #TODO: find out a good way of determ
+):
     """
     Get the JSON from a wordlist file with "normal" cognates.
 
@@ -185,10 +190,19 @@ def compile_to_json_full_cognates(path, transducer="internal", fst_path="/usr/ap
         "Proto-Germanic", cognates="CROSSIDS")
     """
 
-    # For some reason, Python sometimes can't find this file...
-    # TODO: figure out why this is (also not sure if it is still
-    # a problem outside of development mode)
+    # The name of the language "pipeline"
+    # Should be the first word of your input file before a "-", i.e.
+    # germanic-data.tsv --> germanic, burmish-data.tsv --> burmish
+    pipeline_name = path.split("-")[0]
+    eprint(f"Assuming pipeline name: {pipeline_name}")
+
+    # Finding file path
+    path = os.path.join('/usr/app/data', path)
+
+    # Where we will put everything we read from the input data
     data = []
+
+    # For some reason, Python sometimes can't find this file...
     with open(os.path.abspath(path)) as f:
         for row in f.readlines():
             data += [[cell.strip() for cell in row.split("\t")]]
@@ -221,43 +235,67 @@ def compile_to_json_full_cognates(path, transducer="internal", fst_path="/usr/ap
         boards["words"][idx] = {
             "id": idx,
             "doculect": row["DOCULECT"],
-            "syllables": [".".join(row["TOKENS"].split())],
+            # "syllables": [".".join(row["TOKENS"].split())],
+            "syllables": [".".join(r.split(" ")) for r in row["TOKENS"].split(" + ")],
+            # "syllables": syllabize(row["IPA"]),
             "gloss": row["CONCEPT"],
             "glossid": row["GLOSSID"],
         }
-        boards["syllables"][idx + "-0"] = {
-            "id": idx + "-0",
-            "doculect": row["DOCULECT"],
-            "syllables": boards["words"][idx]["syllables"],
-            "gloss": boards["words"][idx]["gloss"],
-            "glossid": boards["words"][idx]["glossid"],
-            "wordID": idx,
-            "syllOrder": 0,
-            "syllable": boards["words"][idx]["syllables"][0],
-        }
 
-        # column ids are in fact the cognate sets +++
-        cogid = "column-" + row[cognates]
-        if cogid in boards["columns"]:
-            boards["columns"][cogid]["syllableIds"] += [idx + "-0"]
-        else:
-            boards["columns"][cogid] = {"id": cogid, "syllableIds": [idx + "-0"]}
+
+        syl_idx = 0
+        for syllable in boards["words"][idx]["syllables"]:
+            syl_id = "-".join([idx, str(syl_idx)])
+            boards["syllables"][syl_id] = {
+                "id": syl_id,
+                "doculect": row["DOCULECT"],
+                "syllables": boards["words"][idx]["syllables"],
+                "gloss": boards["words"][idx]["gloss"],
+                "glossid": boards["words"][idx]["glossid"],
+                "wordID": idx,
+                "syllOrder": syl_idx,
+                "syllable": syllable,
+            }
+
+            # eprint(syllable_ids)
+            # column ids are in fact the cognate sets
+            cogid = "column-" + row[cognates].split(" ")[syl_idx]
+            if cogid in boards["columns"]:
+                boards["columns"][cogid]["syllableIds"].append(syl_id)
+            else:
+                boards["columns"][cogid] = {"id": cogid, "syllableIds": [syl_id]}
+            
+            syl_idx += 1
 
     # boards["currentBoard"] = list(boards["boards"].keys())[0]
 
     # get the transducers, works only if they are there
     # fsts = {k: FST.load(".reconstruct/{0}.bin".format(k)) for k in boards["fstDoculects"]}
 
+    # TODO: Needs to be made consistent
     fst_index = {
         "German": "german",
         "Dutch": "dutch",
         "English": "english",
+        "Old_Burmese": "burmese",
+        "Achang_Longchuan": "ngochang",
+        "Xiandao": "xiandao",
+        "Maru": "maru",
+        "Bola": "bola",
+        "Atsi": "atsi",
+        "Lashi": "lashi",
+        "Rangoon": "rangoon"
     }
 
     fsts = {}
     new_transducer = ""
-    
+
     if transducer == "internal":
+        # try and access the pipeline file in /fsts
+        if os.path.isfile(f"/usr/app/fsts/{pipeline_name}.txt"):
+            fst_path = f"/usr/app/fsts/{pipeline_name}.txt"
+            eprint(f"Found input transducer for {pipeline_name}",)
+
         with open(fst_path, encoding="utf-8") as fst_file:
             new_transducer = fst_file.read()
     else:
@@ -272,9 +310,14 @@ def compile_to_json_full_cognates(path, transducer="internal", fst_path="/usr/ap
             "UTF-8"
         )
         eprint("\n".join(output.split("\n")[-5:]))
+        
+        # debug
+        eprint(boards["fstDoculects"])
+
         for doculect_name in boards["fstDoculects"]:
             if os.path.isfile(fst_index[doculect_name] + ".bin"):
                 fsts[doculect_name] = FST.load(fst_index[doculect_name] + ".bin")
+        eprint(fsts)
         eprint("FSTs loaded:", ", ".join(fsts))
 
 
@@ -288,10 +331,26 @@ def compile_to_json_full_cognates(path, transducer="internal", fst_path="/usr/ap
     # Loop over each CROSSID (our cognates here) and add the relevant words
     for i, entry in data_dict.items():
         idx = "word-" + str(i)
-        if not entry[cognates] in rows_of_cognates:
-            rows_of_cognates[entry[cognates]] = [(boards["words"][idx]["syllables"], entry)]
-        else:
-            rows_of_cognates[entry[cognates]].append((boards["words"][idx]["syllables"], entry))
+        cogids_list = entry[cognates].split(" ")
+
+        # now we pretend to always be working with morphemes
+        # eprint(cogids_list, entry)
+
+        # Now we're just making a list of all the syllables/morphemes
+        for syl, _ in enumerate(cogids_list):
+            morph_cogid = cogids_list[syl]
+
+            if not morph_cogid in rows_of_cognates:
+                rows_of_cognates[morph_cogid] = [
+                    (boards["words"][idx]["syllables"][syl], entry)
+                ]
+            else:
+                rows_of_cognates[morph_cogid].append(
+                    (boards["words"][idx]["syllables"][syl], entry)
+                )
+        
+            # eprint(rows_of_cognates[morph_cogid])
+
 
     # TBD what this stuff does
     reconstructions_of_crossid = {}
@@ -300,9 +359,9 @@ def compile_to_json_full_cognates(path, transducer="internal", fst_path="/usr/ap
     sortkey_of_crossid = {}
     first_crossid_of_reconstruction = {}
     included_in_clean = set([])
-    # --
+    # ---
 
-    # Now go through each cogid we've collected to actuall start running transducers
+    # Now go through each cogid we've collected to actually start running transducers
     for cogid, cogs in rows_of_cognates.items():
         # First, try to guess the reconstruction by the following rule:
         # 1. Collect all reconstructions for each language
@@ -311,8 +370,13 @@ def compile_to_json_full_cognates(path, transducer="internal", fst_path="/usr/ap
         first_form = False
         at_least_one = False
 
+        # the cogids are not being split properly... TODO
+        # eprint(cogid)
+        # eprint(cogs)
+
         # For each word (with Burmish would be syllable) that shares a cogid/crossid
         for word, row in cogs:
+            # eprint(word, cogs)
 
             if not first_form:
                 # TBD what this is used for
@@ -323,17 +387,27 @@ def compile_to_json_full_cognates(path, transducer="internal", fst_path="/usr/ap
                 # Make the current syllable equal to the whole word, since we are
                 # working with the Germanic data. Also add spaces so that Mattis'
                 # transducer will work.
-                syl = word[0].replace(".", " ") + " "
+                syl = word
+
+                # Bad stuff because of how current germanic FST is written 
+                if pipeline_name == "germanic":
+                    syl = word.replace(".", " ") + " "
+                else:
+                    syl = word.replace(".", "")
+
+                # for burmish?
+                syl = replace_diacritics_up(syl)
 
                 # print("trying ", row["DOCULECT"], " on ", syl, " : ", row["CONCEPT"])
 
                 # Apply the transducer upwards to this word
                 recs = list(fsts[row["DOCULECT"]].apply_up(syl))
 
+                # eprint(recs)
+
                 # Add the reconstructions to our record, whether or not they exist
-                # We use word[0] here to match the "syllables" entry in the JSON
-                boards["fstUp"][row["DOCULECT"]][word[0]] = sorted(set(recs))
-                
+                boards["fstUp"][row["DOCULECT"]][word] = sorted(set(recs))
+
                 # TBD
                 # attested_reconstructions.update(rec)
 
@@ -344,11 +418,11 @@ def compile_to_json_full_cognates(path, transducer="internal", fst_path="/usr/ap
                         reconstructions[row["DOCULECT"]] = set(recs)
                         # print(row["DOCULECT"], recs)
                     else:
-                        reconstructions[row["DOCULECT"]] = reconstructions[row["DOCULECT"]].union(
-                            set(recs)
-                        )
+                        reconstructions[row["DOCULECT"]] = reconstructions[
+                            row["DOCULECT"]
+                        ].union(set(recs))
 
-        strict = True # usage TBD
+        strict = True  # usage TBD
 
         # Here is where we will store all our reconstructions for this cogid/crossid
         cognate_reconstructions = []
@@ -357,7 +431,7 @@ def compile_to_json_full_cognates(path, transducer="internal", fst_path="/usr/ap
         if at_least_one:
             strict = True
             cognate_reconstructions = list(set.intersection(*reconstructions.values()))
-            
+
             if not cognate_reconstructions:
                 strict = False
                 # kinda lenient way of generating reconstructions
@@ -384,12 +458,10 @@ def compile_to_json_full_cognates(path, transducer="internal", fst_path="/usr/ap
         reconstructions_of_crossid[cogid] = cognate_reconstructions
         strictness_of_crossid[cogid] = strict
 
-
         if cognate_reconstructions:
             sortkey_of_crossid[cogid] = (0, cognate_reconstructions[0])
         else:
             sortkey_of_crossid[cogid] = (1, str(first_form))
-
 
         # merge with disjoint sets
         ds.add(cogid, cogid)
@@ -404,7 +476,7 @@ def compile_to_json_full_cognates(path, transducer="internal", fst_path="/usr/ap
         # with the "--clean" flag
         if cognate_reconstructions and len(reconstructions) > 1:
             included_in_clean.add(cogid)
-        
+
     display_crossids = sorted(
         ds.group.keys(), key=lambda cogid: sortkey_of_crossid[cogid]
     )
@@ -461,13 +533,15 @@ def compile_to_json_full_cognates(path, transducer="internal", fst_path="/usr/ap
             "title": board_title,
             "columnIds": board_columns,
         }
-        print(board_json)
+        # print(board_json)
 
         boards["boards"][board_id] = board_json
 
     return boards
 
+
 # compile_to_json_full_cognates("./pipeline/output/germanic/stage3/germanic-aligned-final.tsv")
+
 
 def compile_to_json(filepath):
     fst_burmese = FST.load("./reconstruct/burmese.bin")
