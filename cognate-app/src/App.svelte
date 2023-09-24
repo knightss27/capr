@@ -6,6 +6,7 @@
 	import type { CognateApp, FstComparison } from './types';
 	import { saveAs } from 'file-saver';
     import Select from 'svelte-select';
+    import { Circle } from "svelte-loading-spinners";
 	
 	// Imports starting JSON data for running as POC (proof of concept).
 	// This data is a little too long, which is why HMR fails. Just reload the page manually.
@@ -31,6 +32,7 @@
 	// Status info for the top bar.
 	let statusMessage = "Board loaded."
 	let statusError = false;
+    let statusLoading = false;
 
 	// Where our api is
 	const rootUrl = "/api"
@@ -81,6 +83,9 @@
 
     const loadNewBoard = async (getExistingTransducers: boolean) => {
         loaded = {...initialData} as unknown as CognateApp;
+        hasLoaded = false;
+        statusLoading = true;
+        statusMessage = `Loading ${selectedDataPath.value}`;
 
         await fetch(`${rootUrl}/new-board`, {
 			method: "POST",
@@ -101,6 +106,7 @@
                 statusError = false;
 				$currentBoard = "board-1";
                 hasLoaded = true;
+                statusLoading = false;
 			})
 			.catch(e => {
 				// If we have an error, we've got some issues.
@@ -238,13 +244,25 @@
                 <label for="useNewFst">Use new FST?</label>
                 <input style="margin: 0px 0px 0px 0.25rem;" type="checkbox" name="useNewFst" bind:checked={useNewFst} />
             </span>
-            <span class:statusError>Status: {statusMessage}</span>
+            <span class:statusError>Status: {statusMessage}
+                {#if statusLoading}
+                    <div class="loader">
+                        <Circle size={15} />
+                    </div>
+                {/if}
+            </span>
         {:else}
             <button on:click={() => {showNewFst = !showNewFst}}>Switch FST</button>
             <span class="info">Current FST: {showNewFst ? "New" : "Old"}</span>
             <button on:click={saveFSTLocally}>Save FSTs</button>
             <button on:click={exportFST}>Export FSTs</button>
-            <span class:statusError>Status: {statusMessage}</span>
+            <span class:statusError>Status: {statusMessage} 
+                {#if statusLoading}
+                <div class="loader">
+                    <Circle2 />
+                </div>
+                {/if}
+            </span>
             <span class="info checkbox">
                 <label for="useNewFst">Use new FST?</label>
                 <input style="margin: 0px 0px 0px 0.25rem;" type="checkbox" name="useNewFst" bind:checked={useNewFst} />
@@ -293,7 +311,7 @@
 		height: calc(100% - 8px);
 	}
 
-	div {
+	div:not(.loader) {
 		display: flex;
 		align-items: center;
 		width: 100%;
@@ -334,6 +352,7 @@
 		padding: 0.5rem 1rem;
 		background-color: lightgreen;
 		border-radius: 0.5rem;
+        display: flex;
 	}
 
 	span.checkbox {
@@ -373,5 +392,10 @@
         max-width: 250px;
         border-radius: 0.5rem !important;
         /* margin-left: auto !important; */
+    }
+
+    div.loader {
+        display: block;
+        margin-left: 0.5rem;
     }
 </style>
