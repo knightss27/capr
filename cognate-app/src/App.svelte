@@ -79,7 +79,9 @@
 			})
 	}
 
-    const loadNewBoard = async (getExistingBoards: boolean) => {
+    const loadNewBoard = async (getExistingTransducers: boolean) => {
+        loaded = {...initialData} as unknown as CognateApp;
+
         await fetch(`${rootUrl}/new-board`, {
 			method: "POST",
             headers: {
@@ -108,7 +110,7 @@
 				statusMessage = e.message;
 			})
         
-        if (getExistingBoards) {
+        if (getExistingTransducers) {
             await fetch(`${rootUrl}/get-transducers`, {
                 method: "POST",
                 headers: {

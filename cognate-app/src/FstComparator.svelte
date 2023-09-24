@@ -22,10 +22,7 @@
 
 
     // Doculects to be selected from.
-    // Should really be returned from server or something where they can be centrally defined.
     $: doculects = ['Debug', ...data.fstDoculects];
-
-    let fst_names = {'Old_Burmese': 'burmese', 'Achang_Longchuan': 'ngochang', 'Xiandao': 'xiandao', 'Maru': 'maru', 'Bola': 'bola', 'Atsi': 'atsi', 'Lashi': 'lashi'}
 
     // Currently selected doculect list.
     export let selectedDoculects = [];
@@ -96,11 +93,6 @@
     // Keep track of `foma` compiling errors.
     let compilerErrors: string[] = [];
 
-    // Keep track of words, and index them by their characters
-    // This is mainly for debugging to show relevant glosses, TBD whether we
-    // should keep it...
-    let wordsByWord = {}
-    $: Object.values(data.words).forEach((w) => {wordsByWord[w.syllables[0]] = w})
 </script>
 
 
@@ -137,9 +129,9 @@
                 {#each Object.entries(data.fstUp) as [language, words]}
                 <h1>{language}</h1>
                 <table class="debug-table" cellpadding="0" cellspacing="0">
-                    <tr><th>Gloss</th><th>Word</th><th>Apply Up</th></tr>
+                    <tr><th>Word/Syllable</th><th>Apply Up</th></tr>
                     {#each Object.entries(words) as [word, applied]}
-                    <tr><td>{wordsByWord[word].gloss}</td><td>{word}</td><td>{applied.join(", ")}</td></tr>
+                    <tr><td>{word}</td><td>{applied.join(", ")}</td></tr>
                     {/each}
                 </table>
                 {/each}
