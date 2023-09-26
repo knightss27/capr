@@ -31,34 +31,22 @@ You must have `libfoma0` and `libfoma0-dev` installed for the API to work. **Not
 sudo apt-get install libfoma0 libfoma0-dev
 ```
 
+## Important Notes
+
 For much more in-depth instructions, see [SETUP.md](https://github.com/knightss27/capr/blob/update/SETUP.md).
 
 For usage instructions, see [USAGE.md](https://github.com/knightss27/capr/blob/update/USAGE.md).
-
-## Important Notes
-When writing FSTs in the editor, you must write them for the languages below (unless you go ahead and change the code). Each language has a corresponding `.bin` name that it must be assigned at the end of that section of the transducer, i.e: `save stack lashi.bin`.
-
-| Language Name | .bin Name |
-| :------------ | :-------- |
-| Old_Burmese | burmese.bin |
-| Achang_Longchuan | ngochang.bin |
-| Xiandao | xiandao.bin |
-| Maru | maru.bin |
-| Bola | bola.bin |
-| Atsi | atsi.bin |
-| Lashi | lashi.bin |
-
 
 ## Project Structure
 ```
 .
 ├── cognate-app/
 │   └── [svelte code for cognate reassignment and fst editor]
-├── orthoprofiles/
+├── orthoprofiles/ *deprecated*
 │   └── [orthographical profiles for pipeline stages]
 ├── pipeline/
 │   └── [wordlist to tokenized lexicon, ran through lexstat to find intial cognates]
-├── reconstruct/
+├── reconstruct/ *deprecated*
 │   └── [intial fsts for pipeline usage]
 └── server/
     └── [all api routes and associated functions]
