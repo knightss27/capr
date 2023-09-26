@@ -22,4 +22,4 @@ Make sure to copy your FST or save/export it. Once you have a starting point, it
 
 ## Using the boards
 
-Once you have an FST and want to start working on boards, you will unfortunately run into the fact that the current refishing code is quite broken, especially since CAPR was updated to be more language agnostic. See #18 for updates and progress on this front.
+Once you have an FST and want to start working on boards, you will unfortunately run into the fact that the current refishing code is quite broken, especially since CAPR was updated to be more language agnostic. See [#18](https://github.com/knightss27/capr/pull/18) for updates and progress on this front.
