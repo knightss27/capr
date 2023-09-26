@@ -16,4 +16,3 @@ services:
       - 5001:5000
     volumes:
       - ./server:/usr/app
-    # command: "python server.py"

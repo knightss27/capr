@@ -259,7 +259,7 @@
             <span class:statusError>Status: {statusMessage} 
                 {#if statusLoading}
                 <div class="loader">
-                    <Circle2 />
+                    <Circle size={15} />
                 </div>
                 {/if}
             </span>

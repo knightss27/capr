@@ -249,7 +249,7 @@ regex pbSyllable ∘ LawBurling ∘ BurmishDevoicing # Burmese-Ngochang group
 ∘ BurmeseSoundLaws
 ∘ BurmeseInitialReflexes ∘ BurmeseTonefulRimeReflexes ∘ BurmeseStopcodaRimeReflexes ∘ BurmeseMedialReflexes ∘ BurmeseToneReflexes # Burmese specific
 ∘ RejectAsterisks;
-save stack burmese.bin
+save stack old_burmese.bin
 
 ###############################################
 ## Longchuan Ngochang: orthographical filter ##
@@ -373,7 +373,7 @@ define Ngochang NgochangReflexes
 
 clear
 push Ngochang
-save stack ngochang.bin
+save stack achang_longchuan.bin
 
 #################################
 ## Maru: orthographical filter ##

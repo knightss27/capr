@@ -267,25 +267,8 @@ def compile_to_json_full_cognates(
             
             syl_idx += 1
 
-    # boards["currentBoard"] = list(boards["boards"].keys())[0]
 
-    # get the transducers, works only if they are there
-    # fsts = {k: FST.load(".reconstruct/{0}.bin".format(k)) for k in boards["fstDoculects"]}
-
-    # TODO: Needs to be made consistent
-    fst_index = {
-        "German": "german",
-        "Dutch": "dutch",
-        "English": "english",
-        "Old_Burmese": "burmese",
-        "Achang_Longchuan": "ngochang",
-        "Xiandao": "xiandao",
-        "Maru": "maru",
-        "Bola": "bola",
-        "Atsi": "atsi",
-        "Lashi": "lashi",
-        "Rangoon": "rangoon"
-    }
+    # Now we start working with the transducers
 
     fsts = {}
     new_transducer = ""
@@ -315,8 +298,8 @@ def compile_to_json_full_cognates(
         eprint(boards["fstDoculects"])
 
         for doculect_name in boards["fstDoculects"]:
-            if os.path.isfile(fst_index[doculect_name] + ".bin"):
-                fsts[doculect_name] = FST.load(fst_index[doculect_name] + ".bin")
+            if os.path.isfile(doculect_name.lower() + ".bin"):
+                fsts[doculect_name] = FST.load(doculect_name.lower() + ".bin")
         eprint(fsts)
         eprint("FSTs loaded:", ", ".join(fsts))
 
