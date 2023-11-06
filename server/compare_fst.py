@@ -160,77 +160,82 @@ import tempfile
 import os
 import subprocess
 
+
+def read_transducer(input_json, old_new, errors):
+    ret = {}
+    script_path = os.path.dirname(os.path.realpath(__file__))
+    with tempfile.TemporaryDirectory() as tmpdirname:
+        os.chdir(tmpdirname)
+        eprint(f'Compiling FSTs ({old_new})')
+        with open('transducer.foma', 'w') as fp:
+            fp.write(input_json[f'{old_new}Transducer'])
+        eprint("---------")
+        output = subprocess.run(['foma', '-f', 'transducer.foma'],
+                                capture_output=True, check=True, text=True)
+
+        # Add errors from stderr
+        if (len(output.stderr) > 0):
+            for err in output.stderr.split("\n"):
+                if len(err) > 0:
+                    errors.append(f"Error loading {old_new} transducer: {err}")
+                    eprint(err)
+
+        # Check for errors in stdout, to be passed back to the program
+        if '***' in output.stdout:
+            error = f"Error loading {old_new} transducer: " + output.stdout.split('***')[1]
+            eprint(error)
+            errors.append(error)
+
+        for doculect_name in fst_index:
+            if os.path.isfile(fst_index[doculect_name] + '.bin'):
+                ret[doculect_name] = FST.load(fst_index[doculect_name] + '.bin')
+        os.chdir(script_path)
+        eprint('FSTs loaded:', ', '.join(ret))
+    return ret
+
+
+def process_row(row):
+    if row['ID'].startswith('#'):
+        # internal to lingpy
+        return {}
+
+    if row['CROSSIDS']:
+        crossids = row['CROSSIDS'].split(' ')
+    else:
+        if not production:
+            eprint('SANITY: empty crossid: ', row['ID'])
+        return {}
+
+    word_id = 'word-' + row['ID']
+    syllables = syllabize(row['IPA'])
+    syllables_parsed = [merge_phonemes(str(sch), str(tk), 'i m r t',
+                                       {'i': 'im', 'm':'m',
+                                        'r':'mnNc', 't':'t'})
+                        for sch, tk in zip(row['STRUCTURE'].split(' + '),
+                                           row['TOKENS'].split(' + '))]
+
+    word_json = {
+            'id':word_id,
+            'doculect': row['DOCULECT'],
+            'syllables': syllables,
+            'syllables_parsed': syllables_parsed,
+            'gloss': row['CONCEPT'],
+            'glossid': row['GLOSSID']}
+    return {word_id: word_json}
+
+
 def compare_fst(input_json):
     # decode the input JSON
     # input_json = json.load(open('input-correspondence.json', 'r+'))
 
     # First field from JSON: langsUnderStudy
     langs_under_study = input_json['langsUnderStudy']
-    number_of_languages = len(langs_under_study)
 
     # Board from JSON
-    script_path = os.path.dirname(os.path.realpath(__file__))
-
-    fsts_old = {}
-    fsts_new = {}
-
     errors = []
 
-    # Reading old transducers
-    with tempfile.TemporaryDirectory() as tmpdirname:
-        os.chdir(tmpdirname)
-        eprint('Compiling FSTs (old)')
-        with open('transducer.foma', 'w') as fp:
-            fp.write(input_json['oldTransducer'])
-        eprint("---------")
-        output = subprocess.run(['foma', '-f', 'transducer.foma'], capture_output=True,check=True, text=True)
-
-        # Add errors from stderr
-        if (len(output.stderr) > 0):
-            for err in output.stderr.split("\n"):
-                if len(err) > 0:
-                    errors.append("Error loading old transducer: " + err)
-                    eprint(err)
-
-        ## Check for errors, to be passed back to the program
-        if '***' in output.stdout:
-            error = "Error loading old transducer: " + output.stdout.split('***')[1]
-            eprint(error)
-            errors.append(error)
-
-        for doculect_name in fst_index:
-            if os.path.isfile(fst_index[doculect_name] + '.bin'):
-                fsts_old[doculect_name] = FST.load(fst_index[doculect_name] + '.bin')
-        os.chdir(script_path)
-        eprint('FSTs loaded:', ', '.join(fsts_old))
-
-    # Reader
-    with tempfile.TemporaryDirectory() as tmpdirname:
-        os.chdir(tmpdirname)
-        eprint('Compiling FSTs (new)')
-        with open('transducer.foma', 'w') as fp:
-            fp.write(input_json['newTransducer'])
-        eprint("---------")
-        output = subprocess.run(['foma', '-f', 'transducer.foma'], capture_output=True,check=True, text=True)
-
-        # Add errors from stderr
-        if (len(output.stderr) > 0):
-            for err in output.stderr.split("\n"):
-                if len(err) > 0:
-                    errors.append("Error loading new transducer: " + err)
-                    eprint(err)
-
-        # Check for errors in stdout, to be passed back to the program
-        if '***' in output.stdout:
-            error = "Error loading new transducer: " + output.stdout.split('***')[1]
-            eprint(error)
-            errors.append(error)
-
-        for doculect_name in fst_index:
-            if os.path.isfile(fst_index[doculect_name] + '.bin'):
-                fsts_new[doculect_name] = FST.load(fst_index[doculect_name] + '.bin')
-        os.chdir(script_path)
-        eprint('FSTs loaded:', ', '.join(fsts_new))
+    fsts_old = read_transducer(input_json, 'old', errors)
+    fsts_new = read_transducer(input_json, 'new', errors)
 
     both_missing = []
     if not all(b in fsts_new for b in langs_under_study) and not all(b in fsts_old for b in langs_under_study):
@@ -247,32 +252,8 @@ def compare_fst(input_json):
 
     eprint('Processing TSV rows...')
     words = {}
-    def process_row(row):
-        if row['ID'].startswith('#'):
-            # internal to lingpy
-            return
-
-        if row['CROSSIDS']:
-            crossids = row['CROSSIDS'].split(' ')
-        else:
-            if not production: eprint('SANITY: empty crossid: ', row['ID'])
-            return
-
-        word_id = 'word-' + row['ID']
-        syllables = syllabize(row['IPA'])
-        syllables_parsed = [merge_phonemes(str(sch), str(tk), 'i m r t', {'i': 'im', 'm':'m', 'r':'mnNc', 't':'t'}) for sch, tk in zip(row['STRUCTURE'].split(' + '), row['TOKENS'].split(' + '))]
-
-        word_json = {
-                'id':word_id,
-                'doculect': row['DOCULECT'],
-                'syllables': syllables,
-                'syllables_parsed': syllables_parsed,
-                'gloss': row['CONCEPT'],
-                'glossid': row['GLOSSID']}
-        words[word_id] = word_json
-
     for row in csvreader:
-        process_row(row)
+        words.update(process_row(row))
 
     eprint('Processing boards...')
     input_board = input_json['board']
@@ -293,6 +274,10 @@ def compare_fst(input_json):
                 continue
 
             # First, guess the reconstruction
+            # print(columns, flush=True)
+            print('id', column_id, flush=True)
+            print('words', len(words), flush=True)
+            print('words', words, flush=True)
             inferred_reconstructions, strict_reconstructions = back_reconstruct_list(columns[column_id]['syllableIds'], fsts_old, words)
 
             # cnt[pos][doculect] → Counter of possibilities
