@@ -201,34 +201,8 @@ def compile_transducers(transducer_txt):
     return fsts
 
 
-def compile_to_json_full_cognates(
-    path,
-    transducer="internal",
-    fst_path="/usr/app/refishing-fst.txt",
-    cognates="COGIDS", #TODO: find out a good way of determ
-):
-    """
-    Get the JSON from a wordlist file with "normal" cognates.
-
-    Example
-    -------
-
-    compile_to_json_full_cognates(
-        "pipeline/output/germanic/stage3/germanic-aligned-final.tsv",
-        "Proto-Germanic", cognates="CROSSIDS")
-    """
-
-    # The name of the language "pipeline"
-    # Should be the first word of your input file before a "-", i.e.
-    # germanic-data.tsv --> germanic, burmish-data.tsv --> burmish
-    pipeline_name = path.split("-")[0]
-    eprint(f"Assuming pipeline name: {pipeline_name}")
-
-    # Finding file path
-    path = os.path.join('/usr/app/data', path)
-
-    # Where we will put everything we read from the input data
-    data_dict = {}
+def load_data_dict(path):
+    ret = dict()
 
     # For some reason, Python sometimes can't find this file...
     with open(os.path.abspath(path)) as f:
@@ -236,9 +210,11 @@ def compile_to_json_full_cognates(
             filter(lambda row: row.strip() and not row.startswith('#'), f),
             dialect='excel-tab')
         for row in csvreader:
-            data_dict[row['ID']] = row
+            ret[row['ID']] = row
+    return ret
 
-    # create the board dictionary
+
+def get_boards(data_dict, cognate_col):
     doculects = sorted(set([row["DOCULECT"] for row in data_dict.values()]))
     boards = {
         "fstDoculects": doculects,
@@ -251,13 +227,14 @@ def compile_to_json_full_cognates(
     }
 
     # fill data with content by iterating over the data_dict
-    for i, row in data_dict.items():
-        idx = "word-" + str(i)
+    for row in data_dict.values():
+        idx = f"word-{row['ID']}"
         boards["words"][idx] = {
             "id": idx,
             "doculect": row["DOCULECT"],
             # "syllables": [".".join(row["TOKENS"].split())],
-            "syllables": [".".join(r.split(" ")) for r in row["TOKENS"].split(" + ")],
+            "syllables": [".".join(r.split(" "))
+                          for r in row["TOKENS"].split(" + ")],
             # "syllables": syllabize(row["IPA"]),
             "gloss": row["CONCEPT"],
             "glossid": row["GLOSSID"],
@@ -279,25 +256,65 @@ def compile_to_json_full_cognates(
 
             # eprint(syllable_ids)
             # column ids are in fact the cognate sets
-            cogid = "column-" + row[cognates].split(" ")[syl_idx]
+            cogid = "column-" + row[cognate_col].split(" ")[syl_idx]
             if cogid in boards["columns"]:
                 boards["columns"][cogid]["syllableIds"].append(syl_id)
             else:
-                boards["columns"][cogid] = {"id": cogid, "syllableIds": [syl_id]}  # CHECK: "id":cogid not needed here
+                boards["columns"][cogid] = {"id": cogid,  # CHECK: "id" no need
+                                            "syllableIds": [syl_id]}
+
+    return boards
 
 
-    # Now we start working with the transducers
-
+def load_transducer(transducer, pipeline_name, fst_path):
     if transducer != "internal":
         new_transducer = transducer
     else:
         # try and access the pipeline file in /fsts
-        if os.path.isfile(f"/usr/app/fsts/{pipeline_name}.txt"):  # if not present, assumes refish.txt
+        # if not present, uses fst_path (== refish.txt)
+        if os.path.isfile(f"/usr/app/fsts/{pipeline_name}.txt"):
             fst_path = f"/usr/app/fsts/{pipeline_name}.txt"
             eprint(f"Found input transducer for {pipeline_name}")
 
         with open(fst_path, encoding="utf-8") as fst_file:
             new_transducer = fst_file.read()
+    return new_transducer
+
+
+def compile_to_json_full_cognates(
+    path,
+    transducer="internal",
+    fst_path="/usr/app/refishing-fst.txt",
+    cognate_col="COGIDS", #TODO: find out a good way of determ
+):
+    """
+    Get the JSON from a wordlist file with "normal" cognates.
+
+    Example
+    -------
+
+    compile_to_json_full_cognates(
+        "pipeline/output/germanic/stage3/germanic-aligned-final.tsv",
+        "Proto-Germanic", cognate_col="CROSSIDS")
+    """
+
+    # The name of the language "pipeline"
+    # Should be the first word of your input file before a "-", i.e.
+    # germanic-data.tsv --> germanic, burmish-data.tsv --> burmish
+    pipeline_name = path.split("-")[0]
+    eprint(f"Assuming pipeline name: {pipeline_name}")
+
+    # Finding file path
+    path = os.path.join('/usr/app/data', path)
+
+    # Where we will put everything we read from the input data
+    data_dict = load_data_dict(path)
+
+    # create the board dictionary
+    boards = get_boards(data_dict, cognate_col)
+
+    # Now we start working with the transducers
+    new_transducer = load_transducer(transducer, pipeline_name, fst_path)
 
     fsts = compile_transducers(new_transducer)
     # not particularly elegant, but that keeps compile_transducers cleaner
