@@ -173,6 +173,33 @@ def sort_row_tuples(row_tuples, reconstructed_sense):
     return row_tuples_sorted_by_senses
 
 
+def compile_transducers(transducer_txt):
+    '''Takes a transducer as text, compiles it and returns a dict of doculects
+    to transducer objects. The doculets are retrieved from the transducer text
+    by parsing lines of the shape `save stack XXX.bin`'''
+    doculects = [re.search('save stack ([\w-]+).bin', line).group(1)
+                 for line in transducer_txt.splitlines()
+                 if line.startswith('save stack')]
+
+    with tempfile.TemporaryDirectory() as tmpdirname:
+        os.chdir(tmpdirname)
+        eprint("Compiling FSTs (new)")
+        with open("transducer.foma", "w", encoding="utf-8") as fp:
+            fp.write(transducer_txt)
+        output = subprocess.check_output(["foma",
+                                          "-f",
+                                          "transducer.foma"]).decode("UTF-8")
+        eprint("\n".join(output.split("\n")[-5:]))
+
+        fsts = {doculect: FST.load(doculect + ".bin")
+                for doculect in doculects}
+
+    eprint(fsts)
+    eprint("FSTs loaded:", ", ".join(fsts))
+
+    return fsts
+
+
 def compile_to_json_full_cognates(
     path,
     transducer="internal",
@@ -284,25 +311,13 @@ def compile_to_json_full_cognates(
     else:
         new_transducer = transducer
 
-    with tempfile.TemporaryDirectory() as tmpdirname:
-        os.chdir(tmpdirname)
-        eprint("Compiling FSTs (new)")
-        with open("transducer.foma", "w", encoding="utf-8") as fp:
-            fp.write(new_transducer)
-        output = subprocess.check_output(["foma", "-f", "transducer.foma"]).decode(
-            "UTF-8"
-        )
-        eprint("\n".join(output.split("\n")[-5:]))
-        
-        # debug
-        eprint(boards["fstDoculects"])
 
-        for doculect_name in boards["fstDoculects"]:
-            if os.path.isfile(doculect_name.lower() + ".bin"):
-                fsts[doculect_name] = FST.load(doculect_name.lower() + ".bin")
-        eprint(fsts)
-        eprint("FSTs loaded:", ", ".join(fsts))
-
+    fsts = compile_transducers(new_transducer)
+    # not particularly elegant, but that keeps compile_transducers cleaner
+    # {'german': FST} => {'German': FST}
+    fsts = {doculect: fsts[doculect.lower()]
+            for doculect in boards['fstDoculects']
+            if doculect.lower() in fsts}
 
     # Will hold something, TBD
     ds = DisjointSet()
