@@ -309,12 +309,10 @@ def compile_to_json_full_cognates(
             for doculect in boards['fstDoculects']
             if doculect.lower() in fsts}
 
-    # Will hold something, TBD
-    ds = DisjointSet()
 
     # For each cogid, we will create a list of the cognates to be transduced
     # Where it is a tuple of the cognate itself, plus the associated row in the data
-    rows_of_cognates = {}
+    rows_of_cognates = defaultdict(list)
 
     # Loop over each CROSSID (our cognates here) and add the relevant words
     for i, entry in data_dict.items():
@@ -325,20 +323,15 @@ def compile_to_json_full_cognates(
         # eprint(cogids_list, entry)
 
         # Now we're just making a list of all the syllables/morphemes
-        for syl, _ in enumerate(cogids_list):
-            morph_cogid = cogids_list[syl]
-
-            if not morph_cogid in rows_of_cognates:
-                rows_of_cognates[morph_cogid] = [
-                    (boards["words"][idx]["syllables"][syl], entry)
-                ]
-            else:
-                rows_of_cognates[morph_cogid].append(
-                    (boards["words"][idx]["syllables"][syl], entry)
-                )
+        for syl, morph_cogid in enumerate(cogids_list):
+            rows_of_cognates[morph_cogid].append(
+                (boards["words"][idx]["syllables"][syl], entry)
+            )
         
             # eprint(rows_of_cognates[morph_cogid])
 
+    # Will hold something, TBD
+    ds = DisjointSet()
 
     # TBD what this stuff does
     reconstructions_of_crossid = {}
