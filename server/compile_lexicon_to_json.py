@@ -344,17 +344,16 @@ def compile_to_json_full_cognates(
             )
         
             # eprint(rows_of_cognates[morph_cogid])
-
     # Will hold something, TBD
     ds = DisjointSet()
 
     # TBD what this stuff does
-    reconstructions_of_crossid = {}
-    strictness_of_crossid = {}
+    reconstructions_of_crossid = dict()
+    strictness_of_crossid = dict()
     # ---
-    sortkey_of_crossid = {}
-    first_crossid_of_reconstruction = {}
-    included_in_clean = set([])
+    sortkey_of_crossid = dict()
+    first_crossid_of_reconstruction = dict()
+    included_in_clean = set()
     # ---
 
     # Now go through each cogid we've collected to actually start running transducers
@@ -385,13 +384,13 @@ def compile_to_json_full_cognates(
                 # transducer will work.
                 syl = word
 
-                # Bad stuff because of how current germanic FST is written 
+                # Bad stuff because of how current germanic FST is written  # CHECK: can you say more?
                 if pipeline_name == "germanic":
                     syl = word.replace(".", " ") + " "
                 else:
                     syl = word.replace(".", "")
 
-                # for burmish?
+                # for burmish?  # yes
                 syl = replace_diacritics_up(syl)
 
                 # Apply the transducer upwards to this word (/syl/morpheme)
@@ -479,8 +478,8 @@ def compile_to_json_full_cognates(
         crossids = sorted(ds.group[major_crossid])
 
         # get reconstructions and strictness
-        strict = all([strictness_of_crossid[crossid] for crossid in crossids])
-        clean = any([crossid in included_in_clean for crossid in crossids])
+        strict = all(strictness_of_crossid[crossid] for crossid in crossids)
+        clean = any(crossid in included_in_clean for crossid in crossids)
 
         # If not included in "--clean", continue
         if not clean:
