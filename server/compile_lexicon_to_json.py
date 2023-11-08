@@ -287,20 +287,16 @@ def compile_to_json_full_cognates(
 
     # Now we start working with the transducers
 
-    fsts = {}
-    new_transducer = ""
-
-    if transducer == "internal":
+    if transducer != "internal":
+        new_transducer = transducer
+    else:
         # try and access the pipeline file in /fsts
-        if os.path.isfile(f"/usr/app/fsts/{pipeline_name}.txt"):
+        if os.path.isfile(f"/usr/app/fsts/{pipeline_name}.txt"):  # if not present, assumes refish.txt
             fst_path = f"/usr/app/fsts/{pipeline_name}.txt"
-            eprint(f"Found input transducer for {pipeline_name}",)
+            eprint(f"Found input transducer for {pipeline_name}")
 
         with open(fst_path, encoding="utf-8") as fst_file:
             new_transducer = fst_file.read()
-    else:
-        new_transducer = transducer
-
 
     fsts = compile_transducers(new_transducer)
     # not particularly elegant, but that keeps compile_transducers cleaner
