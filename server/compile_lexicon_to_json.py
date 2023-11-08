@@ -325,21 +325,22 @@ def compile_to_json_full_cognates(
 
 
     # For each cogid, we will create a list of the cognates to be transduced
-    # Where it is a tuple of the cognate itself, plus the associated row in the data
+    # Where it is a tuple of the cognate itself, plus the associated doculect
+    # e.g. {102: [('j.uː.θ', 'English'), ('j.uː.ɡ.ə.n.t', 'Deutsch')], ...}
     rows_of_cognates = defaultdict(list)
 
-    # Loop over each CROSSID (our cognates here) and add the relevant words
-    for i, entry in data_dict.items():
-        idx = "word-" + str(i)
-        cogids_list = entry[cognates].split(" ")
+    # Loop over each CROSSID (or COGIDS?) and add the relevant words
+    for row in data_dict.values():
+        idx = f"word-{row['ID']}"
+        cogids_list = row[cognate_col].split(" ")
 
         # now we pretend to always be working with morphemes
-        # eprint(cogids_list, entry)
+        # eprint(cogids_list, row)
 
         # Now we're just making a list of all the syllables/morphemes
-        for syl, morph_cogid in enumerate(cogids_list):
+        for syl_idx, morph_cogid in enumerate(cogids_list):
             rows_of_cognates[morph_cogid].append(
-                (boards["words"][idx]["syllables"][syl], entry)
+                (boards["words"][idx]["syllables"][syl_idx], row['DOCULECT'])
             )
         
             # eprint(rows_of_cognates[morph_cogid])
@@ -361,7 +362,7 @@ def compile_to_json_full_cognates(
         # First, try to guess the reconstruction by the following rule:
         # 1. Collect all reconstructions for each language
         # 2. The intersection of all reconstructions is the most probable one
-        reconstructions = {}
+        reconstructions = defaultdict(set)
         first_form = False
         at_least_one = False
 
@@ -370,7 +371,7 @@ def compile_to_json_full_cognates(
         # eprint(cogs)
 
         # For each word (with Burmish would be syllable) that shares a cogid/crossid
-        for word, row in cogs:
+        for word, doculect in cogs:
             # eprint(word, cogs)
 
             if not first_form:
@@ -378,7 +379,7 @@ def compile_to_json_full_cognates(
                 pass
 
             # If we have a transducer for this doculect
-            if row["DOCULECT"] in fsts:
+            if doculect in fsts:
                 # Make the current syllable equal to the whole word, since we are
                 # working with the Germanic data. Also add spaces so that Mattis'
                 # transducer will work.
@@ -393,15 +394,13 @@ def compile_to_json_full_cognates(
                 # for burmish?
                 syl = replace_diacritics_up(syl)
 
-                # print("trying ", row["DOCULECT"], " on ", syl, " : ", row["CONCEPT"])
-
-                # Apply the transducer upwards to this word
-                recs = list(fsts[row["DOCULECT"]].apply_up(syl))
+                # Apply the transducer upwards to this word (/syl/morpheme)
+                recs = list(fsts[doculect].apply_up(syl))
 
                 # eprint(recs)
 
                 # Add the reconstructions to our record, whether or not they exist
-                boards["fstUp"][row["DOCULECT"]][word] = sorted(set(recs))
+                boards["fstUp"][doculect][word] = sorted(set(recs))
 
                 # TBD
                 # attested_reconstructions.update(rec)
@@ -409,13 +408,7 @@ def compile_to_json_full_cognates(
                 # Only worry about reconstructions when we have actually made one
                 if len(recs) > 0:
                     at_least_one = True
-                    if row["DOCULECT"] not in reconstructions:
-                        reconstructions[row["DOCULECT"]] = set(recs)
-                        # print(row["DOCULECT"], recs)
-                    else:
-                        reconstructions[row["DOCULECT"]] = reconstructions[
-                            row["DOCULECT"]
-                        ].union(set(recs))
+                    reconstructions[doculect] |= set(recs)
 
         strict = True  # usage TBD
 
