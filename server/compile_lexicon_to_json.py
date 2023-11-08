@@ -227,23 +227,16 @@ def compile_to_json_full_cognates(
     path = os.path.join('/usr/app/data', path)
 
     # Where we will put everything we read from the input data
-    data = []
+    data_dict = {}
 
     # For some reason, Python sometimes can't find this file...
     with open(os.path.abspath(path)) as f:
-        for row in f.readlines():
-            data += [[cell.strip() for cell in row.split("\t")]]
+        csvreader = csv.DictReader(
+            filter(lambda row: row.strip() and not row.startswith('#'), f),
+            dialect='excel-tab')
+        for row in csvreader:
+            data_dict[row['ID']] = row
 
-    f.close()
-
-    header = [row for row in data if row[0] and not row[0].startswith("#")][0]
-    data_dict = {}
-    for i, row in enumerate(data[1:]):
-        if row[0].startswith("#") or not row[0].strip():
-            pass
-        else:
-            cell_dict = dict(zip(header, row))
-            data_dict[cell_dict["ID"]] = cell_dict
     # create the board dictionary
     doculects = sorted(set([row["DOCULECT"] for row in data_dict.values()]))
     boards = {
