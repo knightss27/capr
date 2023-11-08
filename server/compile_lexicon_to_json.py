@@ -263,9 +263,8 @@ def compile_to_json_full_cognates(
         }
 
 
-        syl_idx = 0
-        for syllable in boards["words"][idx]["syllables"]:
-            syl_id = "-".join([idx, str(syl_idx)])
+        for syl_idx, syllable in enumerate(boards["words"][idx]["syllables"]):
+            syl_id = f"{idx}-{syl_idx}"
             boards["syllables"][syl_id] = {
                 "id": syl_id,
                 "doculect": row["DOCULECT"],
@@ -283,9 +282,7 @@ def compile_to_json_full_cognates(
             if cogid in boards["columns"]:
                 boards["columns"][cogid]["syllableIds"].append(syl_id)
             else:
-                boards["columns"][cogid] = {"id": cogid, "syllableIds": [syl_id]}
-            
-            syl_idx += 1
+                boards["columns"][cogid] = {"id": cogid, "syllableIds": [syl_id]}  # CHECK: "id":cogid not needed here
 
 
     # Now we start working with the transducers
