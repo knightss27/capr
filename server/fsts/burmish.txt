@@ -1,0 +1,1141 @@
+#!/usr/local/bin/foma -f
+# This is the FST (fst-for-refishing-2) as found in Gong's deposit. 
+
+#############################################
+## A definition of Proto-Burmish phonology ##
+#############################################
+
+define pbInitC [
+  b:{*b} | p:{*p} | {ʔp}:{*ʔp} | m:{*m} | {ʔm}:{*ʔm} |
+  d:{*d} | t:{*t} | {ʔt}:{*ʔt} | n:{*n} | {ʔn}:{*ʔn} |
+  g:{*g} | k:{*k} | {ʔk}:{*ʔk} | ŋ:{*ŋ} | {ʔŋ}:{*ʔŋ} |
+  {dz}:{*dz} | {ts}:{*ts} | {ʔts}:{*ʔts} |
+  {dʒ}:{*dʒ} | {tʃ}:{*tʃ} | {ʔtʃ}:{*ʔtʃ} | ɲ:{*ɲ} | {ʔɲ}:{*ʔɲ} |
+  s:{*s} | {ʔs}:{*ʔs} |
+  ʃ:{*ʃ} |
+  j:{*j} | {ʔj}:{*ʔj} |
+  r:{*r} | {ʔr}:{*ʔr} |
+  l:{*l} | {ʔl}:{*ʔl} |
+  w:{*w} |
+  ʔ:{*ʔ} ];
+
+define pbInitC⋄withMedial [
+  b:{*b} | p:{*p} | {ʔp}:{*ʔp} | m:{*m} | {ʔm}:{*ʔm} |
+  d:{*d} | t:{*t} | {ʔt}:{*ʔt} | n:{*n} | {ʔn}:{*ʔn} |
+  g:{*g} | k:{*k} | {ʔk}:{*ʔk} | ŋ:{*ŋ} | {ʔŋ}:{*ʔŋ} ];
+
+define pbMedial [j:{*j} | r:{*r} | l:{*l} | {rj}:{*rj} ];
+
+define pbDoubleMedial [ {rj}:{*r*j} | {ʔrj}:{*ʔr*j} | {ʔlj}:{*ʔl*j} ];
+define pbInitial [ pbInitC | pbInitC⋄withMedial pbMedial | pbDoubleMedial ];
+
+
+define pbOpenRime [u:{*u} | o:{*o} | ʊ:{*ʊ} | a:{*a} | i:{*i} | e:{*e} | ɛ:{*ɛ} | {ai}:{*ai} | {ui}:{*ui} ];
+define pbRimeCore [u:{*u} | o:{*o} | a:{*a} | i:{*i} ];
+define pbNasalCoda [m:{*m} | n:{*n} | ŋ:{*ŋ} ];
+define pbStopCoda [p:{*p} | t:{*t} | k:{*k} ];
+define pbNotationTone [0 | H:H | X:X ];
+
+define pbPlainRimeSeg [[pbOpenRime | pbRimeCore pbNasalCoda]];
+define pbPlainRime [pbPlainRimeSeg pbNotationTone];
+define pbEnteringRime [pbRimeCore pbStopCoda];
+define pbRime [pbPlainRime | pbEnteringRime];
+
+define pbNotationSyllable [pbInitial pbRime];
+
+# Notation changes
+
+define addToneMarks [ pbPlainRimeSeg -> ... Ø || _ .#. ,,
+  pbStopCoda @-> ... "入" \\ _ .#.];
+define pbTone [Ø | H | X | 入];
+define pbSyllable [pbNotationSyllable ∘ addToneMarks];
+
+# Widely shared sound changes
+define BurmishDevoicing {*b} -> {*p}, {*d} -> {*t}, {*g} -> {*k}, {*dz} -> {*ts}, {*dʒ} -> {*tʃ}, {*p} -> {*ph}, {*t} -> {*th}, {*k} -> {*kh}, {*ts} -> {*tsh}, {*tʃ} -> {*tʃh} || .#. _ {*} ;
+
+define medial⋄l⇒r {*l} -> {*r} || ? _ ;
+
+define LawBurling {*ʔp} -> {*p}, {*ʔt} -> {*t}, {*ʔk} -> {*k}, {*ʔts} -> {*ts}, {*ʔtʃ} -> {*tʃ}, {*ʔm} -> {*mh}, {*ʔn} -> {*nh}, {*ʔŋ} -> {*ŋh}, {*ʔɲ} -> {*ɲh}, {*ʔs} -> {*s}, {*ʔj} -> {*j}, {*ʔr} -> {*rh}, {*ʔl} -> {*lh} || .#. _ {*} ;
+
+define pbVoicedInitial [
+  {*b} | {*m} |
+  {*d} | {*n} |
+  {*g} | {*ŋ} |
+  {*dz} |
+  {*dʒ} |
+  {*ɲ} |
+  {*j} |
+  {*r} |
+  {*l} |
+  {*w} ];
+
+define pbVoicelessInitial [
+  {*p} | {*ʔp} | {*ʔm} |
+  {*t} | {*ʔt} | {*ʔn} |
+  {*k} | {*ʔk} | {*ʔŋ} |
+  {*ts} | {*ʔts} |
+  {*tʃ} | {*ʔtʃ} |
+  {*ʔɲ} |
+  {*s} | {*ʔs} |
+  {*ʃ} |
+  {*ʔr} |
+   {*ʔl} |
+  {*ʔ} ];
+
+define BurmishToneSplit [
+  ? @-> ... "[h]" \\ .#. pbVoicelessInitial ? * _ .#. ,,
+  ? @-> ... "[l]" \\ .#. pbVoicedInitial ? * _ .#.];
+
+# Asterisk utilities
+define RemoveAsterisks {*} -> 0;
+define RejectAsterisks [¬ [? * "*" ? *]];
+
+# Other utilities
+define j⋄cleanup {j*j} -> {j};
+
+########################################
+## Old Burmese: orthographical filter ##
+########################################
+## Each language gets two formal components: an "orthographical filter", regex which corresponds to the phonological system of the language, so that the actual transcriptions can be checked wrt the phonological system
+
+define BurmeseSimpleInitial [
+   b:{p } |
+   p:{p } |  {ph}:{ph } |  m:{m } |  {mh}:{m̥ } |
+   t:{t } |  {th}:{th } |  n:{n } |  {nh}:{n̥ } |
+   k:{k } |  {kh}:{kh } |  ṅ:{ŋ } |  {ṅh}:{ŋ̊ } |
+   c:{tɕ } |  {ch}:{tɕh } |  ñ:{ɲ } |  {ñh}:{ɲ̥ } |
+   s:{s } |
+   h:{h } |
+   w:{w } ];
+
+define BurmeseSimpleInitial⇒ [ BurmeseSimpleInitial:{i } ];
+
+define BurmeseInitial [
+   BurmeseSimpleInitial |
+   r:{r } |  {rh}:{r̥ } |
+   {ry}:{rj } | {rhy}:{r̥j } |
+   l:{l } |  {lh}:{l̥ } |
+   {ly}:{lj } |  {lhy}:{l̥j } |
+   y:{j } |
+   0:{ʔ } ];
+
+define BurmeseInitial⇒ [ BurmeseInitial:{i } ];
+
+define BurmeseSimpleVowelRime [
+   a:{a } |
+   i:{i } |
+   {o₁}:{o } |
+   {o₂}:{ʊ } |
+   u:{u }];
+
+define BurmeseSimpleVowelRime⇒ [ BurmeseSimpleVowelRime:{n } ];
+
+define BurmeseSonorantCodaRime [
+   {ay}:{a j } | 
+   {am}:{a m } | {an}:{a n } | {aṅ}:{a ŋ } | {añ}:{a ɲ } |
+   {iy}:{ə j } |
+   {im}:{i m } | {in}:{i n } |
+   {o₁y}:{o j } |
+   {o₁m}:{o m } | {o₁n}:{o n } | {o₁ṅ}:{o ŋ } |
+   {uiw}:{ə w } |
+   {uiṅ}:{ə ŋ } |
+   {uy}:{u j } |
+   {un}:{u n } | {um}:{u m } |
+   {o₂ṅ}:{ʊ ŋ } ];
+
+define BurmeseSonorantCodaRime⇒ [ BurmeseSonorantCodaRime:{n c } ];
+
+define BurmeseTonefulRime [ BurmeseSimpleVowelRime | BurmeseSonorantCodaRime ];
+
+define BurmeseTonefulRime⇒ [ BurmeseSimpleVowelRime⇒ | BurmeseSonorantCodaRime⇒ ];
+
+define BurmeseStopcodaRime [
+   {ak}:{a k } | {ap}:{a p } | {at}:{a t } | {ac}:{a c } |
+   {ip}:{i p } | {it}:{i t } |
+   {o₁t}:{o t } | {o₁k}:{o k } |
+   {uik}:{ə k } |
+   {up}:{u p } | {ut}:{u t } | {o₂k}:{ʊ k }];
+
+define BurmeseStopcodaRime⇒ [ BurmeseStopcodaRime:{n c } ];
+
+define BurmeseMedial [ {ry}:{rj } | {ly}:{lj } | y:{j } | r:{r } | l:{l }];
+
+define BurmeseMedial⇒ [ BurmeseMedial:{m } ];
+
+define BurmeseTone [0:{²²} | ʔ:{⁵³} | ḥ:{⁵⁵}];
+
+define BurmeseTone⇒ [ BurmeseTone:{t} ];
+
+define BurmeseDefaultStopcodaTone [0:{⁴}];
+
+define BurmeseRime [ [BurmeseTonefulRime BurmeseTone] |
+[ BurmeseStopcodaRime BurmeseDefaultStopcodaTone] ];
+
+define BurmeseRime⇒ [
+   [BurmeseTonefulRime⇒ BurmeseTone⇒] |
+   BurmeseStopcodaRime:{n c t} ];
+
+define BurmeseSyllable [BurmeseSimpleInitial (BurmeseMedial) BurmeseRime |
+  BurmeseInitial BurmeseRime ];
+
+
+define BurmeseSyllable⇒ [BurmeseSimpleInitial⇒ (BurmeseMedial⇒) BurmeseRime⇒ |
+BurmeseInitial⇒ BurmeseRime⇒ ];
+
+clear
+push BurmeseSyllable
+save stack burmese-ortho.bin
+
+clear
+push BurmeseSyllable⇒
+save stack burmese-ortho-template.bin
+
+####################################################################
+## A transducer from the current proto-Burmish to Written Burmese ##
+####################################################################
+## As the two languages are really close to each other, this transducer does a shallow orthographic mapping, just in order to get things done
+
+define j⋄Delete {*j} -> {*ʔ} || .#. _ {*i};
+
+define BurmeseSoundLaws j⋄Delete;
+
+define BurmeseInitialReflexes [
+  {*p} -> p, {*ph} -> p h, {*m} -> m, {*mh} -> m h,
+  {*t} -> t, {*th} -> t h, {*n} -> n, {*nh} -> n h,
+  {*k} -> k, {*kh} -> k h, {*ŋ} -> ṅ, {*ŋh} -> ṅ h,
+  {*tʃ} -> c, {*tʃh} -> c h, {*ɲ} -> ñ, {*ɲh} -> ñ h,
+  {*ts} -> c, {*tsh} -> c h,
+  {*s} -> s,
+  {*ʃ} -> s,
+  {*j} -> y,
+  {*r} -> r, {*rh} -> r h,
+  {*r*j} -> r y, {*rh*j} -> r h y,
+  {*l} -> l, {*lh} -> l h,
+  {*w} -> w,
+  {*ʔ} -> 0
+    || .#. _];
+
+define BurmeseTonefulRimeReflexes [
+  {*a} -> a, {*ai} -> a y, 
+  {*a*m} -> a m, {*a*n} -> a n, {*a*ŋ} -> a ṅ,
+  {*e} -> i,
+  {*ɛ} -> i,
+  {*i} -> i y,
+  {*i*m} -> i m, {*i*ŋ} -> a ñ,
+  {*o} -> {o₁},
+  {*o*n} -> {o₁} n, {*o*ŋ} -> {o₁} ṅ,
+  {*u} -> u i w, {*ui} -> u y,
+  {*u*m} -> u m, {*u*ŋ} -> {o₂} ṅ,
+  {*ʊ} -> u
+    || _ pbTone];
+
+define BurmeseStopcodaRimeReflexes [
+  {*a*k} -> a k, {*a*p} -> a p, {*a*t} -> a t,
+  {*i*p} -> i p, {*i*k} -> a c,
+  {*o*k} -> {o₁} k,
+  {*u*p} -> u p, {*u*t} -> u t, {*u*k} -> {o₂} k
+    || _ pbTone];
+
+define BurmeseMedialReflexes 
+  {*rj} -> r y 
+  ∘ [{*j} -> y,
+     {*r} -> r,
+     {*l} -> l];
+
+define BurmeseToneReflexes [Ø -> 0, X -> ʔ, H -> ḥ, 入 -> 0];
+
+clear
+regex pbSyllable ∘ LawBurling ∘ BurmishDevoicing # Burmese-Ngochang group
+∘ BurmeseSoundLaws
+∘ BurmeseInitialReflexes ∘ BurmeseTonefulRimeReflexes ∘ BurmeseStopcodaRimeReflexes ∘ BurmeseMedialReflexes ∘ BurmeseToneReflexes # Burmese specific
+∘ RejectAsterisks;
+save stack old_burmese.bin
+
+###############################################
+## Longchuan Ngochang: orthographical filter ##
+###############################################
+
+define NgochangInitial [
+   p |  p h |  m |  m̥ |
+   p ʐ | p h ʐ |  m ʐ |  m̥ ʐ |
+   f | v |
+   t |  t h | t s | t s h | s |
+   n |  n̥ |  l |  l̥ |
+   t ɕ | t ɕ h | ɕ | ʑ | ȵ | ȵ̥ |
+   t ʂ | t ʂ h | ʂ | ʐ |
+   k |  k h | x | ŋ | ŋ̊ |
+   k ʐ | k h ʐ | x ʐ 
+   | 0 ];
+
+define NgochangOpenRhyme [
+   i | e | a | ɔ | o | u | ə | ɿ |
+   e i | a i | o i | u i |
+   i a u | u a i ];
+
+define NgochangNasalRhyme [
+   [[i | e | a | ɔ | o | u | ə]
+    [m | n | ŋ]] |
+   i a m | i a ŋ | u a n | u a ŋ ];
+
+define NgochangStopRhyme [
+   [[i | e | a | ɔ | o | u | ə]
+    [p | t | k | ʔ]] |
+   i a p | i a k | u a t | u a k |
+   a i ʔ | u i ʔ | a u ʔ | o u ʔ | u a ʔ];
+
+define NgochangTone [⁵⁵ | ³¹ | ³⁵ | ⁵¹];
+
+define NgochangRime [ [NgochangOpenRhyme | NgochangNasalRhyme | NgochangStopRhyme] NgochangTone];
+
+define NgochangSyllable [NgochangInitial NgochangRime];
+
+clear
+push NgochangSyllable
+save stack ngochang-ortho.bin
+
+#######################################################################
+## A transducer from the current proto-Burmish to Longchuan Ngochang ##
+#######################################################################
+# Things are done the kosher way, with proper sound changes and everything
+
+# Burmish-Ngochang group common innovation
+define u⇒ou {*u} -> {*ou} || _ pbTone;
+define ʊ⇒u {*ʊ} -> {*u} || _ pbTone;
+define i⇒ei {*i} -> {*ei} || _ pbTone;
+define e⇒i {*e} -> {*i} || _ pbTone;
+
+define PreNgochang pbSyllable ∘ LawBurling ∘ BurmishDevoicing
+ ∘ u⇒ou ∘ ʊ⇒u ∘ i⇒ei ∘ e⇒i ∘ medial⋄l⇒r;
+
+# Longchuan Ngochang
+# 1. Sound laws
+
+define tsha⇒tɕha {*tsh} -> {*tɕh} || _ {*a};
+define ak⇒aʔ {*k} -> {*ʔ} || {*a} _, {*o} _, {*u} _;
+define a⇒ɔ {*a} -> {*ɔ} || _ pbTone, _ {*ʔ}, _ {*ŋ};
+define ou⇒au {*ou} -> {*au} || _ pbTone;
+define ʃ⇒ʂ {ʃ} -> {ʂ} || {*} (t) _ (h) ;
+define ru⇒ro {*u} -> {*o} || [{*} (t) ʂ (h) | {*r}] _ [ pbTone | {*ʔ} | {*p} ] ;
+define ɔ⇒ua {*ɔ} -> {*ua} || {*r} _, {*} (t) ʂ (h) _,  _ {*ŋ} ;
+define ruaŋ⇒raŋ {*ua} -> {*a} || [{*r} | j] _ {*ŋ} ;
+define iŋ⇒əŋ {*i} -> {*ə} || _ {*k}, _ {*ŋ};
+define sə⇒ʂə {*s} -> {*ʂ} || _ {*ə};
+define ʂi⇒ʂə {*i} -> {*ə} || {*} (t) ʂ (h) _ pbTone, {*r} _ pbTone;
+define ti⇒te {*i} -> {*e} || [t | d | n | l | s ] (h) _ pbTone;
+define tai⇒tə {*ai} -> {*ə} ||  [t | d | n | l | s ] (h) _ pbTone;
+define ni⇒ɲi {*n} -> {*ɲ} || _ {*i}, _ {*j};
+define w⋄Rounding [{*w*a} -> {*w*ɔ}, {*w*ua} -> {*w*ɔ} , {*w*ɔ} -> {*ʔ*o}];
+define ei⇒i {*ei} -> {*i};
+define ai⇒i {*ai} -> {*i};
+define ʂi⇒ʂɿ {*i} -> {*ɿ} || {*} (t) ʂ (h) _, {*r} _ ;
+define rhy⇒ɕ {*rh*j} -> {*ɕ} ; 
+define rh⇒s {*rh} -> {*s};
+define jat⇒jet {*a} -> {*e} || [{j} | ɕ (h) | ɲ] _ [{*n} | {*t}] ;
+define im⇒in {*m} -> {*n}, {*p} -> {*t} || {*i} _ ;
+define ɔi⇒oi {*ɔi} -> {*oi};
+define w⋄Delete {*w} -> {*ʔ} || .#. _ {*ɔ}, .#. _ {*o};
+define j⋄Delete {*j} -> {*ʔ} || .#. _ {*i};
+define k⋄Palatalization {*k} -> {*tɕ}, {*kh} -> {*tɕh} || _ {*j} ;
+define j⇒ʑ {*j} -> {*ʑ} || .#. _ ;
+define mi⇒ɲi {*m} -> {*ɲ} || _ {*i}, _ {*j};
+define kh⇒x {*kh} -> {*x};
+define ɛ⇒a {*ɛ} -> {*a};
+
+define NgochangReflexes PreNgochang .o. tsha⇒tɕha
+.o. ak⇒aʔ .o. a⇒ɔ .o. ou⇒au .o. ʃ⇒ʂ .o. ru⇒ro .o. ɔ⇒ua .o. ruaŋ⇒raŋ .o. iŋ⇒əŋ .o. sə⇒ʂə .o. ʂi⇒ʂə .o. ti⇒te .o. tai⇒tə .o. ni⇒ɲi .o. w⋄Rounding .o. ei⇒i .o. ai⇒i .o. ʂi⇒ʂɿ .o. rhy⇒ɕ .o. rh⇒s .o. jat⇒jet .o. im⇒in .o. ɔi⇒oi .o. w⋄Delete .o. j⋄Delete .o. k⋄Palatalization .o. j⇒ʑ .o. mi⇒ɲi .o. kh⇒x .o. ɛ⇒a;
+
+# 2. Orthography
+define NgochangCoalesceYod {*j} -> 0
+  || _ {*i}, ɕ (h) _, ɲ _;
+
+define NgochangInitialNotation [
+  {*p} -> p, {*ph} -> p h, {*m} -> m, {*mh} -> m̥,
+  {*t} -> t, {*th} -> t h, {*n} -> n, {*nh} -> n̥,
+  {*k} -> k, {*kh} -> k h, {*ŋ} -> ŋ, {*ŋh} -> ŋ̊,
+  {*tʃ} -> t ɕ, {*tʃh} -> t ɕ h, {*ɲ} -> ȵ, {*ɲh} -> ȵ̥,
+  {*s} -> s,
+  {*r} -> ʐ,
+  {*l} -> l, {*lh} -> l̥,
+  {*ʔ} -> 0
+    || .#. _ {*}];
+
+define NgochangNotation [
+  {*r} -> ʐ];
+
+define NgochangToneNotation [Ø -> ⁵⁵, X -> ³⁵, H -> ³¹, 入 -> ⁵⁵];
+
+define Ngochang NgochangReflexes
+  ∘ NgochangCoalesceYod
+  ∘ NgochangToneNotation
+  ∘ NgochangInitialNotation
+  ∘ NgochangNotation
+  ∘ RemoveAsterisks;
+
+clear
+push Ngochang
+save stack achang_longchuan.bin
+
+#################################
+## Maru: orthographical filter ##
+#################################
+
+define MaruInitial [
+   p |  p h |  m |
+   p j | p h l |  m j |
+   f | v |
+   t |  t h | n | l |
+   t s | t s h | s |
+   t ʃ | t ʃ h | ʃ | ʒ | j |
+   k |  k h | x | ŋ | ɣ |
+   k j | k h j | ŋ j |
+   0 ];
+
+define MaruOpenRhyme [
+   [ i | ɛ | a | ɔ | u | ə | ø | ɛ̃ | ɔ̃ ] ( "_"  ) |
+   [ a | ɔ | u ] ( "_"  ) i |
+   [ a ] ( "_"  ) u
+];
+
+define MaruNasalRhyme [
+   [ ɛ | a | ɔ |  u ] ( "_"  ) m |
+   [ i | a | ɔ | u ] ( "_"  ) n |
+   ɛ n | ə n |
+   [ i | ɛ | a | ɔ | u | ə ] ( "_"  ) ŋ |
+   a ( "_"  ) u ŋ
+];
+
+define MaruStopRhyme [
+   [ ɛ | a | ɔ ] ( "_"  ) p |
+   [ ɛ | a | ɔ | u ] ( "_"  ) t |
+   [ i | a | ɔ | u ] ( "_"  ) k |
+   ə k |
+   [ ɛ | a | ɔ | ø ] ( "_"  ) ʔ |
+   a ( "_"  ) u k 
+];
+
+define MaruTone [⁵⁵ | ³⁵ | ³¹];
+
+define MaruRime [ [MaruOpenRhyme | MaruNasalRhyme | MaruStopRhyme] MaruTone];
+
+define MaruSyllable [ MaruInitial MaruRime ];
+
+clear
+push MaruSyllable
+save stack maru-ortho.bin
+
+#########################################################
+## A transducer from the current proto-Burmish to Maru ##
+#########################################################
+# Things are done the kosher way, with proper sound changes and everything
+
+
+# 1. Sound laws
+define r⋄Devoicing {*ʔr} -> {*rh} || .#. _ ;
+define rj⇒j {*r*j} -> {*j} || .#. _ ; 
+define medial⋄r⇒j {*r} -> {*j} || ? _ ;
+define aŋ⇒ã {*ŋ} -> {~} || {*a} _;
+define ak⇒aʔ {*k} -> {*ʔ} || {*a} _;
+define ap⇒at {*p} -> {*t} || {*a} _ pbTone;
+define am⇒ɛ̃ {*a*m} -> {*ɛ~} || _ pbTone;
+define at⇒ɛʔ {*a*t} -> {*ɛ*ʔ} || _ pbTone;
+define a⇒ɔ {*a} -> {*ɔ} || _ pbTone, _ {~}, _ {*ʔ};
+define an⇒əŋ {*a*n} -> {*ə*ŋ} || _ pbTone;
+define kəŋ⇒kiŋ {*ə*ŋ} -> {*i*ŋ} || [k | ŋ] (h) _ pbTone;
+define uk⇒auk {*u} -> {*au} || _ {*k}, _ {*ŋ};
+define iC⇒aC {*i} -> {*a}, {*u} -> {*a} || _ {*ŋ}, _ {*k}, _ {*m}, _ {*p}, _ {*n}, _ {*t};
+define ti⇒ta {*i} -> {*a} || [t | d | n | l ] (h) _;
+define ui⇒a {*ui} -> {*a} || [p | k | s] (h) _ pbTone;
+define rh⇒x {*rh} -> {*x};
+define r⇒ɣ {*r} -> {*ɣ};
+define xy⇒ʃ {*x*j} -> {*ʃ};
+define k⋄Epenthesis {*i} pbTone -> {*i*k} 入, {*u} pbTone -> {*uk} 入;
+# Tone neutralized during k-Epenthesis into the two entering tones, which shows that the initial breathiness didn't neutralize at the time of the k Epenthesis
+# define xik⇒xək {*i} -> {*ə} || [x | ɣ] _ {*k};
+define ʊ⇒au {*ʊ} -> {*au} || _ pbTone;
+define e⇒i {*e} -> {*i} || _ pbTone;
+define o⇒u {*o} -> {*u} || _ pbTone;
+define ɣu⇒vu {*ɣ} -> {*w} || _ {*u};
+define ui⇒ø {*ui} -> {*ø} || j _ pbTone;
+
+define MaruReflexes pbSyllable .o. BurmishToneSplit .o. BurmishDevoicing
+ .o. r⋄Devoicing
+ .o. rj⇒j
+ .o. medial⋄l⇒r
+ .o. medial⋄r⇒j
+ .o. aŋ⇒ã .o. ak⇒aʔ
+ .o. ap⇒at
+ .o. am⇒ɛ̃ .o. at⇒ɛʔ
+ .o. a⇒ɔ
+ .o. an⇒əŋ
+ .o. kəŋ⇒kiŋ
+ .o. uk⇒auk
+ .o. iC⇒aC
+ .o. ti⇒ta
+ .o. ui⇒a
+ .o. rh⇒x
+ .o. r⇒ɣ
+ .o. xy⇒ʃ
+ .o. k⋄Epenthesis
+# .o. xik⇒xək
+ .o. ʊ⇒au
+ .o. e⇒i
+ .o. o⇒u
+ .o. ɣu⇒vu
+ .o. ui⇒ø
+ ;
+
+# 2. Orthography
+define MaruInitialNotation [
+  {*w} -> v,
+  {*ʔ} -> 0
+    || .#. _ {*}];
+
+define MaruTenseVowelNotation [
+  [ i | ɛ | a | ɔ | u | ə | ø | {ɛ~} | {ɔ~} ] -> ... "_" || .#. {*ʔ} MaruInitial ({*j}) {*} _ ]
+  .o. [{*ʔ} -> 0 || .#. _ ? ** "_"];
+
+define MaruToneNotation [Ø ? -> ³¹, X ? -> ⁵⁵, H ? -> ³⁵, 入 "[h]" -> ⁵⁵, 入 "[l]" -> ³¹ \\ _ .#.];
+
+define Maru MaruReflexes
+  ∘ MaruInitialNotation
+  ∘ MaruTenseVowelNotation
+  ∘ MaruToneNotation
+  ∘ RemoveAsterisks;
+
+clear
+push Maru
+save stack maru.bin
+
+#########################################################
+## A transducer from the current proto-Burmish to Bola ##
+#########################################################
+
+# 1. Sound laws
+
+define BolaInitial [
+   p |  p h |  m |
+   p j | p h j |  m j |
+   f | v |
+   t |  t h | n | l |
+   t s | t s h | s |
+   t ʃ | t ʃ h | ʃ | ʒ | j |
+   k |  k h | x | ŋ | ɣ |
+   k j | k h j | ŋ j |
+   0 ];
+
+# 1. Sound laws
+# PROBABLY ALREADY DEFINED FOR ANOTHER LANGUAGE
+define medial⋄r⇒j {*r} -> {*j} || ? _ ;
+define medial⋄l⇒j {*l} -> {*j} || ? _ ;
+define ʔrj⇒ʃ {*ʔr*j} -> {*ʃ} || .#. _ ; 
+define ʔlj⇒ʃ {*ʔl*j} -> {*ʃ} || .#. _ ; 
+define rj⇒j {*r*j} -> {*j} || .#. _ ; 
+define ʔr⇒x {*ʔr} -> {*x} || .#. _ ; 
+define r⇒ɣ {*r} -> {*ɣ} || .#. _ ;
+define o⇒ɔ {*o} -> {*ɔ} || _ pbTone ; 
+#This next one I have commented out, because it seems to only be necessary for 'silver'
+#define ui⇒ø {*ui} -> {*ø} || _ pbTone ; 
+#I think we will assume 'buy' is a loanword from Burmese.
+#define ai⇒ɛ {*ai} -> {*ɛ} || _ pbTone ; 
+# ku and kruk greak to au, but not kru, so we need two changes. 
+define uk⇒auk {*u} -> {*au} || _ {*k} pbTone , _ {*ŋ} pbTone ; 
+define u⇒au {*u} -> {*au} || [\j] _ pbTone ; 
+define ak⇒aʔ⋄auk⇒auʔ {*k} -> {*ʔ} || {*a} _ , {*au} _ ;
+define aŋ⇒ɔ̃ {*a*ŋ} -> {*ɔ~} || _ pbTone ;  
+define ap⇒at⋄am⇒an {*p} -> {*t}, {*m} -> {*n} || {*a} _ pbTone ;
+define up⇒ap⋄um⇒am {*u} -> {*a} || _ {*p} pbTone , _ {*m} pbTone ;
+define at⇒ɛʔ⋄an⇒ɛ̃ {*a*t} -> {*ɛ*ʔ}, {*a*n} -> {*ɛ~} || _ pbTone ;  
+define ut⇒ɔt {*u} -> {*ɔ} || _ {*t} pbTone ; 
+define ji⇒əi {*j*i} -> {*ə*i} || _ pbTone ;
+define ik⇒ak {*i} -> {*a} || _ {*k}, _ {*ŋ} ;
+define e⇒i {*e} -> {*i} || _ pbTone ;
+#The following change makes “muntjac / deer (barking)” irregular, but it needed for 'wash' and other examples. 
+define i⇒ɿ {*i} -> {*ɿ} || {*ʃ} _ pbTone, {*tʃ} _ pbTone, {tʃh} _ pbTone;
+define ts⇒t {*ts} -> {*t} || .#. _ ;  
+
+define BolaReflexes pbSyllable
+  .o. BurmishToneSplit 
+  .o. BurmishDevoicing 
+  .o. medial⋄r⇒j 
+  .o. ji⇒əi
+  .o. medial⋄l⇒j
+  .o. ʔrj⇒ʃ
+  .o. ʔlj⇒ʃ
+  .o. rj⇒j
+  .o. ʔr⇒x
+  .o. r⇒ɣ
+  .o. o⇒ɔ
+#  .o. wa⇒wɔ
+  .o. uk⇒auk
+  .o. u⇒au 
+  .o. ak⇒aʔ⋄auk⇒auʔ 
+  .o. aŋ⇒ɔ̃ 
+  .o. ap⇒at⋄am⇒an 
+  .o. up⇒ap⋄um⇒am
+  .o. at⇒ɛʔ⋄an⇒ɛ̃
+  .o. ut⇒ɔt
+  .o. ik⇒ak 
+  .o. e⇒i 
+  .o. i⇒ɿ 
+  .o. ts⇒t
+  ;
+
+# 2. Orthography
+define BolaInitialNotation [
+  {*w} -> v,
+  {*ʔ} -> 0
+    || .#. _ {*}];
+
+define BolaTenseVowelNotation [
+  [ i | ɛ | a | ɔ | u | ə | ø | {ɛ~} | {ɔ~} ] -> ... "_" || .#. {*ʔ} BolaInitial ({*j}) {*} _ ]
+  .o. [{*ʔ} -> 0 || .#. _ ? ** "_"];
+
+define BolaToneNotation [Ø ? -> ⁵⁵, X ? -> ³⁵, H "[h]" -> ³⁵, H "[l]" -> ³¹, 入 "[h]" -> ⁵⁵, 入 "[l]" -> ³¹ \\ _ .#.];
+
+define Bola BolaReflexes
+  ∘ BolaInitialNotation
+  ∘ BolaTenseVowelNotation
+  ∘ BolaToneNotation
+  ∘ RemoveAsterisks;
+
+clear
+push Bola
+save stack bola.bin
+
+########################################
+## Achang-Luxi: orthographical filter ##
+########################################
+
+define LuxiSimpleInitial [
+f:{f } | k:{k } | {kʰ}:{kh }
+| l:{l } |m:{m } |n:{n }
+| p:{p } | {pʰ}:{ph }
+| s:{s } | t:{t } | {tʰ}:{th }
+| w:{w } |x:{x } |z:{z }
+|ŋ:{ŋ }
+|ʦ:{ts } |{ʦʰ}:{tsh }
+|0:{ʔ } ];
+
+define LuxiSimpleInitial⇒ [ LuxiSimpleInitial:{i } ];
+
+define LuxiIotizedInitial [
+{kʰʲ}:{kh j }
+| {kʲ}:{k j }
+| {mʲ}:{m j }
+| {pʰʲ}:{ph j }
+| {pʲ}:{p j }
+| {xʲ}:{x j }
+| ȵ:{ȵ j }
+| ɕ:{ɕ j }
+| ʑ:{ʑ j }
+| ʨ:{tɕ j }
+| ʨʰ:{tɕh j } ];
+
+define LuxiIotizedInitial⇒ [ LuxiIotizedInitial:{i m } ];
+
+define LuxiNucleus [
+a:{a }
+| {ai}:{ai }
+| i:{i }
+| o:{o }
+| u:{u }
+| {ua}:{ua }
+| {ui}:{ui }
+| {uɛ}:{uɛ }
+| ɑ:{ɑ }
+| ɔ:{ɔ }
+| ə:{ə }
+| {əu}:{əu }
+| ɛ:{ɛ }
+| ɯ:{ɯ }
+| m:{m } ];
+
+define LuxiNucleus⇒ [ LuxiNucleus:{n } ];
+
+define LuxiIotizedNucleus [
+{ia}:{j a }
+| {iu}:{j u }
+| {iɛ}:{j ɛ } ];
+
+define LuxiIotizedNucleus⇒ [ LuxiIotizedNucleus:{m n } ];
+
+define LuxiCodalessSyllable [LuxiSimpleInitial LuxiNucleus | LuxiSimpleInitial LuxiIotizedNucleus | LuxiIotizedInitial LuxiNucleus ];
+define LuxiCodalessSyllable⇒ [LuxiSimpleInitial⇒ LuxiNucleus⇒ | LuxiSimpleInitial⇒ LuxiIotizedNucleus⇒ | LuxiIotizedInitial⇒ LuxiNucleus⇒ ];
+
+define LuxiCoda [
+j:{j }
+| k:{k }
+| l:{l }
+| m:{m }
+| n:{n }
+| p:{p }
+| t:{t }
+| w:{w }
+| ŋ:{ŋ }
+| ʔ:{ʔ } ];
+
+define LuxiCoda⇒ [ LuxiCoda:{c } ];
+
+define LuxiTone [{²¹}:{²¹} | {⁴⁵}:{⁴⁵} | {⁵¹}:{⁵¹} | {⁵⁵}:{⁵⁵}];
+
+define LuxiTone⇒ [ LuxiTone:{t} ];
+
+define LuxiSyllable [LuxiCodalessSyllable LuxiTone | LuxiCodalessSyllable LuxiCoda LuxiTone];
+define LuxiSyllable⇒ [LuxiCodalessSyllable⇒ LuxiTone⇒ | LuxiCodalessSyllable⇒ LuxiCoda⇒ LuxiTone⇒];
+
+clear
+push LuxiSyllable
+save stack luxi-ortho.bin
+
+clear
+push LuxiSyllable⇒
+save stack luxi-ortho-template.bin
+
+#########################################################
+## A transducer from the current proto-Burmish to Lashi ##
+#########################################################
+
+define LashiInitial [
+   p |  p h |  m |
+   p j | p h l |  m j |
+   f | v |
+   t |  t h | n | l |
+   t s | t s h | s |
+   t ʃ | t ʃ h | ʃ | ʒ | j |
+   k |  k h | x | ŋ | ɣ |
+   k j | k h j | ŋ j |
+   0 ];
+
+define LashiOpenRhyme [
+   [ i | ɛ | a | ɔ | u | ə | ø | ɛ̃ | ɔ̃ ] ( "_"  ) |
+   [ a | ɔ | u ] ( "_"  ) i |
+   [ a ] ( "_"  ) u
+];
+
+define LashiNasalRhyme [
+   [ ɛ | a | ɔ | u ] ( "_"  ) m |
+   [ i | a | ɔ | u ] ( "_"  ) n |
+   ɛ n | ə n |
+   [ i | ɛ | a | ɔ | u | ə ] ( "_"  ) ŋ |
+   a ( "_"  ) u ŋ
+];
+
+define LashiStopRhyme [
+   [ ɛ | a | ɔ ] ( "_"  ) p |
+   [ ɛ | a | ɔ | u ] ( "_"  ) t |
+   [ i | a | ɔ | u ] ( "_"  ) k |
+   ə k |
+   [ ɛ | a | ɔ | ø ] ( "_"  ) ʔ |
+   a ( "_"  ) u k 
+];
+
+define LashiTone [⁵⁵ | ³⁵ | ³¹];
+
+define LashiRime [ [LashiOpenRhyme | LashiNasalRhyme | LashiStopRhyme] LashiTone];
+
+define LashiSyllable [ LashiInitial LashiRime ];
+
+# 1. Sound laws
+# PROBABLY ALREADY DEFINED FOR ANOTHER LANGUAGE
+define medial⋄r⇒j {*r} -> {*j} || ? _ ;
+define ʔr⇒ʃ {*ʔr} ({*j}) -> {*ʔʃ} || .#. _ ; 
+define ʔlj⇒ʃ {*ʔl*j} -> {*ʃ} || .#. _ ; 
+define rj⇒j {*r*j} -> {*j} || .#. _ ; 
+define r⇒j {*r} -> {*j} || .#. _ ;
+define jat⇒ɛt {*j*a} -> {*ɛ} ||  _ {*t}, _ {*n} ; 
+define ik⇒ək {*i} -> {*ə} ||  _ {*ŋ} pbTone, _ {*k} pbTone ;  
+define nj⇒ɲ {*n} -> {*ɲ} || _ {*j}; 
+define ak⇒ɔk {*a} -> {*ɔ} || _ ({*k}) pbTone;  
+define k⇒ʔ {*k} -> {*ʔ} || {*o} _ pbTone, {*ɔ} _ pbTone ;
+define wa⇒wu {*w*a} -> {*w*u}, {*w*ɔ} -> {*w*u} || _ {*t}, _ {*n}, _ {*ʔ},  _ {*k}, _  {*ŋ}; 
+
+
+define ai⇒ɛ {*ai} -> {*ɛ} || _ pbTone ;
+define ti⇒tai {*i} -> {*ai} || [t | d | n | l ] (h) _;
+define i⇒ei {*i} -> {*ei} || _ pbTone;
+define bui⇒bei {*ui} -> {*ei} || [p | b | m] (h) _;
+define e⇒i {*e} -> {*i} || _ pbTone;
+define u⇒au {*u} -> {*au} || _ pbTone ; 
+define au⇒u {*au} -> {*u} || {*p} (h) {*j} _ ; 
+define ʊ⇒u {*ʊ} -> {*u} ; 
+define ip⇒jup ({*i} -> {*j*u} || _ {*p}, _ {*m}) .o. j⋄cleanup ;
+define um⇒ɔm {*u} -> {*ɔ} || _ {*m}, _ {*ŋ} ; 
+define ɲ⇒ŋj {*ɲ} -> {*ŋ*j}; 
+define w⇒v {*w} -> {*v} || .#. _;
+
+# Just for monosyllables
+define monosyllabic⋄lengthening 
+       {*a} -> {*aː}, {*e} -> {*eː},
+       {*i} -> {*iː}, {*o} -> {*oː}, {*u} -> {*uː},
+       {*ɔ} -> {*ɔː}, {*ɛ} -> {*ɛː}, {*ə} -> {*əː};
+
+# Just for elements in compound
+define i⇒ɿ {*i} -> {*ɿ} || {*ʃ} _ pbTone, {*tʃ} _ pbTone, {tʃh} _ pbTone;
+define ɔ⇒u {*ɔ} -> {*u} || _ {*k} pbTone, _ {*ŋ} pbTone ;
+define ɔ⇒o {*ɔ} -> {*o} || _ pbTone;
+define au⇒ou {*au} -> {*ou} || _ pbTone;
+define ai⇒ei {*ai} -> {*ei} || _ pbTone;
+define ɛ⇒i {*ɛ} -> {*i} || {*j} _ pbTone;
+define ɛ⇒e {*ɛ} -> {*e} || _ pbTone;
+# This is an uncomfortably specific change
+define ə⇒i {*ə} -> {*i} || [{*p}|{*b}] {*j} _ {*ŋ} pbTone, [{*p}|{*b}] {*j} _ {*k} pbTone ;
+
+define LashiReflexesCommon pbSyllable
+  .o. BurmishToneSplit 
+  .o. BurmishDevoicing 
+  .o. medial⋄l⇒r 
+  .o. medial⋄r⇒j 
+  .o. ʔr⇒ʃ
+  .o. ʔlj⇒ʃ
+  .o. rj⇒j
+  .o. r⇒j
+  .o. jat⇒ɛt
+  .o. ik⇒ək
+  .o. nj⇒ɲ
+  .o. ak⇒ɔk 
+  .o. k⇒ʔ
+  .o. wa⇒wu
+  .o. ai⇒ɛ 
+  .o. ti⇒tai
+  .o. i⇒ei
+  .o. bui⇒bei
+  .o. e⇒i
+  .o. u⇒au
+  .o. au⇒u
+  .o. ʊ⇒u
+  .o. ip⇒jup
+  .o. um⇒ɔm
+  .o. ɲ⇒ŋj
+  .o. j⋄cleanup
+  .o. w⇒v
+  ;
+
+define LashiReflexeslong LashiReflexesCommon
+.o. monosyllabic⋄lengthening ; 
+
+define LashiReflexesshort LashiReflexesCommon
+.o. ɔ⇒o
+# .o. ɔ⇒u
+.o. ə⇒i
+.o. ɛ⇒i
+.o. ɛ⇒e
+.o. i⇒ɿ 
+.o. au⇒ou
+.o. ai⇒ei
+; 
+
+define LashiReflexes [ LashiReflexeslong | LashiReflexesshort ];
+
+# 2. Orthography
+define LashiInitialNotation [
+  {*w} -> v,
+  {*ʔ} -> 0
+    || .#. _ {*}];
+
+
+define LashiTenseVowelNotation [
+  [ i | e | ɛ | a | o | ɔ | u | ə | ø | {ɛ~} | {ɔ~} ] -> ... "_" || .#. {*ʔ} LashiInitial ({*j}) {*} _ ]
+  .o. [{*ʔ} -> 0 || .#. _ ? ** "_"];
+
+define LashiToneNotation [Ø "[h]" -> ³³, Ø "[l]" -> ³¹, X "[h]" -> ⁵³, X "[l]" -> ⁵⁵, H "[h]" -> ⁵⁵, H "[l]" -> ³³, 入 "[h]" -> ⁵⁵, 入 "[l]" -> ³¹ \\ _ .#.];
+
+define Lashi LashiReflexes
+  ∘ LashiInitialNotation
+  ∘ LashiTenseVowelNotation
+  ∘ LashiToneNotation
+  ∘ RemoveAsterisks;
+
+clear
+push Lashi
+save stack lashi.bin
+
+####################################
+## Xiandao: orthographical filter ##
+####################################
+
+define XiandaoInitial [
+   p |  p h |  m |  m̥ |
+   p ʐ | p h ʐ |  m ʐ |  m̥ ʐ |
+   f | v |
+   t |  t h | t s | t s h | s |
+   n |  n̥ |  l |  l̥ |
+   t ɕ | t ɕ h | ɕ | j | ȵ | ȵ̥ |
+   t ʂ | t ʂ h | ʂ | ʐ |
+   k |  k h | x | ŋ | ŋ̊ |
+   k ʐ | k h ʐ | x ʐ 
+   | 0 ];
+
+define XiandaoOpenRhyme [
+   i | e | a | ɔ | o | u | ə | ɿ |
+   e i | a i | o i | u i |
+   i a u | u a i ];
+
+define XiandaoNasalRhyme [
+   [[i | e | a | ɔ | o | u | ə]
+    [m | n | ŋ]] |
+   i a m | i a ŋ | u a n | u a ŋ ];
+
+define XiandaoStopRhyme [
+   [[i | e | a | ɔ | o | u | ə]
+    [p | t | k | ʔ]] |
+   i a p | i a k | u a t | u a k |
+   a i ʔ | u i ʔ | a u ʔ | o u ʔ | u a ʔ];
+
+define XiandaoTone [⁵⁵ | ³¹ | ³⁵ | ⁵¹];
+
+define XiandaoRime [ [XiandaoOpenRhyme | XiandaoNasalRhyme | XiandaoStopRhyme] XiandaoTone];
+
+define XiandaoSyllable [XiandaoInitial XiandaoRime];
+
+#clear
+#push XiandaoSyllable
+#save stack Xiandao-ortho.bin
+
+#######################################################################
+## A transducer from the current proto-Burmish to Xiandao ##
+#######################################################################
+# Things are done the kosher way, with proper sound changes and everything
+
+# Burmish-Xiandao group common innovation
+define u⇒ou {*u} -> {*ou} || _ pbTone;
+define ʊ⇒u {*ʊ} -> {*u} || _ pbTone;
+define i⇒ei {*i} -> {*ei} || _ pbTone;
+## XIANDAO APPEARS NOT TO PARTICIPATE IN THIS MERGER
+## define e⇒i {*e} -> {*i} || _ pbTone;
+
+define PreXiandao pbSyllable ∘ LawBurling ∘ BurmishDevoicing
+ ∘ u⇒ou ∘ ʊ⇒u ∘ i⇒ei 
+# ∘ e⇒i 
+ ∘ medial⋄l⇒r;
+
+# Xiandao
+# 1. Sound laws
+
+define ak⇒aʔ {*k} -> {*ʔ} || {*a} _, {*o} _, {*u} _;
+define jat⇒ɛt {*a} -> {*ɛ} || [{*j}|{*ʃ}|{*tʃ}|{*tʃh}] _ {*t} , [{*j}|{*ʃ}|{*tʃ}|{*tʃh}] _ {*n};
+define a⇒ɔ {*a} -> {*ɔ} || _ pbTone, _ {*ʔ}, _ {*ŋ};
+define ou⇒au {*ou} -> {*au} || _ pbTone;
+define kru⇒kju {*r} -> {*j} || {*k} _ {*u}, {*kh} _ {*u};
+#define ru⇒ro {*u} -> {*o} || {*} (t) ʂ (h) _, {*r} _ ;
+define rhj⇒ç {*rh*j} -> {*ç} || .#. _ ; 
+define lhj⇒ç {*lh*j} -> {*ç} || .#. _ ; 
+define rh⇒s {*rh} -> {*s};
+define ʃ⇒ʂ {ʃ} -> {ʂ} || {*} (t) _ (h) ;
+#define ɔ⇒ua {*ɔ} -> {*ua} || {*r} _, {*} (t) ʂ (h) _, _ {*ŋ} ;
+define iŋ⇒əŋ {*i} -> {*ə} || _ {*k}, _ {*ŋ};
+define sə⇒ʂə {*s} -> {*ʂ} || _ {*ə};
+define ʂi⇒ʂə {*i} -> {*ə} || {*} (t) ʂ (h) _, {*r} _ ;
+define ni⇒ɲi {*n} -> {*ɲ} || _ {*i}, _ {*j};
+define ei⇒i {*ei} -> {*i};
+define e⇒ɛ {*e} -> {*ɛ} ; 
+define tai⇒tə {*ai} -> {*ə} ||  [t | d | n | l | s ] (h) _ pbTone;
+define ai⇒ɛ {*ai} -> {*ɛ};
+define ti⇒tai {*i} -> {*ai} || [t | d | n | l ] (h) _;
+define ʂi⇒ʂɿ {*i} -> {*ɿ} || {*} (t) ʂ (h) _ ;
+define im⇒in {*m} -> {*n}, {*p} -> {*t} || {*i} _ ;
+define w⋄Rounding [{*w*a} -> {*w*ɔ} , {*w*ɔ} -> {*ʔ*o}];
+define w⋄Delete {*w} -> {*ʔ} || .#. _ {*ɔ}, .#. _ {*o};
+define j⋄Delete {*j} -> {*ʔ} || .#. _ {*i};
+define k⋄Palatalization {*k*j} -> {*tʂ}, {*kh*j} -> {*tʂh} ;
+define 2nd⋄palatalization {*tʂh} -> {*ch}, {*tʂ} -> {*c}  
+       || _ ({*j}) [{*ɛ} | {*u} | {*i}];
+#define j⇒ʑ {*j} -> {*ʑ} || .#. _ ;
+define mi⇒ɲi {*m} -> {*ɲ} || _ {*i}, _ {*j};
+define ɲi⇒ni {*ɲ*i} -> {*n*i} || _ pbTone;
+# for secondary ɲ from mi mostly
+define kh⇒x {*kh} -> {*x}|| _ {*} \r ;
+define ɛ⇒a {*ɛ} -> {*a};
+define rə⇒ɯ {*ə} -> {*ɯ} || {*r} _, {*ʂ} _ ;
+define r⋄loss {*r} -> 0 || \.#. _ {*ɯ}, \.#. _ {*i} ;
+
+define XiandaoReflexes PreXiandao
+.o. ak⇒aʔ 
+.o. a⇒ɔ 
+.o. ɛ⇒a
+.o. jat⇒ɛt
+.o. rhj⇒ç
+.o. lhj⇒ç
+.o. rh⇒s
+.o. ou⇒au 
+.o. kru⇒kju
+#.o. ru⇒ro 
+.o. ʃ⇒ʂ 
+#.o. ɔ⇒ua 
+.o. iŋ⇒əŋ 
+.o. sə⇒ʂə 
+.o. ʂi⇒ʂə 
+.o. ni⇒ɲi 
+.o. ei⇒i 
+.o. e⇒ɛ
+.o. tai⇒tə
+.o. ai⇒ɛ 
+.o. ti⇒tai
+.o. ʂi⇒ʂɿ 
+.o. im⇒in 
+.o. w⋄Rounding 
+.o. w⋄Delete 
+.o. k⋄Palatalization 
+.o. 2nd⋄palatalization
+.o. j⋄Delete 
+#.o. j⇒ʑ 
+.o. mi⇒ɲi 
+.o. ɲi⇒ni
+.o. kh⇒x 
+.o. rə⇒ɯ 
+.o. r⋄loss
+;
+
+# 2. Orthography
+define XiandaoCoalesceYod {*j} -> 0
+  || _ {*i}, ɕ (h) _, ɲ _;
+
+define XiandaoInitialNotation [
+  {*p} -> p, {*ph} -> p h, {*m} -> m, {*mh} -> m̥,
+  {*t} -> t, {*th} -> t h, {*n} -> n, {*nh} -> n̥,
+  {*k} -> k, {*kh} -> k h, {*ŋ} -> ŋ, {*ŋh} -> ŋ̊,
+  {*tʃ} -> c, {*tʃh} -> c h, {*ɲ} -> ɲ, {*ɲh} -> ɲ̊,
+  {*s} -> s,
+  {*r} -> ʐ,
+  {*l} -> l, {*lh} -> l̥,
+  {*ʔ} -> 0
+    || .#. _ {*}];
+
+define XiandaoNotation [
+  {*ə} -> ɤ,  
+  {*r} -> ʐ];
+
+define XiandaoToneNotation [Ø -> ⁵⁵, X -> ³⁵, H -> ³¹, 入 -> ⁵⁵];
+
+define Xiandao XiandaoReflexes
+  ∘ XiandaoCoalesceYod
+  ∘ XiandaoToneNotation
+  ∘ XiandaoInitialNotation
+  ∘ XiandaoNotation
+  ∘ RemoveAsterisks;
+
+clear
+push Xiandao
+save stack xiandao.bin
+
+#########################################################
+## A transducer from the current proto-Burmish to Atsi ##
+#########################################################
+
+define AtsiInitial [
+   p |  p h |  m |
+   p j | p h l |  m j |
+   f | v |
+   t |  t h | n | l |
+   t s | t s h | s |
+   t ʃ | t ʃ h | ʃ | ʒ | j |
+   k |  k h | x | ŋ | ɣ |
+   k j | k h j | ŋ j |
+   0 ];
+
+define AtsiOpenRhyme [
+   [ i | ɛ | a | ɔ | u | ə | ø | ɛ̃ | ɔ̃ ] ( "_"  ) |
+   [ a | ɔ | u ] ( "_"  ) i |
+   [ a ] ( "_"  ) u
+];
+
+define AtsiNasalRhyme [
+   [ ɛ | a | ɔ | u ] ( "_"  ) m |
+   [ i | a | ɔ | u ] ( "_"  ) n |
+   ɛ n | ə n |
+   [ i | ɛ | a | ɔ | u | ə ] ( "_"  ) ŋ |
+   a ( "_"  ) u ŋ
+];
+
+define AtsiStopRhyme [
+   [ ɛ | a | ɔ ] ( "_"  ) p |
+   [ ɛ | a | ɔ | u ] ( "_"  ) t |
+   [ i | a | ɔ | u ] ( "_"  ) k |
+   ə k |
+   [ ɛ | a | ɔ | ø ] ( "_"  ) ʔ |
+   a ( "_"  ) u k 
+];
+
+define AtsiTone [⁵⁵ | ³⁵ | ³¹];
+
+define AtsiRime [ [AtsiOpenRhyme | AtsiNasalRhyme | AtsiStopRhyme] AtsiTone];
+
+define AtsiSyllable [ AtsiInitial AtsiRime ];
+
+# 1. Sound laws
+# PROBABLY ALREADY DEFINED FOR ANOTHER LANGUAGE
+define medial⋄r⇒j {*r} -> {*j} || ? _ ;
+define ʔrj⇒ʃ {*ʔr*j} -> {*ʃ} || .#. _ ; 
+define ʔlj⇒ʃ {*ʔl*j} -> {*ʃ} || .#. _ ; 
+define rj⇒j {*r*j} -> {*j} || .#. _ ; 
+define ʔr⇒x {*ʔr} -> {*x} || .#. _ ; 
+define wa⇒wu {*w*a} -> {*w*u} || _ {*t}, _ {*n}, _ {i} ; 
+define e⇒i {*e} -> {*i} || _ pbTone;
+define ɛ⇒e {*ɛ} -> {*e} ; 
+define ʊ⇒u {*ʊ} -> {*u} ; 
+define ip⇒jup ({*i} -> {*j*u} || _ {*p}, _ {*m}) .o. j⋄cleanup ;
+define ti⇒tai {*i} -> {*ai} || [t | d | l ] (h) _ pbTone; # unlike Maru, does not apply to *ni; cf "be (in the house)", "day (time)"
+define pi⇒pji {*i} -> {*j*i} || [ p | b | m ] (h) _ ;  
+define a⇒o {*a} -> {*o} || _ ({*k}) pbTone ;
+define wo⇒wa {*w*o} -> {*w*a} ;
+define r⇒w {*r} -> {*w} || .#. _ ;  
+# *rak i voʔ but wak is vaʔ
+define k⇒ʔ {*k} -> {*ʔ} || {*a} _ pbTone , {*u} _ pbTone , {*o} _ pbTone ;
+define ai⇒e {*ai} -> {*e} || _ pbTone ;  
+define ju⇒jui {*u} -> {*ui} || {*j} _ pbTone , {*ɲ} _ pbTone , {ʃ} (h) _ pbTone ;
+define u⇒au {*u} -> {*au} || {*} (ʔ) \j (s) (h) _ pbTone ; 
+# both iK and ɤK are attested reflexes of *iK; I think ɤK is a mistake. Also, 
+# there is a case of *liŋH > leŋH, so there is something really strange with i
+# before velar finals. 
+# define ik⇒ɤk {*i} -> {*ɤ} || _ {*k}, _ {*ŋ} ;
+# It's because "come loose" is wierd
+define i⇒ɿ {*i} -> {*ɿ} || {*ʃ} _ pbTone, {*tʃ} _ pbTone, {tʃh} _ pbTone;
+
+define AtsiReflexes pbSyllable
+  .o. BurmishToneSplit 
+  .o. BurmishDevoicing 
+  .o. medial⋄l⇒r 
+  .o. medial⋄r⇒j 
+  .o. ʔrj⇒ʃ
+  .o. ʔlj⇒ʃ
+  .o. rj⇒j
+  .o. ʔr⇒x
+  .o. wa⇒wu
+  .o. ip⇒jup
+  .o. e⇒i
+  .o. ɛ⇒e
+  .o. ai⇒e 
+  .o. ti⇒tai
+  .o. pi⇒pji
+  .o. a⇒o .o. wo⇒wa
+  .o. r⇒w
+  .o. k⇒ʔ
+  .o. ju⇒jui
+  .o. u⇒au
+  .o. ʊ⇒u
+  .o. ɲ⇒ŋj
+#  .o. ik⇒ɤk 
+#  .o. i⇒ɿ 
+  ;
+
+# 2. Orthography
+define AtsiInitialNotation [
+  {*w} -> v,
+  {*ʔ} -> 0
+    || .#. _ {*}];
+
+define AtsiTenseVowelNotation [
+  [ i | ɛ | e |  a | ɔ | o | u | ə | ø | {ɛ~} | {ɔ~} ] -> ... "_" || .#. {*ʔ} AtsiInitial ({*j}) {*} _ ]
+  .o. [{*ʔ} -> 0 || .#. _ ? ** "_"];
+
+define AtsiToneNotation [Ø ? -> ⁵¹, X ? -> ⁵⁵, H ? -> ²¹, 入 "[h]" -> ⁵⁵, 入 "[l]" -> ²¹ \\ _ .#.];
+
+define Atsi AtsiReflexes
+  ∘ AtsiInitialNotation
+  ∘ AtsiTenseVowelNotation
+  ∘ AtsiToneNotation
+  ∘ RemoveAsterisks;
+  
+
+clear
+push Atsi
+save stack atsi.bin

@@ -2,7 +2,7 @@
     import FstEditor from "./FstEditor.svelte";
     import Select from "svelte-select";
     import type { CognateApp, FstComparison } from "./types";
-    import initialTransducers from "./initialTransducers"
+    // import initialTransducers from "./initialTransducers"
     import FstOutput from "./FstOutput.svelte";
     import { Circle2 } from "svelte-loading-spinners";
 
@@ -18,25 +18,11 @@
         let fsts = JSON.parse(window.localStorage.getItem('fsts'));
         oldFst = fsts.oldFst;
         newFst = fsts.newFst;
-    } else {
-        oldFst = initialTransducers.oldTransducer;
-        newFst = initialTransducers.newTransducer;
     }
 
 
     // Doculects to be selected from.
-    // Should really be returned from server or something where they can be centrally defined.
-    let doculects = [
-        'Old_Burmese', 
-        'Achang_Longchuan',
-        'Xiandao',
-        'Maru',
-        'Bola',
-        'Atsi',
-        'Lashi'
-    ]
-
-    let fst_names = {'Old_Burmese': 'burmese', 'Achang_Longchuan': 'ngochang', 'Xiandao': 'xiandao', 'Maru': 'maru', 'Bola': 'bola', 'Atsi': 'atsi', 'Lashi': 'lashi'}
+    $: doculects = ['Debug', ...data.fstDoculects];
 
     // Currently selected doculect list.
     export let selectedDoculects = [];
@@ -44,51 +30,59 @@
     // TODO: move this to just replace call
     let rootUrl = "/api"
 
+    export let handleDebugComparison = async () => {};
+
     // Calls the comparison route with our FSTs, returning the new data.
     const handleComparison = async () => {
-        statusMessage = "Calculating correspondence patterns..."
-        comparisonData = null;
-        loadingData = true;
-        statusError = false;
-        compilerErrors = [];
-
-        fetch(`${rootUrl}/compare-fst`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                langsUnderStudy: selectedDoculects.map(p => p.value),
-                oldTransducer: oldFst,
-                newTransducer: newFst,
-                board: {
-                    columns: data.columns,
-                    boards: data.boards
-                }
-            })
-        })
-        .then(res => res.json())
-        .then(data => {
-            // If we have our data, we should have calculated correctly.
-            console.log("Successfully calculated correspondence.")
-            comparisonData = data;
-            statusMessage = "Patterns calculated."
+        if (selectedDoculects.map(f => f.value).includes('Debug')) {
+            console.log("Running debug rerun")
+            await handleDebugComparison();
+        } else {
+            statusMessage = "Calculating correspondence patterns..."
+            comparisonData = null;
+            loadingData = true;
             statusError = false;
-            if (data.missing_transducers.length > 0) {
-                statusMessage += " Missing FSTs: " + data.missing_transducers.join(",");
-            }
-            if (data.errors.length > 0) {
-                compilerErrors = data.errors;
-            }
-            loadingData = false;
-        })
-        .catch(e => {
-            // If we have an error, we've got some issues.
-            console.log("Error encountered while calculating correspondence:")
-            console.error(e);
-            statusError = true;
-            statusMessage = e.message;
-        })
+            compilerErrors = [];
+
+            fetch(`${rootUrl}/compare-fst`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    langsUnderStudy: selectedDoculects.map(p => p.value),
+                    oldTransducer: oldFst,
+                    newTransducer: newFst,
+                    board: {
+                        columns: data.columns,
+                        boards: data.boards
+                    }
+                })
+            })
+            .then(res => res.json())
+            .then(data => {
+                // If we have our data, we should have calculated correctly.
+                console.log("Successfully calculated correspondence.")
+                comparisonData = data;
+                statusMessage = "Patterns calculated."
+                statusError = false;
+                if (data.missing_transducers.length > 0) {
+                    statusMessage += " Missing FSTs: " + data.missing_transducers.join(",");
+                }
+                if (data.errors.length > 0) {
+                    compilerErrors = data.errors;
+                }
+                loadingData = false;
+            })
+            .catch(e => {
+                // If we have an error, we've got some issues.
+                console.log("Error encountered while calculating correspondence:")
+                console.error(e);
+                statusError = true;
+                statusMessage = e.message;
+                loadingData = false;
+            })
+        }
     }
 
     // Holds the data returned by the `compare-fst` route
@@ -98,6 +92,7 @@
 	let fstEditorWidth = 600;
     // Keep track of `foma` compiling errors.
     let compilerErrors: string[] = [];
+
 </script>
 
 
@@ -127,6 +122,19 @@
         {:else if loadingData}
             <div class="loader">
                 <Circle2 />            
+            </div>
+        {/if}
+        {#if selectedDoculects && selectedDoculects.map(f => f.value).includes('Debug')}
+            <div style="max-height: 100%; overflow-y: scroll;">
+                {#each Object.entries(data.fstUp) as [language, words]}
+                <h1>{language}</h1>
+                <table class="debug-table" cellpadding="0" cellspacing="0">
+                    <tr><th>Word/Syllable</th><th>Apply Up</th></tr>
+                    {#each Object.entries(words) as [word, applied]}
+                    <tr><td>{word}</td><td>{applied.join(", ")}</td></tr>
+                    {/each}
+                </table>
+                {/each}
             </div>
         {/if}
     </div>
@@ -186,5 +194,15 @@
         justify-content: center;
         padding: 0.5rem;
         margin-bottom: 0.25rem;
+    }
+
+    table.debug-table td, table.debug-table th {
+        border: 0.5px solid #cccccc;
+        padding: 1px 2px;
+    }
+
+    table.debug-table {
+        width: 100%;
+        border: 0.5px solid #cccccc;
     }
 </style>

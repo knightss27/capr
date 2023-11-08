@@ -1,0 +1,61 @@
+#!/usr/local/bin/foma -f
+# Basic FST for the Germanic dataset
+
+# Dutch
+define Dutch [] ;
+
+clear
+push Dutch
+save stack dutch.bin
+
+# English (Needs fixing)
+def PGC "b " | "d " | "f " | "g " | "gʷ " | "j " | "k " | "kʷ " | "kː " | "l " | "lː " | "m " | "mː " | "n " | "nː " | "p " | "pː " | "r " | "s " | "t " | "w " | "x " | "xʷ " | "z " | "θ ";
+
+def PGV "a " | "ai " | "au " | "e " | "eu " | "eː " | "i " | "iː " | "o " | "oː " | "u " | "uː ";
+
+def PGSyllable PGC* PGV* ;
+
+def PGWord PGSyllable* ;
+
+def SK "s " "k " -> "ʃ ";
+def XS "x " "s " -> "k " "s ";
+def XH "x " -> "h ";
+def KN "k " "n " -> "n ";
+
+# hacks
+def AR "a " "r " -> "ɜ " "r ";
+def ER "ɜ " "r " -> "ɜː ";
+
+define English PGWord .o. SK .o. XS .o. XH .o. KN .o. AR .o. ER;
+
+clear
+push English
+save stack english.bin
+
+# German
+def PGC "b " | "d " | "f " | "g " | "gʷ " | "j " | "k " | "kʷ " | "kː " | "l " | "lː " | "m " | "mː " | "n " | "nː " | "p " | "pː " | "r " | "s " | "t " | "w " | "x " | "xʷ " | "z " | "θ ";
+
+def PGV "a " | "ai " | "au " | "e " | "eu " | "eː " | "i " | "iː " | "o " | "oː " | "u " | "uː ";
+
+def PGSyllable PGC* PGV* ;
+
+def PGWord PGSyllable* ;
+
+def Grimm "p " -> "pf ", "t " -> "ts ";
+
+def OE "oː " -> "ə ";
+
+def SK "s " "k " -> "ʃ ";
+
+# hacks
+def TD "θ " -> "d ";
+def AL "iː " "l " -> "aː " "l ";
+
+# regex PGWord ;
+# regex Grimm .o. TD .o. OE .o. SK;
+
+def German PGWord .o. Grimm .o. TD .o. OE .o. SK .o. AL;
+
+clear
+push German
+save stack german.bin

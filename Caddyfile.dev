@@ -1,0 +1,8 @@
+:5002
+
+route /api/* {
+    uri strip_prefix /api
+    reverse_proxy http://localhost:5001
+}
+
+reverse_proxy http://localhost:8080

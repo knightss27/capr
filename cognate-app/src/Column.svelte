@@ -21,6 +21,9 @@
     let columnSyllables = column.syllableIds.map(s => syllables[s]);
     $: columnSyllables = column.syllableIds.map(s => syllables[s]);
 
+    $: console.log(column.id)
+    $: console.log(column.syllableIds)
+
     // Initialize reconstruction data
     let reconstructions: any = {};
     let crossid_reconstructions = [];
@@ -129,7 +132,7 @@
     <textarea bind:this={textarea} bind:value={protogloss} on:input={() => {handleTextareaResize(); setAsGloss();}} />
     <!-- Drag and drop zone with our cards of each syllable/word -->
     <div class="dropzone" use:dndzone={{items: columnItems[columnItems.findIndex(c => c.id == column.id)].items}} on:consider={(e) => {handleConsider(column.id, e)}} on:finalize={(e) => {handleFinalize(column.id, e)}}>
-        {#each columnItems[columnItems.findIndex(c => c.id == column.id)].items as syl(syl.id)}
+        {#each columnItems.find(c => c.id == column.id).items as syl(syl.id)}
         <Card syllable={syl} word={words[syl.wordId]} />
         {/each}
     </div>
