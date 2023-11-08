@@ -21,7 +21,7 @@ from sys import maxsize
 from ctypes import *
 from ctypes.util import find_library
 
-import six_1_11_0 as six
+from . import six_1_11_0 as six
 
 fomalibpath = find_library('foma')
 foma = cdll.LoadLibrary(fomalibpath)

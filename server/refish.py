@@ -183,12 +183,12 @@ def back_reconstruct_list(syllable_ids, fsts, words):
 import argparse
 
 # Compile transducers
-from foma import FST
 import tempfile
 import os
 import subprocess
 
-from disjointset import DisjointSet
+from .disjointset import DisjointSet
+from .foma import FST
 
 
 def refish(jsonfile, csvfile="lexicon.tsv", fstfile="refishing-fst2.txt"):

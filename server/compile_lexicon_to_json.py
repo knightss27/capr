@@ -4,19 +4,20 @@
 # Usage: Unix-ish
 
 # Basic imports
+import argparse
+import csv
+import fileinput
+import json
 import os
+import re
 import subprocess
 import sys
-import re
-import csv
-import json
-from functools import reduce
 import tempfile
-from disjointset import DisjointSet
-from foma import FST
-import argparse
-import fileinput
 from collections import defaultdict
+from functools import reduce
+
+from .disjointset import DisjointSet
+from .foma import FST
 
 
 def eprint(*args, **kwargs):
