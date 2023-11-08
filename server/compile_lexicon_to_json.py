@@ -382,13 +382,8 @@ def compile_to_json_full_cognates(
                 # Make the current syllable equal to the whole word, since we are
                 # working with the Germanic data. Also add spaces so that Mattis'
                 # transducer will work.
-                syl = word
 
-                # Bad stuff because of how current germanic FST is written  # CHECK: can you say more?
-                if pipeline_name == "germanic":
-                    syl = word.replace(".", " ") + " "
-                else:
-                    syl = word.replace(".", "")
+                syl = word.replace(".", "")
 
                 # for burmish?  # yes
                 syl = replace_diacritics_up(syl)
