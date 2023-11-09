@@ -15,6 +15,7 @@ import sys
 import tempfile
 from collections import defaultdict
 from functools import reduce
+from itertools import combinations
 
 from .disjointset import DisjointSet
 from .foma import FST
@@ -281,6 +282,44 @@ def load_transducer(transducer, pipeline_name, fst_path):
     return new_transducer
 
 
+def get_shared_reconstructions(cand_recs_by_doculect):
+    '''Takes a list of candidate reconstruction sets, where each set correspond
+    to a doculect (doesn't matter which) and contains the possible
+    reconstructions for a given modern form. The function then outputs the most
+    likely reconstructions by taking the candidate reconstructions that are
+    shared by most doculects.
+    (current implementation returns "shared by all" and, if none, falls back to
+    "shared by 2"; we could fall back more gracefully to "shared by all-1,
+    all-2, or more efficiently and legibly, by counting the candidates across
+    the doculects, and returning the ones that have the max count.
+    '''
+    strict = True
+
+    # Here is where we will store all our reconstructions for this cogid
+    ret = list()
+
+    # If we have at least one reconstruction made (so we can make a board?)
+    if len(cand_recs_by_doculect) > 0:
+        # all reconstructions have to agree, but there might be only 1!
+        ret = list(set.intersection(*cand_recs_by_doculect))
+
+        if len(ret) == 0:
+            strict = False
+            # kinda lenient way of generating reconstructions
+            # try and make intersection of every pair of doculects
+            pairwise_intersections = [
+                set.intersection(rec_a, rec_b)
+                for rec_a, rec_b in combinations(cand_recs_by_doculect, 2)
+            ]
+            if pairwise_intersections:
+                ret = ['*' + w
+                       for w in set.union(*pairwise_intersections)]
+            else:
+                ret = []
+
+    return ret, strict
+
+
 def compile_to_json_full_cognates(
     path,
     transducer="internal",
@@ -363,7 +402,6 @@ def compile_to_json_full_cognates(
         # 2. The intersection of all reconstructions is the most probable one
         reconstructions = defaultdict(set)
         first_form = False
-        at_least_one = False
 
         # the cogids are not being split properly... TODO
         # eprint(cogid)
@@ -401,37 +439,9 @@ def compile_to_json_full_cognates(
 
                 # Only worry about reconstructions when we have actually made one
                 if len(recs) > 0:
-                    at_least_one = True
                     reconstructions[doculect] |= set(recs)
 
-        strict = True  # usage TBD
-
-        # Here is where we will store all our reconstructions for this cogid/crossid
-        cognate_reconstructions = []
-
-        # If we have at least one reconstruction made (so we can make a board?)
-        if at_least_one:
-            strict = True
-            cognate_reconstructions = list(set.intersection(*reconstructions.values()))
-
-            if not cognate_reconstructions:
-                strict = False
-                # kinda lenient way of generating reconstructions
-                # try and make intersection of every pair of doculects
-                pairwise_intersections = [
-                    set.intersection(reconstructions[a], reconstructions[b])
-                    for a in reconstructions
-                    for b in reconstructions
-                    if a != b
-                ]
-                if pairwise_intersections:
-                    cognate_reconstructions = list(set.union(*pairwise_intersections))
-                else:
-                    cognate_reconstructions = []
-
-                cognate_reconstructions = ["*" + w for w in cognate_reconstructions]
-
-            # print(cognate_reconstructions)
+        cognate_reconstructions, strict = get_shared_reconstructions(reconstructions.values())
 
         # TODO: Actually go through what is written below and clean it up
         # I have not verified what a lot of this does in the same way I did the
@@ -484,20 +494,7 @@ def compile_to_json_full_cognates(
         all_reconstructions = [
             set(reconstructions_of_crossid[crossid]) for crossid in crossids
         ]
-        reconstructions = list(set.intersection(*all_reconstructions))
-
-        if not reconstructions:
-            strict = False
-            pairwise_intersections = [
-                set.intersection(all_reconstructions[a], all_reconstructions[b])
-                for a in range(len(all_reconstructions))
-                for b in range(len(all_reconstructions))
-                if a != b
-            ]
-            if pairwise_intersections:
-                reconstructions = list(set.union(*pairwise_intersections))
-            else:
-                reconstructions = []
+        reconstructions, strict = get_shared_reconstructions(all_reconstructions)
 
         board_id = "board-" + str(boardid_cntr)
         boardid_cntr += 1
