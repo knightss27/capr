@@ -301,7 +301,7 @@ def compile_to_json_full_cognates(
     # The name of the language "pipeline"
     # Should be the first word of your input file before a "-", i.e.
     # germanic-data.tsv --> germanic, burmish-data.tsv --> burmish
-    pipeline_name = path.split("-")[0]
+    pipeline_name = path.rsplit('.')[0].split("-")[0]
     eprint(f"Assuming pipeline name: {pipeline_name}")
 
     # Finding file path
