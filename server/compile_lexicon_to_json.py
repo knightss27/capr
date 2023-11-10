@@ -377,23 +377,23 @@ def compile_to_json_full_cognates(
                 # TBD what this is used for
                 pass
 
+            # Make the current syllable equal to the whole word, since we are
+            # working with the Germanic data. Also add spaces so that Mattis'
+            # transducer will work.
+
+            syl = word.replace(".", "")
+
+            # for burmish?  # yes
+            syl = replace_diacritics_up(syl)
+
             # If we have a transducer for this doculect
             if doculect in fsts:
-                # Make the current syllable equal to the whole word, since we are
-                # working with the Germanic data. Also add spaces so that Mattis'
-                # transducer will work.
-
-                syl = word.replace(".", "")
-
-                # for burmish?  # yes
-                syl = replace_diacritics_up(syl)
 
                 # Apply the transducer upwards to this word (/syl/morpheme)
                 recs = list(fsts[doculect].apply_up(syl))
 
-                # eprint(recs)
-
                 # Add the reconstructions to our record, whether or not they exist
+                # This will show in 'Apply Up'
                 boards["fstUp"][doculect][word] = sorted(set(recs))
 
                 # TBD
