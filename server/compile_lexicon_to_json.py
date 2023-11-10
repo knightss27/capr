@@ -4,19 +4,21 @@
 # Usage: Unix-ish
 
 # Basic imports
+import argparse
+import csv
+import fileinput
+import json
 import os
+import re
 import subprocess
 import sys
-import re
-import csv
-import json
-from functools import reduce
 import tempfile
-from disjointset import DisjointSet
-from foma import FST
-import argparse
-import fileinput
 from collections import defaultdict
+from functools import reduce
+from itertools import combinations
+
+from .disjointset import DisjointSet
+from .foma import FST
 
 
 def eprint(*args, **kwargs):
@@ -173,51 +175,47 @@ def sort_row_tuples(row_tuples, reconstructed_sense):
     return row_tuples_sorted_by_senses
 
 
-def compile_to_json_full_cognates(
-    path,
-    transducer="internal",
-    fst_path="/usr/app/refishing-fst.txt",
-    cognates="COGIDS", #TODO: find out a good way of determ
-):
-    """
-    Get the JSON from a wordlist file with "normal" cognates.
+def compile_transducers(transducer_txt):
+    '''Takes a transducer as text, compiles it and returns a dict of doculects
+    to transducer objects. The doculets are retrieved from the transducer text
+    by parsing lines of the shape `save stack XXX.bin`'''
+    doculects = [re.search('save stack ([\w-]+).bin', line).group(1)
+                 for line in transducer_txt.splitlines()
+                 if line.startswith('save stack')]
 
-    Example
-    -------
+    with tempfile.TemporaryDirectory() as tmpdirname:
+        os.chdir(tmpdirname)
+        eprint("Compiling FSTs (new)")
+        with open("transducer.foma", "w", encoding="utf-8") as fp:
+            fp.write(transducer_txt)
+        output = subprocess.check_output(["foma",
+                                          "-f",
+                                          "transducer.foma"]).decode("UTF-8")
+        eprint("\n".join(output.split("\n")[-5:]))
 
-    compile_to_json_full_cognates(
-        "pipeline/output/germanic/stage3/germanic-aligned-final.tsv",
-        "Proto-Germanic", cognates="CROSSIDS")
-    """
+        fsts = {doculect: FST.load(doculect + ".bin")
+                for doculect in doculects}
 
-    # The name of the language "pipeline"
-    # Should be the first word of your input file before a "-", i.e.
-    # germanic-data.tsv --> germanic, burmish-data.tsv --> burmish
-    pipeline_name = path.split("-")[0]
-    eprint(f"Assuming pipeline name: {pipeline_name}")
+    eprint(fsts)
+    eprint("FSTs loaded:", ", ".join(fsts))
 
-    # Finding file path
-    path = os.path.join('/usr/app/data', path)
+    return fsts
 
-    # Where we will put everything we read from the input data
-    data = []
+
+def load_data_dict(path):
+    ret = dict()
 
     # For some reason, Python sometimes can't find this file...
     with open(os.path.abspath(path)) as f:
-        for row in f.readlines():
-            data += [[cell.strip() for cell in row.split("\t")]]
+        csvreader = csv.DictReader(
+            filter(lambda row: row.strip() and not row.startswith('#'), f),
+            dialect='excel-tab')
+        for row in csvreader:
+            ret[row['ID']] = row
+    return ret
 
-    f.close()
 
-    header = [row for row in data if row[0] and not row[0].startswith("#")][0]
-    data_dict = {}
-    for i, row in enumerate(data[1:]):
-        if row[0].startswith("#") or not row[0].strip():
-            pass
-        else:
-            cell_dict = dict(zip(header, row))
-            data_dict[cell_dict["ID"]] = cell_dict
-    # create the board dictionary
+def get_boards(data_dict, cognate_col):
     doculects = sorted(set([row["DOCULECT"] for row in data_dict.values()]))
     boards = {
         "fstDoculects": doculects,
@@ -230,22 +228,22 @@ def compile_to_json_full_cognates(
     }
 
     # fill data with content by iterating over the data_dict
-    for i, row in data_dict.items():
-        idx = "word-" + str(i)
+    for row in data_dict.values():
+        idx = f"word-{row['ID']}"
         boards["words"][idx] = {
             "id": idx,
             "doculect": row["DOCULECT"],
             # "syllables": [".".join(row["TOKENS"].split())],
-            "syllables": [".".join(r.split(" ")) for r in row["TOKENS"].split(" + ")],
+            "syllables": [".".join(r.split(" "))
+                          for r in row["TOKENS"].split(" + ")],
             # "syllables": syllabize(row["IPA"]),
             "gloss": row["CONCEPT"],
             "glossid": row["GLOSSID"],
         }
 
 
-        syl_idx = 0
-        for syllable in boards["words"][idx]["syllables"]:
-            syl_id = "-".join([idx, str(syl_idx)])
+        for syl_idx, syllable in enumerate(boards["words"][idx]["syllables"]):
+            syl_id = f"{idx}-{syl_idx}"
             boards["syllables"][syl_id] = {
                 "id": syl_id,
                 "doculect": row["DOCULECT"],
@@ -259,89 +257,142 @@ def compile_to_json_full_cognates(
 
             # eprint(syllable_ids)
             # column ids are in fact the cognate sets
-            cogid = "column-" + row[cognates].split(" ")[syl_idx]
+            cogid = "column-" + row[cognate_col].split(" ")[syl_idx]
             if cogid in boards["columns"]:
                 boards["columns"][cogid]["syllableIds"].append(syl_id)
             else:
-                boards["columns"][cogid] = {"id": cogid, "syllableIds": [syl_id]}
-            
-            syl_idx += 1
+                boards["columns"][cogid] = {"id": cogid,  # CHECK: "id" no need
+                                            "syllableIds": [syl_id]}
+
+    return boards
 
 
-    # Now we start working with the transducers
-
-    fsts = {}
-    new_transducer = ""
-
-    if transducer == "internal":
+def load_transducer(transducer, pipeline_name, fst_path):
+    if transducer != "internal":
+        new_transducer = transducer
+    else:
         # try and access the pipeline file in /fsts
+        # if not present, uses fst_path (== refish.txt)
         if os.path.isfile(f"/usr/app/fsts/{pipeline_name}.txt"):
             fst_path = f"/usr/app/fsts/{pipeline_name}.txt"
-            eprint(f"Found input transducer for {pipeline_name}",)
+            eprint(f"Found input transducer for {pipeline_name}")
 
         with open(fst_path, encoding="utf-8") as fst_file:
             new_transducer = fst_file.read()
-    else:
-        new_transducer = transducer
+    return new_transducer
 
-    with tempfile.TemporaryDirectory() as tmpdirname:
-        os.chdir(tmpdirname)
-        eprint("Compiling FSTs (new)")
-        with open("transducer.foma", "w", encoding="utf-8") as fp:
-            fp.write(new_transducer)
-        output = subprocess.check_output(["foma", "-f", "transducer.foma"]).decode(
-            "UTF-8"
-        )
-        eprint("\n".join(output.split("\n")[-5:]))
+
+def get_shared_reconstructions(cand_recs_by_doculect):
+    '''Takes a list of candidate reconstruction sets, where each set correspond
+    to a doculect (doesn't matter which) and contains the possible
+    reconstructions for a given modern form. The function then outputs the most
+    likely reconstructions by taking the candidate reconstructions that are
+    shared by most doculects.
+    (current implementation returns "shared by all" and, if none, falls back to
+    "shared by 2"; we could fall back more gracefully to "shared by all-1,
+    all-2, or more efficiently and legibly, by counting the candidates across
+    the doculects, and returning the ones that have the max count.
+    '''
+    strict = True
+
+    # Here is where we will store all our reconstructions for this cogid
+    ret = list()
+
+    # If we have at least one reconstruction made (so we can make a board?)
+    if len(cand_recs_by_doculect) > 0:
+        # all reconstructions have to agree, but there might be only 1!
+        ret = list(set.intersection(*cand_recs_by_doculect))
+
+        if len(ret) == 0:
+            strict = False
+            # kinda lenient way of generating reconstructions
+            # try and make intersection of every pair of doculects
+            pairwise_intersections = [
+                set.intersection(rec_a, rec_b)
+                for rec_a, rec_b in combinations(cand_recs_by_doculect, 2)
+            ]
+            if pairwise_intersections:
+                ret = ['*' + w
+                       for w in set.union(*pairwise_intersections)]
+            else:
+                ret = []
+
+    return ret, strict
+
+
+def compile_to_json_full_cognates(
+    path,
+    transducer="internal",
+    fst_path="/usr/app/refishing-fst.txt",
+    cognate_col="COGIDS", #TODO: find out a good way of determ
+):
+    """
+    Get the JSON from a wordlist file with "normal" cognates.
+
+    Example
+    -------
+
+    compile_to_json_full_cognates(
+        "pipeline/output/germanic/stage3/germanic-aligned-final.tsv",
+        "Proto-Germanic", cognate_col="CROSSIDS")
+    """
+
+    # The name of the language "pipeline"
+    # Should be the first word of your input file before a "-", i.e.
+    # germanic-data.tsv --> germanic, burmish-data.tsv --> burmish
+    pipeline_name = path.rsplit('.')[0].split("-")[0]
+    eprint(f"Assuming pipeline name: {pipeline_name}")
+
+    # Finding file path
+    path = os.path.join('/usr/app/data', path)
+
+    # Where we will put everything we read from the input data
+    data_dict = load_data_dict(path)
+
+    # create the board dictionary
+    boards = get_boards(data_dict, cognate_col)
+
+    # Now we start working with the transducers
+    new_transducer = load_transducer(transducer, pipeline_name, fst_path)
+
+    fsts = compile_transducers(new_transducer)
+    # not particularly elegant, but that keeps compile_transducers cleaner
+    # {'german': FST} => {'German': FST}
+    fsts = {doculect: fsts[doculect.lower()]
+            for doculect in boards['fstDoculects']
+            if doculect.lower() in fsts}
+
+
+    # For each cogid, we will create a list of the cognates to be transduced
+    # Where it is a tuple of the cognate itself, plus the associated doculect
+    # e.g. {102: [('j.uː.θ', 'English'), ('j.uː.ɡ.ə.n.t', 'Deutsch')], ...}
+    rows_of_cognates = defaultdict(list)
+
+    # Loop over each CROSSID (or COGIDS?) and add the relevant words
+    for row in data_dict.values():
+        idx = f"word-{row['ID']}"
+        cogids_list = row[cognate_col].split(" ")
+
+        # now we pretend to always be working with morphemes
+        # eprint(cogids_list, row)
+
+        # Now we're just making a list of all the syllables/morphemes
+        for syl_idx, morph_cogid in enumerate(cogids_list):
+            rows_of_cognates[morph_cogid].append(
+                (boards["words"][idx]["syllables"][syl_idx], row['DOCULECT'])
+            )
         
-        # debug
-        eprint(boards["fstDoculects"])
-
-        for doculect_name in boards["fstDoculects"]:
-            if os.path.isfile(doculect_name.lower() + ".bin"):
-                fsts[doculect_name] = FST.load(doculect_name.lower() + ".bin")
-        eprint(fsts)
-        eprint("FSTs loaded:", ", ".join(fsts))
-
-
+            # eprint(rows_of_cognates[morph_cogid])
     # Will hold something, TBD
     ds = DisjointSet()
 
-    # For each cogid, we will create a list of the cognates to be transduced
-    # Where it is a tuple of the cognate itself, plus the associated row in the data
-    rows_of_cognates = {}
-
-    # Loop over each CROSSID (our cognates here) and add the relevant words
-    for i, entry in data_dict.items():
-        idx = "word-" + str(i)
-        cogids_list = entry[cognates].split(" ")
-
-        # now we pretend to always be working with morphemes
-        # eprint(cogids_list, entry)
-
-        # Now we're just making a list of all the syllables/morphemes
-        for syl, _ in enumerate(cogids_list):
-            morph_cogid = cogids_list[syl]
-
-            if not morph_cogid in rows_of_cognates:
-                rows_of_cognates[morph_cogid] = [
-                    (boards["words"][idx]["syllables"][syl], entry)
-                ]
-            else:
-                rows_of_cognates[morph_cogid].append(
-                    (boards["words"][idx]["syllables"][syl], entry)
-                )
-        
-            # eprint(rows_of_cognates[morph_cogid])
-
-
     # TBD what this stuff does
-    reconstructions_of_crossid = {}
-    strictness_of_crossid = {}
+    reconstructions_of_crossid = dict()
+    strictness_of_crossid = dict()
     # ---
-    sortkey_of_crossid = {}
-    first_crossid_of_reconstruction = {}
-    included_in_clean = set([])
+    sortkey_of_crossid = dict()
+    first_crossid_of_reconstruction = dict()
+    included_in_clean = set()
     # ---
 
     # Now go through each cogid we've collected to actually start running transducers
@@ -349,90 +400,48 @@ def compile_to_json_full_cognates(
         # First, try to guess the reconstruction by the following rule:
         # 1. Collect all reconstructions for each language
         # 2. The intersection of all reconstructions is the most probable one
-        reconstructions = {}
+        reconstructions = defaultdict(set)
         first_form = False
-        at_least_one = False
 
         # the cogids are not being split properly... TODO
         # eprint(cogid)
         # eprint(cogs)
 
         # For each word (with Burmish would be syllable) that shares a cogid/crossid
-        for word, row in cogs:
+        for word, doculect in cogs:
             # eprint(word, cogs)
 
             if not first_form:
                 # TBD what this is used for
                 pass
 
+            # Make the current syllable equal to the whole word, since we are
+            # working with the Germanic data. Also add spaces so that Mattis'
+            # transducer will work.
+
+            syl = word.replace(".", "")
+
+            # for burmish?  # yes
+            syl = replace_diacritics_up(syl)
+
             # If we have a transducer for this doculect
-            if row["DOCULECT"] in fsts:
-                # Make the current syllable equal to the whole word, since we are
-                # working with the Germanic data. Also add spaces so that Mattis'
-                # transducer will work.
-                syl = word
+            if doculect in fsts:
 
-                # Bad stuff because of how current germanic FST is written 
-                if pipeline_name == "germanic":
-                    syl = word.replace(".", " ") + " "
-                else:
-                    syl = word.replace(".", "")
-
-                # for burmish?
-                syl = replace_diacritics_up(syl)
-
-                # print("trying ", row["DOCULECT"], " on ", syl, " : ", row["CONCEPT"])
-
-                # Apply the transducer upwards to this word
-                recs = list(fsts[row["DOCULECT"]].apply_up(syl))
-
-                # eprint(recs)
+                # Apply the transducer upwards to this word (/syl/morpheme)
+                recs = list(fsts[doculect].apply_up(syl))
 
                 # Add the reconstructions to our record, whether or not they exist
-                boards["fstUp"][row["DOCULECT"]][word] = sorted(set(recs))
+                # This will show in 'Apply Up'
+                boards["fstUp"][doculect][word] = sorted(set(recs))
 
                 # TBD
                 # attested_reconstructions.update(rec)
 
                 # Only worry about reconstructions when we have actually made one
                 if len(recs) > 0:
-                    at_least_one = True
-                    if row["DOCULECT"] not in reconstructions:
-                        reconstructions[row["DOCULECT"]] = set(recs)
-                        # print(row["DOCULECT"], recs)
-                    else:
-                        reconstructions[row["DOCULECT"]] = reconstructions[
-                            row["DOCULECT"]
-                        ].union(set(recs))
+                    reconstructions[doculect] |= set(recs)
 
-        strict = True  # usage TBD
-
-        # Here is where we will store all our reconstructions for this cogid/crossid
-        cognate_reconstructions = []
-
-        # If we have at least one reconstruction made (so we can make a board?)
-        if at_least_one:
-            strict = True
-            cognate_reconstructions = list(set.intersection(*reconstructions.values()))
-
-            if not cognate_reconstructions:
-                strict = False
-                # kinda lenient way of generating reconstructions
-                # try and make intersection of every pair of doculects
-                pairwise_intersections = [
-                    set.intersection(reconstructions[a], reconstructions[b])
-                    for a in reconstructions
-                    for b in reconstructions
-                    if a != b
-                ]
-                if pairwise_intersections:
-                    cognate_reconstructions = list(set.union(*pairwise_intersections))
-                else:
-                    cognate_reconstructions = []
-
-                cognate_reconstructions = ["*" + w for w in cognate_reconstructions]
-
-            # print(cognate_reconstructions)
+        cognate_reconstructions, strict = get_shared_reconstructions(reconstructions.values())
 
         # TODO: Actually go through what is written below and clean it up
         # I have not verified what a lot of this does in the same way I did the
@@ -474,8 +483,8 @@ def compile_to_json_full_cognates(
         crossids = sorted(ds.group[major_crossid])
 
         # get reconstructions and strictness
-        strict = all([strictness_of_crossid[crossid] for crossid in crossids])
-        clean = any([crossid in included_in_clean for crossid in crossids])
+        strict = all(strictness_of_crossid[crossid] for crossid in crossids)
+        clean = any(crossid in included_in_clean for crossid in crossids)
 
         # If not included in "--clean", continue
         if not clean:
@@ -485,20 +494,7 @@ def compile_to_json_full_cognates(
         all_reconstructions = [
             set(reconstructions_of_crossid[crossid]) for crossid in crossids
         ]
-        reconstructions = list(set.intersection(*all_reconstructions))
-
-        if not reconstructions:
-            strict = False
-            pairwise_intersections = [
-                set.intersection(all_reconstructions[a], all_reconstructions[b])
-                for a in range(len(all_reconstructions))
-                for b in range(len(all_reconstructions))
-                if a != b
-            ]
-            if pairwise_intersections:
-                reconstructions = list(set.union(*pairwise_intersections))
-            else:
-                reconstructions = []
+        reconstructions, strict = get_shared_reconstructions(all_reconstructions)
 
         board_id = "board-" + str(boardid_cntr)
         boardid_cntr += 1

@@ -24,17 +24,18 @@ language_title = {'Old_Burmese': 'OBurm', 'Achang_Longchuan': 'Acha-LC', 'Xianda
 fst_index = {'Old_Burmese': 'burmese', 'Achang_Longchuan': 'ngochang', 'Xiandao': 'xiandao', 'Maru': 'maru', 'Bola': 'bola', 'Atsi': 'atsi', 'Lashi': 'lashi'}
 
 # Basic imports
-from hashlib import new
-import sys
-import re
-import json
 import csv
+import json
+import re
+import sys
+from collections import Counter
+from functools import reduce
+from hashlib import new
 
 from numpy import equal
-from merge_phonemes import merge_phonemes
-from functools import reduce
-from collections import Counter
 from tabulate import tabulate
+
+from .merge_phonemes import merge_phonemes
 
 ##### ROUTINES #####
 
@@ -155,7 +156,7 @@ def back_reconstruct_list(syllable_ids, fsts, words):
 # eprint('Program starts')
 
 # Compile transducers
-from foma import FST
+from .foma import FST
 import tempfile
 import os
 import subprocess

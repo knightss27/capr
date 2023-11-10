@@ -1,12 +1,14 @@
-import os
-from os.path import isfile, join
-from flask import Flask, Response, jsonify, request, abort
-from flask_cors import CORS
-from functools import wraps
-from compile_lexicon_to_json import compile_to_json, compile_to_json_full_cognates
-from refish import refish
-from compare_fst import compare_fst
 import glob
+import os
+from flask_cors import CORS
+from flask import Flask, Response, jsonify, request, abort
+from functools import wraps
+from os.path import isfile, join
+
+from .compare_fst import compare_fst
+from .compile_lexicon_to_json import compile_to_json, compile_to_json_full_cognates
+from .refish import refish
+
 
 app = Flask(__name__)
 CORS(app)

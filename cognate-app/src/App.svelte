@@ -94,7 +94,7 @@
 			},
 			body: JSON.stringify({
 				dataPath: selectedDataPath.value,
-                transducer: useNewFst ? newFst : "internal"
+				transducer: useNewFst ? newFst : "internal"
 			})
 		})
 			.then((res => res.json()))
